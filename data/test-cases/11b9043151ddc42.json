@@ -1,12 +1,12 @@
 {
-  "uid" : "21a918499f67875f",
-  "name" : "List dbtypes",
-  "fullName" : "test_first.TestGET#test_list_dbtypes",
-  "historyId" : "c1ddb0ad2a5283a85532f93dc1c7d028",
+  "uid" : "11b9043151ddc42",
+  "name" : "Post db create",
+  "fullName" : "test_first.TestPOST#test_post_db_create",
+  "historyId" : "1aec0f14b932a152b799443dcd6b951a",
   "time" : {
-    "start" : 1703807994961,
-    "stop" : 1703807995513,
-    "duration" : 552
+    "start" : 1703808293753,
+    "stop" : 1703808294484,
+    "duration" : 731
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,18 +15,18 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Method GET",
+      "name" : "Method POST",
       "time" : {
-        "start" : 1703807994961,
-        "stop" : 1703807995512,
-        "duration" : 551
+        "start" : 1703808293753,
+        "stop" : 1703808294483,
+        "duration" : 730
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Add request",
         "time" : {
-          "start" : 1703807994961,
-          "stop" : 1703807994961,
+          "start" : 1703808293753,
+          "stop" : 1703808293753,
           "duration" : 0
         },
         "status" : "passed",
@@ -34,10 +34,10 @@
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "url",
-          "value" : "'https://dbend.areso.pro/list_dbtypes'"
+          "value" : "'https://dbend.areso.pro/db_create'"
         }, {
           "name" : "method",
-          "value" : "'GET'"
+          "value" : "'POST'"
         } ],
         "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
@@ -46,17 +46,17 @@
       }, {
         "name" : "Add response",
         "time" : {
-          "start" : 1703807995511,
-          "stop" : 1703807995512,
-          "duration" : 1
+          "start" : 1703808294483,
+          "stop" : 1703808294483,
+          "duration" : 0
         },
         "status" : "passed",
         "steps" : [ {
-          "name" : "Response code: 200\n",
+          "name" : "Response code: 201\n",
           "time" : {
-            "start" : 1703807995511,
-            "stop" : 1703807995512,
-            "duration" : 1
+            "start" : 1703808294483,
+            "stop" : 1703808294483,
+            "duration" : 0
           },
           "status" : "passed",
           "steps" : [ ],
@@ -67,10 +67,10 @@
           "stepsCount" : 0,
           "hasContent" : false
         }, {
-          "name" : "Response text: {\"3\":\"mysql8\"}\n\n",
+          "name" : "Response text: {\"db_uuid\":\"0658e0d2-657f-7426-8000-db69d2b74a7c\",\"msg\":\"your order for a new database created successfully\"}\n\n",
           "time" : {
-            "start" : 1703807995512,
-            "stop" : 1703807995512,
+            "start" : 1703808294483,
+            "stop" : 1703808294483,
             "duration" : 0
           },
           "status" : "passed",
@@ -85,7 +85,7 @@
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "result",
-          "value" : "<Response [200]>"
+          "value" : "<Response [201]>"
         } ],
         "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
@@ -95,7 +95,13 @@
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "url",
-        "value" : "'https://dbend.areso.pro/list_dbtypes'"
+        "value" : "'https://dbend.areso.pro/db_create'"
+      }, {
+        "name" : "cookie",
+        "value" : "{'sid': '6f3c3c7b-f574-481c-b97c-0e64e7953fd7'}"
+      }, {
+        "name" : "body",
+        "value" : "{'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 3}"
       } ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
@@ -103,11 +109,11 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "be99396430b7c5a5",
+      "uid" : "f66c62b6d15601d1",
       "name" : "stdout",
-      "source" : "be99396430b7c5a5.txt",
+      "source" : "f66c62b6d15601d1.txt",
       "type" : "text/plain",
-      "size" : 73
+      "size" : 229
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
@@ -118,19 +124,19 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
-    "value" : "REQUESTS GET"
-  }, {
-    "name" : "epic",
-    "value" : "GET REQUESTS"
+    "value" : "REQUESTS POST"
   }, {
     "name" : "subSuite",
-    "value" : "GET"
+    "value" : "POST"
+  }, {
+    "name" : "epic",
+    "value" : "POST REQUESTS"
   }, {
     "name" : "host",
-    "value" : "fv-az1493-787"
+    "value" : "fv-az802-323"
   }, {
     "name" : "thread",
-    "value" : "1815-MainThread"
+    "value" : "1781-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -152,8 +158,27 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "19b1024b02e37e20",
+        "status" : "passed",
+        "time" : {
+          "start" : 1703807997678,
+          "stop" : 1703807998247,
+          "duration" : 569
+        }
+      } ]
+    },
     "tags" : [ ]
   },
-  "source" : "21a918499f67875f.json",
+  "source" : "11b9043151ddc42.json",
   "parameterValues" : [ ]
 }
