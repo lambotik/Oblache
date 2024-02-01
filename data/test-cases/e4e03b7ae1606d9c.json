@@ -1,12 +1,12 @@
 {
-  "uid" : "ddaad7cca6583126",
-  "name" : "List regions.",
-  "fullName" : "tests.test_bd.TestGET#test_get_list_regions",
-  "historyId" : "e19035bf6c6923fc65971ccf708c5c7c",
+  "uid" : "e4e03b7ae1606d9c",
+  "name" : "Get profile information.",
+  "fullName" : "tests.test_bd.TestGET#test_get_profile",
+  "historyId" : "36e9e537c111d2d280309040f5f8822e",
   "time" : {
-    "start" : 1706810607810,
-    "stop" : 1706810608138,
-    "duration" : 328
+    "start" : 1706811805336,
+    "stop" : 1706811805764,
+    "duration" : 428
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,10 +15,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "GET https://dbend.areso.pro/list_regions",
+      "name" : "GET https://dbend.areso.pro/get_profile",
       "time" : {
-        "start" : 1706810607810,
-        "stop" : 1706810607810,
+        "start" : 1706811805336,
+        "stop" : 1706811805336,
         "duration" : 0
       },
       "status" : "passed",
@@ -32,8 +32,8 @@
     }, {
       "name" : "Status code: 200",
       "time" : {
-        "start" : 1706810608136,
-        "stop" : 1706810608136,
+        "start" : 1706811805762,
+        "stop" : 1706811805762,
         "duration" : 0
       },
       "status" : "passed",
@@ -45,11 +45,26 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Response: {'3': 'CIS'}",
+      "name" : "Params url: https://dbend.areso.pro/get_profile\nCookies: {'sid': '120ef34e-24b7-4ace-a934-737a736807b7'}\nBody: {}",
       "time" : {
-        "start" : 1706810608137,
-        "stop" : 1706810608137,
+        "start" : 1706811805762,
+        "stop" : 1706811805762,
         "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Response: {\n    \"content\": [\n        [\n            \"email\",\n            \"lambotik1988@gmail.com\"\n        ],\n        [\n            \"is_blocked\",\n            0\n        ],\n        [\n            \"is_db_creation_allowed\",\n            0\n        ],\n        [\n            \"disk_db_quota\",\n            4\n        ],\n        [\n            \"disk_db_used\",\n            10\n        ],\n        [\n            \"db_qty_quota\",\n            100\n        ],\n        [\n            \"db_qty_used\",\n            2\n        ]\n    ]\n}\n",
+      "time" : {
+        "start" : 1706811805762,
+        "stop" : 1706811805763,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -62,8 +77,8 @@
     }, {
       "name" : "Assert status code: 200 == Response status code: 200",
       "time" : {
-        "start" : 1706810608137,
-        "stop" : 1706810608137,
+        "start" : 1706811805763,
+        "stop" : 1706811805763,
         "duration" : 0
       },
       "status" : "passed",
@@ -76,16 +91,16 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "2b879776fffad55",
+      "uid" : "f655325caa12bf57",
       "name" : "stdout",
-      "source" : "2b879776fffad55.txt",
+      "source" : "f655325caa12bf57.txt",
       "type" : "text/plain",
-      "size" : 119
+      "size" : 609
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 4,
+    "stepsCount" : 5,
     "hasContent" : true
   },
   "afterStages" : [ ],
@@ -103,10 +118,10 @@
     "value" : "TestGET"
   }, {
     "name" : "host",
-    "value" : "fv-az532-566"
+    "value" : "fv-az1536-535"
   }, {
     "name" : "thread",
-    "value" : "1838-MainThread"
+    "value" : "1780-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -128,8 +143,27 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "6482bb2e226a4368",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706810606494,
+          "stop" : 1706810606823,
+          "duration" : 329
+        }
+      } ]
+    },
     "tags" : [ ]
   },
-  "source" : "ddaad7cca6583126.json",
+  "source" : "e4e03b7ae1606d9c.json",
   "parameterValues" : [ ]
 }

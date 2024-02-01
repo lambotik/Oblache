@@ -1,28 +1,28 @@
 {
-  "uid" : "f633e59c75cbd05",
+  "uid" : "edca01e84f8a9fc5",
   "name" : "Post db create",
   "fullName" : "tests.test_bd.TestPOST#test_post_db_create",
   "historyId" : "072cccfb757d85a23781a718b88741bd",
   "time" : {
-    "start" : 1706810609943,
-    "stop" : 1706810610281,
-    "duration" : 338
+    "start" : 1706811808663,
+    "stop" : 1706811808967,
+    "duration" : 304
   },
   "status" : "broken",
   "statusMessage" : "KeyError: 'db_uuid'",
-  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f5891c4cf70>\n\n    @allure.title('Post db create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.sid)\n>       print(result_post_db_list.json()[\"db_uuid\"])\nE       KeyError: 'db_uuid'\n\ntests/test_bd.py:96: KeyError",
+  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f003070b550>\n\n    @allure.title('Post db create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.sid)\n>       print(result_post_db_list.json()[\"db_uuid\"])\nE       KeyError: 'db_uuid'\n\ntests/test_bd.py:96: KeyError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
     "status" : "broken",
     "statusMessage" : "KeyError: 'db_uuid'",
-    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f5891c4cf70>\n\n    @allure.title('Post db create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.sid)\n>       print(result_post_db_list.json()[\"db_uuid\"])\nE       KeyError: 'db_uuid'\n\ntests/test_bd.py:96: KeyError",
+    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f003070b550>\n\n    @allure.title('Post db create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.sid)\n>       print(result_post_db_list.json()[\"db_uuid\"])\nE       KeyError: 'db_uuid'\n\ntests/test_bd.py:96: KeyError",
     "steps" : [ {
       "name" : "POST https://dbend.areso.pro/db_create",
       "time" : {
-        "start" : 1706810609943,
-        "stop" : 1706810609943,
+        "start" : 1706811808663,
+        "stop" : 1706811808663,
         "duration" : 0
       },
       "status" : "passed",
@@ -36,8 +36,8 @@
     }, {
       "name" : "Status code: 403",
       "time" : {
-        "start" : 1706810610280,
-        "stop" : 1706810610280,
+        "start" : 1706811808966,
+        "stop" : 1706811808966,
         "duration" : 0
       },
       "status" : "passed",
@@ -49,10 +49,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': 'c1ce2338-d9cb-432a-858c-8c60291d6757'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 3}",
+      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '120ef34e-24b7-4ace-a934-737a736807b7'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 3}",
       "time" : {
-        "start" : 1706810610280,
-        "stop" : 1706810610280,
+        "start" : 1706811808966,
+        "stop" : 1706811808966,
         "duration" : 0
       },
       "status" : "passed",
@@ -64,10 +64,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Response: {'content': 'you are not allowed to create new databases'}",
+      "name" : "Response: {\n    \"content\": \"you are not allowed to create new databases\"\n}\n",
       "time" : {
-        "start" : 1706810610280,
-        "stop" : 1706810610280,
+        "start" : 1706811808966,
+        "stop" : 1706811808966,
         "duration" : 0
       },
       "status" : "passed",
@@ -80,9 +80,9 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "484791672cdfcc4c",
+      "uid" : "191fa18913e13adc",
       "name" : "stdout",
-      "source" : "484791672cdfcc4c.txt",
+      "source" : "191fa18913e13adc.txt",
       "type" : "text/plain",
       "size" : 163
     } ],
@@ -94,11 +94,11 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "suite",
-    "value" : "POST"
-  }, {
     "name" : "epic",
     "value" : "POST REQUESTS"
+  }, {
+    "name" : "suite",
+    "value" : "POST"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
@@ -107,10 +107,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az532-566"
+    "value" : "fv-az1536-535"
   }, {
     "name" : "thread",
-    "value" : "1838-MainThread"
+    "value" : "1780-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -136,8 +136,28 @@
       "matchedStatuses" : [ ],
       "flaky" : false
     } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "f633e59c75cbd05",
+        "status" : "broken",
+        "statusDetails" : "KeyError: 'db_uuid'",
+        "time" : {
+          "start" : 1706810609943,
+          "stop" : 1706810610281,
+          "duration" : 338
+        }
+      } ]
+    },
     "tags" : [ ]
   },
-  "source" : "f633e59c75cbd05.json",
+  "source" : "edca01e84f8a9fc5.json",
   "parameterValues" : [ ]
 }

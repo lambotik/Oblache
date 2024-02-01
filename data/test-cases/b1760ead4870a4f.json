@@ -1,28 +1,28 @@
 {
-  "uid" : "99f602695870b5bb",
+  "uid" : "b1760ead4870a4f",
   "name" : "Post registration",
   "fullName" : "tests.test_bd.TestPOST#test_post_registration",
   "historyId" : "2a65ea35f5f222c4de1aaf9f487f0bf6",
   "time" : {
-    "start" : 1706810608139,
-    "stop" : 1706810608458,
-    "duration" : 319
+    "start" : 1706811807019,
+    "stop" : 1706811807330,
+    "duration" : 311
   },
   "status" : "skipped",
   "statusMessage" : "XFAIL\n\nAssertionError: Incorrect status code",
-  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f5891c4c9d0>\n\n    @pytest.mark.xfail()\n    @allure.title('Post registration')\n    def test_post_registration(self):\n        print('\\n\\nMethod POST: registration')\n        result_post = API.post_registration()\n        status_code = result_post\n>       Checking.check_status_code(status_code, 201)\n\ntests/test_bd.py:57: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [400]>, status_code = 201\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
+  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f003070ba90>\n\n    @pytest.mark.xfail()\n    @allure.title('Post registration')\n    def test_post_registration(self):\n        print('\\n\\nMethod POST: registration')\n        result_post = API.post_registration()\n        status_code = result_post\n>       Checking.check_status_code(status_code, 201)\n\ntests/test_bd.py:57: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [400]>, status_code = 201\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
     "status" : "skipped",
     "statusMessage" : "XFAIL\n\nAssertionError: Incorrect status code",
-    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f5891c4c9d0>\n\n    @pytest.mark.xfail()\n    @allure.title('Post registration')\n    def test_post_registration(self):\n        print('\\n\\nMethod POST: registration')\n        result_post = API.post_registration()\n        status_code = result_post\n>       Checking.check_status_code(status_code, 201)\n\ntests/test_bd.py:57: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [400]>, status_code = 201\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
+    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f003070ba90>\n\n    @pytest.mark.xfail()\n    @allure.title('Post registration')\n    def test_post_registration(self):\n        print('\\n\\nMethod POST: registration')\n        result_post = API.post_registration()\n        status_code = result_post\n>       Checking.check_status_code(status_code, 201)\n\ntests/test_bd.py:57: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [400]>, status_code = 201\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
     "steps" : [ {
       "name" : "POST https://dbend.areso.pro/register",
       "time" : {
-        "start" : 1706810608140,
-        "stop" : 1706810608140,
+        "start" : 1706811807019,
+        "stop" : 1706811807019,
         "duration" : 0
       },
       "status" : "passed",
@@ -36,8 +36,8 @@
     }, {
       "name" : "Params:{'email': 'lambotik1988@gmail.com', 'password': 'M@il3261415'}",
       "time" : {
-        "start" : 1706810608140,
-        "stop" : 1706810608140,
+        "start" : 1706811807019,
+        "stop" : 1706811807019,
         "duration" : 0
       },
       "status" : "passed",
@@ -51,8 +51,8 @@
     }, {
       "name" : "Status code: 400",
       "time" : {
-        "start" : 1706810608458,
-        "stop" : 1706810608458,
+        "start" : 1706811807329,
+        "stop" : 1706811807329,
         "duration" : 0
       },
       "status" : "passed",
@@ -66,8 +66,8 @@
     }, {
       "name" : "Params url: https://dbend.areso.pro/register\nBody: {'email': 'lambotik1988@gmail.com', 'password': 'M@il3261415'}",
       "time" : {
-        "start" : 1706810608458,
-        "stop" : 1706810608458,
+        "start" : 1706811807329,
+        "stop" : 1706811807329,
         "duration" : 0
       },
       "status" : "passed",
@@ -81,8 +81,8 @@
     }, {
       "name" : "Response: {\n    \"content\": \"msg[3]: registration failed, this email is taken\"\n}\n",
       "time" : {
-        "start" : 1706810608458,
-        "stop" : 1706810608458,
+        "start" : 1706811807329,
+        "stop" : 1706811807329,
         "duration" : 0
       },
       "status" : "passed",
@@ -96,8 +96,8 @@
     }, {
       "name" : "Assert status code: 201 == Response status code: 400",
       "time" : {
-        "start" : 1706810608458,
-        "stop" : 1706810608458,
+        "start" : 1706811807329,
+        "stop" : 1706811807329,
         "duration" : 0
       },
       "status" : "failed",
@@ -112,9 +112,9 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "a793079b870ce1c",
+      "uid" : "75f0ebbca39911c8",
       "name" : "stdout",
-      "source" : "a793079b870ce1c.txt",
+      "source" : "75f0ebbca39911c8.txt",
       "type" : "text/plain",
       "size" : 148
     } ],
@@ -126,11 +126,11 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "suite",
-    "value" : "POST"
-  }, {
     "name" : "epic",
     "value" : "POST REQUESTS"
+  }, {
+    "name" : "suite",
+    "value" : "POST"
   }, {
     "name" : "tag",
     "value" : "@pytest.mark.xfail"
@@ -142,10 +142,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az532-566"
+    "value" : "fv-az1536-535"
   }, {
     "name" : "thread",
-    "value" : "1838-MainThread"
+    "value" : "1780-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -167,8 +167,28 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 2,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "99f602695870b5bb",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL\n\nAssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1706810608139,
+          "stop" : 1706810608458,
+          "duration" : 319
+        }
+      } ]
+    },
     "tags" : [ "@pytest.mark.xfail" ]
   },
-  "source" : "99f602695870b5bb.json",
+  "source" : "b1760ead4870a4f.json",
   "parameterValues" : [ ]
 }
