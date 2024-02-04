@@ -1,28 +1,28 @@
 {
-  "uid" : "edca01e84f8a9fc5",
+  "uid" : "d24283f86d821663",
   "name" : "Post db create",
   "fullName" : "tests.test_bd.TestPOST#test_post_db_create",
   "historyId" : "072cccfb757d85a23781a718b88741bd",
   "time" : {
-    "start" : 1706811808663,
-    "stop" : 1706811808967,
-    "duration" : 304
+    "start" : 1707067365254,
+    "stop" : 1707067365586,
+    "duration" : 332
   },
   "status" : "broken",
   "statusMessage" : "KeyError: 'db_uuid'",
-  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f003070b550>\n\n    @allure.title('Post db create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.sid)\n>       print(result_post_db_list.json()[\"db_uuid\"])\nE       KeyError: 'db_uuid'\n\ntests/test_bd.py:96: KeyError",
+  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f52d7e4e2c0>\n\n    @allure.title('Post db create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.sid)\n>       print(result_post_db_list.json()[\"db_uuid\"])\nE       KeyError: 'db_uuid'\n\ntests/test_bd.py:101: KeyError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
     "status" : "broken",
     "statusMessage" : "KeyError: 'db_uuid'",
-    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f003070b550>\n\n    @allure.title('Post db create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.sid)\n>       print(result_post_db_list.json()[\"db_uuid\"])\nE       KeyError: 'db_uuid'\n\ntests/test_bd.py:96: KeyError",
+    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f52d7e4e2c0>\n\n    @allure.title('Post db create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.sid)\n>       print(result_post_db_list.json()[\"db_uuid\"])\nE       KeyError: 'db_uuid'\n\ntests/test_bd.py:101: KeyError",
     "steps" : [ {
       "name" : "POST https://dbend.areso.pro/db_create",
       "time" : {
-        "start" : 1706811808663,
-        "stop" : 1706811808663,
+        "start" : 1707067365254,
+        "stop" : 1707067365254,
         "duration" : 0
       },
       "status" : "passed",
@@ -36,8 +36,8 @@
     }, {
       "name" : "Status code: 403",
       "time" : {
-        "start" : 1706811808966,
-        "stop" : 1706811808966,
+        "start" : 1707067365585,
+        "stop" : 1707067365585,
         "duration" : 0
       },
       "status" : "passed",
@@ -49,10 +49,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '120ef34e-24b7-4ace-a934-737a736807b7'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 3}",
+      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '476ca2d1-a717-4ad3-909f-6a90c5e49be1'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 3}",
       "time" : {
-        "start" : 1706811808966,
-        "stop" : 1706811808966,
+        "start" : 1707067365585,
+        "stop" : 1707067365585,
         "duration" : 0
       },
       "status" : "passed",
@@ -66,8 +66,8 @@
     }, {
       "name" : "Response: {\n    \"content\": \"you are not allowed to create new databases\"\n}\n",
       "time" : {
-        "start" : 1706811808966,
-        "stop" : 1706811808966,
+        "start" : 1707067365585,
+        "stop" : 1707067365585,
         "duration" : 0
       },
       "status" : "passed",
@@ -80,9 +80,9 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "191fa18913e13adc",
+      "uid" : "860da4de9cbf10e2",
       "name" : "stdout",
-      "source" : "191fa18913e13adc.txt",
+      "source" : "860da4de9cbf10e2.txt",
       "type" : "text/plain",
       "size" : 163
     } ],
@@ -107,10 +107,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az1536-535"
+    "value" : "fv-az847-48"
   }, {
     "name" : "thread",
-    "value" : "1780-MainThread"
+    "value" : "1811-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -139,13 +139,22 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 2,
+        "broken" : 3,
         "skipped" : 0,
         "passed" : 0,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
+        "uid" : "edca01e84f8a9fc5",
+        "status" : "broken",
+        "statusDetails" : "KeyError: 'db_uuid'",
+        "time" : {
+          "start" : 1706811808663,
+          "stop" : 1706811808967,
+          "duration" : 304
+        }
+      }, {
         "uid" : "f633e59c75cbd05",
         "status" : "broken",
         "statusDetails" : "KeyError: 'db_uuid'",
@@ -158,6 +167,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "edca01e84f8a9fc5.json",
+  "source" : "d24283f86d821663.json",
   "parameterValues" : [ ]
 }

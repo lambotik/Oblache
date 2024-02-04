@@ -1,12 +1,12 @@
 {
-  "uid" : "bf14a96a2e30c6cf",
-  "name" : "List dbtypes.",
-  "fullName" : "tests.test_bd.TestGET#test_get_list_dbtypes",
-  "historyId" : "568d5308d5c3380391edf599f715645c",
+  "uid" : "18407dd553fa7618",
+  "name" : "List regions.",
+  "fullName" : "tests.test_bd.TestGET#test_get_with_bad_request",
+  "historyId" : "881eb2ea92534fd9494bec4be18a1001",
   "time" : {
-    "start" : 1706811805765,
-    "stop" : 1706811806078,
-    "duration" : 313
+    "start" : 1707067363231,
+    "stop" : 1707067363582,
+    "duration" : 351
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,10 +15,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "GET https://dbend.areso.pro/list_dbtypes",
+      "name" : "GET https://dbend.areso.pro/bad_request",
       "time" : {
-        "start" : 1706811805765,
-        "stop" : 1706811805765,
+        "start" : 1707067363231,
+        "stop" : 1707067363231,
         "duration" : 0
       },
       "status" : "passed",
@@ -30,10 +30,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Status code: 200",
+      "name" : "Status code: 404",
       "time" : {
-        "start" : 1706811806077,
-        "stop" : 1706811806077,
+        "start" : 1707067363581,
+        "stop" : 1707067363581,
         "duration" : 0
       },
       "status" : "passed",
@@ -45,10 +45,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Response: {\n    \"3\": \"mysql8\"\n}\n",
+      "name" : "Response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>\n",
       "time" : {
-        "start" : 1706811806077,
-        "stop" : 1706811806077,
+        "start" : 1707067363581,
+        "stop" : 1707067363581,
         "duration" : 0
       },
       "status" : "passed",
@@ -60,10 +60,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Assert status code: 200 == Response status code: 200",
+      "name" : "Assert status code: 404 == Response status code: 404",
       "time" : {
-        "start" : 1706811806077,
-        "stop" : 1706811806077,
+        "start" : 1707067363581,
+        "stop" : 1707067363581,
         "duration" : 0
       },
       "status" : "passed",
@@ -76,11 +76,11 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "43dd5894a783890f",
+      "uid" : "7b55161bced2d94d",
       "name" : "stdout",
-      "source" : "43dd5894a783890f.txt",
+      "source" : "7b55161bced2d94d.txt",
       "type" : "text/plain",
-      "size" : 122
+      "size" : 306
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
@@ -90,11 +90,11 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "suite",
-    "value" : "GET"
-  }, {
     "name" : "epic",
     "value" : "GET REQUESTS"
+  }, {
+    "name" : "suite",
+    "value" : "GET"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
@@ -103,10 +103,10 @@
     "value" : "TestGET"
   }, {
     "name" : "host",
-    "value" : "fv-az1536-535"
+    "value" : "fv-az847-48"
   }, {
     "name" : "thread",
-    "value" : "1780-MainThread"
+    "value" : "1811-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -128,27 +128,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "history" : {
-      "statistic" : {
-        "failed" : 0,
-        "broken" : 0,
-        "skipped" : 0,
-        "passed" : 2,
-        "unknown" : 0,
-        "total" : 2
-      },
-      "items" : [ {
-        "uid" : "9f05425618cff02f",
-        "status" : "passed",
-        "time" : {
-          "start" : 1706810606824,
-          "stop" : 1706810607158,
-          "duration" : 334
-        }
-      } ]
-    },
     "tags" : [ ]
   },
-  "source" : "bf14a96a2e30c6cf.json",
+  "source" : "18407dd553fa7618.json",
   "parameterValues" : [ ]
 }

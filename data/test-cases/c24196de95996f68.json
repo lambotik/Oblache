@@ -1,28 +1,28 @@
 {
-  "uid" : "65a2dd01f2320fca",
+  "uid" : "c24196de95996f68",
   "name" : "Post db_create with wrong env.",
   "fullName" : "tests.test_bd.TestPOST#test_post_db_create_with_wrong_values_env",
   "historyId" : "06336b61428442869c62a34b831535e4",
   "time" : {
-    "start" : 1706811809624,
-    "stop" : 1706811809936,
-    "duration" : 312
+    "start" : 1707067366241,
+    "stop" : 1707067366559,
+    "duration" : 318
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Incorrect status code",
-  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f00307090f0>\n\n    @allure.title('Post db_create with wrong env.')\n    def test_post_db_create_with_wrong_values_env(self):\n        print('\\n\\nMethod POST: post_db_create_wrong_value_env')\n        result_post_db_list = API.post_db_create_wrong_value_env(TestData.sid)\n        print(result_post_db_list.json())\n>       Checking.check_status_code(result_post_db_list, 400)\n\ntests/test_bd.py:122: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 400\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
+  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f52d7e4d9f0>\n\n    @allure.title('Post db_create with wrong env.')\n    def test_post_db_create_with_wrong_values_env(self):\n        print('\\n\\nMethod POST: post_db_create_wrong_value_env')\n        result_post_db_list = API.post_db_create_wrong_value_env(TestData.sid)\n        print(result_post_db_list.json())\n>       Checking.check_status_code(result_post_db_list, 400)\n\ntests/test_bd.py:127: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 400\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Incorrect status code",
-    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f00307090f0>\n\n    @allure.title('Post db_create with wrong env.')\n    def test_post_db_create_with_wrong_values_env(self):\n        print('\\n\\nMethod POST: post_db_create_wrong_value_env')\n        result_post_db_list = API.post_db_create_wrong_value_env(TestData.sid)\n        print(result_post_db_list.json())\n>       Checking.check_status_code(result_post_db_list, 400)\n\ntests/test_bd.py:122: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 400\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
+    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7f52d7e4d9f0>\n\n    @allure.title('Post db_create with wrong env.')\n    def test_post_db_create_with_wrong_values_env(self):\n        print('\\n\\nMethod POST: post_db_create_wrong_value_env')\n        result_post_db_list = API.post_db_create_wrong_value_env(TestData.sid)\n        print(result_post_db_list.json())\n>       Checking.check_status_code(result_post_db_list, 400)\n\ntests/test_bd.py:127: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 400\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
     "steps" : [ {
       "name" : "POST https://dbend.areso.pro/db_create",
       "time" : {
-        "start" : 1706811809624,
-        "stop" : 1706811809624,
+        "start" : 1707067366241,
+        "stop" : 1707067366241,
         "duration" : 0
       },
       "status" : "passed",
@@ -36,8 +36,8 @@
     }, {
       "name" : "Status code: 403",
       "time" : {
-        "start" : 1706811809936,
-        "stop" : 1706811809936,
+        "start" : 1707067366558,
+        "stop" : 1707067366558,
         "duration" : 0
       },
       "status" : "passed",
@@ -49,10 +49,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '120ef34e-24b7-4ace-a934-737a736807b7'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 33, 'region': 3}",
+      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '476ca2d1-a717-4ad3-909f-6a90c5e49be1'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 53, 'region': 3}",
       "time" : {
-        "start" : 1706811809936,
-        "stop" : 1706811809936,
+        "start" : 1707067366558,
+        "stop" : 1707067366558,
         "duration" : 0
       },
       "status" : "passed",
@@ -66,8 +66,8 @@
     }, {
       "name" : "Response: {\n    \"content\": \"you are not allowed to create new databases\"\n}\n",
       "time" : {
-        "start" : 1706811809936,
-        "stop" : 1706811809936,
+        "start" : 1707067366558,
+        "stop" : 1707067366558,
         "duration" : 0
       },
       "status" : "passed",
@@ -81,8 +81,8 @@
     }, {
       "name" : "Assert status code: 400 == Response status code: 403",
       "time" : {
-        "start" : 1706811809936,
-        "stop" : 1706811809936,
+        "start" : 1707067366558,
+        "stop" : 1707067366558,
         "duration" : 0
       },
       "status" : "failed",
@@ -97,9 +97,9 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "59ef21a7499cc624",
+      "uid" : "414ab6cfec9b36da",
       "name" : "stdout",
-      "source" : "59ef21a7499cc624.txt",
+      "source" : "414ab6cfec9b36da.txt",
       "type" : "text/plain",
       "size" : 238
     } ],
@@ -124,10 +124,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az1536-535"
+    "value" : "fv-az847-48"
   }, {
     "name" : "thread",
-    "value" : "1780-MainThread"
+    "value" : "1811-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -155,14 +155,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 2,
+        "failed" : 3,
         "broken" : 0,
         "skipped" : 0,
         "passed" : 0,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
+        "uid" : "65a2dd01f2320fca",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1706811809624,
+          "stop" : 1706811809936,
+          "duration" : 312
+        }
+      }, {
         "uid" : "d04baf212873b8a",
         "status" : "failed",
         "statusDetails" : "AssertionError: Incorrect status code",
@@ -175,6 +184,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "65a2dd01f2320fca.json",
+  "source" : "c24196de95996f68.json",
   "parameterValues" : [ ]
 }
