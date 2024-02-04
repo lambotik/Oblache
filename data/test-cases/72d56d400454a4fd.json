@@ -1,12 +1,12 @@
 {
-  "uid" : "ab196ae456e2efda",
-  "name" : "Post db list with filter",
-  "fullName" : "tests.test_bd.TestPOST#test_post_db_list_with_filter",
-  "historyId" : "6f36813e0600b433eda47665426f083e",
+  "uid" : "72d56d400454a4fd",
+  "name" : "Post registration mail",
+  "fullName" : "tests.test_bd.TestPOST#test_post_registration_with_variety_mail",
+  "historyId" : "a901fc2adfb7177824e3e0f6d85ea502",
   "time" : {
-    "start" : 1707067367226,
-    "stop" : 1707067367880,
-    "duration" : 654
+    "start" : 1707069340129,
+    "stop" : 1707069340457,
+    "duration" : 328
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,40 +15,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "POST https://dbend.areso.pro/db_list",
+      "name" : "POST https://dbend.areso.pro/register",
       "time" : {
-        "start" : 1707067367226,
-        "stop" : 1707067367227,
-        "duration" : 1
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Status code: 200",
-      "time" : {
-        "start" : 1707067367544,
-        "stop" : 1707067367545,
-        "duration" : 1
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0,
-      "hasContent" : false
-    }, {
-      "name" : "Params url: https://dbend.areso.pro/db_list\nCookies: {'sid': '476ca2d1-a717-4ad3-909f-6a90c5e49be1'}\nBody: {}",
-      "time" : {
-        "start" : 1707067367545,
-        "stop" : 1707067367545,
+        "start" : 1707069340129,
+        "stop" : 1707069340129,
         "duration" : 0
       },
       "status" : "passed",
@@ -60,10 +30,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Response: {\n    \"content\": {\n        \"065a3977-1ea0-739c-8000-5abfcceb40b3\": [\n            \"db_riiz4zca\",\n            \"CIS\",\n            \"deleting\",\n            \"mysql://user_jrlkcd55:pwPW01__E2lV83dlrmTijb@cisdb1.areso.pro:3306/db_riiz4zca\",\n            \"None\"\n        ],\n        \"065a3c88-8731-736f-8000-2851a3e53b9c\": [\n            \"db_pnus4peh\",\n            \"CIS\",\n            \"deleting\",\n            \"mysql://user_iw86gluq:pwPW01__xShBKVNdoLa7Fb@cisdb1.areso.pro:3306/db_pnus4peh\",\n            \"None\"\n        ]\n    }\n}\n",
+      "name" : "Params:{'email': 'aqa(date)04-02-2024(time)17:55:37@mail.by', 'password': 'M@il3261415'}",
       "time" : {
-        "start" : 1707067367545,
-        "stop" : 1707067367545,
+        "start" : 1707069340129,
+        "stop" : 1707069340129,
         "duration" : 0
       },
       "status" : "passed",
@@ -75,10 +45,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Status code: 200",
+      "name" : "Status code: 201",
       "time" : {
-        "start" : 1707067367878,
-        "stop" : 1707067367878,
+        "start" : 1707069340456,
+        "stop" : 1707069340456,
         "duration" : 0
       },
       "status" : "passed",
@@ -90,10 +60,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Params url: https://dbend.areso.pro/db_list\nCookies: {'sid': '476ca2d1-a717-4ad3-909f-6a90c5e49be1'}\nBody: {'db_uuid': '065a3977-1ea0-739c-8000-5abfcceb40b3'}",
+      "name" : "Params url: https://dbend.areso.pro/register\nBody: {'email': 'aqa(date)04-02-2024(time)17:55:37@mail.by', 'password': 'M@il3261415'}",
       "time" : {
-        "start" : 1707067367878,
-        "stop" : 1707067367878,
+        "start" : 1707069340456,
+        "stop" : 1707069340456,
         "duration" : 0
       },
       "status" : "passed",
@@ -105,10 +75,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Response: {\n    \"content\": {\n        \"065a3977-1ea0-739c-8000-5abfcceb40b3\": [\n            \"db_riiz4zca\",\n            \"CIS\",\n            \"deleting\",\n            \"mysql://user_jrlkcd55:pwPW01__E2lV83dlrmTijb@cisdb1.areso.pro:3306/db_riiz4zca\",\n            \"None\"\n        ]\n    }\n}\n",
+      "name" : "Response: {\n    \"content\": \"msg[1]: registered successfully\"\n}\n",
       "time" : {
-        "start" : 1707067367878,
-        "stop" : 1707067367878,
+        "start" : 1707069340456,
+        "stop" : 1707069340456,
         "duration" : 0
       },
       "status" : "passed",
@@ -120,10 +90,25 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Assert status code: 200 == Response status code: 200",
+      "name" : "Assert status code: 201 == Response status code: 201",
       "time" : {
-        "start" : 1707067367879,
-        "stop" : 1707067367879,
+        "start" : 1707069340456,
+        "stop" : 1707069340456,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [201]>\nKey: content\nValue: msg[1]: registered successfully",
+      "time" : {
+        "start" : 1707069340456,
+        "stop" : 1707069340456,
         "duration" : 0
       },
       "status" : "passed",
@@ -136,16 +121,16 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "3e66d8ad43ccf352",
+      "uid" : "bbb4b69575eedb9",
       "name" : "stdout",
-      "source" : "3e66d8ad43ccf352.txt",
+      "source" : "bbb4b69575eedb9.txt",
       "type" : "text/plain",
-      "size" : 979
+      "size" : 360
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 8,
+    "stepsCount" : 7,
     "hasContent" : true
   },
   "afterStages" : [ ],
@@ -163,10 +148,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az847-48"
+    "value" : "fv-az891-697"
   }, {
     "name" : "thread",
-    "value" : "1811-MainThread"
+    "value" : "1817-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -193,22 +178,38 @@
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 2,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 2
+        "total" : 4
       },
       "items" : [ {
-        "uid" : "dd2cd32842575e5b",
+        "uid" : "c84b828753f54074",
         "status" : "passed",
         "time" : {
-          "start" : 1706811810572,
-          "stop" : 1706811811207,
-          "duration" : 635
+          "start" : 1707067363933,
+          "stop" : 1707067364271,
+          "duration" : 338
+        }
+      }, {
+        "uid" : "d04f0dbb1b1671d4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706811807370,
+          "stop" : 1706811807710,
+          "duration" : 340
+        }
+      }, {
+        "uid" : "c7c87f3cde950432",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706810608502,
+          "stop" : 1706810608837,
+          "duration" : 335
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "ab196ae456e2efda.json",
+  "source" : "72d56d400454a4fd.json",
   "parameterValues" : [ ]
 }

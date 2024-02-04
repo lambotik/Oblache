@@ -1,28 +1,28 @@
 {
-  "uid" : "84c451ae4fb7267f",
+  "uid" : "568fb134bf17d04b",
   "name" : "test_complex",
   "fullName" : "tests.test_bd.TestConnectionDB#test_complex",
   "historyId" : "185984a5f58955473ec81f7620ad9f4d",
   "time" : {
-    "start" : 1707067368562,
-    "stop" : 1707067399249,
-    "duration" : 30687
+    "start" : 1707069344564,
+    "stop" : 1707069375226,
+    "duration" : 30662
   },
   "status" : "broken",
   "statusMessage" : "KeyError: 'db_uuid'",
-  "statusTrace" : "self = <tests.test_bd.TestConnectionDB object at 0x7f52d7e4d060>\n\n    @allure.sub_suite('Complex')\n    def test_complex(self):\n        time.sleep(30)\n>       API.check_full_cycle(TestData.sid)\n\ntests/test_bd.py:183: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsid = {'sid': '476ca2d1-a717-4ad3-909f-6a90c5e49be1'}\n\n    @staticmethod\n    def check_full_cycle(sid):\n        print('\\nCheck Time: ', str(datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")))\n        empty_db_list = API.post_db_list(sid).text\n        result_db_create = API.post_db_create(sid)\n>       db_uuid = result_db_create.json()[\"db_uuid\"]\nE       KeyError: 'db_uuid'\n\nutils/request.py:277: KeyError",
+  "statusTrace" : "self = <tests.test_bd.TestConnectionDB object at 0x7fa28cc685e0>\n\n    @allure.sub_suite('Complex')\n    def test_complex(self):\n        time.sleep(30)\n>       API.check_full_cycle(TestData.sid)\n\ntests/test_bd.py:188: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsid = {'sid': '14194766-321f-4dfe-96a4-b845bf75dad1'}\n\n    @staticmethod\n    def check_full_cycle(sid):\n        print('\\nCheck Time: ', str(datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")))\n        empty_db_list = API.post_db_list(sid).text\n        result_db_create = API.post_db_create(sid)\n>       db_uuid = result_db_create.json()[\"db_uuid\"]\nE       KeyError: 'db_uuid'\n\nutils/request.py:294: KeyError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
     "status" : "broken",
     "statusMessage" : "KeyError: 'db_uuid'",
-    "statusTrace" : "self = <tests.test_bd.TestConnectionDB object at 0x7f52d7e4d060>\n\n    @allure.sub_suite('Complex')\n    def test_complex(self):\n        time.sleep(30)\n>       API.check_full_cycle(TestData.sid)\n\ntests/test_bd.py:183: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsid = {'sid': '476ca2d1-a717-4ad3-909f-6a90c5e49be1'}\n\n    @staticmethod\n    def check_full_cycle(sid):\n        print('\\nCheck Time: ', str(datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")))\n        empty_db_list = API.post_db_list(sid).text\n        result_db_create = API.post_db_create(sid)\n>       db_uuid = result_db_create.json()[\"db_uuid\"]\nE       KeyError: 'db_uuid'\n\nutils/request.py:277: KeyError",
+    "statusTrace" : "self = <tests.test_bd.TestConnectionDB object at 0x7fa28cc685e0>\n\n    @allure.sub_suite('Complex')\n    def test_complex(self):\n        time.sleep(30)\n>       API.check_full_cycle(TestData.sid)\n\ntests/test_bd.py:188: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsid = {'sid': '14194766-321f-4dfe-96a4-b845bf75dad1'}\n\n    @staticmethod\n    def check_full_cycle(sid):\n        print('\\nCheck Time: ', str(datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")))\n        empty_db_list = API.post_db_list(sid).text\n        result_db_create = API.post_db_create(sid)\n>       db_uuid = result_db_create.json()[\"db_uuid\"]\nE       KeyError: 'db_uuid'\n\nutils/request.py:294: KeyError",
     "steps" : [ {
       "name" : "POST https://dbend.areso.pro/db_list",
       "time" : {
-        "start" : 1707067398592,
-        "stop" : 1707067398592,
+        "start" : 1707069374594,
+        "stop" : 1707069374594,
         "duration" : 0
       },
       "status" : "passed",
@@ -36,8 +36,8 @@
     }, {
       "name" : "Status code: 200",
       "time" : {
-        "start" : 1707067398917,
-        "stop" : 1707067398917,
+        "start" : 1707069374915,
+        "stop" : 1707069374915,
         "duration" : 0
       },
       "status" : "passed",
@@ -49,10 +49,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Params url: https://dbend.areso.pro/db_list\nCookies: {'sid': '476ca2d1-a717-4ad3-909f-6a90c5e49be1'}\nBody: {}",
+      "name" : "Params url: https://dbend.areso.pro/db_list\nCookies: {'sid': '14194766-321f-4dfe-96a4-b845bf75dad1'}\nBody: {}",
       "time" : {
-        "start" : 1707067398917,
-        "stop" : 1707067398917,
+        "start" : 1707069374915,
+        "stop" : 1707069374915,
         "duration" : 0
       },
       "status" : "passed",
@@ -66,8 +66,8 @@
     }, {
       "name" : "Response: {\n    \"content\": {\n        \"065a3977-1ea0-739c-8000-5abfcceb40b3\": [\n            \"db_riiz4zca\",\n            \"CIS\",\n            \"deleting\",\n            \"mysql://user_jrlkcd55:pwPW01__E2lV83dlrmTijb@cisdb1.areso.pro:3306/db_riiz4zca\",\n            \"None\"\n        ],\n        \"065a3c88-8731-736f-8000-2851a3e53b9c\": [\n            \"db_pnus4peh\",\n            \"CIS\",\n            \"deleting\",\n            \"mysql://user_iw86gluq:pwPW01__xShBKVNdoLa7Fb@cisdb1.areso.pro:3306/db_pnus4peh\",\n            \"None\"\n        ]\n    }\n}\n",
       "time" : {
-        "start" : 1707067398917,
-        "stop" : 1707067398917,
+        "start" : 1707069374915,
+        "stop" : 1707069374915,
         "duration" : 0
       },
       "status" : "passed",
@@ -81,8 +81,8 @@
     }, {
       "name" : "POST https://dbend.areso.pro/db_create",
       "time" : {
-        "start" : 1707067398918,
-        "stop" : 1707067398918,
+        "start" : 1707069374916,
+        "stop" : 1707069374916,
         "duration" : 0
       },
       "status" : "passed",
@@ -96,8 +96,8 @@
     }, {
       "name" : "Status code: 403",
       "time" : {
-        "start" : 1707067399248,
-        "stop" : 1707067399248,
+        "start" : 1707069375225,
+        "stop" : 1707069375225,
         "duration" : 0
       },
       "status" : "passed",
@@ -109,10 +109,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '476ca2d1-a717-4ad3-909f-6a90c5e49be1'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 3}",
+      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '14194766-321f-4dfe-96a4-b845bf75dad1'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 3}",
       "time" : {
-        "start" : 1707067399248,
-        "stop" : 1707067399248,
+        "start" : 1707069375225,
+        "stop" : 1707069375225,
         "duration" : 0
       },
       "status" : "passed",
@@ -126,8 +126,8 @@
     }, {
       "name" : "Response: {\n    \"content\": \"you are not allowed to create new databases\"\n}\n",
       "time" : {
-        "start" : 1707067399248,
-        "stop" : 1707067399248,
+        "start" : 1707069375225,
+        "stop" : 1707069375225,
         "duration" : 0
       },
       "status" : "passed",
@@ -140,9 +140,9 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "842824a53cb3c2df",
+      "uid" : "4c2432e3e14b5fdf",
       "name" : "stdout",
-      "source" : "842824a53cb3c2df.txt",
+      "source" : "4c2432e3e14b5fdf.txt",
       "type" : "text/plain",
       "size" : 735
     } ],
@@ -157,20 +157,20 @@
     "name" : "epic",
     "value" : "Connection DB"
   }, {
-    "name" : "suite",
-    "value" : "Test Connection DB"
-  }, {
     "name" : "subSuite",
     "value" : "Complex"
+  }, {
+    "name" : "suite",
+    "value" : "Test Connection DB"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
   }, {
     "name" : "host",
-    "value" : "fv-az847-48"
+    "value" : "fv-az891-697"
   }, {
     "name" : "thread",
-    "value" : "1811-MainThread"
+    "value" : "1817-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -199,13 +199,22 @@
     "history" : {
       "statistic" : {
         "failed" : 0,
-        "broken" : 3,
+        "broken" : 4,
         "skipped" : 0,
         "passed" : 0,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
+        "uid" : "84c451ae4fb7267f",
+        "status" : "broken",
+        "statusDetails" : "KeyError: 'db_uuid'",
+        "time" : {
+          "start" : 1707067368562,
+          "stop" : 1707067399249,
+          "duration" : 30687
+        }
+      }, {
         "uid" : "b9abe4318f857364",
         "status" : "broken",
         "statusDetails" : "KeyError: 'db_uuid'",
@@ -227,6 +236,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "84c451ae4fb7267f.json",
+  "source" : "568fb134bf17d04b.json",
   "parameterValues" : [ ]
 }
