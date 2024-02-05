@@ -1,12 +1,12 @@
 {
-  "uid" : "f59e9592d54cf1c6",
-  "name" : "Post db_create with wrong dbtype.",
-  "fullName" : "tests.test_bd.TestPOST#test_post_db_create_with_wrong_values_dbtype",
-  "historyId" : "e69ce9aa1e1ae8013bd8fd0629d5da9b",
+  "uid" : "bcabe0514a433bb0",
+  "name" : "Post db_create with wrong region.",
+  "fullName" : "tests.test_bd.TestPOST#test_post_db_create_with_wrong_values_region",
+  "historyId" : "ab20bf97eee2e17efc3d49666531cfd4",
   "time" : {
-    "start" : 1707149334159,
-    "stop" : 1707149334609,
-    "duration" : 450
+    "start" : 1707150861623,
+    "stop" : 1707150862144,
+    "duration" : 521
   },
   "status" : "passed",
   "flaky" : false,
@@ -17,8 +17,8 @@
     "steps" : [ {
       "name" : "POST https://dbend.areso.pro/db_create",
       "time" : {
-        "start" : 1707149334159,
-        "stop" : 1707149334159,
+        "start" : 1707150861623,
+        "stop" : 1707150861623,
         "duration" : 0
       },
       "status" : "passed",
@@ -32,8 +32,8 @@
     }, {
       "name" : "Status code: 400",
       "time" : {
-        "start" : 1707149334608,
-        "stop" : 1707149334608,
+        "start" : 1707150862142,
+        "stop" : 1707150862142,
         "duration" : 0
       },
       "status" : "passed",
@@ -45,10 +45,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': 'b5190dc5-5c44-4558-a688-b87da7ad19e9'}\nBody: {'dbtype': 76, 'dbversion': 5, 'env': 3, 'region': 3}",
+      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '25cc8b1a-ea65-4e8e-b504-cc193620c15f'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 98}",
       "time" : {
-        "start" : 1707149334608,
-        "stop" : 1707149334608,
+        "start" : 1707150862142,
+        "stop" : 1707150862142,
         "duration" : 0
       },
       "status" : "passed",
@@ -60,10 +60,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Response: {\n    \"content\": \"error: DB type isn't found or isn't available for order\"\n}\n",
+      "name" : "Response: {\n    \"content\": \"error: region isn't found or isn't available for order\"\n}\n",
       "time" : {
-        "start" : 1707149334608,
-        "stop" : 1707149334608,
+        "start" : 1707150862142,
+        "stop" : 1707150862142,
         "duration" : 0
       },
       "status" : "passed",
@@ -77,8 +77,8 @@
     }, {
       "name" : "Assert status code: 400 == Response status code: 400",
       "time" : {
-        "start" : 1707149334608,
-        "stop" : 1707149334608,
+        "start" : 1707150862142,
+        "stop" : 1707150862142,
         "duration" : 0
       },
       "status" : "passed",
@@ -90,10 +90,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: DB type isn't found or isn't available for order",
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: region isn't found or isn't available for order",
       "time" : {
-        "start" : 1707149334608,
-        "stop" : 1707149334608,
+        "start" : 1707150862142,
+        "stop" : 1707150862142,
         "duration" : 0
       },
       "status" : "passed",
@@ -106,11 +106,11 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "f06ce9f3a36f7580",
+      "uid" : "b3e49794f84a4e22",
       "name" : "stdout",
-      "source" : "f06ce9f3a36f7580.txt",
+      "source" : "b3e49794f84a4e22.txt",
       "type" : "text/plain",
-      "size" : 418
+      "size" : 415
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
@@ -133,10 +133,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az1024-918"
+    "value" : "fv-az714-734"
   }, {
     "name" : "thread",
-    "value" : "1781-MainThread"
+    "value" : "1759-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -163,66 +163,74 @@
         "failed" : 4,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 7
+        "total" : 8
       },
       "items" : [ {
-        "uid" : "2fa2d69bec7a3165",
+        "uid" : "b0749c8e5bd1b0e",
         "status" : "passed",
         "time" : {
-          "start" : 1707148229910,
-          "stop" : 1707148230220,
+          "start" : 1707149335236,
+          "stop" : 1707149335557,
+          "duration" : 321
+        }
+      }, {
+        "uid" : "a757116330cd59b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707148230848,
+          "stop" : 1707148231324,
+          "duration" : 476
+        }
+      }, {
+        "uid" : "6cae578441cfbd19",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707069935707,
+          "stop" : 1707069936019,
+          "duration" : 312
+        }
+      }, {
+        "uid" : "a40b213a132f053b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1707069342668,
+          "stop" : 1707069342978,
           "duration" : 310
         }
       }, {
-        "uid" : "35ebf9e4fd61361c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707069934735,
-          "stop" : 1707069935059,
-          "duration" : 324
-        }
-      }, {
-        "uid" : "3ab7ca9e26a24137",
+        "uid" : "5fe6306f5edc400",
         "status" : "failed",
         "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1707069341717,
-          "stop" : 1707069342027,
-          "duration" : 310
+          "start" : 1707067366568,
+          "stop" : 1707067366886,
+          "duration" : 318
         }
       }, {
-        "uid" : "93841f6a082844e",
+        "uid" : "91adc82fc246d94e",
         "status" : "failed",
         "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1707067365594,
-          "stop" : 1707067365908,
-          "duration" : 314
+          "start" : 1706811809943,
+          "stop" : 1706811810251,
+          "duration" : 308
         }
       }, {
-        "uid" : "c2109baefd577336",
+        "uid" : "c1c3bb65fd146434",
         "status" : "failed",
         "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1706811808972,
-          "stop" : 1706811809295,
-          "duration" : 323
-        }
-      }, {
-        "uid" : "fd96d7ba067bd486",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
-        "time" : {
-          "start" : 1706810610286,
-          "stop" : 1706810610616,
+          "start" : 1706810611405,
+          "stop" : 1706810611735,
           "duration" : 330
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "f59e9592d54cf1c6.json",
+  "source" : "bcabe0514a433bb0.json",
   "parameterValues" : [ ]
 }
