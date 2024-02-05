@@ -1,12 +1,12 @@
 {
-  "uid" : "c05eab8c0cebc425",
-  "name" : "Post db_create with wrong dbversion.",
-  "fullName" : "tests.test_bd.TestPOST#test_post_db_create_with_wrong_values_dbversion",
-  "historyId" : "b3a3af92d91b50bdb373eff87221beca",
+  "uid" : "45c7a62b9351e12e",
+  "name" : "Post login",
+  "fullName" : "tests.test_bd.TestPOST#test_post_login",
+  "historyId" : "5914f9f0482414a2ae5ca7174102e25c",
   "time" : {
-    "start" : 1707148230222,
-    "stop" : 1707148230528,
-    "duration" : 306
+    "start" : 1707149333489,
+    "stop" : 1707149333797,
+    "duration" : 308
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,10 +15,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "POST https://dbend.areso.pro/db_create",
+      "name" : "POST https://dbend.areso.pro/login",
       "time" : {
-        "start" : 1707148230222,
-        "stop" : 1707148230222,
+        "start" : 1707149333489,
+        "stop" : 1707149333489,
         "duration" : 0
       },
       "status" : "passed",
@@ -30,10 +30,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Status code: 400",
+      "name" : "Status code: 200",
       "time" : {
-        "start" : 1707148230526,
-        "stop" : 1707148230526,
+        "start" : 1707149333796,
+        "stop" : 1707149333796,
         "duration" : 0
       },
       "status" : "passed",
@@ -45,10 +45,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': '4767fe78-6e57-4c69-9bc9-ecf892466d08'}\nBody: {'dbtype': 3, 'dbversion': 21, 'env': 3, 'region': 3}",
+      "name" : "Params url: https://dbend.areso.pro/login\nBody: {'email': 'test4', 'password': 'testpassword'}",
       "time" : {
-        "start" : 1707148230526,
-        "stop" : 1707148230526,
+        "start" : 1707149333796,
+        "stop" : 1707149333796,
         "duration" : 0
       },
       "status" : "passed",
@@ -60,10 +60,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Response: {\n    \"content\": \"error: DB version isn't found or isn't available for order\"\n}\n",
+      "name" : "Response: msg[6]: login successful",
       "time" : {
-        "start" : 1707148230526,
-        "stop" : 1707148230526,
+        "start" : 1707149333796,
+        "stop" : 1707149333796,
         "duration" : 0
       },
       "status" : "passed",
@@ -75,10 +75,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Assert status code: 400 == Response status code: 400",
+      "name" : "Body: {\"email\":\"your_email\",\"password\":\"your_password\"}",
       "time" : {
-        "start" : 1707148230527,
-        "stop" : 1707148230527,
+        "start" : 1707149333796,
+        "stop" : 1707149333796,
         "duration" : 0
       },
       "status" : "passed",
@@ -90,10 +90,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: DB version isn't found or isn't available for order",
+      "name" : "Assert status code: 200 == Response status code: 200",
       "time" : {
-        "start" : 1707148230527,
-        "stop" : 1707148230527,
+        "start" : 1707149333796,
+        "stop" : 1707149333796,
         "duration" : 0
       },
       "status" : "passed",
@@ -106,11 +106,11 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "7d1c92cdea37900e",
+      "uid" : "d05afc1a3d226081",
       "name" : "stdout",
-      "source" : "7d1c92cdea37900e.txt",
+      "source" : "d05afc1a3d226081.txt",
       "type" : "text/plain",
-      "size" : 431
+      "size" : 351
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
@@ -120,11 +120,11 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "suite",
-    "value" : "POST"
-  }, {
     "name" : "epic",
     "value" : "POST REQUESTS"
+  }, {
+    "name" : "suite",
+    "value" : "POST"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
@@ -133,10 +133,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az570-650"
+    "value" : "fv-az1024-918"
   }, {
     "name" : "thread",
-    "value" : "1786-MainThread"
+    "value" : "1781-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -160,61 +160,65 @@
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 4,
+        "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 2,
+        "passed" : 7,
         "unknown" : 0,
-        "total" : 6
+        "total" : 7
       },
       "items" : [ {
-        "uid" : "ef06eb378a5dee0a",
+        "uid" : "a21f6514406072b1",
         "status" : "passed",
         "time" : {
-          "start" : 1707069935061,
-          "stop" : 1707069935376,
-          "duration" : 315
+          "start" : 1707148229215,
+          "stop" : 1707148229524,
+          "duration" : 309
         }
       }, {
-        "uid" : "85c87e38cd5eb558",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
+        "uid" : "70f6aa61ac799d96",
+        "status" : "passed",
         "time" : {
-          "start" : 1707069342037,
-          "stop" : 1707069342345,
-          "duration" : 308
+          "start" : 1707069934066,
+          "stop" : 1707069934367,
+          "duration" : 301
         }
       }, {
-        "uid" : "fe3020d09658a7b1",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
+        "uid" : "25661a63170ade68",
+        "status" : "passed",
         "time" : {
-          "start" : 1707067365915,
-          "stop" : 1707067366234,
-          "duration" : 319
+          "start" : 1707069341090,
+          "stop" : 1707069341397,
+          "duration" : 307
         }
       }, {
-        "uid" : "98d51cbf2a867e7b",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
+        "uid" : "6daf7dd8f1d06e3f",
+        "status" : "passed",
         "time" : {
-          "start" : 1706811809301,
-          "stop" : 1706811809615,
-          "duration" : 314
+          "start" : 1707067364941,
+          "stop" : 1707067365252,
+          "duration" : 311
         }
       }, {
-        "uid" : "8be957dbc8159f98",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
+        "uid" : "3413669503925c1f",
+        "status" : "passed",
         "time" : {
-          "start" : 1706810610623,
-          "stop" : 1706810611058,
-          "duration" : 435
+          "start" : 1706811808352,
+          "stop" : 1706811808662,
+          "duration" : 310
+        }
+      }, {
+        "uid" : "bd79923db66cbd43",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706810609618,
+          "stop" : 1706810609941,
+          "duration" : 323
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "c05eab8c0cebc425.json",
+  "source" : "45c7a62b9351e12e.json",
   "parameterValues" : [ ]
 }
