@@ -1,186 +1,190 @@
 {
-  "uid" : "2732c79d4796a09d",
+  "uid" : "f7c9c30b04e454bd",
   "name" : "delete db",
   "fullName" : "tests.test_bd.TestPOST#test_delete_db",
   "historyId" : "6b562f8bf571af52594cf0d13d8f83e3",
   "time" : {
-    "start" : 1707155594018,
-    "stop" : 1707155594675,
-    "duration" : 657
+    "start" : 1707391214403,
+    "stop" : 1707391215144,
+    "duration" : 741
   },
-  "status" : "passed",
-  "statusMessage" : "XPASS",
+  "status" : "skipped",
+  "statusMessage" : "XFAIL\n\nAssertionError: Incorrect status code",
+  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7ff4d5e40430>\n\n    @allure.title('delete db')\n    @pytest.mark.xfail()\n    def test_delete_db(self):\n        print('\\n\\nMethod DELETE: delete_db')\n        list_db = API.post_db_list(TestData.sid)\n        json_list_db = json.loads(list_db.text)\n        try:\n            first_db_uuid = list(json_list_db['content'].keys())[0]\n            result_post_db_delete = API.delete_db(first_db_uuid, TestData.sid)\n>           Checking.check_status_code(result_post_db_delete, 200)\n\ntests/test_bd.py:224: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [400]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
-    "status" : "passed",
-    "statusMessage" : "XPASS",
+    "status" : "skipped",
+    "statusMessage" : "XFAIL\n\nAssertionError: Incorrect status code",
+    "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7ff4d5e40430>\n\n    @allure.title('delete db')\n    @pytest.mark.xfail()\n    def test_delete_db(self):\n        print('\\n\\nMethod DELETE: delete_db')\n        list_db = API.post_db_list(TestData.sid)\n        json_list_db = json.loads(list_db.text)\n        try:\n            first_db_uuid = list(json_list_db['content'].keys())[0]\n            result_post_db_delete = API.delete_db(first_db_uuid, TestData.sid)\n>           Checking.check_status_code(result_post_db_delete, 200)\n\ntests/test_bd.py:224: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [400]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\nutils/checking.py:18: AssertionError",
     "steps" : [ {
       "name" : "POST https://dbend.areso.pro/db_list",
       "time" : {
-        "start" : 1707155594018,
-        "stop" : 1707155594018,
+        "start" : 1707391214403,
+        "stop" : 1707391214403,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Status code: 200",
       "time" : {
-        "start" : 1707155594331,
-        "stop" : 1707155594331,
+        "start" : 1707391214769,
+        "stop" : 1707391214769,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Params url: https://dbend.areso.pro/db_list",
       "time" : {
-        "start" : 1707155594331,
-        "stop" : 1707155594331,
+        "start" : 1707391214769,
+        "stop" : 1707391214769,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Response: <Response [200]>",
       "time" : {
-        "start" : 1707155594331,
-        "stop" : 1707155594331,
+        "start" : 1707391214769,
+        "stop" : 1707391214769,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "DELETE https://dbend.areso.pro/db_delete",
       "time" : {
-        "start" : 1707155594331,
-        "stop" : 1707155594331,
+        "start" : 1707391214769,
+        "stop" : 1707391214769,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
-      "name" : "Db uuid is: {'db_uuid': '065c11ef-7198-768e-8000-f78929d14454'}",
+      "name" : "Db uuid is: {'db_uuid': '065c2cf5-8d15-7d52-8000-ca909fb8e389'}",
       "time" : {
-        "start" : 1707155594331,
-        "stop" : 1707155594331,
+        "start" : 1707391214769,
+        "stop" : 1707391214769,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
-      "name" : "Status code: 200",
+      "name" : "Status code: 400",
       "time" : {
-        "start" : 1707155594673,
-        "stop" : 1707155594673,
+        "start" : 1707391215144,
+        "stop" : 1707391215144,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
       "name" : "Params url: https://dbend.areso.pro/db_delete",
       "time" : {
-        "start" : 1707155594673,
-        "stop" : 1707155594673,
+        "start" : 1707391215144,
+        "stop" : 1707391215144,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
-      "name" : "Response: <Response [200]>",
+      "name" : "Response: <Response [400]>",
       "time" : {
-        "start" : 1707155594673,
-        "stop" : 1707155594673,
+        "start" : 1707391215144,
+        "stop" : 1707391215144,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "stepsCount" : 0,
+      "hasContent" : false
     }, {
-      "name" : "Assert status code: 200 == Response status code: 200",
+      "name" : "Assert status code: 200 == Response status code: 400",
       "time" : {
-        "start" : 1707155594673,
-        "stop" : 1707155594673,
+        "start" : 1707391215144,
+        "stop" : 1707391215144,
         "duration" : 0
       },
-      "status" : "passed",
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Incorrect status code\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/utils/checking.py\", line 18, in check_status_code\n    assert status_code == result.status_code, 'Incorrect status code'\n",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "stepsCount" : 0
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0,
+      "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "hasContent" : true,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : true,
-    "stepsCount" : 10
+    "stepsCount" : 10,
+    "hasContent" : true
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "suite",
-    "value" : "POST"
-  }, {
     "name" : "epic",
     "value" : "POST REQUESTS"
+  }, {
+    "name" : "suite",
+    "value" : "POST"
   }, {
     "name" : "tag",
     "value" : "@pytest.mark.xfail"
@@ -192,10 +196,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az1499-314"
+    "value" : "fv-az975-706"
   }, {
     "name" : "thread",
-    "value" : "1782-MainThread"
+    "value" : "1770-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -221,12 +225,21 @@
       "statistic" : {
         "failed" : 0,
         "broken" : 0,
-        "skipped" : 5,
+        "skipped" : 6,
         "passed" : 7,
         "unknown" : 0,
-        "total" : 12
+        "total" : 13
       },
       "items" : [ {
+        "uid" : "2732c79d4796a09d",
+        "status" : "passed",
+        "statusDetails" : "XPASS",
+        "time" : {
+          "start" : 1707155594018,
+          "stop" : 1707155594675,
+          "duration" : 657
+        }
+      }, {
         "uid" : "d4455d3425d4965a",
         "status" : "passed",
         "statusDetails" : "XPASS",
@@ -329,6 +342,6 @@
     },
     "tags" : [ "@pytest.mark.xfail" ]
   },
-  "source" : "2732c79d4796a09d.json",
+  "source" : "f7c9c30b04e454bd.json",
   "parameterValues" : [ ]
 }
