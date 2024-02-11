@@ -1,12 +1,12 @@
 {
-  "uid" : "c480e8c53640e8fd",
-  "name" : "Post db_create with wrong env.",
-  "fullName" : "tests.test_bd.TestPOST#test_post_db_create_with_wrong_values_env",
-  "historyId" : "06336b61428442869c62a34b831535e4",
+  "uid" : "2c72fa767e51e9f5",
+  "name" : "Post registration email is taken",
+  "fullName" : "tests.test_bd.TestPOST#test_post_registration_email_is_taken",
+  "historyId" : "0f4134fbee9ce9a1e38b38e03bf163a2",
   "time" : {
-    "start" : 1707680708904,
-    "stop" : 1707680709221,
-    "duration" : 317
+    "start" : 1707682360301,
+    "stop" : 1707682360620,
+    "duration" : 319
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,19 +15,19 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "post_db_create_wrong_value_env",
+      "name" : "post_registration",
       "time" : {
-        "start" : 1707680708904,
-        "stop" : 1707680709220,
-        "duration" : 316
+        "start" : 1707682360301,
+        "stop" : 1707682360619,
+        "duration" : 318
       },
       "status" : "passed",
       "steps" : [ {
-        "name" : "POST https://dbend.areso.pro/db_create",
+        "name" : "POST https://dbend.areso.pro/register",
         "time" : {
-          "start" : 1707680708904,
-          "stop" : 1707680708905,
-          "duration" : 1
+          "start" : 1707682360301,
+          "stop" : 1707682360301,
+          "duration" : 0
         },
         "status" : "passed",
         "steps" : [ ],
@@ -40,8 +40,8 @@
       }, {
         "name" : "Status code: 400",
         "time" : {
-          "start" : 1707680709220,
-          "stop" : 1707680709220,
+          "start" : 1707682360619,
+          "stop" : 1707682360619,
           "duration" : 0
         },
         "status" : "passed",
@@ -53,10 +53,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': 'efa23f8c-95b1-436b-a769-7ed81aa40fa8'}\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 21, 'region': 3}",
+        "name" : "Params url: https://dbend.areso.pro/register",
         "time" : {
-          "start" : 1707680709220,
-          "stop" : 1707680709220,
+          "start" : 1707682360619,
+          "stop" : 1707682360619,
           "duration" : 0
         },
         "status" : "passed",
@@ -70,8 +70,8 @@
       }, {
         "name" : "Response: <Response [400]>",
         "time" : {
-          "start" : 1707680709220,
-          "stop" : 1707680709220,
+          "start" : 1707682360619,
+          "stop" : 1707682360619,
           "duration" : 0
         },
         "status" : "passed",
@@ -84,10 +84,7 @@
         "hasContent" : false
       } ],
       "attachments" : [ ],
-      "parameters" : [ {
-        "name" : "sid",
-        "value" : "{'sid': 'efa23f8c-95b1-436b-a769-7ed81aa40fa8'}"
-      } ],
+      "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
       "stepsCount" : 4,
@@ -95,8 +92,8 @@
     }, {
       "name" : "Assert status code: 400 == Response status code: 400",
       "time" : {
-        "start" : 1707680709220,
-        "stop" : 1707680709220,
+        "start" : 1707682360619,
+        "stop" : 1707682360619,
         "duration" : 0
       },
       "status" : "passed",
@@ -108,10 +105,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: DB environment isn't found or isn't available for order",
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: msg[3]: registration failed, this email is taken",
       "time" : {
-        "start" : 1707680709220,
-        "stop" : 1707680709220,
+        "start" : 1707682360620,
+        "stop" : 1707682360620,
         "duration" : 0
       },
       "status" : "passed",
@@ -145,10 +142,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az849-70"
+    "value" : "fv-az1152-95"
   }, {
     "name" : "thread",
-    "value" : "1797-MainThread"
+    "value" : "1843-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -172,157 +169,162 @@
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 4,
-        "broken" : 0,
+        "failed" : 0,
+        "broken" : 1,
         "skipped" : 0,
-        "passed" : 14,
+        "passed" : 18,
         "unknown" : 0,
-        "total" : 18
+        "total" : 19
       },
       "items" : [ {
-        "uid" : "63aed631294f9e57",
+        "uid" : "53bc01f120f5e6ed",
         "status" : "passed",
         "time" : {
-          "start" : 1707679066037,
-          "stop" : 1707679066548,
-          "duration" : 511
+          "start" : 1707680707296,
+          "stop" : 1707680707604,
+          "duration" : 308
         }
       }, {
-        "uid" : "645d128a41c3f1f2",
+        "uid" : "cf7d2d3ad570cf13",
         "status" : "passed",
         "time" : {
-          "start" : 1707673170456,
-          "stop" : 1707673170830,
-          "duration" : 374
+          "start" : 1707679063420,
+          "stop" : 1707679063930,
+          "duration" : 510
         }
       }, {
-        "uid" : "44618da1ceef01b7",
+        "uid" : "3c9c403a2210e3d9",
         "status" : "passed",
         "time" : {
-          "start" : 1707672756430,
-          "stop" : 1707672756751,
-          "duration" : 321
+          "start" : 1707673168508,
+          "stop" : 1707673168867,
+          "duration" : 359
         }
       }, {
-        "uid" : "d38c06eb3dbb6cdb",
+        "uid" : "b193e63e0628d0de",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: type object 'TestData' has no attribute 'password'",
+        "time" : {
+          "start" : 1707672755076,
+          "stop" : 1707672755076,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8dba64cff8e3d38b",
         "status" : "passed",
         "time" : {
-          "start" : 1707391665316,
-          "stop" : 1707391665824,
-          "duration" : 508
+          "start" : 1707391662680,
+          "stop" : 1707391663192,
+          "duration" : 512
         }
       }, {
-        "uid" : "14400ba2ce319b8a",
+        "uid" : "ad0a8d2b7b0b4b6",
         "status" : "passed",
         "time" : {
-          "start" : 1707391212552,
-          "stop" : 1707391212927,
-          "duration" : 375
+          "start" : 1707391210644,
+          "stop" : 1707391211008,
+          "duration" : 364
         }
       }, {
-        "uid" : "80c6e0f29255f285",
+        "uid" : "3d05d75d680b301c",
         "status" : "passed",
         "time" : {
-          "start" : 1707155592462,
-          "stop" : 1707155592775,
-          "duration" : 313
+          "start" : 1707155590856,
+          "stop" : 1707155591159,
+          "duration" : 303
         }
       }, {
-        "uid" : "7ee5592f584bd1f5",
+        "uid" : "87028dd34bd1a90c",
         "status" : "passed",
         "time" : {
-          "start" : 1707155478809,
-          "stop" : 1707155479315,
-          "duration" : 506
+          "start" : 1707155476148,
+          "stop" : 1707155476688,
+          "duration" : 540
         }
       }, {
-        "uid" : "89ca4ec43c117b99",
+        "uid" : "d5627c296a23b54",
         "status" : "passed",
         "time" : {
-          "start" : 1707154332019,
-          "stop" : 1707154332540,
-          "duration" : 521
+          "start" : 1707154329382,
+          "stop" : 1707154329895,
+          "duration" : 513
         }
       }, {
-        "uid" : "d35b1019f5d44ad0",
+        "uid" : "db858213d06a4e01",
         "status" : "passed",
         "time" : {
-          "start" : 1707151589284,
-          "stop" : 1707151589801,
-          "duration" : 517
+          "start" : 1707151586675,
+          "stop" : 1707151587191,
+          "duration" : 516
         }
       }, {
-        "uid" : "ca9bc2bad614ea7b",
+        "uid" : "bdbb9ef851f6bb6f",
         "status" : "passed",
         "time" : {
-          "start" : 1707150861080,
-          "stop" : 1707150861622,
-          "duration" : 542
+          "start" : 1707150858410,
+          "stop" : 1707150858942,
+          "duration" : 532
         }
       }, {
-        "uid" : "f05425ac49ea23e0",
+        "uid" : "be9bec08fdd5f793",
         "status" : "passed",
         "time" : {
-          "start" : 1707149334921,
-          "stop" : 1707149335234,
-          "duration" : 313
-        }
-      }, {
-        "uid" : "aead0c681e078a0e",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707148230530,
-          "stop" : 1707148230847,
-          "duration" : 317
-        }
-      }, {
-        "uid" : "aa3c55eab5540735",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707069935378,
-          "stop" : 1707069935706,
-          "duration" : 328
-        }
-      }, {
-        "uid" : "d068603cbddc330a",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
-        "time" : {
-          "start" : 1707069342352,
-          "stop" : 1707069342661,
-          "duration" : 309
-        }
-      }, {
-        "uid" : "c24196de95996f68",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
-        "time" : {
-          "start" : 1707067366241,
-          "stop" : 1707067366559,
-          "duration" : 318
-        }
-      }, {
-        "uid" : "65a2dd01f2320fca",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
-        "time" : {
-          "start" : 1706811809624,
-          "stop" : 1706811809936,
+          "start" : 1707149333176,
+          "stop" : 1707149333488,
           "duration" : 312
         }
       }, {
-        "uid" : "d04baf212873b8a",
-        "status" : "failed",
-        "statusDetails" : "AssertionError: Incorrect status code",
+        "uid" : "7b6b131441c85194",
+        "status" : "passed",
         "time" : {
-          "start" : 1706810611064,
-          "stop" : 1706810611395,
-          "duration" : 331
+          "start" : 1707148228900,
+          "stop" : 1707148229213,
+          "duration" : 313
+        }
+      }, {
+        "uid" : "da8154f1c3f46e91",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707069933758,
+          "stop" : 1707069934064,
+          "duration" : 306
+        }
+      }, {
+        "uid" : "c142e901a758e09a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707069340778,
+          "stop" : 1707069341088,
+          "duration" : 310
+        }
+      }, {
+        "uid" : "ed3cbbe0b7c61c4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707067364623,
+          "stop" : 1707067364940,
+          "duration" : 317
+        }
+      }, {
+        "uid" : "4f142fa1785a14fd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706811808039,
+          "stop" : 1706811808350,
+          "duration" : 311
+        }
+      }, {
+        "uid" : "e75bd6e9259a8f2d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1706810609286,
+          "stop" : 1706810609616,
+          "duration" : 330
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "c480e8c53640e8fd.json",
+  "source" : "2c72fa767e51e9f5.json",
   "parameterValues" : [ ]
 }

@@ -1,12 +1,12 @@
 {
-  "uid" : "d6553e0df88f492f",
-  "name" : "Post db_create with wrong db_type.",
-  "fullName" : "tests.test_bd.TestPOST#test_post_db_create_with_wrong_values_dbtype",
-  "historyId" : "e69ce9aa1e1ae8013bd8fd0629d5da9b",
+  "uid" : "fe289b28b8de8835",
+  "name" : "Post db_create with wrong region.",
+  "fullName" : "tests.test_bd.TestPOST#test_post_db_create_with_wrong_values_region",
+  "historyId" : "ab20bf97eee2e17efc3d49666531cfd4",
   "time" : {
-    "start" : 1707680708274,
-    "stop" : 1707680708588,
-    "duration" : 314
+    "start" : 1707682362287,
+    "stop" : 1707682362605,
+    "duration" : 318
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,18 +15,18 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "post_db_create_wrong_value_db_type",
+      "name" : "post_db_create_wrong_value_region",
       "time" : {
-        "start" : 1707680708275,
-        "stop" : 1707680708587,
-        "duration" : 312
+        "start" : 1707682362287,
+        "stop" : 1707682362604,
+        "duration" : 317
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "POST https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1707680708275,
-          "stop" : 1707680708275,
+          "start" : 1707682362287,
+          "stop" : 1707682362287,
           "duration" : 0
         },
         "status" : "passed",
@@ -40,8 +40,8 @@
       }, {
         "name" : "Status code: 400",
         "time" : {
-          "start" : 1707680708587,
-          "stop" : 1707680708587,
+          "start" : 1707682362603,
+          "stop" : 1707682362603,
           "duration" : 0
         },
         "status" : "passed",
@@ -53,10 +53,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: {'sid': 'efa23f8c-95b1-436b-a769-7ed81aa40fa8'}\nBody: {'dbtype': 29, 'dbversion': 5, 'env': 3, 'region': 3}",
+        "name" : "Params url: https://dbend.areso.pro/db_create\nCookies: sid\nBody: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 5}",
         "time" : {
-          "start" : 1707680708587,
-          "stop" : 1707680708587,
+          "start" : 1707682362603,
+          "stop" : 1707682362603,
           "duration" : 0
         },
         "status" : "passed",
@@ -70,8 +70,8 @@
       }, {
         "name" : "Response: <Response [400]>",
         "time" : {
-          "start" : 1707680708587,
-          "stop" : 1707680708587,
+          "start" : 1707682362603,
+          "stop" : 1707682362603,
           "duration" : 0
         },
         "status" : "passed",
@@ -86,7 +86,7 @@
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "sid",
-        "value" : "{'sid': 'efa23f8c-95b1-436b-a769-7ed81aa40fa8'}"
+        "value" : "{'sid': '3def191d-4dfe-46b5-a23a-463dc78836d4'}"
       } ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
@@ -95,8 +95,8 @@
     }, {
       "name" : "Assert status code: 400 == Response status code: 400",
       "time" : {
-        "start" : 1707680708587,
-        "stop" : 1707680708587,
+        "start" : 1707682362604,
+        "stop" : 1707682362604,
         "duration" : 0
       },
       "status" : "passed",
@@ -108,10 +108,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: DB type isn't found or isn't available for order",
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: region isn't found or isn't available for order",
       "time" : {
-        "start" : 1707680708587,
-        "stop" : 1707680708587,
+        "start" : 1707682362604,
+        "stop" : 1707682362604,
         "duration" : 0
       },
       "status" : "passed",
@@ -145,10 +145,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az849-70"
+    "value" : "fv-az1152-95"
   }, {
     "name" : "thread",
-    "value" : "1797-MainThread"
+    "value" : "1843-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -175,154 +175,162 @@
         "failed" : 4,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 14,
+        "passed" : 15,
         "unknown" : 0,
-        "total" : 18
+        "total" : 19
       },
       "items" : [ {
-        "uid" : "1e0ccff465f75be5",
+        "uid" : "5e0f24694ca7c11d",
         "status" : "passed",
         "time" : {
-          "start" : 1707679065008,
-          "stop" : 1707679065523,
-          "duration" : 515
+          "start" : 1707680709223,
+          "stop" : 1707680709533,
+          "duration" : 310
         }
       }, {
-        "uid" : "4d866b3ce1507d57",
+        "uid" : "60534c71788258cc",
         "status" : "passed",
         "time" : {
-          "start" : 1707673169706,
-          "stop" : 1707673170088,
-          "duration" : 382
-        }
-      }, {
-        "uid" : "5e6c8f6fc87bb49c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707672755780,
-          "stop" : 1707672756107,
-          "duration" : 327
-        }
-      }, {
-        "uid" : "1fc05d91a8938a91",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707391664270,
-          "stop" : 1707391664789,
-          "duration" : 519
-        }
-      }, {
-        "uid" : "4461d45b3bee5b62",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707391211800,
-          "stop" : 1707391212169,
-          "duration" : 369
-        }
-      }, {
-        "uid" : "b49ff0e10ca3c6e0",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707155591829,
-          "stop" : 1707155592137,
-          "duration" : 308
-        }
-      }, {
-        "uid" : "9b934279a66d256c",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707155477773,
-          "stop" : 1707155478292,
-          "duration" : 519
-        }
-      }, {
-        "uid" : "b231a3da8bd2cb4b",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707154330996,
-          "stop" : 1707154331504,
-          "duration" : 508
-        }
-      }, {
-        "uid" : "48d4c41971075b0f",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707151588243,
-          "stop" : 1707151588751,
-          "duration" : 508
-        }
-      }, {
-        "uid" : "676a2fe7dc70ed75",
-        "status" : "passed",
-        "time" : {
-          "start" : 1707150860043,
-          "stop" : 1707150860572,
+          "start" : 1707679066550,
+          "stop" : 1707679067079,
           "duration" : 529
         }
       }, {
-        "uid" : "f59e9592d54cf1c6",
+        "uid" : "b49c8c0a086fb53d",
         "status" : "passed",
         "time" : {
-          "start" : 1707149334159,
-          "stop" : 1707149334609,
-          "duration" : 450
+          "start" : 1707673170832,
+          "stop" : 1707673171197,
+          "duration" : 365
         }
       }, {
-        "uid" : "2fa2d69bec7a3165",
+        "uid" : "d9efad9871cceda9",
         "status" : "passed",
         "time" : {
-          "start" : 1707148229910,
-          "stop" : 1707148230220,
+          "start" : 1707672756752,
+          "stop" : 1707672757069,
+          "duration" : 317
+        }
+      }, {
+        "uid" : "4b209f23ff9f12ab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707391665826,
+          "stop" : 1707391666334,
+          "duration" : 508
+        }
+      }, {
+        "uid" : "ec369b22943d5cbc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707391212929,
+          "stop" : 1707391213290,
+          "duration" : 361
+        }
+      }, {
+        "uid" : "bd397341d5532462",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707155592776,
+          "stop" : 1707155593086,
           "duration" : 310
         }
       }, {
-        "uid" : "35ebf9e4fd61361c",
+        "uid" : "23917f44ef87478a",
         "status" : "passed",
         "time" : {
-          "start" : 1707069934735,
-          "stop" : 1707069935059,
-          "duration" : 324
+          "start" : 1707155479317,
+          "stop" : 1707155479828,
+          "duration" : 511
         }
       }, {
-        "uid" : "3ab7ca9e26a24137",
+        "uid" : "c2e2dcf9f6484bfc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707154332542,
+          "stop" : 1707154333059,
+          "duration" : 517
+        }
+      }, {
+        "uid" : "8bf06ec776241121",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707151589802,
+          "stop" : 1707151590325,
+          "duration" : 523
+        }
+      }, {
+        "uid" : "bcabe0514a433bb0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707150861623,
+          "stop" : 1707150862144,
+          "duration" : 521
+        }
+      }, {
+        "uid" : "b0749c8e5bd1b0e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707149335236,
+          "stop" : 1707149335557,
+          "duration" : 321
+        }
+      }, {
+        "uid" : "a757116330cd59b5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707148230848,
+          "stop" : 1707148231324,
+          "duration" : 476
+        }
+      }, {
+        "uid" : "6cae578441cfbd19",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707069935707,
+          "stop" : 1707069936019,
+          "duration" : 312
+        }
+      }, {
+        "uid" : "a40b213a132f053b",
         "status" : "failed",
         "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1707069341717,
-          "stop" : 1707069342027,
+          "start" : 1707069342668,
+          "stop" : 1707069342978,
           "duration" : 310
         }
       }, {
-        "uid" : "93841f6a082844e",
+        "uid" : "5fe6306f5edc400",
         "status" : "failed",
         "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1707067365594,
-          "stop" : 1707067365908,
-          "duration" : 314
+          "start" : 1707067366568,
+          "stop" : 1707067366886,
+          "duration" : 318
         }
       }, {
-        "uid" : "c2109baefd577336",
+        "uid" : "91adc82fc246d94e",
         "status" : "failed",
         "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1706811808972,
-          "stop" : 1706811809295,
-          "duration" : 323
+          "start" : 1706811809943,
+          "stop" : 1706811810251,
+          "duration" : 308
         }
       }, {
-        "uid" : "fd96d7ba067bd486",
+        "uid" : "c1c3bb65fd146434",
         "status" : "failed",
         "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1706810610286,
-          "stop" : 1706810610616,
+          "start" : 1706810611405,
+          "stop" : 1706810611735,
           "duration" : 330
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "d6553e0df88f492f.json",
+  "source" : "fe289b28b8de8835.json",
   "parameterValues" : [ ]
 }
