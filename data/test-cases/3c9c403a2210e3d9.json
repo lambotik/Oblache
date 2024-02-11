@@ -1,19 +1,117 @@
 {
-  "uid" : "b193e63e0628d0de",
+  "uid" : "3c9c403a2210e3d9",
   "name" : "Post registration email is taken",
   "fullName" : "tests.test_bd.TestPOST#test_post_registration_email_is_taken",
   "historyId" : "0f4134fbee9ce9a1e38b38e03bf163a2",
   "time" : {
-    "start" : 1707672755076,
-    "stop" : 1707672755076,
-    "duration" : 0
+    "start" : 1707673168508,
+    "stop" : 1707673168867,
+    "duration" : 359
   },
-  "status" : "broken",
-  "statusMessage" : "AttributeError: type object 'TestData' has no attribute 'password'",
-  "statusTrace" : "self = <tests.test_bd.TestPOST object at 0x7fc495441b70>\n\n    @allure.title('Post registration email is taken')\n    def test_post_registration_email_is_taken(self):\n        print('\\n\\nMethod POST: registration')\n>       result_post = API.post_registration()\n\ntests/test_bd.py:152: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n    @staticmethod\n    def post_registration():\n        \"\"\"\n        Method for create new user\n        :return: JSON Response\n        \"\"\"\n>       json_for_create_new_user = {\"email\": TestData.email, \"password\": TestData.password}\nE       AttributeError: type object 'TestData' has no attribute 'password'\n\nutils/request.py:117: AttributeError",
+  "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST https://dbend.areso.pro/register",
+      "time" : {
+        "start" : 1707673168508,
+        "stop" : 1707673168508,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Status code: 400",
+      "time" : {
+        "start" : 1707673168865,
+        "stop" : 1707673168865,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Params url: https://dbend.areso.pro/register",
+      "time" : {
+        "start" : 1707673168865,
+        "stop" : 1707673168865,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Response: <Response [400]>",
+      "time" : {
+        "start" : 1707673168865,
+        "stop" : 1707673168865,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1707673168865,
+        "stop" : 1707673168866,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: msg[3]: registration failed, this email is taken",
+      "time" : {
+        "start" : 1707673168866,
+        "stop" : 1707673168866,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 6,
+    "hasContent" : true
+  },
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "suite",
@@ -29,10 +127,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az702-205"
+    "value" : "fv-az1014-530"
   }, {
     "name" : "thread",
-    "value" : "1862-MainThread"
+    "value" : "1790-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -53,21 +151,26 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ ],
-    "categories" : [ {
-      "name" : "Test defects",
-      "matchedStatuses" : [ ],
-      "flaky" : false
-    } ],
+    "categories" : [ ],
     "history" : {
       "statistic" : {
         "failed" : 0,
         "broken" : 1,
         "skipped" : 0,
-        "passed" : 14,
+        "passed" : 15,
         "unknown" : 0,
-        "total" : 15
+        "total" : 16
       },
       "items" : [ {
+        "uid" : "b193e63e0628d0de",
+        "status" : "broken",
+        "statusDetails" : "AttributeError: type object 'TestData' has no attribute 'password'",
+        "time" : {
+          "start" : 1707672755076,
+          "stop" : 1707672755076,
+          "duration" : 0
+        }
+      }, {
         "uid" : "8dba64cff8e3d38b",
         "status" : "passed",
         "time" : {
@@ -183,6 +286,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "b193e63e0628d0de.json",
+  "source" : "3c9c403a2210e3d9.json",
   "parameterValues" : [ ]
 }
