@@ -1,36 +1,36 @@
 {
-  "uid" : "137e7c9947b115f3",
+  "uid" : "544819fbc8158f3",
   "name" : "test_capacity_db",
   "fullName" : "tests_api.test_bd.TestCapacity#test_capacity_db",
   "historyId" : "d4e63d876bdadc96b0cb07e9735e72e1",
   "time" : {
-    "start" : 1708879080167,
-    "stop" : 1708879080837,
-    "duration" : 670
+    "start" : 1708881021770,
+    "stop" : 1708881022835,
+    "duration" : 1065
   },
   "status" : "broken",
   "statusMessage" : "KeyError: 'db_uuid'",
-  "statusTrace" : "self = <tests_api.test_bd.TestCapacity object at 0x7fa69dbd36d0>\n\n    @allure.title('test_capacity_db')\n    def test_capacity_db(self):\n        start_mb_value = API.get_profile(TestData.token).json()['data'][\"content\"][4][1]\n        print('Db size mb:', start_mb_value)\n        result_db_create = API.post_db_create(TestData.token)\n        print('Status db is :', result_db_create.json())\n>       db_uuid = result_db_create.json()[\"db_uuid\"]\nE       KeyError: 'db_uuid'\n\ntests_api/test_bd.py:32: KeyError",
+  "statusTrace" : "self = <tests_api.test_bd.TestCapacity object at 0x7f500c2f7e20>\n\n    @allure.title('test_capacity_db')\n    def test_capacity_db(self):\n        start_mb_value = API.get_profile(TestData.token).json()['data'][\"content\"][4][1]\n        print('Db size mb:', start_mb_value)\n        result_db_create = API.post_db_create(TestData.token)\n        print('Status db is :', result_db_create.json())\n>       db_uuid = result_db_create.json()[\"db_uuid\"]\nE       KeyError: 'db_uuid'\n\ntests_api/test_bd.py:32: KeyError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
     "status" : "broken",
     "statusMessage" : "KeyError: 'db_uuid'",
-    "statusTrace" : "self = <tests_api.test_bd.TestCapacity object at 0x7fa69dbd36d0>\n\n    @allure.title('test_capacity_db')\n    def test_capacity_db(self):\n        start_mb_value = API.get_profile(TestData.token).json()['data'][\"content\"][4][1]\n        print('Db size mb:', start_mb_value)\n        result_db_create = API.post_db_create(TestData.token)\n        print('Status db is :', result_db_create.json())\n>       db_uuid = result_db_create.json()[\"db_uuid\"]\nE       KeyError: 'db_uuid'\n\ntests_api/test_bd.py:32: KeyError",
+    "statusTrace" : "self = <tests_api.test_bd.TestCapacity object at 0x7f500c2f7e20>\n\n    @allure.title('test_capacity_db')\n    def test_capacity_db(self):\n        start_mb_value = API.get_profile(TestData.token).json()['data'][\"content\"][4][1]\n        print('Db size mb:', start_mb_value)\n        result_db_create = API.post_db_create(TestData.token)\n        print('Status db is :', result_db_create.json())\n>       db_uuid = result_db_create.json()[\"db_uuid\"]\nE       KeyError: 'db_uuid'\n\ntests_api/test_bd.py:32: KeyError",
     "steps" : [ {
       "name" : "get_profile",
       "time" : {
-        "start" : 1708879080167,
-        "stop" : 1708879080504,
-        "duration" : 337
+        "start" : 1708881021770,
+        "stop" : 1708881022292,
+        "duration" : 522
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "GET https://dbend.areso.pro/get_profile",
         "time" : {
-          "start" : 1708879080167,
-          "stop" : 1708879080167,
+          "start" : 1708881021770,
+          "stop" : 1708881021770,
           "duration" : 0
         },
         "status" : "passed",
@@ -44,8 +44,8 @@
       }, {
         "name" : "Status code: 200",
         "time" : {
-          "start" : 1708879080504,
-          "stop" : 1708879080504,
+          "start" : 1708881022292,
+          "stop" : 1708881022292,
           "duration" : 0
         },
         "status" : "passed",
@@ -59,8 +59,8 @@
       }, {
         "name" : "Response: {\n  \"data\": {\n    \"content\": [\n      [\n        \"email\",\n        \"test4@mail.com\"\n      ],\n      [\n        \"is_blocked\",\n        0\n      ],\n      [\n        \"is_db_creation_allowed\",\n        0\n      ],\n      [\n        \"disk_db_quota\",\n        4\n      ],\n      [\n        \"disk_db_used\",\n        0\n      ],\n      [\n        \"db_qty_quota\",\n        100\n      ],\n      [\n        \"db_qty_used\",\n        38\n      ],\n      [\n        \"id_regions\",\n        \"3\"\n      ]\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": \"GET\",\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Content-type\": \"application/json\"\n  },\n  \"status\": 200\n}\n",
         "time" : {
-          "start" : 1708879080504,
-          "stop" : 1708879080504,
+          "start" : 1708881022292,
+          "stop" : 1708881022292,
           "duration" : 0
         },
         "status" : "passed",
@@ -75,7 +75,7 @@
       "attachments" : [ ],
       "parameters" : [ {
         "name" : "token",
-        "value" : "'465a292f-14c7-44f3-9fc1-c1e2d115492b'"
+        "value" : "'001282db-42ef-4b3a-b282-2e40ef454e9a'"
       } ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
@@ -84,16 +84,16 @@
     }, {
       "name" : "post_db_create",
       "time" : {
-        "start" : 1708879080505,
-        "stop" : 1708879080837,
-        "duration" : 332
+        "start" : 1708881022293,
+        "stop" : 1708881022834,
+        "duration" : 541
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "POST https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1708879080505,
-          "stop" : 1708879080505,
+          "start" : 1708881022293,
+          "stop" : 1708881022293,
           "duration" : 0
         },
         "status" : "passed",
@@ -107,8 +107,8 @@
       }, {
         "name" : "Status code: 403",
         "time" : {
-          "start" : 1708879080837,
-          "stop" : 1708879080837,
+          "start" : 1708881022834,
+          "stop" : 1708881022834,
           "duration" : 0
         },
         "status" : "passed",
@@ -122,8 +122,8 @@
       }, {
         "name" : "Params url: https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1708879080837,
-          "stop" : 1708879080837,
+          "start" : 1708881022834,
+          "stop" : 1708881022834,
           "duration" : 0
         },
         "status" : "passed",
@@ -137,8 +137,8 @@
       }, {
         "name" : "Response: <Response [403]>",
         "time" : {
-          "start" : 1708879080837,
-          "stop" : 1708879080837,
+          "start" : 1708881022834,
+          "stop" : 1708881022834,
           "duration" : 0
         },
         "status" : "passed",
@@ -166,11 +166,11 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "epic",
-    "value" : "Performance DB"
-  }, {
     "name" : "suite",
     "value" : "Test Performance DB"
+  }, {
+    "name" : "epic",
+    "value" : "Performance DB"
   }, {
     "name" : "parentSuite",
     "value" : "tests_api"
@@ -179,10 +179,10 @@
     "value" : "TestCapacity"
   }, {
     "name" : "host",
-    "value" : "fv-az529-673"
+    "value" : "fv-az1493-306"
   }, {
     "name" : "thread",
-    "value" : "1781-MainThread"
+    "value" : "1771-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -211,13 +211,22 @@
     "history" : {
       "statistic" : {
         "failed" : 1,
-        "broken" : 1,
+        "broken" : 2,
         "skipped" : 0,
         "passed" : 0,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
+        "uid" : "137e7c9947b115f3",
+        "status" : "broken",
+        "statusDetails" : "KeyError: 'db_uuid'",
+        "time" : {
+          "start" : 1708879080167,
+          "stop" : 1708879080837,
+          "duration" : 670
+        }
+      }, {
         "uid" : "e5b8ee4d1efc662c",
         "status" : "failed",
         "statusDetails" : "AssertionError: Value db_size should be more than 0.\nassert 0 > 0\n +  where 0 = int(0)",
@@ -230,6 +239,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "137e7c9947b115f3.json",
+  "source" : "544819fbc8158f3.json",
   "parameterValues" : [ ]
 }

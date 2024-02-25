@@ -1,29 +1,29 @@
 {
-  "uid" : "fc5f75f5f9faa9f",
+  "uid" : "cdd737a9dbe0eae9",
   "name" : "Complex",
   "fullName" : "tests_api.test_bd.TestConnectionDB#test_complex",
   "historyId" : "3d6d9ae5a060f04651be2b33726ce20e",
   "time" : {
-    "start" : 1708879078782,
-    "stop" : 1708879080120,
-    "duration" : 1338
+    "start" : 1708881019385,
+    "stop" : 1708881021724,
+    "duration" : 2339
   },
   "status" : "broken",
   "statusMessage" : "KeyError: 'db_uuid'",
-  "statusTrace" : "self = <tests_api.test_bd.TestConnectionDB object at 0x7fa69dbd3040>\n\n    @allure.title('Complex')\n    def test_complex(self):\n>       API.check_full_cycle(TestData.token)\n\ntests_api/test_bd.py:20: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ntoken = '465a292f-14c7-44f3-9fc1-c1e2d115492b'\n\n    @staticmethod\n    def check_full_cycle(token):\n        \"\"\"\n        :param token:\n        :return:\n        \"\"\"\n        with allure.step('check_full_cycle'):\n            print('\\nCheck Time: ', str(datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")))\n            start_value_db_list = API.post_db_list(token)\n            API.get_profile(token)\n            API.post_db_list(token)\n            result_db_create = API.post_db_create(token)\n>           db_uuid = result_db_create.json()[\"db_uuid\"]\nE           KeyError: 'db_uuid'\n\ntests_api/utils/request.py:352: KeyError",
+  "statusTrace" : "self = <tests_api.test_bd.TestConnectionDB object at 0x7f500c2f6d10>\n\n    @allure.title('Complex')\n    def test_complex(self):\n>       API.check_full_cycle(TestData.token)\n\ntests_api/test_bd.py:20: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ntoken = '001282db-42ef-4b3a-b282-2e40ef454e9a'\n\n    @staticmethod\n    def check_full_cycle(token):\n        \"\"\"\n        :param token:\n        :return:\n        \"\"\"\n        with allure.step('check_full_cycle'):\n            print('\\nCheck Time: ', str(datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")))\n            start_value_db_list = API.post_db_list(token)\n            API.get_profile(token)\n            API.post_db_list(token)\n            result_db_create = API.post_db_create(token)\n>           db_uuid = result_db_create.json()[\"db_uuid\"]\nE           KeyError: 'db_uuid'\n\ntests_api/utils/request.py:352: KeyError",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
     "status" : "broken",
     "statusMessage" : "KeyError: 'db_uuid'",
-    "statusTrace" : "self = <tests_api.test_bd.TestConnectionDB object at 0x7fa69dbd3040>\n\n    @allure.title('Complex')\n    def test_complex(self):\n>       API.check_full_cycle(TestData.token)\n\ntests_api/test_bd.py:20: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ntoken = '465a292f-14c7-44f3-9fc1-c1e2d115492b'\n\n    @staticmethod\n    def check_full_cycle(token):\n        \"\"\"\n        :param token:\n        :return:\n        \"\"\"\n        with allure.step('check_full_cycle'):\n            print('\\nCheck Time: ', str(datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")))\n            start_value_db_list = API.post_db_list(token)\n            API.get_profile(token)\n            API.post_db_list(token)\n            result_db_create = API.post_db_create(token)\n>           db_uuid = result_db_create.json()[\"db_uuid\"]\nE           KeyError: 'db_uuid'\n\ntests_api/utils/request.py:352: KeyError",
+    "statusTrace" : "self = <tests_api.test_bd.TestConnectionDB object at 0x7f500c2f6d10>\n\n    @allure.title('Complex')\n    def test_complex(self):\n>       API.check_full_cycle(TestData.token)\n\ntests_api/test_bd.py:20: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ntoken = '001282db-42ef-4b3a-b282-2e40ef454e9a'\n\n    @staticmethod\n    def check_full_cycle(token):\n        \"\"\"\n        :param token:\n        :return:\n        \"\"\"\n        with allure.step('check_full_cycle'):\n            print('\\nCheck Time: ', str(datetime.now().strftime(\"%d-%m-%Y %H:%M:%S\")))\n            start_value_db_list = API.post_db_list(token)\n            API.get_profile(token)\n            API.post_db_list(token)\n            result_db_create = API.post_db_create(token)\n>           db_uuid = result_db_create.json()[\"db_uuid\"]\nE           KeyError: 'db_uuid'\n\ntests_api/utils/request.py:352: KeyError",
     "steps" : [ {
       "name" : "check_full_cycle",
       "time" : {
-        "start" : 1708879078782,
-        "stop" : 1708879080120,
-        "duration" : 1338
+        "start" : 1708881019385,
+        "stop" : 1708881021724,
+        "duration" : 2339
       },
       "status" : "broken",
       "statusMessage" : "KeyError: 'db_uuid'\n",
@@ -31,16 +31,16 @@
       "steps" : [ {
         "name" : "post_db_list",
         "time" : {
-          "start" : 1708879078782,
-          "stop" : 1708879079129,
-          "duration" : 347
+          "start" : 1708881019386,
+          "stop" : 1708881019922,
+          "duration" : 536
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "POST https://dbend.areso.pro/db_list",
           "time" : {
-            "start" : 1708879078782,
-            "stop" : 1708879078782,
+            "start" : 1708881019386,
+            "stop" : 1708881019386,
             "duration" : 0
           },
           "status" : "passed",
@@ -54,8 +54,8 @@
         }, {
           "name" : "Status code: 200",
           "time" : {
-            "start" : 1708879079128,
-            "stop" : 1708879079128,
+            "start" : 1708881019921,
+            "stop" : 1708881019921,
             "duration" : 0
           },
           "status" : "passed",
@@ -69,8 +69,8 @@
         }, {
           "name" : "Params url: https://dbend.areso.pro/db_list",
           "time" : {
-            "start" : 1708879079128,
-            "stop" : 1708879079128,
+            "start" : 1708881019921,
+            "stop" : 1708881019921,
             "duration" : 0
           },
           "status" : "passed",
@@ -84,8 +84,8 @@
         }, {
           "name" : "Response: <Response [200]>",
           "time" : {
-            "start" : 1708879079128,
-            "stop" : 1708879079128,
+            "start" : 1708881019921,
+            "stop" : 1708881019921,
             "duration" : 0
           },
           "status" : "passed",
@@ -106,16 +106,16 @@
       }, {
         "name" : "get_profile",
         "time" : {
-          "start" : 1708879079129,
-          "stop" : 1708879079460,
-          "duration" : 331
+          "start" : 1708881019922,
+          "stop" : 1708881020588,
+          "duration" : 666
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "GET https://dbend.areso.pro/get_profile",
           "time" : {
-            "start" : 1708879079129,
-            "stop" : 1708879079129,
+            "start" : 1708881019922,
+            "stop" : 1708881019922,
             "duration" : 0
           },
           "status" : "passed",
@@ -129,9 +129,9 @@
         }, {
           "name" : "Status code: 200",
           "time" : {
-            "start" : 1708879079460,
-            "stop" : 1708879079460,
-            "duration" : 0
+            "start" : 1708881020587,
+            "stop" : 1708881020588,
+            "duration" : 1
           },
           "status" : "passed",
           "steps" : [ ],
@@ -144,8 +144,8 @@
         }, {
           "name" : "Response: {\n  \"data\": {\n    \"content\": [\n      [\n        \"email\",\n        \"test4@mail.com\"\n      ],\n      [\n        \"is_blocked\",\n        0\n      ],\n      [\n        \"is_db_creation_allowed\",\n        0\n      ],\n      [\n        \"disk_db_quota\",\n        4\n      ],\n      [\n        \"disk_db_used\",\n        0\n      ],\n      [\n        \"db_qty_quota\",\n        100\n      ],\n      [\n        \"db_qty_used\",\n        38\n      ],\n      [\n        \"id_regions\",\n        \"3\"\n      ]\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": \"GET\",\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Content-type\": \"application/json\"\n  },\n  \"status\": 200\n}\n",
           "time" : {
-            "start" : 1708879079460,
-            "stop" : 1708879079460,
+            "start" : 1708881020588,
+            "stop" : 1708881020588,
             "duration" : 0
           },
           "status" : "passed",
@@ -160,7 +160,7 @@
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "token",
-          "value" : "'465a292f-14c7-44f3-9fc1-c1e2d115492b'"
+          "value" : "'001282db-42ef-4b3a-b282-2e40ef454e9a'"
         } ],
         "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
@@ -169,16 +169,16 @@
       }, {
         "name" : "post_db_list",
         "time" : {
-          "start" : 1708879079461,
-          "stop" : 1708879079800,
-          "duration" : 339
+          "start" : 1708881020589,
+          "stop" : 1708881021101,
+          "duration" : 512
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "POST https://dbend.areso.pro/db_list",
           "time" : {
-            "start" : 1708879079461,
-            "stop" : 1708879079461,
+            "start" : 1708881020589,
+            "stop" : 1708881020589,
             "duration" : 0
           },
           "status" : "passed",
@@ -192,8 +192,8 @@
         }, {
           "name" : "Status code: 200",
           "time" : {
-            "start" : 1708879079800,
-            "stop" : 1708879079800,
+            "start" : 1708881021100,
+            "stop" : 1708881021100,
             "duration" : 0
           },
           "status" : "passed",
@@ -207,8 +207,8 @@
         }, {
           "name" : "Params url: https://dbend.areso.pro/db_list",
           "time" : {
-            "start" : 1708879079800,
-            "stop" : 1708879079800,
+            "start" : 1708881021100,
+            "stop" : 1708881021100,
             "duration" : 0
           },
           "status" : "passed",
@@ -222,8 +222,8 @@
         }, {
           "name" : "Response: <Response [200]>",
           "time" : {
-            "start" : 1708879079800,
-            "stop" : 1708879079800,
+            "start" : 1708881021100,
+            "stop" : 1708881021100,
             "duration" : 0
           },
           "status" : "passed",
@@ -244,16 +244,16 @@
       }, {
         "name" : "post_db_create",
         "time" : {
-          "start" : 1708879079801,
-          "stop" : 1708879080120,
-          "duration" : 319
+          "start" : 1708881021101,
+          "stop" : 1708881021724,
+          "duration" : 623
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "POST https://dbend.areso.pro/db_create",
           "time" : {
-            "start" : 1708879079801,
-            "stop" : 1708879079801,
+            "start" : 1708881021101,
+            "stop" : 1708881021101,
             "duration" : 0
           },
           "status" : "passed",
@@ -267,8 +267,8 @@
         }, {
           "name" : "Status code: 403",
           "time" : {
-            "start" : 1708879080119,
-            "stop" : 1708879080119,
+            "start" : 1708881021723,
+            "stop" : 1708881021723,
             "duration" : 0
           },
           "status" : "passed",
@@ -282,9 +282,9 @@
         }, {
           "name" : "Params url: https://dbend.areso.pro/db_create",
           "time" : {
-            "start" : 1708879080119,
-            "stop" : 1708879080119,
-            "duration" : 0
+            "start" : 1708881021723,
+            "stop" : 1708881021724,
+            "duration" : 1
           },
           "status" : "passed",
           "steps" : [ ],
@@ -297,8 +297,8 @@
         }, {
           "name" : "Response: <Response [403]>",
           "time" : {
-            "start" : 1708879080119,
-            "stop" : 1708879080119,
+            "start" : 1708881021724,
+            "stop" : 1708881021724,
             "duration" : 0
           },
           "status" : "passed",
@@ -346,10 +346,10 @@
     "value" : "TestConnectionDB"
   }, {
     "name" : "host",
-    "value" : "fv-az529-673"
+    "value" : "fv-az1493-306"
   }, {
     "name" : "thread",
-    "value" : "1781-MainThread"
+    "value" : "1771-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -375,8 +375,28 @@
       "matchedStatuses" : [ ],
       "flaky" : false
     } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "fc5f75f5f9faa9f",
+        "status" : "broken",
+        "statusDetails" : "KeyError: 'db_uuid'",
+        "time" : {
+          "start" : 1708879078782,
+          "stop" : 1708879080120,
+          "duration" : 1338
+        }
+      } ]
+    },
     "tags" : [ ]
   },
-  "source" : "fc5f75f5f9faa9f.json",
+  "source" : "cdd737a9dbe0eae9.json",
   "parameterValues" : [ ]
 }

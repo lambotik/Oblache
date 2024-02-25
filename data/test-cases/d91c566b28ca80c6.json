@@ -1,36 +1,36 @@
 {
-  "uid" : "fb0418770c9c9c8",
+  "uid" : "d91c566b28ca80c6",
   "name" : "Post db_create",
   "fullName" : "tests_api.test_bd.TestPOST#test_post_db_create",
   "historyId" : "0b53e71177b12ce964a75d76d7986dbc",
   "time" : {
-    "start" : 1708879085565,
-    "stop" : 1708879085887,
-    "duration" : 322
+    "start" : 1708881030613,
+    "stop" : 1708881031134,
+    "duration" : 521
   },
   "status" : "failed",
   "statusMessage" : "AssertionError: Incorrect status code",
-  "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7fa69dbd1300>\n\n    @allure.title('Post db_create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.token)\n>       Checking.check_status_code(result_post_db_list, 201)\n\ntests_api/test_bd.py:178: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 201\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\ntests_api/utils/checking.py:18: AssertionError",
+  "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7f500c2f4fd0>\n\n    @allure.title('Post db_create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.token)\n>       Checking.check_status_code(result_post_db_list, 201)\n\ntests_api/test_bd.py:178: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 201\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\ntests_api/utils/checking.py:18: AssertionError",
   "flaky" : false,
-  "newFailed" : true,
+  "newFailed" : false,
   "beforeStages" : [ ],
   "testStage" : {
     "status" : "failed",
     "statusMessage" : "AssertionError: Incorrect status code",
-    "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7fa69dbd1300>\n\n    @allure.title('Post db_create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.token)\n>       Checking.check_status_code(result_post_db_list, 201)\n\ntests_api/test_bd.py:178: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 201\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\ntests_api/utils/checking.py:18: AssertionError",
+    "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7f500c2f4fd0>\n\n    @allure.title('Post db_create')\n    def test_post_db_create(self):\n        print('\\n\\nMethod POST: db_create')\n        result_post_db_list = API.post_db_create(TestData.token)\n>       Checking.check_status_code(result_post_db_list, 201)\n\ntests_api/test_bd.py:178: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 201\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\ntests_api/utils/checking.py:18: AssertionError",
     "steps" : [ {
       "name" : "post_db_create",
       "time" : {
-        "start" : 1708879085565,
-        "stop" : 1708879085887,
-        "duration" : 322
+        "start" : 1708881030613,
+        "stop" : 1708881031134,
+        "duration" : 521
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "POST https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1708879085565,
-          "stop" : 1708879085565,
+          "start" : 1708881030613,
+          "stop" : 1708881030613,
           "duration" : 0
         },
         "status" : "passed",
@@ -44,8 +44,8 @@
       }, {
         "name" : "Status code: 403",
         "time" : {
-          "start" : 1708879085887,
-          "stop" : 1708879085887,
+          "start" : 1708881031134,
+          "stop" : 1708881031134,
           "duration" : 0
         },
         "status" : "passed",
@@ -59,8 +59,8 @@
       }, {
         "name" : "Params url: https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1708879085887,
-          "stop" : 1708879085887,
+          "start" : 1708881031134,
+          "stop" : 1708881031134,
           "duration" : 0
         },
         "status" : "passed",
@@ -74,8 +74,8 @@
       }, {
         "name" : "Response: <Response [403]>",
         "time" : {
-          "start" : 1708879085887,
-          "stop" : 1708879085887,
+          "start" : 1708881031134,
+          "stop" : 1708881031134,
           "duration" : 0
         },
         "status" : "passed",
@@ -96,8 +96,8 @@
     }, {
       "name" : "Assert status code: 201 == Response status code: 403",
       "time" : {
-        "start" : 1708879085887,
-        "stop" : 1708879085887,
+        "start" : 1708881031134,
+        "stop" : 1708881031134,
         "duration" : 0
       },
       "status" : "failed",
@@ -133,10 +133,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az529-673"
+    "value" : "fv-az1493-306"
   }, {
     "name" : "thread",
-    "value" : "1781-MainThread"
+    "value" : "1771-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -164,14 +164,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 1,
+        "failed" : 2,
         "broken" : 0,
         "skipped" : 0,
         "passed" : 1,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
+        "uid" : "fb0418770c9c9c8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1708879085565,
+          "stop" : 1708879085887,
+          "duration" : 322
+        }
+      }, {
         "uid" : "a535280d075d161a",
         "status" : "passed",
         "time" : {
@@ -183,6 +192,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "fb0418770c9c9c8.json",
+  "source" : "d91c566b28ca80c6.json",
   "parameterValues" : [ ]
 }
