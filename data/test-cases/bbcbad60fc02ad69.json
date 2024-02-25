@@ -1,12 +1,12 @@
 {
-  "uid" : "817fd456bb45f826",
-  "name" : "Test tos.",
-  "fullName" : "tests_api.test_bd.TestGET#test_tos",
-  "historyId" : "1bd6d480cd29dd301e6e77cd0f9194c6",
+  "uid" : "bbcbad60fc02ad69",
+  "name" : "Post registration email is taken",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_registration_email_is_taken",
+  "historyId" : "8e5e97e65cd661fe5135ad0b97aa29eb",
   "time" : {
-    "start" : 1708881022841,
-    "stop" : 1708881023375,
-    "duration" : 534
+    "start" : 1708881401355,
+    "stop" : 1708881401663,
+    "duration" : 308
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,18 +15,18 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "get_tos",
+      "name" : "post_registration",
       "time" : {
-        "start" : 1708881022842,
-        "stop" : 1708881023374,
-        "duration" : 532
+        "start" : 1708881401355,
+        "stop" : 1708881401662,
+        "duration" : 307
       },
       "status" : "passed",
       "steps" : [ {
-        "name" : "GET https://dbend.areso.pro/tos",
+        "name" : "POST https://dbend.areso.pro/register",
         "time" : {
-          "start" : 1708881022842,
-          "stop" : 1708881022842,
+          "start" : 1708881401355,
+          "stop" : 1708881401355,
           "duration" : 0
         },
         "status" : "passed",
@@ -38,10 +38,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Status code: 200",
+        "name" : "Status code: 400",
         "time" : {
-          "start" : 1708881023374,
-          "stop" : 1708881023374,
+          "start" : 1708881401662,
+          "stop" : 1708881401662,
           "duration" : 0
         },
         "status" : "passed",
@@ -53,10 +53,25 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Response: \"Hello. This pet-project (later Project) works AS IS, no warranty at all.\\nUsing Project, you agree to that.\\nYou MUST create backups of your databases for sake reasons.\\nBecause I do run project on my own pocket money, \\nI limit total size of the databases per 1 user as 100 MBs.\\nAny account don't used more than 6 monts is subject for deletion with all databases.\"\n",
+        "name" : "Params url: https://dbend.areso.pro/register",
         "time" : {
-          "start" : 1708881023374,
-          "stop" : 1708881023374,
+          "start" : 1708881401662,
+          "stop" : 1708881401662,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "Response: <Response [400]>",
+        "time" : {
+          "start" : 1708881401662,
+          "stop" : 1708881401662,
           "duration" : 0
         },
         "status" : "passed",
@@ -72,14 +87,29 @@
       "parameters" : [ ],
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "stepsCount" : 3,
+      "stepsCount" : 4,
       "hasContent" : true
     }, {
-      "name" : "Assert status code: 200 == Response status code: 200",
+      "name" : "Assert status code: 400 == Response status code: 400",
       "time" : {
-        "start" : 1708881023374,
-        "stop" : 1708881023374,
+        "start" : 1708881401662,
+        "stop" : 1708881401662,
         "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: msg[3]: registration failed, this email is taken",
+      "time" : {
+        "start" : 1708881401662,
+        "stop" : 1708881401663,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -94,28 +124,28 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 5,
+    "stepsCount" : 7,
     "hasContent" : true
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "epic",
-    "value" : "GET REQUESTS"
-  }, {
     "name" : "suite",
-    "value" : "GET"
+    "value" : "POST"
+  }, {
+    "name" : "epic",
+    "value" : "POST REQUESTS"
   }, {
     "name" : "parentSuite",
     "value" : "tests_api"
   }, {
     "name" : "subSuite",
-    "value" : "TestGET"
+    "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az1493-306"
+    "value" : "fv-az774-318"
   }, {
     "name" : "thread",
-    "value" : "1771-MainThread"
+    "value" : "1783-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -142,30 +172,38 @@
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
-        "uid" : "72a8982df90f3346",
+        "uid" : "5bbf3afe201e4164",
         "status" : "passed",
         "time" : {
-          "start" : 1708879080844,
-          "stop" : 1708879081172,
-          "duration" : 328
+          "start" : 1708881028836,
+          "stop" : 1708881029352,
+          "duration" : 516
         }
       }, {
-        "uid" : "8e16990d346d1dd9",
+        "uid" : "4440fc07bc57f2eb",
         "status" : "passed",
         "time" : {
-          "start" : 1708030750587,
-          "stop" : 1708030750917,
-          "duration" : 330
+          "start" : 1708879084573,
+          "stop" : 1708879084890,
+          "duration" : 317
+        }
+      }, {
+        "uid" : "1a3543cf1622c66a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708030754185,
+          "stop" : 1708030754497,
+          "duration" : 312
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "817fd456bb45f826.json",
+  "source" : "bbcbad60fc02ad69.json",
   "parameterValues" : [ ]
 }

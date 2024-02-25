@@ -1,12 +1,12 @@
 {
-  "uid" : "d5444f891400bf80",
-  "name" : "Post db_list",
-  "fullName" : "tests_api.test_bd.TestPOST#test_post_db_list",
-  "historyId" : "74e2e9a19a1c9ee2ec47a859e878d5d7",
+  "uid" : "6a4eaec50fec1f5a",
+  "name" : "Post db_create with wrong db_type.",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_db_create_with_wrong_values_dbtype",
+  "historyId" : "ae63095b2fe55ca99f871a9193b615b5",
   "time" : {
-    "start" : 1708881033252,
-    "stop" : 1708881033766,
-    "duration" : 514
+    "start" : 1708881402637,
+    "stop" : 1708881402952,
+    "duration" : 315
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,18 +15,18 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "post_db_list",
+      "name" : "post_db_create_wrong_value_db_type",
       "time" : {
-        "start" : 1708881033252,
-        "stop" : 1708881033766,
-        "duration" : 514
+        "start" : 1708881402637,
+        "stop" : 1708881402951,
+        "duration" : 314
       },
       "status" : "passed",
       "steps" : [ {
-        "name" : "POST https://dbend.areso.pro/db_list",
+        "name" : "POST https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1708881033252,
-          "stop" : 1708881033252,
+          "start" : 1708881402637,
+          "stop" : 1708881402637,
           "duration" : 0
         },
         "status" : "passed",
@@ -38,10 +38,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Status code: 200",
+        "name" : "Status code: 400",
         "time" : {
-          "start" : 1708881033765,
-          "stop" : 1708881033765,
+          "start" : 1708881402951,
+          "stop" : 1708881402951,
           "duration" : 0
         },
         "status" : "passed",
@@ -53,10 +53,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Params url: https://dbend.areso.pro/db_list",
+        "name" : "Params url: https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1708881033765,
-          "stop" : 1708881033765,
+          "start" : 1708881402951,
+          "stop" : 1708881402951,
           "duration" : 0
         },
         "status" : "passed",
@@ -68,10 +68,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Response: <Response [200]>",
+        "name" : "Response: <Response [400]>",
         "time" : {
-          "start" : 1708881033765,
-          "stop" : 1708881033765,
+          "start" : 1708881402951,
+          "stop" : 1708881402951,
           "duration" : 0
         },
         "status" : "passed",
@@ -90,10 +90,25 @@
       "stepsCount" : 4,
       "hasContent" : true
     }, {
-      "name" : "Assert status code: 200 == Response status code: 200",
+      "name" : "Assert status code: 400 == Response status code: 400",
       "time" : {
-        "start" : 1708881033766,
-        "stop" : 1708881033766,
+        "start" : 1708881402951,
+        "stop" : 1708881402951,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: DB type isn't found or isn't available for order",
+      "time" : {
+        "start" : 1708881402951,
+        "stop" : 1708881402951,
         "duration" : 0
       },
       "status" : "passed",
@@ -109,7 +124,7 @@
     "parameters" : [ ],
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
-    "stepsCount" : 6,
+    "stepsCount" : 7,
     "hasContent" : true
   },
   "afterStages" : [ ],
@@ -127,10 +142,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az1493-306"
+    "value" : "fv-az774-318"
   }, {
     "name" : "thread",
-    "value" : "1771-MainThread"
+    "value" : "1783-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -154,33 +169,43 @@
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 0,
+        "failed" : 2,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 2,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
-        "uid" : "b13f3e449c593a82",
-        "status" : "passed",
+        "uid" : "8c5227ed9add07ea",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1708879087228,
-          "stop" : 1708879087557,
-          "duration" : 329
+          "start" : 1708881031141,
+          "stop" : 1708881031644,
+          "duration" : 503
         }
       }, {
-        "uid" : "7ed99ea6fffd799a",
+        "uid" : "16ebedcc00cc9e2f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1708879085895,
+          "stop" : 1708879086215,
+          "duration" : 320
+        }
+      }, {
+        "uid" : "b349d24fe7723a91",
         "status" : "passed",
         "time" : {
-          "start" : 1708030756494,
-          "stop" : 1708030756888,
-          "duration" : 394
+          "start" : 1708030755191,
+          "stop" : 1708030755532,
+          "duration" : 341
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "d5444f891400bf80.json",
+  "source" : "6a4eaec50fec1f5a.json",
   "parameterValues" : [ ]
 }

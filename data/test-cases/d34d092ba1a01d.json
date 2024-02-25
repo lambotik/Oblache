@@ -1,12 +1,12 @@
 {
-  "uid" : "5bbf3afe201e4164",
-  "name" : "Post registration email is taken",
-  "fullName" : "tests_api.test_bd.TestPOST#test_post_registration_email_is_taken",
-  "historyId" : "8e5e97e65cd661fe5135ad0b97aa29eb",
+  "uid" : "d34d092ba1a01d",
+  "name" : "Post db_create with wrong db_version.",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_db_create_with_wrong_values_db_version",
+  "historyId" : "bda6ac446aec42c036b6b747abee39c3",
   "time" : {
-    "start" : 1708881028836,
-    "stop" : 1708881029352,
-    "duration" : 516
+    "start" : 1708881402954,
+    "stop" : 1708881403280,
+    "duration" : 326
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,18 +15,18 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "post_registration",
+      "name" : "post_db_create_wrong_value_db_version",
       "time" : {
-        "start" : 1708881028836,
-        "stop" : 1708881029351,
-        "duration" : 515
+        "start" : 1708881402954,
+        "stop" : 1708881403279,
+        "duration" : 325
       },
       "status" : "passed",
       "steps" : [ {
-        "name" : "POST https://dbend.areso.pro/register",
+        "name" : "POST https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1708881028836,
-          "stop" : 1708881028836,
+          "start" : 1708881402954,
+          "stop" : 1708881402954,
           "duration" : 0
         },
         "status" : "passed",
@@ -40,8 +40,8 @@
       }, {
         "name" : "Status code: 400",
         "time" : {
-          "start" : 1708881029351,
-          "stop" : 1708881029351,
+          "start" : 1708881403279,
+          "stop" : 1708881403279,
           "duration" : 0
         },
         "status" : "passed",
@@ -53,10 +53,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Params url: https://dbend.areso.pro/register",
+        "name" : "Params url: https://dbend.areso.pro/db_create",
         "time" : {
-          "start" : 1708881029351,
-          "stop" : 1708881029351,
+          "start" : 1708881403279,
+          "stop" : 1708881403279,
           "duration" : 0
         },
         "status" : "passed",
@@ -70,8 +70,8 @@
       }, {
         "name" : "Response: <Response [400]>",
         "time" : {
-          "start" : 1708881029351,
-          "stop" : 1708881029351,
+          "start" : 1708881403279,
+          "stop" : 1708881403279,
           "duration" : 0
         },
         "status" : "passed",
@@ -92,8 +92,8 @@
     }, {
       "name" : "Assert status code: 400 == Response status code: 400",
       "time" : {
-        "start" : 1708881029351,
-        "stop" : 1708881029351,
+        "start" : 1708881403279,
+        "stop" : 1708881403279,
         "duration" : 0
       },
       "status" : "passed",
@@ -105,10 +105,10 @@
       "stepsCount" : 0,
       "hasContent" : false
     }, {
-      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: msg[3]: registration failed, this email is taken",
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: DB version isn't found or isn't available for order",
       "time" : {
-        "start" : 1708881029351,
-        "stop" : 1708881029351,
+        "start" : 1708881403279,
+        "stop" : 1708881403279,
         "duration" : 0
       },
       "status" : "passed",
@@ -142,10 +142,10 @@
     "value" : "TestPOST"
   }, {
     "name" : "host",
-    "value" : "fv-az1493-306"
+    "value" : "fv-az774-318"
   }, {
     "name" : "thread",
-    "value" : "1771-MainThread"
+    "value" : "1783-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -169,33 +169,43 @@
     "categories" : [ ],
     "history" : {
       "statistic" : {
-        "failed" : 0,
+        "failed" : 2,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 2,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
-        "uid" : "4440fc07bc57f2eb",
-        "status" : "passed",
+        "uid" : "abf083273ef0b066",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
         "time" : {
-          "start" : 1708879084573,
-          "stop" : 1708879084890,
-          "duration" : 317
+          "start" : 1708881031652,
+          "stop" : 1708881032164,
+          "duration" : 512
         }
       }, {
-        "uid" : "1a3543cf1622c66a",
+        "uid" : "9d21650ef4b41f21",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1708879086225,
+          "stop" : 1708879086556,
+          "duration" : 331
+        }
+      }, {
+        "uid" : "2df3e76b59992768",
         "status" : "passed",
         "time" : {
-          "start" : 1708030754185,
-          "stop" : 1708030754497,
-          "duration" : 312
+          "start" : 1708030755534,
+          "stop" : 1708030755857,
+          "duration" : 323
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "5bbf3afe201e4164.json",
+  "source" : "d34d092ba1a01d.json",
   "parameterValues" : [ ]
 }

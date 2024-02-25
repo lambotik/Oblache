@@ -1,12 +1,12 @@
 {
-  "uid" : "2e2f17fed9e1c2ee",
-  "name" : "Get profile status.",
-  "fullName" : "tests_api.test_bd.TestGET#test_get_status",
-  "historyId" : "1db526b86e70a0d5647421e92bf453b9",
+  "uid" : "9e71d39f9d9794e9",
+  "name" : "Bad request.",
+  "fullName" : "tests_api.test_bd.TestGET#test_get_with_bad_request",
+  "historyId" : "5156f5dedc3d46e33a62122a588c6956",
   "time" : {
-    "start" : 1708881026750,
-    "stop" : 1708881027261,
-    "duration" : 511
+    "start" : 1708881399748,
+    "stop" : 1708881400051,
+    "duration" : 303
   },
   "status" : "passed",
   "flaky" : false,
@@ -15,18 +15,18 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "get_status",
+      "name" : "get_bad_request",
       "time" : {
-        "start" : 1708881026750,
-        "stop" : 1708881027261,
-        "duration" : 511
+        "start" : 1708881399748,
+        "stop" : 1708881400050,
+        "duration" : 302
       },
       "status" : "passed",
       "steps" : [ {
-        "name" : "GET https://dbend.areso.pro/get_profile",
+        "name" : "GET https://dbend.areso.pro/bad_request",
         "time" : {
-          "start" : 1708881026750,
-          "stop" : 1708881026750,
+          "start" : 1708881399748,
+          "stop" : 1708881399748,
           "duration" : 0
         },
         "status" : "passed",
@@ -38,10 +38,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Status code: 200",
+        "name" : "Status code: 404",
         "time" : {
-          "start" : 1708881027261,
-          "stop" : 1708881027261,
+          "start" : 1708881400050,
+          "stop" : 1708881400050,
           "duration" : 0
         },
         "status" : "passed",
@@ -53,10 +53,10 @@
         "stepsCount" : 0,
         "hasContent" : false
       }, {
-        "name" : "Response: {\n  \"data\": {\n    \"content\": [\n      [\n        \"email\",\n        \"test4@mail.com\"\n      ],\n      [\n        \"is_blocked\",\n        0\n      ],\n      [\n        \"is_db_creation_allowed\",\n        0\n      ],\n      [\n        \"disk_db_quota\",\n        4\n      ],\n      [\n        \"disk_db_used\",\n        0\n      ],\n      [\n        \"db_qty_quota\",\n        100\n      ],\n      [\n        \"db_qty_used\",\n        38\n      ],\n      [\n        \"id_regions\",\n        \"3\"\n      ]\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": \"GET\",\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Content-type\": \"application/json\"\n  },\n  \"status\": 200\n}\n",
+        "name" : "Response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>\n",
         "time" : {
-          "start" : 1708881027261,
-          "stop" : 1708881027261,
+          "start" : 1708881400050,
+          "stop" : 1708881400050,
           "duration" : 0
         },
         "status" : "passed",
@@ -75,10 +75,10 @@
       "stepsCount" : 3,
       "hasContent" : true
     }, {
-      "name" : "Assert status code: 200 == Response status code: 200",
+      "name" : "Assert status code: 404 == Response status code: 404",
       "time" : {
-        "start" : 1708881027261,
-        "stop" : 1708881027261,
+        "start" : 1708881400050,
+        "stop" : 1708881400050,
         "duration" : 0
       },
       "status" : "passed",
@@ -99,11 +99,11 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "epic",
-    "value" : "GET REQUESTS"
-  }, {
     "name" : "suite",
     "value" : "GET"
+  }, {
+    "name" : "epic",
+    "value" : "GET REQUESTS"
   }, {
     "name" : "parentSuite",
     "value" : "tests_api"
@@ -112,10 +112,10 @@
     "value" : "TestGET"
   }, {
     "name" : "host",
-    "value" : "fv-az1493-306"
+    "value" : "fv-az774-318"
   }, {
     "name" : "thread",
-    "value" : "1771-MainThread"
+    "value" : "1783-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -142,30 +142,38 @@
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 3,
+        "passed" : 4,
         "unknown" : 0,
-        "total" : 3
+        "total" : 4
       },
       "items" : [ {
-        "uid" : "a4434d115794522",
+        "uid" : "68b3388a9b0af7db",
         "status" : "passed",
         "time" : {
-          "start" : 1708879083230,
-          "stop" : 1708879083565,
-          "duration" : 335
+          "start" : 1708881026237,
+          "stop" : 1708881026748,
+          "duration" : 511
         }
       }, {
-        "uid" : "4b973df1d0a36f66",
+        "uid" : "e1b97e159d3ac555",
         "status" : "passed",
         "time" : {
-          "start" : 1708030752842,
-          "stop" : 1708030753161,
-          "duration" : 319
+          "start" : 1708879082916,
+          "stop" : 1708879083228,
+          "duration" : 312
+        }
+      }, {
+        "uid" : "a38a60b88eebf89b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1708030752529,
+          "stop" : 1708030752840,
+          "duration" : 311
         }
       } ]
     },
     "tags" : [ ]
   },
-  "source" : "2e2f17fed9e1c2ee.json",
+  "source" : "9e71d39f9d9794e9.json",
   "parameterValues" : [ ]
 }
