@@ -1,0 +1,207 @@
+{
+  "uid" : "32baec2c72bd1f1a",
+  "name" : "test_links",
+  "fullName" : "tests_ui.test_ui.TestMainPage#test_links",
+  "historyId" : "2a40ccc1cee529e6b08586fec647202e",
+  "time" : {
+    "start" : 1709052874573,
+    "stop" : 1709052878314,
+    "duration" : 3741
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Link https://oblache.areso.pro/tos.html is broken!",
+  "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestMainPage object at 0x7fa23c30f4f0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9103020afc7c7f9829ed6ee1918b6392\")>\n\n    @allure.title('test_links')\n    def test_links(self, driver):\n        page = MainPage(driver, TestDataLinks.main_page)\n        page.open()\n>       page.check_links()\n\ntests_ui/test_ui.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.main_page.MainPage object at 0x7fa23c2ba680>\n\n    @allure.step('check_links')\n    def check_links(self):\n        links = self.elements_are_present(self.locators.LINKS)\n        list_links = [link.get_attribute('href') for link in links]\n        for link in list_links:\n            with allure.step(f'{link} status code is: {requests.get(link).status_code}'):\n>               assert requests.get(link).status_code != 404, f'Link {link} is broken!'\nE               AssertionError: Link https://oblache.areso.pro/tos.html is broken!\n\ntests_ui/main_page.py:17: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1709052874293,
+      "stop" : 1709052874572,
+      "duration" : 279
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Link https://oblache.areso.pro/tos.html is broken!",
+    "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestMainPage object at 0x7fa23c30f4f0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9103020afc7c7f9829ed6ee1918b6392\")>\n\n    @allure.title('test_links')\n    def test_links(self, driver):\n        page = MainPage(driver, TestDataLinks.main_page)\n        page.open()\n>       page.check_links()\n\ntests_ui/test_ui.py:23: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.main_page.MainPage object at 0x7fa23c2ba680>\n\n    @allure.step('check_links')\n    def check_links(self):\n        links = self.elements_are_present(self.locators.LINKS)\n        list_links = [link.get_attribute('href') for link in links]\n        for link in list_links:\n            with allure.step(f'{link} status code is: {requests.get(link).status_code}'):\n>               assert requests.get(link).status_code != 404, f'Link {link} is broken!'\nE               AssertionError: Link https://oblache.areso.pro/tos.html is broken!\n\ntests_ui/main_page.py:17: AssertionError",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/",
+      "time" : {
+        "start" : 1709052874573,
+        "stop" : 1709052875236,
+        "duration" : 663
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "check_links",
+      "time" : {
+        "start" : 1709052875236,
+        "stop" : 1709052878314,
+        "duration" : 3078
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Link https://oblache.areso.pro/tos.html is broken!\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/main_page.py\", line 17, in check_links\n    assert requests.get(link).status_code != 404, f'Link {link} is broken!'\n",
+      "steps" : [ {
+        "name" : "Check elements are present: ('xpath', '//a[@href]')",
+        "time" : {
+          "start" : 1709052875236,
+          "stop" : 1709052875246,
+          "duration" : 10
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "https://oblache.areso.pro/register.html status code is: 200",
+        "time" : {
+          "start" : 1709052875793,
+          "stop" : 1709052876291,
+          "duration" : 498
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "https://oblache.areso.pro/register.html status code is: 200",
+        "time" : {
+          "start" : 1709052876813,
+          "stop" : 1709052877322,
+          "duration" : 509
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "https://oblache.areso.pro/tos.html status code is: 404",
+        "time" : {
+          "start" : 1709052877829,
+          "stop" : 1709052878313,
+          "duration" : 484
+        },
+        "status" : "failed",
+        "statusMessage" : "AssertionError: Link https://oblache.areso.pro/tos.html is broken!\n",
+        "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_ui/main_page.py\", line 17, in check_links\n    assert requests.get(link).status_code != 404, f'Link {link} is broken!'\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 4,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 6,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1709052878317,
+      "stop" : 1709052878502,
+      "duration" : 185
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a466377093913e39",
+      "name" : "Screenshot 2024-02-27 16:54:38.443633",
+      "source" : "a466377093913e39.png",
+      "type" : "image/png",
+      "size" : 60393
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Main Page."
+  }, {
+    "name" : "epic",
+    "value" : "UI Tests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUI"
+  }, {
+    "name" : "host",
+    "value" : "fv-az714-373"
+  }, {
+    "name" : "thread",
+    "value" : "1876-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "32baec2c72bd1f1a.json",
+  "parameterValues" : [ ]
+}
