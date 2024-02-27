@@ -6,13 +6,13 @@
       "name" : "AssertionError: Value db_size should be more than 0.\nassert 0 > 0\n +  where 0 = int(0)",
       "children" : [ {
         "name" : "test_capacity_db",
-        "uid" : "546f47aa4861a0d5",
+        "uid" : "edb80e5aedacfb76",
         "parentUid" : "54d4fefbe7b7ebed0a1bbb048761752b",
         "status" : "failed",
         "time" : {
-          "start" : 1709052746752,
-          "stop" : 1709052853765,
-          "duration" : 107013
+          "start" : 1709074364854,
+          "stop" : 1709074458704,
+          "duration" : 93850
         },
         "flaky" : false,
         "newFailed" : false,
@@ -20,73 +20,39 @@
       } ],
       "uid" : "54d4fefbe7b7ebed0a1bbb048761752b"
     }, {
-      "name" : "Failed: Error evaluating 'xfail' condition\n    Reason: There are databases that need to be deleted manually.\n           ^\nSyntaxError: invalid syntax",
+      "name" : "AssertionError: Incorrect status code",
       "children" : [ {
-        "name" : "Post db list with filter",
-        "uid" : "fe9b21cab895e9f0",
-        "parentUid" : "fa5ab4102a80199e4eced5ab8979c345",
+        "name" : "test_post_is_logged_with_wrong_token",
+        "uid" : "1fb079bf6492c8d9",
+        "parentUid" : "e07dd4ab999b15027ae5a060e6c5c14d",
         "status" : "failed",
         "time" : {
-          "start" : 1709052864208,
-          "stop" : 1709052864208,
-          "duration" : 0
+          "start" : 1709074463332,
+          "stop" : 1709074463659,
+          "duration" : 327
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "fa5ab4102a80199e4eced5ab8979c345"
+      "uid" : "e07dd4ab999b15027ae5a060e6c5c14d"
     }, {
-      "name" : "Failed: Error evaluating 'xfail' condition\n    Reason: When using this method during a test run, the database may be in deleting status.\n           ^\nSyntaxError: invalid syntax",
+      "name" : "AssertionError: assert {'065de67b-d7...22:54:43', 0]} == {}\n  Left contains 3 more items:\n  {'065de67b-d76f-7bb9-8000-0c134627e9ad': ['db_tkpt1b5z',\n                                            'CIS',\n                                            'deleting',\n                                            'mysql://user_iq94zfh8:pwPW01__SD0s7eRqy5soT9@cisdb1.areso.pro:3306/db_tkpt1b5z',\n                                            '2024-02-27 22:52:55',\n                                            9],\n   '065de681-a9b2-7981-8000-8234b62d44cc': ['db_r5opld4u',\n                                            'CIS',\n                                            'db_created',\n                                            'mysql://user_k9r95w1v:pwPW01__JNsUCwU1EiZxhV@cisdb1.areso.pro:3306/db_r5opld4u',\n                                            '2024-02-27 22:54:31',\n                                            0],\n   '065de681-ff60-7d58-8000-3e67ab55825c': ['db_eb7fjjfu',\n                                            'CIS',\n                                            'db_created',\n                                            'mysql://user_inksomdo:pwPW01__1KM4OnzLYSKLsB@cisdb1.areso.pro:3306/db_eb7fjjfu',\n                                            '2024-02-27 22:54:43',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '065de67b-d76f-7bb9-8000-0c134627e9ad': ['db_tkpt1b5z',\n  +                                           'CIS',\n  +                                           'deleting',\n  +                                           'mysql://user_iq94zfh8:pwPW01__SD0s7eRqy5soT9@cisdb1.areso.pro:3306/db_tkpt1b5z',\n  +                                           '2024-02-27 22:52:55',\n  +                                           9],\n  +  '065de681-a9b2-7981-8000-8234b62d44cc': ['db_r5opld4u',\n  +                                           'CIS',\n  +                                           'db_created',\n  +                                           'mysql://user_k9r95w1v:pwPW01__JNsUCwU1EiZxhV@cisdb1.areso.pro:3306/db_r5opld4u',\n  +                                           '2024-02-27 22:54:31',\n  +                                           0],\n  +  '065de681-ff60-7d58-8000-3e67ab55825c': ['db_eb7fjjfu',\n  +                                           'CIS',\n  +                                           'db_created',\n  +                                           'mysql://user_inksomdo:pwPW01__1KM4OnzLYSKLsB@cisdb1.areso.pro:3306/db_eb7fjjfu',\n  +                                           '2024-02-27 22:54:43',\n  +                                           0],\n    }",
       "children" : [ {
-        "name" : "delete_db",
-        "uid" : "1b9ad81ab7142543",
-        "parentUid" : "167d781b1e930885399e017e744affc7",
+        "name" : "test_delete_all_created_db",
+        "uid" : "a9c77eaf97b24c2b",
+        "parentUid" : "86fdd756cc1bb7030d48b16b7fe22059",
         "status" : "failed",
         "time" : {
-          "start" : 1709052865259,
-          "stop" : 1709052865259,
-          "duration" : 0
+          "start" : 1709074467715,
+          "stop" : 1709074507575,
+          "duration" : 39860
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "167d781b1e930885399e017e744affc7"
-    }, {
-      "name" : "AssertionError: h_li_2 is repeated!",
-      "children" : [ {
-        "name" : "test_ids_is_not_repeated_on_main_page",
-        "uid" : "24e2ac64aa2ffbc2",
-        "parentUid" : "4568e15961d80140ee7df838ab36e092",
-        "status" : "failed",
-        "time" : {
-          "start" : 1709052872712,
-          "stop" : 1709052874102,
-          "duration" : 1390
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "4568e15961d80140ee7df838ab36e092"
-    }, {
-      "name" : "AssertionError: Link https://oblache.areso.pro/tos.html is broken!",
-      "children" : [ {
-        "name" : "test_links",
-        "uid" : "32baec2c72bd1f1a",
-        "parentUid" : "8d5e98768e98fab4de35f42876ef7e1f",
-        "status" : "failed",
-        "time" : {
-          "start" : 1709052874573,
-          "stop" : 1709052878314,
-          "duration" : 3741
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "8d5e98768e98fab4de35f42876ef7e1f"
+      "uid" : "86fdd756cc1bb7030d48b16b7fe22059"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   }, {
@@ -95,13 +61,13 @@
       "name" : "ValueError: invalid literal for int() with base 10: 'nodata'",
       "children" : [ {
         "name" : "test_create_database",
-        "uid" : "2bb2c9b73bf42a3f",
+        "uid" : "b9819faad51f7607",
         "parentUid" : "1e5c751b9891191eb8565e82f613bcd2",
         "status" : "broken",
         "time" : {
-          "start" : 1709052884927,
-          "stop" : 1709052887428,
-          "duration" : 2501
+          "start" : 1709074518358,
+          "stop" : 1709074520210,
+          "duration" : 1852
         },
         "flaky" : false,
         "newFailed" : false,
