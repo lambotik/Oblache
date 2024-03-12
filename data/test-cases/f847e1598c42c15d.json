@@ -1,47 +1,32 @@
 {
-  "uid" : "d9dc4e5c7acdaf2d",
+  "uid" : "f847e1598c42c15d",
   "name" : "test_delete_database",
   "fullName" : "tests_ui.test_ui.TestProfilePage#test_delete_database",
   "historyId" : "79ccd4aa4a29c03ae3f72e89c73351ae",
   "time" : {
-    "start" : 1710273986922,
-    "stop" : 1710274011854,
-    "duration" : 24932
+    "start" : 1710274414462,
+    "stop" : 1710274438869,
+    "duration" : 24407
   },
   "status" : "failed",
-  "statusMessage" : "AssertionError: assert ('nodata' == '7'\n  - 7\n  + nodata or None == 'No database for deleting.')",
-  "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestProfilePage object at 0x7f4334548640>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1aac523691c3eb17c09ed60eb11349af\")>\nauthorization_user = <tests_ui.login_page.LoginPage object at 0x7f43345e9150>\n\n    @allure.title('test_delete_database')\n    def test_delete_database(self, driver, authorization_user):\n        page = ProfilePage(driver)\n        page.click_button_status()\n        amount_databases = page.get_status_data()['db qty used']\n        msg = page.delete_database()\n        page.click_button_status()\n        amount_after_create = page.get_status_data()['db qty used']\n>       assert amount_databases == amount_after_create or msg == 'No database for deleting.'\nE       AssertionError: assert ('nodata' == '7'\nE         - 7\nE         + nodata or None == 'No database for deleting.')\n\ntests_ui/test_ui.py:66: AssertionError",
+  "statusMessage" : "AssertionError: assert ('nodata' == '8'\n  - 8\n  + nodata or None == 'No database for deleting.')",
+  "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestProfilePage object at 0x7f64d16451b0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"85849259d31ceae9986ed5658c11e666\")>\nauthorization_user = <tests_ui.login_page.LoginPage object at 0x7f64d1644ee0>\n\n    @allure.title('test_delete_database')\n    def test_delete_database(self, driver, authorization_user):\n        page = ProfilePage(driver)\n        page.click_button_status()\n        amount_databases = page.get_status_data()['db qty used']\n        msg = page.delete_database()\n        page.click_button_status()\n        amount_after_create = page.get_status_data()['db qty used']\n>       assert amount_databases == amount_after_create or msg == 'No database for deleting.'\nE       AssertionError: assert ('nodata' == '8'\nE         - 8\nE         + nodata or None == 'No database for deleting.')\n\ntests_ui/test_ui.py:66: AssertionError",
   "flaky" : true,
-  "newFailed" : true,
+  "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "driver",
-    "time" : {
-      "start" : 1710273985214,
-      "stop" : 1710273985494,
-      "duration" : 280
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "stepsCount" : 0,
-    "hasContent" : false
-  }, {
     "name" : "authorization_user",
     "time" : {
-      "start" : 1710273985495,
-      "stop" : 1710273986921,
-      "duration" : 1426
+      "start" : 1710274413250,
+      "stop" : 1710274414462,
+      "duration" : 1212
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Open page: https://oblache.areso.pro/register.html",
       "time" : {
-        "start" : 1710273985495,
-        "stop" : 1710273985849,
-        "duration" : 354
+        "start" : 1710274413250,
+        "stop" : 1710274413549,
+        "duration" : 299
       },
       "status" : "passed",
       "steps" : [ ],
@@ -54,17 +39,17 @@
     }, {
       "name" : "login_user",
       "time" : {
-        "start" : 1710273985849,
-        "stop" : 1710273986921,
-        "duration" : 1072
+        "start" : 1710274413549,
+        "stop" : 1710274414462,
+        "duration" : 913
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Enter email.",
         "time" : {
-          "start" : 1710273985849,
-          "stop" : 1710273985900,
-          "duration" : 51
+          "start" : 1710274413549,
+          "stop" : 1710274413602,
+          "duration" : 53
         },
         "status" : "passed",
         "steps" : [ ],
@@ -77,9 +62,9 @@
       }, {
         "name" : "Enter password.",
         "time" : {
-          "start" : 1710273985900,
-          "stop" : 1710273985940,
-          "duration" : 40
+          "start" : 1710274413602,
+          "stop" : 1710274413641,
+          "duration" : 39
         },
         "status" : "passed",
         "steps" : [ ],
@@ -92,16 +77,16 @@
       }, {
         "name" : "Click button \"Login\"",
         "time" : {
-          "start" : 1710273985941,
-          "stop" : 1710273986002,
-          "duration" : 61
+          "start" : 1710274413641,
+          "stop" : 1710274413705,
+          "duration" : 64
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "element_is_present_and_clickable",
           "time" : {
-            "start" : 1710273985941,
-            "stop" : 1710273985975,
+            "start" : 1710274413642,
+            "stop" : 1710274413676,
             "duration" : 34
           },
           "status" : "passed",
@@ -125,9 +110,9 @@
       }, {
         "name" : "Check url is present: https://oblache.areso.pro/profile.html",
         "time" : {
-          "start" : 1710273986002,
-          "stop" : 1710273986921,
-          "duration" : 919
+          "start" : 1710274413705,
+          "stop" : 1710274414462,
+          "duration" : 757
         },
         "status" : "passed",
         "steps" : [ ],
@@ -151,24 +136,39 @@
     "shouldDisplayMessage" : false,
     "stepsCount" : 7,
     "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1710274412970,
+      "stop" : 1710274413250,
+      "duration" : 280
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "failed",
-    "statusMessage" : "AssertionError: assert ('nodata' == '7'\n  - 7\n  + nodata or None == 'No database for deleting.')",
-    "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestProfilePage object at 0x7f4334548640>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1aac523691c3eb17c09ed60eb11349af\")>\nauthorization_user = <tests_ui.login_page.LoginPage object at 0x7f43345e9150>\n\n    @allure.title('test_delete_database')\n    def test_delete_database(self, driver, authorization_user):\n        page = ProfilePage(driver)\n        page.click_button_status()\n        amount_databases = page.get_status_data()['db qty used']\n        msg = page.delete_database()\n        page.click_button_status()\n        amount_after_create = page.get_status_data()['db qty used']\n>       assert amount_databases == amount_after_create or msg == 'No database for deleting.'\nE       AssertionError: assert ('nodata' == '7'\nE         - 7\nE         + nodata or None == 'No database for deleting.')\n\ntests_ui/test_ui.py:66: AssertionError",
+    "statusMessage" : "AssertionError: assert ('nodata' == '8'\n  - 8\n  + nodata or None == 'No database for deleting.')",
+    "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestProfilePage object at 0x7f64d16451b0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"85849259d31ceae9986ed5658c11e666\")>\nauthorization_user = <tests_ui.login_page.LoginPage object at 0x7f64d1644ee0>\n\n    @allure.title('test_delete_database')\n    def test_delete_database(self, driver, authorization_user):\n        page = ProfilePage(driver)\n        page.click_button_status()\n        amount_databases = page.get_status_data()['db qty used']\n        msg = page.delete_database()\n        page.click_button_status()\n        amount_after_create = page.get_status_data()['db qty used']\n>       assert amount_databases == amount_after_create or msg == 'No database for deleting.'\nE       AssertionError: assert ('nodata' == '8'\nE         - 8\nE         + nodata or None == 'No database for deleting.')\n\ntests_ui/test_ui.py:66: AssertionError",
     "steps" : [ {
       "name" : "Click button Status.",
       "time" : {
-        "start" : 1710273986922,
-        "stop" : 1710273986972,
-        "duration" : 50
+        "start" : 1710274414463,
+        "stop" : 1710274414514,
+        "duration" : 51
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "element_is_present_and_clickable",
         "time" : {
-          "start" : 1710273986922,
-          "stop" : 1710273986951,
+          "start" : 1710274414463,
+          "stop" : 1710274414492,
           "duration" : 29
         },
         "status" : "passed",
@@ -192,24 +192,24 @@
     }, {
       "name" : "get_status_data",
       "time" : {
-        "start" : 1710273986973,
-        "stop" : 1710273987204,
-        "duration" : 231
+        "start" : 1710274414515,
+        "stop" : 1710274414753,
+        "duration" : 238
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Get status data.",
         "time" : {
-          "start" : 1710273987203,
-          "stop" : 1710273987204,
-          "duration" : 1
+          "start" : 1710274414753,
+          "stop" : 1710274414753,
+          "duration" : 0
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Status data is: {'Email:': 'nodata', 'is blocked?': 'nodata', 'is db creation allowed?': 'nodata', 'disk db quota, mb': 'nodata', 'disk db used, mb': 'nodata', 'db qty quota': 'nodata', 'db qty used': 'nodata'}",
           "time" : {
-            "start" : 1710273987204,
-            "stop" : 1710273987204,
+            "start" : 1710274414753,
+            "stop" : 1710274414753,
             "duration" : 0
           },
           "status" : "passed",
@@ -237,24 +237,24 @@
     }, {
       "name" : "delete_database",
       "time" : {
-        "start" : 1710273987204,
-        "stop" : 1710274011619,
-        "duration" : 24415
+        "start" : 1710274414753,
+        "stop" : 1710274438620,
+        "duration" : 23867
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Click \"Databases\" button.",
         "time" : {
-          "start" : 1710273987204,
-          "stop" : 1710273987255,
-          "duration" : 51
+          "start" : 1710274414753,
+          "stop" : 1710274414803,
+          "duration" : 50
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "element_is_present_and_clickable",
           "time" : {
-            "start" : 1710273987204,
-            "stop" : 1710273987232,
+            "start" : 1710274414754,
+            "stop" : 1710274414782,
             "duration" : 28
           },
           "status" : "passed",
@@ -278,24 +278,24 @@
       }, {
         "name" : "click_buttons_create_new_db",
         "time" : {
-          "start" : 1710273987255,
-          "stop" : 1710273990397,
-          "duration" : 3142
+          "start" : 1710274414804,
+          "stop" : 1710274417433,
+          "duration" : 2629
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Click \"Create new DB\" button.",
           "time" : {
-            "start" : 1710273987255,
-            "stop" : 1710273987306,
+            "start" : 1710274414804,
+            "stop" : 1710274414855,
             "duration" : 51
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "element_is_present_and_clickable",
             "time" : {
-              "start" : 1710273987255,
-              "stop" : 1710273987284,
+              "start" : 1710274414804,
+              "stop" : 1710274414833,
               "duration" : 29
             },
             "status" : "passed",
@@ -319,9 +319,9 @@
         }, {
           "name" : "Click \"Create new DB\" button.",
           "time" : {
-            "start" : 1710273987306,
-            "stop" : 1710273990397,
-            "duration" : 3091
+            "start" : 1710274414855,
+            "stop" : 1710274417433,
+            "duration" : 2578
           },
           "status" : "passed",
           "steps" : [ ],
@@ -341,16 +341,16 @@
       }, {
         "name" : "Click \"Databases\" button.",
         "time" : {
-          "start" : 1710273990398,
-          "stop" : 1710273990481,
-          "duration" : 83
+          "start" : 1710274417434,
+          "stop" : 1710274417486,
+          "duration" : 52
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "element_is_present_and_clickable",
           "time" : {
-            "start" : 1710273990398,
-            "stop" : 1710273990425,
+            "start" : 1710274417434,
+            "stop" : 1710274417461,
             "duration" : 27
           },
           "status" : "passed",
@@ -374,9 +374,9 @@
       }, {
         "name" : "Click button: ❌",
         "time" : {
-          "start" : 1710273991598,
-          "stop" : 1710274011618,
-          "duration" : 20020
+          "start" : 1710274418613,
+          "stop" : 1710274438620,
+          "duration" : 20007
         },
         "status" : "passed",
         "steps" : [ ],
@@ -396,17 +396,17 @@
     }, {
       "name" : "Click button Status.",
       "time" : {
-        "start" : 1710274011619,
-        "stop" : 1710274011665,
-        "duration" : 46
+        "start" : 1710274438620,
+        "stop" : 1710274438673,
+        "duration" : 53
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "element_is_present_and_clickable",
         "time" : {
-          "start" : 1710274011619,
-          "stop" : 1710274011646,
-          "duration" : 27
+          "start" : 1710274438621,
+          "stop" : 1710274438652,
+          "duration" : 31
         },
         "status" : "passed",
         "steps" : [ ],
@@ -429,24 +429,24 @@
     }, {
       "name" : "get_status_data",
       "time" : {
-        "start" : 1710274011665,
-        "stop" : 1710274011854,
-        "duration" : 189
+        "start" : 1710274438673,
+        "stop" : 1710274438868,
+        "duration" : 195
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Get status data.",
         "time" : {
-          "start" : 1710274011854,
-          "stop" : 1710274011854,
+          "start" : 1710274438868,
+          "stop" : 1710274438868,
           "duration" : 0
         },
         "status" : "passed",
         "steps" : [ {
-          "name" : "Status data is: {'Email:': 'test4@mail.com', 'is blocked?': '0', 'is db creation allowed?': '1', 'disk db quota, mb': '4', 'disk db used, mb': '0', 'db qty quota': '100', 'db qty used': '7'}",
+          "name" : "Status data is: {'Email:': 'test4@mail.com', 'is blocked?': '0', 'is db creation allowed?': '1', 'disk db quota, mb': '4', 'disk db used, mb': '0', 'db qty quota': '100', 'db qty used': '8'}",
           "time" : {
-            "start" : 1710274011854,
-            "stop" : 1710274011854,
+            "start" : 1710274438868,
+            "stop" : 1710274438868,
             "duration" : 0
           },
           "status" : "passed",
@@ -482,18 +482,18 @@
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1710274011859,
-      "stop" : 1710274012031,
-      "duration" : 172
+      "start" : 1710274438872,
+      "stop" : 1710274439036,
+      "duration" : 164
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "e2a2ad2f3e4dff5d",
-      "name" : "Screenshot 2024-03-12 20:06:51.973908",
-      "source" : "e2a2ad2f3e4dff5d.png",
+      "uid" : "7eca97e6f30937ac",
+      "name" : "Screenshot 2024-03-12 20:13:58.978258",
+      "source" : "7eca97e6f30937ac.png",
       "type" : "image/png",
-      "size" : 37599
+      "size" : 37712
     } ],
     "parameters" : [ ],
     "attachmentsCount" : 1,
@@ -502,11 +502,11 @@
     "hasContent" : true
   } ],
   "labels" : [ {
-    "name" : "suite",
-    "value" : "Test Profile Page."
-  }, {
     "name" : "epic",
     "value" : "UI Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Test Profile Page."
   }, {
     "name" : "parentSuite",
     "value" : "tests_ui"
@@ -515,10 +515,10 @@
     "value" : "TestUI"
   }, {
     "name" : "host",
-    "value" : "fv-az768-322"
+    "value" : "fv-az777-656"
   }, {
     "name" : "thread",
-    "value" : "2165-MainThread"
+    "value" : "2206-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -546,14 +546,23 @@
     } ],
     "history" : {
       "statistic" : {
-        "failed" : 3,
+        "failed" : 4,
         "broken" : 0,
         "skipped" : 0,
         "passed" : 1,
         "unknown" : 0,
-        "total" : 4
+        "total" : 5
       },
       "items" : [ {
+        "uid" : "d9dc4e5c7acdaf2d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert ('nodata' == '7'\n  - 7\n  + nodata or None == 'No database for deleting.')",
+        "time" : {
+          "start" : 1710273986922,
+          "stop" : 1710274011854,
+          "duration" : 24932
+        }
+      }, {
         "uid" : "d53654c78431ff3",
         "status" : "passed",
         "time" : {
@@ -583,6 +592,6 @@
     },
     "tags" : [ ]
   },
-  "source" : "d9dc4e5c7acdaf2d.json",
+  "source" : "f847e1598c42c15d.json",
   "parameterValues" : [ ]
 }
