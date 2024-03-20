@@ -1,0 +1,174 @@
+{
+  "uid" : "552591faacfdabf2",
+  "name" : "Post db_create with wrong region.",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_db_create_with_wrong_values_region",
+  "historyId" : "856aa6401c668dd622a03a1da3937968",
+  "time" : {
+    "start" : 1710942060267,
+    "stop" : 1710942060656,
+    "duration" : 389
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "post_db_create_wrong_value_region",
+      "time" : {
+        "start" : 1710942060267,
+        "stop" : 1710942060656,
+        "duration" : 389
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/db_create, body: {'dbtype': 3, 'dbversion': 5, 'env': 3, 'region': 39}",
+        "time" : {
+          "start" : 1710942060267,
+          "stop" : 1710942060655,
+          "duration" : 388
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 400",
+          "time" : {
+            "start" : 1710942060655,
+            "stop" : 1710942060655,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/db_create",
+          "time" : {
+            "start" : 1710942060655,
+            "stop" : 1710942060655,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response JSON: {'content': \"error: region isn't found or isn't available for order\"}",
+        "time" : {
+          "start" : 1710942060655,
+          "stop" : 1710942060656,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1710942060656,
+        "stop" : 1710942060656,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: region isn't found or isn't available for order",
+      "time" : {
+        "start" : 1710942060656,
+        "stop" : 1710942060656,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "epic",
+    "value" : "POST REQUESTS"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "fv-az840-2"
+  }, {
+    "name" : "thread",
+    "value" : "2354-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "552591faacfdabf2.json",
+  "parameterValues" : [ ]
+}
