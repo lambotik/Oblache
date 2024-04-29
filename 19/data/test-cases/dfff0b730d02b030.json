@@ -1,0 +1,464 @@
+{
+  "uid" : "dfff0b730d02b030",
+  "name" : "test_delete_container",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_delete_container",
+  "historyId" : "82f1b1649b6ba1f52776126438c9d89e",
+  "time" : {
+    "start" : 1714350776572,
+    "stop" : 1714350778110,
+    "duration" : 1538
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError",
+  "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestProfilePage object at 0x7fd8cb350800>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"23379083785c47d5442df4ab92122695\")>\nauthorization_user = <tests_ui.login_page.LoginPage object at 0x7fd8cb222600>\n\n    def test_delete_container(self, driver, authorization_user):\n        page = ProfilePage(driver)\n        page.click_button_docker_containers()\n        page.get_containers_list()\n>       page.delete_first_container()\n\ntests_ui/test_ui.py:101: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.profile_page.ProfilePage object at 0x7fd8cb366c90>\n\n    @allure.step('delete_first_container')\n    def delete_first_container(self):\n        amount_containers = self.get_containers_list()\n        if len(amount_containers) != 0:\n            self.element_is_present_and_clickable((By.XPATH,\n                                                  '//tbody[@id=\"tbody_containers\"] /tr[1]/td[10] /button')).click()\n            server_msg = self.element_is_visible(self.locators.MSG_FROM_SERVER).text\n>           assert server_msg == 'container is set for deleting'\nE           AssertionError\n\ntests_ui/profile_page.py:183: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1714350775168,
+      "stop" : 1714350775367,
+      "duration" : 199
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1714350775367,
+      "stop" : 1714350776571,
+      "duration" : 1204
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1714350775367,
+        "stop" : 1714350775665,
+        "duration" : 298
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "login_user",
+      "time" : {
+        "start" : 1714350775665,
+        "stop" : 1714350776571,
+        "duration" : 906
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1714350775665,
+          "stop" : 1714350775718,
+          "duration" : 53
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1714350775718,
+          "stop" : 1714350775762,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1714350775762,
+          "stop" : 1714350775828,
+          "duration" : 66
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "element_is_present_and_clickable",
+          "time" : {
+            "start" : 1714350775762,
+            "stop" : 1714350775799,
+            "duration" : 37
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//input[@id=\"inp_regform_login_submit\"]')"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/profile.html",
+        "time" : {
+          "start" : 1714350775828,
+          "stop" : 1714350776571,
+          "duration" : 743
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError",
+    "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestProfilePage object at 0x7fd8cb350800>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"23379083785c47d5442df4ab92122695\")>\nauthorization_user = <tests_ui.login_page.LoginPage object at 0x7fd8cb222600>\n\n    def test_delete_container(self, driver, authorization_user):\n        page = ProfilePage(driver)\n        page.click_button_docker_containers()\n        page.get_containers_list()\n>       page.delete_first_container()\n\ntests_ui/test_ui.py:101: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.profile_page.ProfilePage object at 0x7fd8cb366c90>\n\n    @allure.step('delete_first_container')\n    def delete_first_container(self):\n        amount_containers = self.get_containers_list()\n        if len(amount_containers) != 0:\n            self.element_is_present_and_clickable((By.XPATH,\n                                                  '//tbody[@id=\"tbody_containers\"] /tr[1]/td[10] /button')).click()\n            server_msg = self.element_is_visible(self.locators.MSG_FROM_SERVER).text\n>           assert server_msg == 'container is set for deleting'\nE           AssertionError\n\ntests_ui/profile_page.py:183: AssertionError",
+    "steps" : [ {
+      "name" : "Click \"Docker containers\" button.",
+      "time" : {
+        "start" : 1714350776572,
+        "stop" : 1714350776628,
+        "duration" : 56
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "element_is_present_and_clickable",
+        "time" : {
+          "start" : 1714350776572,
+          "stop" : 1714350776604,
+          "duration" : 32
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//button[@id=\"menu_button_containers\"]')"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "get_containers_list",
+      "time" : {
+        "start" : 1714350776628,
+        "stop" : 1714350777328,
+        "duration" : 700
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Check containers list before creation: ['0 399e20 \uD83D\uDCCB nginx None None creating ❌', '1 47facc \uD83D\uDCCB nginx None None creating ❌', '2 b941e4 \uD83D\uDCCB nginx None None creating ❌', '3 941ed1 \uD83D\uDCCB nginx None None creating ❌', '4 c81591 \uD83D\uDCCB nginx None None creating ❌', '5 2459e6 \uD83D\uDCCB nginx None None creating ❌', '6 8c067b \uD83D\uDCCB nginx None None creating ❌', '7 837b4f \uD83D\uDCCB nginx None None creating ❌', '8 0f4856 \uD83D\uDCCB nginx None None creating ❌', '9 4b3960 \uD83D\uDCCB nginx None None creating ❌', '10 8ab93a \uD83D\uDCCB nginx None None creating ❌', '11 edbc8d \uD83D\uDCCB nginx None None creating ❌', '12 c43054 \uD83D\uDCCB nginx None None creating ❌', '13 96ed94 \uD83D\uDCCB nginx None None creating ❌']",
+        "time" : {
+          "start" : 1714350777328,
+          "stop" : 1714350777328,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "delete_first_container",
+      "time" : {
+        "start" : 1714350777328,
+        "stop" : 1714350778110,
+        "duration" : 782
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/profile_page.py\", line 183, in delete_first_container\n    assert server_msg == 'container is set for deleting'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ {
+        "name" : "get_containers_list",
+        "time" : {
+          "start" : 1714350777328,
+          "stop" : 1714350777514,
+          "duration" : 186
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Check containers list before creation: ['0 399e20 \uD83D\uDCCB nginx None None creating ❌', '1 47facc \uD83D\uDCCB nginx None None creating ❌', '2 b941e4 \uD83D\uDCCB nginx None None creating ❌', '3 941ed1 \uD83D\uDCCB nginx None None creating ❌', '4 c81591 \uD83D\uDCCB nginx None None creating ❌', '5 2459e6 \uD83D\uDCCB nginx None None creating ❌', '6 8c067b \uD83D\uDCCB nginx None None creating ❌', '7 837b4f \uD83D\uDCCB nginx None None creating ❌', '8 0f4856 \uD83D\uDCCB nginx None None creating ❌', '9 4b3960 \uD83D\uDCCB nginx None None creating ❌', '10 8ab93a \uD83D\uDCCB nginx None None creating ❌', '11 edbc8d \uD83D\uDCCB nginx None None creating ❌', '12 c43054 \uD83D\uDCCB nginx None None creating ❌', '13 96ed94 \uD83D\uDCCB nginx None None creating ❌']",
+          "time" : {
+            "start" : 1714350777513,
+            "stop" : 1714350777514,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "element_is_present_and_clickable",
+        "time" : {
+          "start" : 1714350777514,
+          "stop" : 1714350777544,
+          "duration" : 30
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//tbody[@id=\"tbody_containers\"] /tr[1]/td[10] /button')"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1714350778117,
+      "stop" : 1714350778300,
+      "duration" : 183
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "e0cbf9c56d22c9b8",
+      "name" : "Screenshot 2024-04-29 00:32:58.239463",
+      "source" : "e0cbf9c56d22c9b8.png",
+      "type" : "image/png",
+      "size" : 117183
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "epic",
+    "value" : "UI Tests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUI"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1542-362"
+  }, {
+    "name" : "thread",
+    "value" : "2314-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 7,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "9dd1dcd9b69ea6c2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/18//#testresult/9dd1dcd9b69ea6c2",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1714264492590,
+          "stop" : 1714264494054,
+          "duration" : 1464
+        }
+      }, {
+        "uid" : "7db6f184de362fe0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/17//#testresult/7db6f184de362fe0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1714177849919,
+          "stop" : 1714177851363,
+          "duration" : 1444
+        }
+      }, {
+        "uid" : "322a1c7b648e1727",
+        "reportUrl" : "https://lambotik.github.io/Oblache/16//#testresult/322a1c7b648e1727",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1714091516174,
+          "stop" : 1714091517550,
+          "duration" : 1376
+        }
+      }, {
+        "uid" : "ff54d93be444a206",
+        "reportUrl" : "https://lambotik.github.io/Oblache/15//#testresult/ff54d93be444a206",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1714005901101,
+          "stop" : 1714005902932,
+          "duration" : 1831
+        }
+      }, {
+        "uid" : "1589be21066595b3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/14//#testresult/1589be21066595b3",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1713918740078,
+          "stop" : 1713918741366,
+          "duration" : 1288
+        }
+      }, {
+        "uid" : "ff51986f725a2c94",
+        "reportUrl" : "https://lambotik.github.io/Oblache/13//#testresult/ff51986f725a2c94",
+        "status" : "failed",
+        "statusDetails" : "AssertionError",
+        "time" : {
+          "start" : 1713832338386,
+          "stop" : 1713832340113,
+          "duration" : 1727
+        }
+      }, {
+        "uid" : "a666b015e464eacb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/5//#testresult/a666b015e464eacb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713811165598,
+          "stop" : 1713811167010,
+          "duration" : 1412
+        }
+      }, {
+        "uid" : "f4b5350b02565b3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/4//#testresult/f4b5350b02565b3",
+        "status" : "broken",
+        "statusDetails" : "TypeError: WebDriver.find_element() takes from 1 to 3 positional arguments but 54 were given",
+        "time" : {
+          "start" : 1713810842893,
+          "stop" : 1713810843681,
+          "duration" : 788
+        }
+      }, {
+        "uid" : "e002ed1e098119f2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/4//#testresult/e002ed1e098119f2",
+        "status" : "broken",
+        "statusDetails" : "TypeError: WebDriver.find_element() takes from 1 to 3 positional arguments but 54 were given",
+        "time" : {
+          "start" : 1713809885770,
+          "stop" : 1713809886565,
+          "duration" : 795
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "dfff0b730d02b030.json",
+  "parameterValues" : [ ]
+}
