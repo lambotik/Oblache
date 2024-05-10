@@ -1,0 +1,498 @@
+{
+  "uid" : "213d1b9cd656c900",
+  "name" : "POST create_docker_container",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_create_docker_container",
+  "historyId" : "d8acef40d4af2e53d7aa621a0c700e4c",
+  "time" : {
+    "start" : 1715300889494,
+    "stop" : 1715300891972,
+    "duration" : 2478
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+  "statusTrace" : "self = <tests_api.test_bd.TestRequests.TestPOST object at 0x7feda5cf62a0>\n\n    @allure.title('POST create_docker_container')\n    def test_post_create_docker_container(self):\n        amount_before = API.post_container_list(ConnectionData.token)\n        result = API.post_create_docker_container(ConnectionData.token)\n        print(result.text, result.status_code)\n        amount_after = API.post_container_list(ConnectionData.token)\n        Checking.check_status_code(result, 201)\n        Checking.check_json_value(result, 'msg', 'order for new container accepted')\n>       assert amount_before == amount_after + 1, 'Container not added to table.'\nE       TypeError: unsupported operand type(s) for +: 'Response' and 'int'\n\ntests_api/test_bd.py:306: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+    "statusTrace" : "self = <tests_api.test_bd.TestRequests.TestPOST object at 0x7feda5cf62a0>\n\n    @allure.title('POST create_docker_container')\n    def test_post_create_docker_container(self):\n        amount_before = API.post_container_list(ConnectionData.token)\n        result = API.post_create_docker_container(ConnectionData.token)\n        print(result.text, result.status_code)\n        amount_after = API.post_container_list(ConnectionData.token)\n        Checking.check_status_code(result, 201)\n        Checking.check_json_value(result, 'msg', 'order for new container accepted')\n>       assert amount_before == amount_after + 1, 'Container not added to table.'\nE       TypeError: unsupported operand type(s) for +: 'Response' and 'int'\n\ntests_api/test_bd.py:306: TypeError",
+    "steps" : [ {
+      "name" : "post_container_list",
+      "time" : {
+        "start" : 1715300889494,
+        "stop" : 1715300890152,
+        "duration" : 658
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/container_list",
+        "time" : {
+          "start" : 1715300889494,
+          "stop" : 1715300890152,
+          "duration" : 658
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1715300890152,
+            "stop" : 1715300890152,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/container_list",
+          "time" : {
+            "start" : 1715300890152,
+            "stop" : 1715300890152,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_create_docker_container",
+      "time" : {
+        "start" : 1715300890152,
+        "stop" : 1715300891296,
+        "duration" : 1144
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/container_create, body: {'docker_image': 'nginx', 'int_ports': '80', 'env': 3, 'region': 3}",
+        "time" : {
+          "start" : 1715300890152,
+          "stop" : 1715300891295,
+          "duration" : 1143
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 201",
+          "time" : {
+            "start" : 1715300891295,
+            "stop" : 1715300891295,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/container_create",
+          "time" : {
+            "start" : 1715300891295,
+            "stop" : 1715300891295,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response JSON: {\n    \"msg\": \"order for new container accepted\"\n}\n",
+        "time" : {
+          "start" : 1715300891296,
+          "stop" : 1715300891296,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_container_list",
+      "time" : {
+        "start" : 1715300891296,
+        "stop" : 1715300891971,
+        "duration" : 675
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/container_list",
+        "time" : {
+          "start" : 1715300891296,
+          "stop" : 1715300891971,
+          "duration" : 675
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1715300891971,
+            "stop" : 1715300891971,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/container_list",
+          "time" : {
+            "start" : 1715300891971,
+            "stop" : 1715300891971,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 201 == Response status code: 201",
+      "time" : {
+        "start" : 1715300891971,
+        "stop" : 1715300891971,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Compare result request with expected value:\nResponse: <Response [201]>\nField name: msg\nValue: order for new container accepted",
+      "time" : {
+        "start" : 1715300891971,
+        "stop" : 1715300891971,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 15,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "TestRequests"
+  }, {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRequests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1149-882"
+  }, {
+    "name" : "thread",
+    "value" : "2388-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 6,
+        "skipped" : 0,
+        "passed" : 22,
+        "unknown" : 0,
+        "total" : 28
+      },
+      "items" : [ {
+        "uid" : "f1c946b1e27ae97f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/29//#testresult/f1c946b1e27ae97f",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1715214461187,
+          "stop" : 1715214462965,
+          "duration" : 1778
+        }
+      }, {
+        "uid" : "e6f48cae47d76f85",
+        "reportUrl" : "https://lambotik.github.io/Oblache/28//#testresult/e6f48cae47d76f85",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1715127771162,
+          "stop" : 1715127772737,
+          "duration" : 1575
+        }
+      }, {
+        "uid" : "670d93f97c92b7b2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/27//#testresult/670d93f97c92b7b2",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1715041678718,
+          "stop" : 1715041680990,
+          "duration" : 2272
+        }
+      }, {
+        "uid" : "9cca606960a8e164",
+        "reportUrl" : "https://lambotik.github.io/Oblache/26//#testresult/9cca606960a8e164",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1714955332112,
+          "stop" : 1714955333618,
+          "duration" : 1506
+        }
+      }, {
+        "uid" : "cf693e74360e815b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/25//#testresult/cf693e74360e815b",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1714869007207,
+          "stop" : 1714869009040,
+          "duration" : 1833
+        }
+      }, {
+        "uid" : "8162fd6702bc9267",
+        "reportUrl" : "https://lambotik.github.io/Oblache/22//#testresult/8162fd6702bc9267",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714614102084,
+          "stop" : 1714614103138,
+          "duration" : 1054
+        }
+      }, {
+        "uid" : "c4063929ace8e8c4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/21//#testresult/c4063929ace8e8c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714526133171,
+          "stop" : 1714526134277,
+          "duration" : 1106
+        }
+      }, {
+        "uid" : "812dee52b45f86a7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/20//#testresult/812dee52b45f86a7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714436950752,
+          "stop" : 1714436951937,
+          "duration" : 1185
+        }
+      }, {
+        "uid" : "2515599771fc2b1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/19//#testresult/2515599771fc2b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714350644016,
+          "stop" : 1714350645089,
+          "duration" : 1073
+        }
+      }, {
+        "uid" : "287dcc040503ec7d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/18//#testresult/287dcc040503ec7d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714264373418,
+          "stop" : 1714264374648,
+          "duration" : 1230
+        }
+      }, {
+        "uid" : "2cddeb23246a878c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/17//#testresult/2cddeb23246a878c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714177761654,
+          "stop" : 1714177762633,
+          "duration" : 979
+        }
+      }, {
+        "uid" : "3cded0c3e6d50dba",
+        "reportUrl" : "https://lambotik.github.io/Oblache/16//#testresult/3cded0c3e6d50dba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714091398804,
+          "stop" : 1714091400005,
+          "duration" : 1201
+        }
+      }, {
+        "uid" : "2243bd98c50563bd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/15//#testresult/2243bd98c50563bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714005760366,
+          "stop" : 1714005761412,
+          "duration" : 1046
+        }
+      }, {
+        "uid" : "94a337ae3a2cc119",
+        "reportUrl" : "https://lambotik.github.io/Oblache/14//#testresult/94a337ae3a2cc119",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713918630965,
+          "stop" : 1713918631909,
+          "duration" : 944
+        }
+      }, {
+        "uid" : "dee6face684615c8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/13//#testresult/dee6face684615c8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713832230163,
+          "stop" : 1713832231173,
+          "duration" : 1010
+        }
+      }, {
+        "uid" : "dbe2630797fd7cb4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/1//#testresult/dbe2630797fd7cb4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713811542081,
+          "stop" : 1713811543112,
+          "duration" : 1031
+        }
+      }, {
+        "uid" : "accbc2bab66c4109",
+        "reportUrl" : "https://lambotik.github.io/Oblache/12//#testresult/accbc2bab66c4109",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713745870920,
+          "stop" : 1713745871964,
+          "duration" : 1044
+        }
+      }, {
+        "uid" : "2785a18bec2a07d6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/11//#testresult/2785a18bec2a07d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713659535061,
+          "stop" : 1713659535938,
+          "duration" : 877
+        }
+      }, {
+        "uid" : "f6d92f4e6e76295f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/10//#testresult/f6d92f4e6e76295f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713572946036,
+          "stop" : 1713572947052,
+          "duration" : 1016
+        }
+      }, {
+        "uid" : "78a84f34a626e961",
+        "reportUrl" : "https://lambotik.github.io/Oblache/9//#testresult/78a84f34a626e961",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713486616502,
+          "stop" : 1713486617597,
+          "duration" : 1095
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "213d1b9cd656c900.json",
+  "parameterValues" : [ ]
+}
