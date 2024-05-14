@@ -1,0 +1,556 @@
+{
+  "uid" : "a2123e4814180d15",
+  "name" : "test_clipboard_uuid_docker",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_clipboard_uuid_docker",
+  "historyId" : "11f91f43cfea2a231aececf29c7ed302",
+  "time" : {
+    "start" : 1715646589645,
+    "stop" : 1715646591384,
+    "duration" : 1739
+  },
+  "status" : "broken",
+  "statusMessage" : "KeyError: 'data'",
+  "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestProfilePage object at 0x7f58fa8b07d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"dcf04cc93fb82d532df62675f47ba2da\")>\nauthorization_user = <tests_ui.login_page.LoginPage object at 0x7f58fa8d2f30>\n\n    @allure.title('test_clipboard_uuid_docker')\n    def test_clipboard_uuid_docker(self, driver, authorization_user):\n        page = ProfilePage(driver)\n        page.click_button_docker_containers()\n>       page.check_clipboard('//table[@id=\"table_containers\"]')\n\ntests_ui/test_ui.py:90: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.profile_page.ProfilePage object at 0x7f58fa8b17f0>\ntable_xpath = '//table[@id=\"table_containers\"]'\n\n    @allure.step('check_clipboard')\n    def check_clipboard(self, table_xpath):\n        databases_list = self.elements_are_present((By.XPATH, f'{table_xpath}//tr'))\n        list_db = [databases_list[i].text for i in range(len(databases_list))]\n        if len(list_db) != 0:\n            button = self.element_is_visible((By.XPATH, f'{table_xpath} //tr[1]/td[3] /button'))\n            button.click()\n            table_line = self.element_is_visible((By.XPATH, f'{table_xpath} //tr[1]')).text\n            with allure.step(f'Clicked button {button.text} in database:{table_line}, for copy uuid.'):\n                pass\n    \n            result = API.post_db_list(ConnectionData.token)\n>           full_uuid = list(result.json()['data'])[0]\nE           KeyError: 'data'\n\ntests_ui/profile_page.py:99: KeyError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1715646587700,
+      "stop" : 1715646589645,
+      "duration" : 1945
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1715646587700,
+        "stop" : 1715646588199,
+        "duration" : 499
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "login_user",
+      "time" : {
+        "start" : 1715646588200,
+        "stop" : 1715646589645,
+        "duration" : 1445
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1715646588200,
+          "stop" : 1715646588251,
+          "duration" : 51
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1715646588251,
+          "stop" : 1715646588296,
+          "duration" : 45
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1715646588296,
+          "stop" : 1715646588361,
+          "duration" : 65
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "element_is_present_and_clickable",
+          "time" : {
+            "start" : 1715646588296,
+            "stop" : 1715646588333,
+            "duration" : 37
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//input[@id=\"inp_regform_login_submit\"]')"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/profile.html",
+        "time" : {
+          "start" : 1715646588361,
+          "stop" : 1715646589645,
+          "duration" : 1284
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1715646587500,
+      "stop" : 1715646587700,
+      "duration" : 200
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "KeyError: 'data'",
+    "statusTrace" : "self = <tests_ui.test_ui.TestUI.TestProfilePage object at 0x7f58fa8b07d0>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"dcf04cc93fb82d532df62675f47ba2da\")>\nauthorization_user = <tests_ui.login_page.LoginPage object at 0x7f58fa8d2f30>\n\n    @allure.title('test_clipboard_uuid_docker')\n    def test_clipboard_uuid_docker(self, driver, authorization_user):\n        page = ProfilePage(driver)\n        page.click_button_docker_containers()\n>       page.check_clipboard('//table[@id=\"table_containers\"]')\n\ntests_ui/test_ui.py:90: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.profile_page.ProfilePage object at 0x7f58fa8b17f0>\ntable_xpath = '//table[@id=\"table_containers\"]'\n\n    @allure.step('check_clipboard')\n    def check_clipboard(self, table_xpath):\n        databases_list = self.elements_are_present((By.XPATH, f'{table_xpath}//tr'))\n        list_db = [databases_list[i].text for i in range(len(databases_list))]\n        if len(list_db) != 0:\n            button = self.element_is_visible((By.XPATH, f'{table_xpath} //tr[1]/td[3] /button'))\n            button.click()\n            table_line = self.element_is_visible((By.XPATH, f'{table_xpath} //tr[1]')).text\n            with allure.step(f'Clicked button {button.text} in database:{table_line}, for copy uuid.'):\n                pass\n    \n            result = API.post_db_list(ConnectionData.token)\n>           full_uuid = list(result.json()['data'])[0]\nE           KeyError: 'data'\n\ntests_ui/profile_page.py:99: KeyError",
+    "steps" : [ {
+      "name" : "Click \"Docker containers\" button.",
+      "time" : {
+        "start" : 1715646589645,
+        "stop" : 1715646589703,
+        "duration" : 58
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "element_is_present_and_clickable",
+        "time" : {
+          "start" : 1715646589645,
+          "stop" : 1715646589679,
+          "duration" : 34
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', '//button[@id=\"menu_button_containers\"]')"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "check_clipboard",
+      "time" : {
+        "start" : 1715646589703,
+        "stop" : 1715646591384,
+        "duration" : 1681
+      },
+      "status" : "broken",
+      "statusMessage" : "KeyError: 'data'\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/profile_page.py\", line 99, in check_clipboard\n    full_uuid = list(result.json()['data'])[0]\n                     ~~~~~~~~~~~~~^^^^^^^^\n",
+      "steps" : [ {
+        "name" : "Clicked button \uD83D\uDCCB in database:№ uuid full uuid image name container name Host Ports Creation date, UTC Current status Delete, for copy uuid.",
+        "time" : {
+          "start" : 1715646590842,
+          "stop" : 1715646590842,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "post_db_list",
+        "time" : {
+          "start" : 1715646590842,
+          "stop" : 1715646591384,
+          "duration" : 542
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "POST https://dbend.areso.pro/db_list",
+          "time" : {
+            "start" : 1715646590842,
+            "stop" : 1715646591384,
+            "duration" : 542
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Status code: 401",
+            "time" : {
+              "start" : 1715646591384,
+              "stop" : 1715646591384,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          }, {
+            "name" : "Params url: https://dbend.areso.pro/db_list",
+            "time" : {
+              "start" : 1715646591384,
+              "stop" : 1715646591384,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "table_xpath",
+        "value" : "'//table[@id=\"table_containers\"]'"
+      } ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1715646591393,
+      "stop" : 1715646591582,
+      "duration" : 189
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "908234778de55e88",
+      "name" : "Screenshot 2024-05-14 00:29:51.522217",
+      "source" : "908234778de55e88.png",
+      "type" : "image/png",
+      "size" : 206203
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "UI Tests"
+  }, {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUI"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1567-18"
+  }, {
+    "name" : "thread",
+    "value" : "2315-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 12,
+        "skipped" : 0,
+        "passed" : 29,
+        "unknown" : 0,
+        "total" : 41
+      },
+      "items" : [ {
+        "uid" : "4701128b2a792ca4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/33//#testresult/4701128b2a792ca4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715560314825,
+          "stop" : 1715560316601,
+          "duration" : 1776
+        }
+      }, {
+        "uid" : "40ae1e797ecb469e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/32//#testresult/40ae1e797ecb469e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715473991161,
+          "stop" : 1715473993122,
+          "duration" : 1961
+        }
+      }, {
+        "uid" : "d885467fedaeb49",
+        "reportUrl" : "https://lambotik.github.io/Oblache/31//#testresult/d885467fedaeb49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715387379900,
+          "stop" : 1715387381084,
+          "duration" : 1184
+        }
+      }, {
+        "uid" : "21396cdd6b1f88f7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/30//#testresult/21396cdd6b1f88f7",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//table[@id=\"table_containers\"] //tr[1]/td[3] /button')\nStacktrace:\n#0 0x55b37c8bde33 <unknown>\n#1 0x55b37c5ad567 <unknown>\n#2 0x55b37c5f827d <unknown>\n#3 0x55b37c5f8331 <unknown>\n#4 0x55b37c63b624 <unknown>\n#5 0x55b37c61a38d <unknown>\n#6 0x55b37c638ae2 <unknown>\n#7 0x55b37c61a103 <unknown>\n#8 0x55b37c5eb1ba <unknown>\n#9 0x55b37c5ebb8e <unknown>\n#10 0x55b37c88259b <unknown>\n#11 0x55b37c88634b <unknown>\n#12 0x55b37c86e681 <unknown>\n#13 0x55b37c886eb2 <unknown>\n#14 0x55b37c8536af <unknown>\n#15 0x55b37c8ad428 <unknown>\n#16 0x55b37c8ad600 <unknown>\n#17 0x55b37c8bcf84 <unknown>\n#18 0x7f8f46294ac3 <unknown>",
+        "time" : {
+          "start" : 1715301001421,
+          "stop" : 1715301006628,
+          "duration" : 5207
+        }
+      }, {
+        "uid" : "54da6a82296f208b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/29//#testresult/54da6a82296f208b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715214576142,
+          "stop" : 1715214577343,
+          "duration" : 1201
+        }
+      }, {
+        "uid" : "8b19cd370b19d935",
+        "reportUrl" : "https://lambotik.github.io/Oblache/28//#testresult/8b19cd370b19d935",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715127889112,
+          "stop" : 1715127890295,
+          "duration" : 1183
+        }
+      }, {
+        "uid" : "efee32d7fecb8c30",
+        "reportUrl" : "https://lambotik.github.io/Oblache/27//#testresult/efee32d7fecb8c30",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715041796659,
+          "stop" : 1715041798625,
+          "duration" : 1966
+        }
+      }, {
+        "uid" : "e60d2b8d59260505",
+        "reportUrl" : "https://lambotik.github.io/Oblache/26//#testresult/e60d2b8d59260505",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714955446875,
+          "stop" : 1714955448003,
+          "duration" : 1128
+        }
+      }, {
+        "uid" : "43151dce89e09aa",
+        "reportUrl" : "https://lambotik.github.io/Oblache/25//#testresult/43151dce89e09aa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714869110141,
+          "stop" : 1714869111361,
+          "duration" : 1220
+        }
+      }, {
+        "uid" : "ef70ed92f61b16d0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/22//#testresult/ef70ed92f61b16d0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714614241088,
+          "stop" : 1714614243010,
+          "duration" : 1922
+        }
+      }, {
+        "uid" : "1c6129c253e7ed42",
+        "reportUrl" : "https://lambotik.github.io/Oblache/21//#testresult/1c6129c253e7ed42",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714526216958,
+          "stop" : 1714526218895,
+          "duration" : 1937
+        }
+      }, {
+        "uid" : "af9fdc2c6f9438cc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/20//#testresult/af9fdc2c6f9438cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714437042131,
+          "stop" : 1714437043348,
+          "duration" : 1217
+        }
+      }, {
+        "uid" : "5fa46e1177d322a7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/19//#testresult/5fa46e1177d322a7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714350769014,
+          "stop" : 1714350770153,
+          "duration" : 1139
+        }
+      }, {
+        "uid" : "10762cd004a08c98",
+        "reportUrl" : "https://lambotik.github.io/Oblache/18//#testresult/10762cd004a08c98",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714264484601,
+          "stop" : 1714264485804,
+          "duration" : 1203
+        }
+      }, {
+        "uid" : "3c63370d5caf7c49",
+        "reportUrl" : "https://lambotik.github.io/Oblache/17//#testresult/3c63370d5caf7c49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714177841903,
+          "stop" : 1714177843125,
+          "duration" : 1222
+        }
+      }, {
+        "uid" : "77d4ec82403ad5b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/16//#testresult/77d4ec82403ad5b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714091508771,
+          "stop" : 1714091509901,
+          "duration" : 1130
+        }
+      }, {
+        "uid" : "2b099364edf47472",
+        "reportUrl" : "https://lambotik.github.io/Oblache/15//#testresult/2b099364edf47472",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714005890564,
+          "stop" : 1714005892483,
+          "duration" : 1919
+        }
+      }, {
+        "uid" : "d1d7dfd0b83841c1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/14//#testresult/d1d7dfd0b83841c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713918732084,
+          "stop" : 1713918733313,
+          "duration" : 1229
+        }
+      }, {
+        "uid" : "f6aa5ec0c35ba48",
+        "reportUrl" : "https://lambotik.github.io/Oblache/13//#testresult/f6aa5ec0c35ba48",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713832327644,
+          "stop" : 1713832329547,
+          "duration" : 1903
+        }
+      }, {
+        "uid" : "3b02becfb6e3d4fa",
+        "reportUrl" : "https://lambotik.github.io/Oblache/5//#testresult/3b02becfb6e3d4fa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1713811157509,
+          "stop" : 1713811158739,
+          "duration" : 1230
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "a2123e4814180d15.json",
+  "parameterValues" : [ ]
+}
