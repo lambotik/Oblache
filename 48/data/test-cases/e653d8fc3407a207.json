@@ -1,0 +1,365 @@
+{
+  "uid" : "e653d8fc3407a207",
+  "name" : "POST checking ports_len negative range",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_checking_ports_len_negative_range",
+  "historyId" : "6a5e2b3a0040caf8e74db064b01d1684",
+  "time" : {
+    "start" : 1716856145396,
+    "stop" : 1716856145729,
+    "duration" : 333
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "post_create_docker_container",
+      "time" : {
+        "start" : 1716856145396,
+        "stop" : 1716856145728,
+        "duration" : 332
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/container_create, body: {'docker_image': 'nginx', 'int_ports': '80-90', 'env': 3, 'region': 3}",
+        "time" : {
+          "start" : 1716856145396,
+          "stop" : 1716856145727,
+          "duration" : 331
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 400",
+          "time" : {
+            "start" : 1716856145727,
+            "stop" : 1716856145727,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/container_create",
+          "time" : {
+            "start" : 1716856145727,
+            "stop" : 1716856145727,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response JSON: {\n    \"msg\": \"msg[]: ports range is too wide\"\n}\n",
+        "time" : {
+          "start" : 1716856145727,
+          "stop" : 1716856145728,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1716856145728,
+        "stop" : 1716856145728,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Compare result request with expected value:\nResponse: <Response [400]>\nField name: msg\nValue: msg[]: ports range is too wide",
+      "time" : {
+        "start" : 1716856145728,
+        "stop" : 1716856145728,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "epic",
+    "value" : "TestRequests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRequests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az575-629"
+  }, {
+    "name" : "thread",
+    "value" : "2406-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 25,
+        "unknown" : 0,
+        "total" : 25
+      },
+      "items" : [ {
+        "uid" : "deb659ac831bf26",
+        "reportUrl" : "https://lambotik.github.io/Oblache/47//#testresult/deb659ac831bf26",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716769817520,
+          "stop" : 1716769817912,
+          "duration" : 392
+        }
+      }, {
+        "uid" : "813243c2dcce4f56",
+        "reportUrl" : "https://lambotik.github.io/Oblache/46//#testresult/813243c2dcce4f56",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716683518153,
+          "stop" : 1716683518678,
+          "duration" : 525
+        }
+      }, {
+        "uid" : "a3ee3b631ab62dc4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/45//#testresult/a3ee3b631ab62dc4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716596892335,
+          "stop" : 1716596892672,
+          "duration" : 337
+        }
+      }, {
+        "uid" : "31e1259719ac6768",
+        "reportUrl" : "https://lambotik.github.io/Oblache/44//#testresult/31e1259719ac6768",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716510552035,
+          "stop" : 1716510552575,
+          "duration" : 540
+        }
+      }, {
+        "uid" : "74bc84a11c68b8a2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/43//#testresult/74bc84a11c68b8a2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716424105818,
+          "stop" : 1716424106158,
+          "duration" : 340
+        }
+      }, {
+        "uid" : "ca23204a15b21c63",
+        "reportUrl" : "https://lambotik.github.io/Oblache/42//#testresult/ca23204a15b21c63",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716337735009,
+          "stop" : 1716337735352,
+          "duration" : 343
+        }
+      }, {
+        "uid" : "cff977fd8918536d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/41//#testresult/cff977fd8918536d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716251330272,
+          "stop" : 1716251330614,
+          "duration" : 342
+        }
+      }, {
+        "uid" : "18b7919a2af479f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/40//#testresult/18b7919a2af479f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716164961437,
+          "stop" : 1716164961831,
+          "duration" : 394
+        }
+      }, {
+        "uid" : "14f1fd35be24febc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/39//#testresult/14f1fd35be24febc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716078687305,
+          "stop" : 1716078687634,
+          "duration" : 329
+        }
+      }, {
+        "uid" : "2facd638382ee1d9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/38//#testresult/2facd638382ee1d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715992126715,
+          "stop" : 1715992127278,
+          "duration" : 563
+        }
+      }, {
+        "uid" : "365c66f492a00812",
+        "reportUrl" : "https://lambotik.github.io/Oblache/37//#testresult/365c66f492a00812",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715905718199,
+          "stop" : 1715905718651,
+          "duration" : 452
+        }
+      }, {
+        "uid" : "eae23ff58a7ea970",
+        "reportUrl" : "https://lambotik.github.io/Oblache/36//#testresult/eae23ff58a7ea970",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715819290813,
+          "stop" : 1715819291210,
+          "duration" : 397
+        }
+      }, {
+        "uid" : "9ceed351a8bc0855",
+        "reportUrl" : "https://lambotik.github.io/Oblache/35//#testresult/9ceed351a8bc0855",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715732905771,
+          "stop" : 1715732906332,
+          "duration" : 561
+        }
+      }, {
+        "uid" : "bb430f19179c6e01",
+        "reportUrl" : "https://lambotik.github.io/Oblache/34//#testresult/bb430f19179c6e01",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715646502564,
+          "stop" : 1715646503100,
+          "duration" : 536
+        }
+      }, {
+        "uid" : "d5e97e4e69a19a63",
+        "reportUrl" : "https://lambotik.github.io/Oblache/33//#testresult/d5e97e4e69a19a63",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715560185814,
+          "stop" : 1715560186220,
+          "duration" : 406
+        }
+      }, {
+        "uid" : "fa0d7d6e0cb030bc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/32//#testresult/fa0d7d6e0cb030bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715473887754,
+          "stop" : 1715473888322,
+          "duration" : 568
+        }
+      }, {
+        "uid" : "3a05834fb5af2715",
+        "reportUrl" : "https://lambotik.github.io/Oblache/31//#testresult/3a05834fb5af2715",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715387258226,
+          "stop" : 1715387258567,
+          "duration" : 341
+        }
+      }, {
+        "uid" : "71a422be8b2e4457",
+        "reportUrl" : "https://lambotik.github.io/Oblache/30//#testresult/71a422be8b2e4457",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715300893131,
+          "stop" : 1715300893702,
+          "duration" : 571
+        }
+      }, {
+        "uid" : "a4d14f0008915895",
+        "reportUrl" : "https://lambotik.github.io/Oblache/29//#testresult/a4d14f0008915895",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715214463922,
+          "stop" : 1715214464280,
+          "duration" : 358
+        }
+      }, {
+        "uid" : "28f72107cacb339",
+        "reportUrl" : "https://lambotik.github.io/Oblache/28//#testresult/28f72107cacb339",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715127773835,
+          "stop" : 1715127774170,
+          "duration" : 335
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e653d8fc3407a207.json",
+  "parameterValues" : [ ]
+}
