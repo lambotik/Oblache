@@ -1,0 +1,379 @@
+{
+  "uid" : "821ad9eb45d36b7",
+  "name" : "POST db_create_with_wrong_db_type.",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_db_create_with_wrong_values_dbtype",
+  "historyId" : "ae63095b2fe55ca99f871a9193b615b5",
+  "time" : {
+    "start" : 1717028946886,
+    "stop" : 1717028947226,
+    "duration" : 340
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Incorrect status code",
+  "statusTrace" : "self = <tests_api.test_bd.TestRequests.TestPOST object at 0x7fd973d1d9a0>\n\n    @allure.title('POST db_create_with_wrong_db_type.')\n    def test_post_db_create_with_wrong_values_dbtype(self):\n        result_post_db_list = API.post_db_create_wrong_value_db_type(ConnectionData.token)\n>       Checking.check_status_code(result_post_db_list, 400)\n\ntests_api/test_bd.py:210: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 400\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\ntests_api/utils/checking.py:18: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Incorrect status code",
+    "statusTrace" : "self = <tests_api.test_bd.TestRequests.TestPOST object at 0x7fd973d1d9a0>\n\n    @allure.title('POST db_create_with_wrong_db_type.')\n    def test_post_db_create_with_wrong_values_dbtype(self):\n        result_post_db_list = API.post_db_create_wrong_value_db_type(ConnectionData.token)\n>       Checking.check_status_code(result_post_db_list, 400)\n\ntests_api/test_bd.py:210: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [403]>, status_code = 400\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response JSON\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, 'Incorrect status code'\nE           AssertionError: Incorrect status code\n\ntests_api/utils/checking.py:18: AssertionError",
+    "steps" : [ {
+      "name" : "post_db_create_wrong_value_db_type",
+      "time" : {
+        "start" : 1717028946886,
+        "stop" : 1717028947226,
+        "duration" : 340
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/db_create, body: {'dbtype': 21, 'dbversion': 5, 'env': 3, 'region': 3}",
+        "time" : {
+          "start" : 1717028946886,
+          "stop" : 1717028947226,
+          "duration" : 340
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 403",
+          "time" : {
+            "start" : 1717028947225,
+            "stop" : 1717028947225,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/db_create",
+          "time" : {
+            "start" : 1717028947225,
+            "stop" : 1717028947226,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response JSON: {\n    \"content\": \"you are not allowed to create new databases\"\n}\n",
+        "time" : {
+          "start" : 1717028947226,
+          "stop" : 1717028947226,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 403",
+      "time" : {
+        "start" : 1717028947226,
+        "stop" : 1717028947226,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Incorrect status code\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 18, in check_status_code\n    assert status_code == result.status_code, 'Incorrect status code'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "epic",
+    "value" : "TestRequests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRequests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1208-524"
+  }, {
+    "name" : "thread",
+    "value" : "2214-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 20,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 32,
+        "unknown" : 0,
+        "total" : 52
+      },
+      "items" : [ {
+        "uid" : "71376133bf164947",
+        "reportUrl" : "https://lambotik.github.io/Oblache/49//#testresult/71376133bf164947",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716942599208,
+          "stop" : 1716942599593,
+          "duration" : 385
+        }
+      }, {
+        "uid" : "d1de0330114b2c69",
+        "reportUrl" : "https://lambotik.github.io/Oblache/48//#testresult/d1de0330114b2c69",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716856138142,
+          "stop" : 1716856138598,
+          "duration" : 456
+        }
+      }, {
+        "uid" : "caed97ba2494a5b0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/47//#testresult/caed97ba2494a5b0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716769809226,
+          "stop" : 1716769809630,
+          "duration" : 404
+        }
+      }, {
+        "uid" : "6939285332df7a85",
+        "reportUrl" : "https://lambotik.github.io/Oblache/46//#testresult/6939285332df7a85",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716683507746,
+          "stop" : 1716683508270,
+          "duration" : 524
+        }
+      }, {
+        "uid" : "e48d54a8f69e3306",
+        "reportUrl" : "https://lambotik.github.io/Oblache/45//#testresult/e48d54a8f69e3306",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716596885178,
+          "stop" : 1716596885508,
+          "duration" : 330
+        }
+      }, {
+        "uid" : "1ecfc16affe3f786",
+        "reportUrl" : "https://lambotik.github.io/Oblache/44//#testresult/1ecfc16affe3f786",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716510541142,
+          "stop" : 1716510541676,
+          "duration" : 534
+        }
+      }, {
+        "uid" : "df69ce1ad768052",
+        "reportUrl" : "https://lambotik.github.io/Oblache/43//#testresult/df69ce1ad768052",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716424098241,
+          "stop" : 1716424098577,
+          "duration" : 336
+        }
+      }, {
+        "uid" : "830fb80aabbc725e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/42//#testresult/830fb80aabbc725e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716337727625,
+          "stop" : 1716337727967,
+          "duration" : 342
+        }
+      }, {
+        "uid" : "1cc8b84b5658ff1d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/41//#testresult/1cc8b84b5658ff1d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716251323054,
+          "stop" : 1716251323399,
+          "duration" : 345
+        }
+      }, {
+        "uid" : "d77e5487d397ce99",
+        "reportUrl" : "https://lambotik.github.io/Oblache/40//#testresult/d77e5487d397ce99",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716164953253,
+          "stop" : 1716164953635,
+          "duration" : 382
+        }
+      }, {
+        "uid" : "f8e7d89a3619b44c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/39//#testresult/f8e7d89a3619b44c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716078679975,
+          "stop" : 1716078680311,
+          "duration" : 336
+        }
+      }, {
+        "uid" : "d8609f529dee5c9d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/38//#testresult/d8609f529dee5c9d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1715992115823,
+          "stop" : 1715992116376,
+          "duration" : 553
+        }
+      }, {
+        "uid" : "61b188bf93a1270d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/37//#testresult/61b188bf93a1270d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1715905710913,
+          "stop" : 1715905711253,
+          "duration" : 340
+        }
+      }, {
+        "uid" : "e02557b29d2af050",
+        "reportUrl" : "https://lambotik.github.io/Oblache/36//#testresult/e02557b29d2af050",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1715819282464,
+          "stop" : 1715819282849,
+          "duration" : 385
+        }
+      }, {
+        "uid" : "9490289a9f92e2e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/35//#testresult/9490289a9f92e2e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1715732894860,
+          "stop" : 1715732895391,
+          "duration" : 531
+        }
+      }, {
+        "uid" : "b9e2e360cfcec3a0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/34//#testresult/b9e2e360cfcec3a0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1715646491828,
+          "stop" : 1715646492371,
+          "duration" : 543
+        }
+      }, {
+        "uid" : "cf6269cc711c2a1b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/33//#testresult/cf6269cc711c2a1b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1715560177680,
+          "stop" : 1715560178081,
+          "duration" : 401
+        }
+      }, {
+        "uid" : "cc70ee873073b42",
+        "reportUrl" : "https://lambotik.github.io/Oblache/32//#testresult/cc70ee873073b42",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1715473876940,
+          "stop" : 1715473877492,
+          "duration" : 552
+        }
+      }, {
+        "uid" : "b906abdd9843e953",
+        "reportUrl" : "https://lambotik.github.io/Oblache/31//#testresult/b906abdd9843e953",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1715387251145,
+          "stop" : 1715387251484,
+          "duration" : 339
+        }
+      }, {
+        "uid" : "d3c2bd96d1f6eefe",
+        "reportUrl" : "https://lambotik.github.io/Oblache/30//#testresult/d3c2bd96d1f6eefe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1715300882263,
+          "stop" : 1715300882807,
+          "duration" : 544
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "821ad9eb45d36b7.json",
+  "parameterValues" : [ ]
+}

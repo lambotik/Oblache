@@ -3,41 +3,165 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AssertionError: Value db_size should be more than 0.\nassert 0 > 0\n +  where 0 = int(0)",
+      "name" : "AssertionError: Incorrect status code",
       "children" : [ {
-        "name" : "test_capacity_db",
-        "uid" : "9d125d4ecfe04ce2",
-        "parentUid" : "54d4fefbe7b7ebed0a1bbb048761752b",
+        "name" : "POST db_create",
+        "uid" : "71cb6ed40cda756",
+        "parentUid" : "e07dd4ab999b15027ae5a060e6c5c14d",
         "status" : "failed",
         "time" : {
-          "start" : 1710941952086,
-          "stop" : 1710942051121,
-          "duration" : 99035
+          "start" : 1717028946480,
+          "stop" : 1717028946844,
+          "duration" : 364
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "54d4fefbe7b7ebed0a1bbb048761752b"
-    }, {
-      "name" : "AssertionError: Incorrect status code",
-      "children" : [ {
-        "name" : "test_post_is_logged_with_wrong_token",
-        "uid" : "760cad376dc1ab40",
+      }, {
+        "name" : "POST db_create_with_wrong_db_type.",
+        "uid" : "821ad9eb45d36b7",
         "parentUid" : "e07dd4ab999b15027ae5a060e6c5c14d",
         "status" : "failed",
         "time" : {
-          "start" : 1710942058246,
-          "stop" : 1710942058637,
-          "duration" : 391
+          "start" : 1717028946886,
+          "stop" : 1717028947226,
+          "duration" : 340
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "POST db_create_with_wrong_db_version.",
+        "uid" : "7b102ac53a1cad38",
+        "parentUid" : "e07dd4ab999b15027ae5a060e6c5c14d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717028947236,
+          "stop" : 1717028947591,
+          "duration" : 355
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "POST db_create_with_wrong_env.",
+        "uid" : "1e346d45027cfb71",
+        "parentUid" : "e07dd4ab999b15027ae5a060e6c5c14d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717028947601,
+          "stop" : 1717028947956,
+          "duration" : 355
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "POST db_create_with_wrong_region.",
+        "uid" : "f99a3561e2ee1b78",
+        "parentUid" : "e07dd4ab999b15027ae5a060e6c5c14d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717028947967,
+          "stop" : 1717028948313,
+          "duration" : 346
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "e07dd4ab999b15027ae5a060e6c5c14d"
+    }, {
+      "name" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+      "children" : [ {
+        "name" : "test_delete_database",
+        "uid" : "72ad8e9d6469b1c4",
+        "parentUid" : "c220fb67c33f0db79926e7f15afd205f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717029032255,
+          "stop" : 1717029036173,
+          "duration" : 3918
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c220fb67c33f0db79926e7f15afd205f"
+    }, {
+      "name" : "AssertionError",
+      "children" : [ {
+        "name" : "test_delete_container",
+        "uid" : "a31737f7cfcf8e2a",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1717029058946,
+          "stop" : 1717029065052,
+          "duration" : 6106
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a0017ad855102fea08b8682d27fec4ca"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+      "children" : [ {
+        "name" : "POST create_docker_container",
+        "uid" : "46c93b50f1d98c85",
+        "parentUid" : "2730c7aab466b75b7d1f550f7eeb0ab3",
+        "status" : "broken",
+        "time" : {
+          "start" : 1717028951442,
+          "stop" : 1717028953247,
+          "duration" : 1805
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2730c7aab466b75b7d1f550f7eeb0ab3"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_from_server\"]')",
+      "children" : [ {
+        "name" : "test_create_database",
+        "uid" : "2a9a9eec378217c5",
+        "parentUid" : "3ade11a03a0ed1fd0050f9b450596951",
+        "status" : "broken",
+        "time" : {
+          "start" : 1717029022719,
+          "stop" : 1717029030606,
+          "duration" : 7887
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3ade11a03a0ed1fd0050f9b450596951"
+    }, {
+      "name" : "AttributeError: 'ProfilePage' object has no attribute 'check_port_lens_positive'",
+      "children" : [ {
+        "name" : "test_check_port_lens_positive",
+        "uid" : "b24fb494fcacb299",
+        "parentUid" : "91690991e3eb5d6dd0b87e30faaf93d4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1717029057310,
+          "stop" : 1717029057311,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "91690991e3eb5d6dd0b87e30faaf93d4"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
   "name" : "categories"
 }
