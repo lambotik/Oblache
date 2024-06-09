@@ -1,0 +1,422 @@
+{
+  "uid" : "c4a6aa0656182bb6",
+  "name" : "POST delete_container",
+  "fullName" : "tests_api.test_bd.TestPOST#test_delete_container",
+  "historyId" : "f292c4cfa0c4b2dd77724aada1d3db8c",
+  "time" : {
+    "start" : 1717893203495,
+    "stop" : 1717893224472,
+    "duration" : 20977
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "post_delete_docker_container",
+      "time" : {
+        "start" : 1717893203495,
+        "stop" : 1717893224471,
+        "duration" : 20976
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "post_container_list",
+        "time" : {
+          "start" : 1717893203495,
+          "stop" : 1717893204072,
+          "duration" : 577
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "POST https://dbend.areso.pro/container_list",
+          "time" : {
+            "start" : 1717893203495,
+            "stop" : 1717893204072,
+            "duration" : 577
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Status code: 200",
+            "time" : {
+              "start" : 1717893204072,
+              "stop" : 1717893204072,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          }, {
+            "name" : "Params url: https://dbend.areso.pro/container_list",
+            "time" : {
+              "start" : 1717893204072,
+              "stop" : 1717893204072,
+              "duration" : 0
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ ],
+            "stepsCount" : 0,
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "hasContent" : false
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 2,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "POST https://dbend.areso.pro/container_delete, body: {'docker_uuid': '06664f85-0ef4-756e-8000-4191af9a0767'}",
+        "time" : {
+          "start" : 1717893224072,
+          "stop" : 1717893224471,
+          "duration" : 399
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1717893224470,
+            "stop" : 1717893224471,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/container_delete",
+          "time" : {
+            "start" : 1717893224471,
+            "stop" : 1717893224471,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response JSON: {\n    \"content\": \"msg[17]: broken database marked for manual deletion\"\n}\n",
+        "time" : {
+          "start" : 1717893224471,
+          "stop" : 1717893224471,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 8,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 200 == Response status code: 200",
+      "time" : {
+        "start" : 1717893224472,
+        "stop" : 1717893224472,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "TestRequests"
+  }, {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestRequests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az692-844"
+  }, {
+    "name" : "thread",
+    "value" : "2275-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 19,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 39,
+        "unknown" : 0,
+        "total" : 58
+      },
+      "items" : [ {
+        "uid" : "dcfd6326cf72e53b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/59//#testresult/dcfd6326cf72e53b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717806589043,
+          "stop" : 1717806610031,
+          "duration" : 20988
+        }
+      }, {
+        "uid" : "fbf4862f0a5a39e4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/58//#testresult/fbf4862f0a5a39e4",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1717720233843,
+          "stop" : 1717720255206,
+          "duration" : 21363
+        }
+      }, {
+        "uid" : "2e8ba587778b88e8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/57//#testresult/2e8ba587778b88e8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1717633766500,
+          "stop" : 1717633787494,
+          "duration" : 20994
+        }
+      }, {
+        "uid" : "5b9ea55f16c8410d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/56//#testresult/5b9ea55f16c8410d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1717547338120,
+          "stop" : 1717547358969,
+          "duration" : 20849
+        }
+      }, {
+        "uid" : "353ed62c2c243759",
+        "reportUrl" : "https://lambotik.github.io/Oblache/55//#testresult/353ed62c2c243759",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717460953094,
+          "stop" : 1717460973933,
+          "duration" : 20839
+        }
+      }, {
+        "uid" : "b6b36fdcb25d0c1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/54//#testresult/b6b36fdcb25d0c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717374623951,
+          "stop" : 1717374645323,
+          "duration" : 21372
+        }
+      }, {
+        "uid" : "c9945b3bc2fa94f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/53//#testresult/c9945b3bc2fa94f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1717288307186,
+          "stop" : 1717288328157,
+          "duration" : 20971
+        }
+      }, {
+        "uid" : "775ec15aa12eaf97",
+        "reportUrl" : "https://lambotik.github.io/Oblache/52//#testresult/775ec15aa12eaf97",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1717201885447,
+          "stop" : 1717201906239,
+          "duration" : 20792
+        }
+      }, {
+        "uid" : "3efd57ad4892d994",
+        "reportUrl" : "https://lambotik.github.io/Oblache/51//#testresult/3efd57ad4892d994",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717115353243,
+          "stop" : 1717115374453,
+          "duration" : 21210
+        }
+      }, {
+        "uid" : "4b88dd519103a48e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/50//#testresult/4b88dd519103a48e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1717028956568,
+          "stop" : 1717028977369,
+          "duration" : 20801
+        }
+      }, {
+        "uid" : "dc8d948ba17eb8f3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/49//#testresult/dc8d948ba17eb8f3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716942609952,
+          "stop" : 1716942630862,
+          "duration" : 20910
+        }
+      }, {
+        "uid" : "3c3dfb3b403b6e61",
+        "reportUrl" : "https://lambotik.github.io/Oblache/48//#testresult/3c3dfb3b403b6e61",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716856147647,
+          "stop" : 1716856168426,
+          "duration" : 20779
+        }
+      }, {
+        "uid" : "b8ca92909256a909",
+        "reportUrl" : "https://lambotik.github.io/Oblache/47//#testresult/b8ca92909256a909",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716769819984,
+          "stop" : 1716769840888,
+          "duration" : 20904
+        }
+      }, {
+        "uid" : "84a2d35e9a8e93b8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/46//#testresult/84a2d35e9a8e93b8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716683521317,
+          "stop" : 1716683542518,
+          "duration" : 21201
+        }
+      }, {
+        "uid" : "89a5759d5eab48ad",
+        "reportUrl" : "https://lambotik.github.io/Oblache/45//#testresult/89a5759d5eab48ad",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716596894585,
+          "stop" : 1716596915349,
+          "duration" : 20764
+        }
+      }, {
+        "uid" : "87bcc0d7d0fa332f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/44//#testresult/87bcc0d7d0fa332f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1716510555377,
+          "stop" : 1716510576612,
+          "duration" : 21235
+        }
+      }, {
+        "uid" : "f10a17a34a466866",
+        "reportUrl" : "https://lambotik.github.io/Oblache/43//#testresult/f10a17a34a466866",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716424108172,
+          "stop" : 1716424128966,
+          "duration" : 20794
+        }
+      }, {
+        "uid" : "dae7785aef48c436",
+        "reportUrl" : "https://lambotik.github.io/Oblache/42//#testresult/dae7785aef48c436",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716337737256,
+          "stop" : 1716337758047,
+          "duration" : 20791
+        }
+      }, {
+        "uid" : "6be44222df28ad91",
+        "reportUrl" : "https://lambotik.github.io/Oblache/41//#testresult/6be44222df28ad91",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716251332706,
+          "stop" : 1716251353507,
+          "duration" : 20801
+        }
+      }, {
+        "uid" : "148c645c781a9824",
+        "reportUrl" : "https://lambotik.github.io/Oblache/40//#testresult/148c645c781a9824",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code",
+        "time" : {
+          "start" : 1716164963897,
+          "stop" : 1716164984816,
+          "duration" : 20919
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "c4a6aa0656182bb6.json",
+  "parameterValues" : [ ]
+}
