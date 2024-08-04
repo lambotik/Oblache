@@ -1,0 +1,510 @@
+{
+  "uid" : "476aae25d8496a52",
+  "name" : "POST create_docker_container",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_create_docker_container",
+  "historyId" : "d8acef40d4af2e53d7aa621a0c700e4c",
+  "time" : {
+    "start" : 1722799195184,
+    "stop" : 1722799197138,
+    "duration" : 1954
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+  "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7fbdc7e17710>\n\n    @allure.title('POST create_docker_container')\n    def test_post_create_docker_container(self):\n        amount_before = API.post_container_list(TestPOST.token)\n        result = API.post_create_docker_container(TestPOST.token)\n        amount_after = API.post_container_list(TestPOST.token)\n        Checking.check_status_code(result, 201)\n        Checking.check_json_value(result, 'msg', 'order for new container accepted')\n>       assert amount_before == amount_after + 1, 'Container not added to table.'\nE       TypeError: unsupported operand type(s) for +: 'Response' and 'int'\n\ntests_api/test_bd.py:340: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+    "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7fbdc7e17710>\n\n    @allure.title('POST create_docker_container')\n    def test_post_create_docker_container(self):\n        amount_before = API.post_container_list(TestPOST.token)\n        result = API.post_create_docker_container(TestPOST.token)\n        amount_after = API.post_container_list(TestPOST.token)\n        Checking.check_status_code(result, 201)\n        Checking.check_json_value(result, 'msg', 'order for new container accepted')\n>       assert amount_before == amount_after + 1, 'Container not added to table.'\nE       TypeError: unsupported operand type(s) for +: 'Response' and 'int'\n\ntests_api/test_bd.py:340: TypeError",
+    "steps" : [ {
+      "name" : "post_container_list",
+      "time" : {
+        "start" : 1722799195184,
+        "stop" : 1722799195721,
+        "duration" : 537
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/container_list",
+        "time" : {
+          "start" : 1722799195184,
+          "stop" : 1722799195720,
+          "duration" : 536
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1722799195720,
+            "stop" : 1722799195720,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/container_list",
+          "time" : {
+            "start" : 1722799195720,
+            "stop" : 1722799195720,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_create_docker_container",
+      "time" : {
+        "start" : 1722799195721,
+        "stop" : 1722799196599,
+        "duration" : 878
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/container_create, body: {'docker_image': 'nginx', 'int_ports': '80', 'env': 3, 'region': 3}",
+        "time" : {
+          "start" : 1722799195721,
+          "stop" : 1722799196599,
+          "duration" : 878
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 201",
+          "time" : {
+            "start" : 1722799196599,
+            "stop" : 1722799196599,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/container_create",
+          "time" : {
+            "start" : 1722799196599,
+            "stop" : 1722799196599,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response JSON: {\n    \"msg\": \"order for new container accepted\"\n}\n",
+        "time" : {
+          "start" : 1722799196599,
+          "stop" : 1722799196599,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_container_list",
+      "time" : {
+        "start" : 1722799196599,
+        "stop" : 1722799197137,
+        "duration" : 538
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST https://dbend.areso.pro/container_list",
+        "time" : {
+          "start" : 1722799196599,
+          "stop" : 1722799197137,
+          "duration" : 538
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1722799197137,
+            "stop" : 1722799197137,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Params url: https://dbend.areso.pro/container_list",
+          "time" : {
+            "start" : 1722799197137,
+            "stop" : 1722799197137,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 201 == Response status code: 201",
+      "time" : {
+        "start" : 1722799197137,
+        "stop" : 1722799197137,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Compare result request with expected value:\nResponse: <Response [201]>\nField name: msg\nValue: order for new container accepted",
+      "time" : {
+        "start" : 1722799197138,
+        "stop" : 1722799197138,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 15,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1391-49"
+  }, {
+    "name" : "thread",
+    "value" : "2301-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 68,
+        "skipped" : 0,
+        "passed" : 22,
+        "unknown" : 0,
+        "total" : 90
+      },
+      "items" : [ {
+        "uid" : "f9f5480f9bec8f8c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/94//#testresult/f9f5480f9bec8f8c",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720830656557,
+          "stop" : 1720830659370,
+          "duration" : 2813
+        }
+      }, {
+        "uid" : "cb159fd81c6108d6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/93//#testresult/cb159fd81c6108d6",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720744222245,
+          "stop" : 1720744224175,
+          "duration" : 1930
+        }
+      }, {
+        "uid" : "b040ef4542ee832f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/92//#testresult/b040ef4542ee832f",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720657871715,
+          "stop" : 1720657873707,
+          "duration" : 1992
+        }
+      }, {
+        "uid" : "11b91e5d516d53f7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/91//#testresult/11b91e5d516d53f7",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720571443806,
+          "stop" : 1720571445742,
+          "duration" : 1936
+        }
+      }, {
+        "uid" : "f8426e707b902932",
+        "reportUrl" : "https://lambotik.github.io/Oblache/90//#testresult/f8426e707b902932",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720485021331,
+          "stop" : 1720485023577,
+          "duration" : 2246
+        }
+      }, {
+        "uid" : "eef5c3777ba997b5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/89//#testresult/eef5c3777ba997b5",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720398748977,
+          "stop" : 1720398751873,
+          "duration" : 2896
+        }
+      }, {
+        "uid" : "9213ff2c4c4170bc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/88//#testresult/9213ff2c4c4170bc",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720312421138,
+          "stop" : 1720312423972,
+          "duration" : 2834
+        }
+      }, {
+        "uid" : "649fe28e675ec7df",
+        "reportUrl" : "https://lambotik.github.io/Oblache/87//#testresult/649fe28e675ec7df",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720225764692,
+          "stop" : 1720225767551,
+          "duration" : 2859
+        }
+      }, {
+        "uid" : "52a7d3e7f346eb71",
+        "reportUrl" : "https://lambotik.github.io/Oblache/86//#testresult/52a7d3e7f346eb71",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720139384833,
+          "stop" : 1720139387058,
+          "duration" : 2225
+        }
+      }, {
+        "uid" : "dca8813c66043517",
+        "reportUrl" : "https://lambotik.github.io/Oblache/85//#testresult/dca8813c66043517",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1720052979676,
+          "stop" : 1720052981759,
+          "duration" : 2083
+        }
+      }, {
+        "uid" : "e25438ecd85b5324",
+        "reportUrl" : "https://lambotik.github.io/Oblache/84//#testresult/e25438ecd85b5324",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719966614275,
+          "stop" : 1719966616240,
+          "duration" : 1965
+        }
+      }, {
+        "uid" : "756fefb606ca16da",
+        "reportUrl" : "https://lambotik.github.io/Oblache/83//#testresult/756fefb606ca16da",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719880210654,
+          "stop" : 1719880213626,
+          "duration" : 2972
+        }
+      }, {
+        "uid" : "48c31068dd380fbb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/82//#testresult/48c31068dd380fbb",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719794109345,
+          "stop" : 1719794112210,
+          "duration" : 2865
+        }
+      }, {
+        "uid" : "c7dca9972054f0a9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/81//#testresult/c7dca9972054f0a9",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719707596701,
+          "stop" : 1719707598726,
+          "duration" : 2025
+        }
+      }, {
+        "uid" : "4d648de3bf4c1d87",
+        "reportUrl" : "https://lambotik.github.io/Oblache/80//#testresult/4d648de3bf4c1d87",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719620968646,
+          "stop" : 1719620971534,
+          "duration" : 2888
+        }
+      }, {
+        "uid" : "a21101ebad0c6425",
+        "reportUrl" : "https://lambotik.github.io/Oblache/79//#testresult/a21101ebad0c6425",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719534584634,
+          "stop" : 1719534587184,
+          "duration" : 2550
+        }
+      }, {
+        "uid" : "9c806bbb3cb78bb5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/78//#testresult/9c806bbb3cb78bb5",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719448194060,
+          "stop" : 1719448197004,
+          "duration" : 2944
+        }
+      }, {
+        "uid" : "9c06cc888ff4302e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/77//#testresult/9c06cc888ff4302e",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719361782636,
+          "stop" : 1719361785482,
+          "duration" : 2846
+        }
+      }, {
+        "uid" : "8e1c1fd042996b29",
+        "reportUrl" : "https://lambotik.github.io/Oblache/76//#testresult/8e1c1fd042996b29",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719275372865,
+          "stop" : 1719275375734,
+          "duration" : 2869
+        }
+      }, {
+        "uid" : "927a82a488572f13",
+        "reportUrl" : "https://lambotik.github.io/Oblache/75//#testresult/927a82a488572f13",
+        "status" : "broken",
+        "statusDetails" : "TypeError: unsupported operand type(s) for +: 'Response' and 'int'",
+        "time" : {
+          "start" : 1719189098313,
+          "stop" : 1719189101174,
+          "duration" : 2861
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "476aae25d8496a52.json",
+  "parameterValues" : [ ]
+}
