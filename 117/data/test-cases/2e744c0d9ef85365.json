@@ -1,0 +1,421 @@
+{
+  "uid" : "2e744c0d9ef85365",
+  "name" : "test_create_docker_container",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_create_docker_container",
+  "historyId" : "5be2ff814ced430a9951780a224cb0d7",
+  "time" : {
+    "start" : 1722799608298,
+    "stop" : 1722799608298,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator https://oblache.areso.pro/profile.html",
+  "statusTrace" : "driver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"6179db41a06e991ffbe75ad61e638bd8\")>\n\n    @pytest.fixture()\n    def authorization_user(driver):\n        page = LoginPage(driver, TestDataLinks.register_page)\n        page.open()\n>       page.login_user()\n\ntests_ui/conftest.py:37: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/login_page.py:62: in login_user\n    assert self.check_expected_link('https://oblache.areso.pro/profile.html'\ntests_ui/base_page.py:62: in check_expected_link\n    return Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"6179db41a06e991ffbe75ad61e638bd8\")>\nmethod = <function url_to_be.<locals>._predicate at 0x7fc0bef83d80>\nmessage = \"Can't find element by locator https://oblache.areso.pro/profile.html\"\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator https://oblache.areso.pro/profile.html\n\n/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1722799608299,
+      "stop" : 1722799608499,
+      "duration" : 200
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1722799608499,
+      "stop" : 1722799614196,
+      "duration" : 5697
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator https://oblache.areso.pro/profile.html\n\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1123, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 902, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/conftest.py\", line 37, in authorization_user\n    page.login_user()\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/login_page.py\", line 62, in login_user\n    assert self.check_expected_link('https://oblache.areso.pro/profile.html'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 62, in check_expected_link\n    return Wait(self.driver, self.timeout).until(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1722799608499,
+        "stop" : 1722799609009,
+        "duration" : 510
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "login_user",
+      "time" : {
+        "start" : 1722799609009,
+        "stop" : 1722799614195,
+        "duration" : 5186
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator https://oblache.areso.pro/profile.html\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/login_page.py\", line 62, in login_user\n    assert self.check_expected_link('https://oblache.areso.pro/profile.html'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 62, in check_expected_link\n    return Wait(self.driver, self.timeout).until(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1722799609009,
+          "stop" : 1722799609061,
+          "duration" : 52
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1722799609061,
+          "stop" : 1722799609100,
+          "duration" : 39
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1722799609100,
+          "stop" : 1722799609162,
+          "duration" : 62
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "element_is_present_and_clickable",
+          "time" : {
+            "start" : 1722799609100,
+            "stop" : 1722799609134,
+            "duration" : 34
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//input[@id=\"inp_regform_login_submit\"]')"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/profile.html",
+        "time" : {
+          "start" : 1722799609162,
+          "stop" : 1722799614195,
+          "duration" : 5033
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator https://oblache.areso.pro/profile.html\n\n",
+        "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 62, in check_expected_link\n    return Wait(self.driver, self.timeout).until(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1722799614207,
+      "stop" : 1722799614363,
+      "duration" : 156
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "62f84569f84c8528",
+      "name" : "Screenshot 2024-08-04 19:26:54.303394",
+      "source" : "62f84569f84c8528.png",
+      "type" : "image/png",
+      "size" : 17586
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "epic",
+    "value" : "UI Tests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUI"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1198-841"
+  }, {
+    "name" : "thread",
+    "value" : "2249-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 81,
+        "unknown" : 0,
+        "total" : 82
+      },
+      "items" : [ {
+        "uid" : "b914a7b8c183cde",
+        "reportUrl" : "https://lambotik.github.io/Oblache/94//#testresult/b914a7b8c183cde",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720830785636,
+          "stop" : 1720830801290,
+          "duration" : 15654
+        }
+      }, {
+        "uid" : "af7df5103bfaf14e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/6//#testresult/af7df5103bfaf14e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720778666810,
+          "stop" : 1720778681601,
+          "duration" : 14791
+        }
+      }, {
+        "uid" : "5538a83341c0092b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/93//#testresult/5538a83341c0092b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720744316453,
+          "stop" : 1720744331121,
+          "duration" : 14668
+        }
+      }, {
+        "uid" : "2181be78b22b43e0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/92//#testresult/2181be78b22b43e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720657980728,
+          "stop" : 1720657995233,
+          "duration" : 14505
+        }
+      }, {
+        "uid" : "17984d43dbc17d9a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/91//#testresult/17984d43dbc17d9a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720571564494,
+          "stop" : 1720571578824,
+          "duration" : 14330
+        }
+      }, {
+        "uid" : "d18c1a706e7ade11",
+        "reportUrl" : "https://lambotik.github.io/Oblache/90//#testresult/d18c1a706e7ade11",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720485118243,
+          "stop" : 1720485132750,
+          "duration" : 14507
+        }
+      }, {
+        "uid" : "5693c220de839dcc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/89//#testresult/5693c220de839dcc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720398867332,
+          "stop" : 1720398882098,
+          "duration" : 14766
+        }
+      }, {
+        "uid" : "37ec4714f569806a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/88//#testresult/37ec4714f569806a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720312555322,
+          "stop" : 1720312570012,
+          "duration" : 14690
+        }
+      }, {
+        "uid" : "90211944e797d6e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/87//#testresult/90211944e797d6e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720225867528,
+          "stop" : 1720225882161,
+          "duration" : 14633
+        }
+      }, {
+        "uid" : "b3b69610d7a28e0d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/86//#testresult/b3b69610d7a28e0d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720139512812,
+          "stop" : 1720139526356,
+          "duration" : 13544
+        }
+      }, {
+        "uid" : "2c879f9d4801e72e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/85//#testresult/2c879f9d4801e72e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720053108672,
+          "stop" : 1720053121994,
+          "duration" : 13322
+        }
+      }, {
+        "uid" : "7d0647ea892bceeb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/84//#testresult/7d0647ea892bceeb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719966714810,
+          "stop" : 1719966728332,
+          "duration" : 13522
+        }
+      }, {
+        "uid" : "8c2b5e40aefdcef7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/83//#testresult/8c2b5e40aefdcef7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719880330938,
+          "stop" : 1719880344720,
+          "duration" : 13782
+        }
+      }, {
+        "uid" : "37006fceb001f04f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/82//#testresult/37006fceb001f04f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719794229968,
+          "stop" : 1719794243694,
+          "duration" : 13726
+        }
+      }, {
+        "uid" : "30c6db99ed90958b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/81//#testresult/30c6db99ed90958b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719707699031,
+          "stop" : 1719707711901,
+          "duration" : 12870
+        }
+      }, {
+        "uid" : "80339d27a3c23782",
+        "reportUrl" : "https://lambotik.github.io/Oblache/80//#testresult/80339d27a3c23782",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719621070972,
+          "stop" : 1719621084390,
+          "duration" : 13418
+        }
+      }, {
+        "uid" : "507bc19330bf9eb6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/79//#testresult/507bc19330bf9eb6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719534713594,
+          "stop" : 1719534726054,
+          "duration" : 12460
+        }
+      }, {
+        "uid" : "6655019b1d76eb3c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/78//#testresult/6655019b1d76eb3c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719448315422,
+          "stop" : 1719448328417,
+          "duration" : 12995
+        }
+      }, {
+        "uid" : "70207a1a79d9186b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/77//#testresult/70207a1a79d9186b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719361915626,
+          "stop" : 1719361928291,
+          "duration" : 12665
+        }
+      }, {
+        "uid" : "f86dfbf6f771780c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/76//#testresult/f86dfbf6f771780c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719275529372,
+          "stop" : 1719275542099,
+          "duration" : 12727
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2e744c0d9ef85365.json",
+  "parameterValues" : [ ]
+}
