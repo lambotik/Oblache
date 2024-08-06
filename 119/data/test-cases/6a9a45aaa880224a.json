@@ -1,0 +1,480 @@
+{
+  "uid" : "6a9a45aaa880224a",
+  "name" : "test_create_docker_container",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_create_docker_container",
+  "historyId" : "5be2ff814ced430a9951780a224cb0d7",
+  "time" : {
+    "start" : 1722904527569,
+    "stop" : 1722904527572,
+    "duration" : 3
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'find_element'",
+  "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7f5fe7560980>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"65675a024e58e30bcbb2542b50e528a9\")>\nauthorization_user = None\n\n    @allure.title('test_create_docker_container')\n    def test_create_docker_container(self, driver, authorization_user):\n        page = ProfilePage(authorization_user)\n>       page.create_docker_container()\n\ntests_ui/test_ui.py:106: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:156: in create_docker_container\n    self.element_is_present_and_clickable(self.locators.BUTTON_DOCKER_CONTAINER).click()\ntests_ui/base_page.py:27: in element_is_present_and_clickable\n    return (Wait(self.driver, self.timeout).until(\n/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:96: in until\n    value = method(self._driver)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ndriver = None\n\n    def _predicate(driver: WebDriverOrWebElement):\n        try:\n>           return _element_if_visible(driver.find_element(*locator))\nE           AttributeError: 'NoneType' object has no attribute 'find_element'\n\n/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py:156: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1722904526890,
+      "stop" : 1722904527091,
+      "duration" : 201
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1722904527091,
+      "stop" : 1722904527569,
+      "duration" : 478
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1722904527091,
+        "stop" : 1722904527399,
+        "duration" : 308
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "login_user",
+      "time" : {
+        "start" : 1722904527399,
+        "stop" : 1722904527569,
+        "duration" : 170
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1722904527399,
+          "stop" : 1722904527451,
+          "duration" : 52
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1722904527451,
+          "stop" : 1722904527496,
+          "duration" : 45
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1722904527496,
+          "stop" : 1722904527567,
+          "duration" : 71
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "element_is_present_and_clickable",
+          "time" : {
+            "start" : 1722904527496,
+            "stop" : 1722904527535,
+            "duration" : 39
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//input[@id=\"inp_regform_login_submit\"]')"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/register.html",
+        "time" : {
+          "start" : 1722904527567,
+          "stop" : 1722904527569,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'find_element'",
+    "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7f5fe7560980>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"65675a024e58e30bcbb2542b50e528a9\")>\nauthorization_user = None\n\n    @allure.title('test_create_docker_container')\n    def test_create_docker_container(self, driver, authorization_user):\n        page = ProfilePage(authorization_user)\n>       page.create_docker_container()\n\ntests_ui/test_ui.py:106: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:156: in create_docker_container\n    self.element_is_present_and_clickable(self.locators.BUTTON_DOCKER_CONTAINER).click()\ntests_ui/base_page.py:27: in element_is_present_and_clickable\n    return (Wait(self.driver, self.timeout).until(\n/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:96: in until\n    value = method(self._driver)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\ndriver = None\n\n    def _predicate(driver: WebDriverOrWebElement):\n        try:\n>           return _element_if_visible(driver.find_element(*locator))\nE           AttributeError: 'NoneType' object has no attribute 'find_element'\n\n/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py:156: AttributeError",
+    "steps" : [ {
+      "name" : "create_docker_container",
+      "time" : {
+        "start" : 1722904527570,
+        "stop" : 1722904527571,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'find_element'\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/profile_page.py\", line 156, in create_docker_container\n    self.element_is_present_and_clickable(self.locators.BUTTON_DOCKER_CONTAINER).click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 27, in element_is_present_and_clickable\n    return (Wait(self.driver, self.timeout).until(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 96, in until\n    value = method(self._driver)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py\", line 156, in _predicate\n    return _element_if_visible(driver.find_element(*locator))\n                               ^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ {
+        "name" : "Click button \"Docker Containers\".",
+        "time" : {
+          "start" : 1722904527570,
+          "stop" : 1722904527571,
+          "duration" : 1
+        },
+        "status" : "broken",
+        "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'find_element'\n",
+        "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_ui/profile_page.py\", line 156, in create_docker_container\n    self.element_is_present_and_clickable(self.locators.BUTTON_DOCKER_CONTAINER).click()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 27, in element_is_present_and_clickable\n    return (Wait(self.driver, self.timeout).until(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 96, in until\n    value = method(self._driver)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py\", line 156, in _predicate\n    return _element_if_visible(driver.find_element(*locator))\n                               ^^^^^^^^^^^^^^^^^^^\n",
+        "steps" : [ {
+          "name" : "element_is_present_and_clickable",
+          "time" : {
+            "start" : 1722904527570,
+            "stop" : 1722904527570,
+            "duration" : 0
+          },
+          "status" : "broken",
+          "statusMessage" : "AttributeError: 'NoneType' object has no attribute 'find_element'\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 27, in element_is_present_and_clickable\n    return (Wait(self.driver, self.timeout).until(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 96, in until\n    value = method(self._driver)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.4/x64/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py\", line 156, in _predicate\n    return _element_if_visible(driver.find_element(*locator))\n                               ^^^^^^^^^^^^^^^^^^^\n",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', '//button[@id=\"menu_button_containers\"]')"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1722904527593,
+      "stop" : 1722904527742,
+      "duration" : 149
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "b39db38f9d5c6b4f",
+      "name" : "Screenshot 2024-08-06 00:35:27.681704",
+      "source" : "b39db38f9d5c6b4f.png",
+      "type" : "image/png",
+      "size" : 17586
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfilePage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1984-724"
+  }, {
+    "name" : "thread",
+    "value" : "2285-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 3,
+        "skipped" : 0,
+        "passed" : 81,
+        "unknown" : 0,
+        "total" : 84
+      },
+      "items" : [ {
+        "uid" : "e9dd2f14a402b007",
+        "reportUrl" : "https://lambotik.github.io/Oblache/118//#testresult/e9dd2f14a402b007",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator https://oblache.areso.pro/profile.html",
+        "time" : {
+          "start" : 1722818362232,
+          "stop" : 1722818362232,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "2e744c0d9ef85365",
+        "reportUrl" : "https://lambotik.github.io/Oblache/117//#testresult/2e744c0d9ef85365",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator https://oblache.areso.pro/profile.html",
+        "time" : {
+          "start" : 1722799608298,
+          "stop" : 1722799608298,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b914a7b8c183cde",
+        "reportUrl" : "https://lambotik.github.io/Oblache/94//#testresult/b914a7b8c183cde",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720830785636,
+          "stop" : 1720830801290,
+          "duration" : 15654
+        }
+      }, {
+        "uid" : "af7df5103bfaf14e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/6//#testresult/af7df5103bfaf14e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720778666810,
+          "stop" : 1720778681601,
+          "duration" : 14791
+        }
+      }, {
+        "uid" : "5538a83341c0092b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/93//#testresult/5538a83341c0092b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720744316453,
+          "stop" : 1720744331121,
+          "duration" : 14668
+        }
+      }, {
+        "uid" : "2181be78b22b43e0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/92//#testresult/2181be78b22b43e0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720657980728,
+          "stop" : 1720657995233,
+          "duration" : 14505
+        }
+      }, {
+        "uid" : "17984d43dbc17d9a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/91//#testresult/17984d43dbc17d9a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720571564494,
+          "stop" : 1720571578824,
+          "duration" : 14330
+        }
+      }, {
+        "uid" : "d18c1a706e7ade11",
+        "reportUrl" : "https://lambotik.github.io/Oblache/90//#testresult/d18c1a706e7ade11",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720485118243,
+          "stop" : 1720485132750,
+          "duration" : 14507
+        }
+      }, {
+        "uid" : "5693c220de839dcc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/89//#testresult/5693c220de839dcc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720398867332,
+          "stop" : 1720398882098,
+          "duration" : 14766
+        }
+      }, {
+        "uid" : "37ec4714f569806a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/88//#testresult/37ec4714f569806a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720312555322,
+          "stop" : 1720312570012,
+          "duration" : 14690
+        }
+      }, {
+        "uid" : "90211944e797d6e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/87//#testresult/90211944e797d6e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720225867528,
+          "stop" : 1720225882161,
+          "duration" : 14633
+        }
+      }, {
+        "uid" : "b3b69610d7a28e0d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/86//#testresult/b3b69610d7a28e0d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720139512812,
+          "stop" : 1720139526356,
+          "duration" : 13544
+        }
+      }, {
+        "uid" : "2c879f9d4801e72e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/85//#testresult/2c879f9d4801e72e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720053108672,
+          "stop" : 1720053121994,
+          "duration" : 13322
+        }
+      }, {
+        "uid" : "7d0647ea892bceeb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/84//#testresult/7d0647ea892bceeb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719966714810,
+          "stop" : 1719966728332,
+          "duration" : 13522
+        }
+      }, {
+        "uid" : "8c2b5e40aefdcef7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/83//#testresult/8c2b5e40aefdcef7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719880330938,
+          "stop" : 1719880344720,
+          "duration" : 13782
+        }
+      }, {
+        "uid" : "37006fceb001f04f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/82//#testresult/37006fceb001f04f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719794229968,
+          "stop" : 1719794243694,
+          "duration" : 13726
+        }
+      }, {
+        "uid" : "30c6db99ed90958b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/81//#testresult/30c6db99ed90958b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719707699031,
+          "stop" : 1719707711901,
+          "duration" : 12870
+        }
+      }, {
+        "uid" : "80339d27a3c23782",
+        "reportUrl" : "https://lambotik.github.io/Oblache/80//#testresult/80339d27a3c23782",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719621070972,
+          "stop" : 1719621084390,
+          "duration" : 13418
+        }
+      }, {
+        "uid" : "507bc19330bf9eb6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/79//#testresult/507bc19330bf9eb6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719534713594,
+          "stop" : 1719534726054,
+          "duration" : 12460
+        }
+      }, {
+        "uid" : "6655019b1d76eb3c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/78//#testresult/6655019b1d76eb3c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1719448315422,
+          "stop" : 1719448328417,
+          "duration" : 12995
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6a9a45aaa880224a.json",
+  "parameterValues" : [ ]
+}
