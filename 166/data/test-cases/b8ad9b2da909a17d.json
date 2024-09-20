@@ -1,0 +1,216 @@
+{
+  "uid" : "b8ad9b2da909a17d",
+  "name" : "POST registration email is taken for unsupported languages",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_registration_email_is_taken_for_unsupported_languages",
+  "historyId" : "0f497336a453dab6752b8ca2c68cb0db",
+  "time" : {
+    "start" : 1726793975409,
+    "stop" : 1726793975922,
+    "duration" : 513
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Endpoint: /bad_request",
+      "time" : {
+        "start" : 1726793975922,
+        "stop" : 1726793975922,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Request:",
+      "time" : {
+        "start" : 1726793975922,
+        "stop" : 1726793975922,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Url: https://dbend.areso.pro/register",
+        "time" : {
+          "start" : 1726793975922,
+          "stop" : 1726793975922,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': 'None'}",
+        "time" : {
+          "start" : 1726793975922,
+          "stop" : 1726793975922,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Body: \n                            {\n                            \"email\": email,\n                            \"password\": password,\n                            \"tos_agree\": True,\n                            \"language\": ru-ru\n                           }",
+        "time" : {
+          "start" : 1726793975922,
+          "stop" : 1726793975922,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Response:",
+      "time" : {
+        "start" : 1726793975922,
+        "stop" : 1726793975922,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status code: 400",
+        "time" : {
+          "start" : 1726793975922,
+          "stop" : 1726793975922,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "JSON: {\n    \"content\": \"msg[34]: the language is not accepted\"\n}\n",
+        "time" : {
+          "start" : 1726793975922,
+          "stop" : 1726793975922,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1726793975922,
+        "stop" : 1726793975922,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: msg[34]: the language is not accepted",
+      "time" : {
+        "start" : 1726793975922,
+        "stop" : 1726793975922,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1198-566"
+  }, {
+    "name" : "thread",
+    "value" : "2272-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b8ad9b2da909a17d.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,322 @@
+{
+  "uid" : "902b42b5c86dd933",
+  "name" : "test_delete_database",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_delete_database",
+  "historyId" : "79ccd4aa4a29c03ae3f72e89c73351ae",
+  "time" : {
+    "start" : 1726794113107,
+    "stop" : 1726794116544,
+    "duration" : 3437
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+  "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7fb7f2718f50>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3333a4079bf74351fbf0e19005704017\")>\nauthorization_user = None\n\n    @allure.title('test_delete_database')\n    def test_delete_database(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n        page.click_button_status()\n        amount_databases = page.get_status_data()['db qty used']\n>       msg = page.delete_database()\n\ntests_ui/test_ui.py:90: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.profile_page.ProfilePage object at 0x7fb7f27f56d0>\n\n    def delete_database(self):\n        self.click_button_databases()\n        self.click_buttons_create_new_db()\n        self.click_button_databases()\n        time.sleep(1)\n        list_databases = self.elements_are_present(self.locators.LIST_DATABASES)\n        list_db = [list_databases[i].text for i in range(len(list_databases))]\n        if len(list_db) != 0:\n            button = self.element_is_visible((By.XPATH, f'//tbody[@id=\"tbody_dbs\"] /tr[1]/td[10] /button'))\n            button.click()\n            server_msg = self.element_is_visible(self.locators.MSG_FROM_SERVER).text\n            with allure.step(f'Check server answer is: {server_msg}'):\n>               assert server_msg == 'server is set for deleting', 'Wrong answer from server or need manual deleting!!!'\nE               AssertionError: Wrong answer from server or need manual deleting!!!\n\ntests_ui/profile_page.py:87: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1726794112445,
+      "stop" : 1726794113107,
+      "duration" : 662
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1726794112445,
+        "stop" : 1726794112935,
+        "duration" : 490
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Login user",
+      "time" : {
+        "start" : 1726794112935,
+        "stop" : 1726794113107,
+        "duration" : 172
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1726794112935,
+          "stop" : 1726794112992,
+          "duration" : 57
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1726794112992,
+          "stop" : 1726794113034,
+          "duration" : 42
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1726794113034,
+          "stop" : 1726794113104,
+          "duration" : 70
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/register.html",
+        "time" : {
+          "start" : 1726794113104,
+          "stop" : 1726794113107,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1726794112193,
+      "stop" : 1726794112444,
+      "duration" : 251
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+    "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7fb7f2718f50>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"3333a4079bf74351fbf0e19005704017\")>\nauthorization_user = None\n\n    @allure.title('test_delete_database')\n    def test_delete_database(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n        page.click_button_status()\n        amount_databases = page.get_status_data()['db qty used']\n>       msg = page.delete_database()\n\ntests_ui/test_ui.py:90: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.profile_page.ProfilePage object at 0x7fb7f27f56d0>\n\n    def delete_database(self):\n        self.click_button_databases()\n        self.click_buttons_create_new_db()\n        self.click_button_databases()\n        time.sleep(1)\n        list_databases = self.elements_are_present(self.locators.LIST_DATABASES)\n        list_db = [list_databases[i].text for i in range(len(list_databases))]\n        if len(list_db) != 0:\n            button = self.element_is_visible((By.XPATH, f'//tbody[@id=\"tbody_dbs\"] /tr[1]/td[10] /button'))\n            button.click()\n            server_msg = self.element_is_visible(self.locators.MSG_FROM_SERVER).text\n            with allure.step(f'Check server answer is: {server_msg}'):\n>               assert server_msg == 'server is set for deleting', 'Wrong answer from server or need manual deleting!!!'\nE               AssertionError: Wrong answer from server or need manual deleting!!!\n\ntests_ui/profile_page.py:87: AssertionError",
+    "steps" : [ {
+      "name" : "Click button Status.",
+      "time" : {
+        "start" : 1726794114107,
+        "stop" : 1726794114468,
+        "duration" : 361
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get status data.",
+      "time" : {
+        "start" : 1726794114710,
+        "stop" : 1726794114710,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status data is: {'Email:': 'nodata', 'is blocked?': 'nodata', 'is db creation allowed?': 'nodata', 'disk db quota, mb': 'nodata', 'disk db used, mb': 'nodata', 'db qty quota': 'nodata', 'db qty used': 'nodata'}",
+        "time" : {
+          "start" : 1726794114710,
+          "stop" : 1726794114710,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click \"Databases\" button.",
+      "time" : {
+        "start" : 1726794114710,
+        "stop" : 1726794114761,
+        "duration" : 51
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click \"Create new DB\" button.",
+      "time" : {
+        "start" : 1726794114761,
+        "stop" : 1726794114816,
+        "duration" : 55
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click \"Databases\" button.",
+      "time" : {
+        "start" : 1726794114816,
+        "stop" : 1726794114863,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check server answer is: something went wrong",
+      "time" : {
+        "start" : 1726794116543,
+        "stop" : 1726794116543,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Wrong answer from server or need manual deleting!!!\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_ui/profile_page.py\", line 87, in delete_database\n    assert server_msg == 'server is set for deleting', 'Wrong answer from server or need manual deleting!!!'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "d9a4f198bc968432",
+      "name" : "Screenshot 2024-09-20 01:01:56.635232",
+      "source" : "d9a4f198bc968432.png",
+      "type" : "image/png",
+      "size" : 107310
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1726794116636,
+      "stop" : 1726794116700,
+      "duration" : 64
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfilePage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1198-566"
+  }, {
+    "name" : "thread",
+    "value" : "2272-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "902b42b5c86dd933.json",
+  "parameterValues" : [ ]
+}

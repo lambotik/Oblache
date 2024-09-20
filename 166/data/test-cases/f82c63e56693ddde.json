@@ -1,0 +1,253 @@
+{
+  "uid" : "f82c63e56693ddde",
+  "name" : "test_clipboard_uuid_docker",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_clipboard_uuid_docker",
+  "historyId" : "11f91f43cfea2a231aececf29c7ed302",
+  "time" : {
+    "start" : 1726794129488,
+    "stop" : 1726794136036,
+    "duration" : 6548
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//table[@id=\"table_containers\"] //tr[1]/td[3] /button')\nStacktrace:\n#0 0x557f8b60b2da <unknown>\n#1 0x557f8b2d9200 <unknown>\n#2 0x557f8b328aa2 <unknown>\n#3 0x557f8b328d41 <unknown>\n#4 0x557f8b36e964 <unknown>\n#5 0x557f8b34d8fd <unknown>\n#6 0x557f8b36bdfd <unknown>\n#7 0x557f8b34d673 <unknown>\n#8 0x557f8b31b473 <unknown>\n#9 0x557f8b31c47e <unknown>\n#10 0x557f8b5d20db <unknown>\n#11 0x557f8b5d6071 <unknown>\n#12 0x557f8b5be9d5 <unknown>\n#13 0x557f8b5d6bf2 <unknown>\n#14 0x557f8b5a3b6f <unknown>\n#15 0x557f8b5fa248 <unknown>\n#16 0x557f8b5fa417 <unknown>\n#17 0x557f8b60a0cc <unknown>\n#18 0x7f101c094ac3 <unknown>",
+  "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7fb7f2719340>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b9a5cea985d814d92ac049d2562f8906\")>\nauthorization_user = None\n\n    @allure.title('test_clipboard_uuid_docker')\n    def test_clipboard_uuid_docker(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n        page.click_button_docker_containers()\n>       page.check_clipboard(\n            table_xpath='//table[@id=\"table_containers\"]',\n            token=TestProfilePage.token)\n\ntests_ui/test_ui.py:113: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:100: in check_clipboard\n    button = self.element_is_visible((By.XPATH, f'{table_xpath} //tr[1]/td[3] /button'))\ntests_ui/base_page.py:33: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\ntests_ui/base_page.py:46: in element_is_present\n    return Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"b9a5cea985d814d92ac049d2562f8906\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7fb7f1564720>\nmessage = 'Can\\'t find element by locator (\\'xpath\\', \\'//table[@id=\"table_containers\"] //tr[1]/td[3] /button\\')'\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//table[@id=\"table_containers\"] //tr[1]/td[3] /button')\nE       Stacktrace:\nE       #0 0x557f8b60b2da <unknown>\nE       #1 0x557f8b2d9200 <unknown>\nE       #2 0x557f8b328aa2 <unknown>\nE       #3 0x557f8b328d41 <unknown>\nE       #4 0x557f8b36e964 <unknown>\nE       #5 0x557f8b34d8fd <unknown>\nE       #6 0x557f8b36bdfd <unknown>\nE       #7 0x557f8b34d673 <unknown>\nE       #8 0x557f8b31b473 <unknown>\nE       #9 0x557f8b31c47e <unknown>\nE       #10 0x557f8b5d20db <unknown>\nE       #11 0x557f8b5d6071 <unknown>\nE       #12 0x557f8b5be9d5 <unknown>\nE       #13 0x557f8b5d6bf2 <unknown>\nE       #14 0x557f8b5a3b6f <unknown>\nE       #15 0x557f8b5fa248 <unknown>\nE       #16 0x557f8b5fa417 <unknown>\nE       #17 0x557f8b60a0cc <unknown>\nE       #18 0x7f101c094ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1726794128811,
+      "stop" : 1726794129488,
+      "duration" : 677
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1726794128811,
+        "stop" : 1726794129313,
+        "duration" : 502
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Login user",
+      "time" : {
+        "start" : 1726794129313,
+        "stop" : 1726794129488,
+        "duration" : 175
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1726794129313,
+          "stop" : 1726794129370,
+          "duration" : 57
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1726794129370,
+          "stop" : 1726794129416,
+          "duration" : 46
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1726794129416,
+          "stop" : 1726794129485,
+          "duration" : 69
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/register.html",
+        "time" : {
+          "start" : 1726794129485,
+          "stop" : 1726794129488,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1726794128550,
+      "stop" : 1726794128811,
+      "duration" : 261
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//table[@id=\"table_containers\"] //tr[1]/td[3] /button')\nStacktrace:\n#0 0x557f8b60b2da <unknown>\n#1 0x557f8b2d9200 <unknown>\n#2 0x557f8b328aa2 <unknown>\n#3 0x557f8b328d41 <unknown>\n#4 0x557f8b36e964 <unknown>\n#5 0x557f8b34d8fd <unknown>\n#6 0x557f8b36bdfd <unknown>\n#7 0x557f8b34d673 <unknown>\n#8 0x557f8b31b473 <unknown>\n#9 0x557f8b31c47e <unknown>\n#10 0x557f8b5d20db <unknown>\n#11 0x557f8b5d6071 <unknown>\n#12 0x557f8b5be9d5 <unknown>\n#13 0x557f8b5d6bf2 <unknown>\n#14 0x557f8b5a3b6f <unknown>\n#15 0x557f8b5fa248 <unknown>\n#16 0x557f8b5fa417 <unknown>\n#17 0x557f8b60a0cc <unknown>\n#18 0x7f101c094ac3 <unknown>",
+    "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7fb7f2719340>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"b9a5cea985d814d92ac049d2562f8906\")>\nauthorization_user = None\n\n    @allure.title('test_clipboard_uuid_docker')\n    def test_clipboard_uuid_docker(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n        page.click_button_docker_containers()\n>       page.check_clipboard(\n            table_xpath='//table[@id=\"table_containers\"]',\n            token=TestProfilePage.token)\n\ntests_ui/test_ui.py:113: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:100: in check_clipboard\n    button = self.element_is_visible((By.XPATH, f'{table_xpath} //tr[1]/td[3] /button'))\ntests_ui/base_page.py:33: in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\ntests_ui/base_page.py:46: in element_is_present\n    return Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"b9a5cea985d814d92ac049d2562f8906\")>\nmethod = <function presence_of_element_located.<locals>._predicate at 0x7fb7f1564720>\nmessage = 'Can\\'t find element by locator (\\'xpath\\', \\'//table[@id=\"table_containers\"] //tr[1]/td[3] /button\\')'\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//table[@id=\"table_containers\"] //tr[1]/td[3] /button')\nE       Stacktrace:\nE       #0 0x557f8b60b2da <unknown>\nE       #1 0x557f8b2d9200 <unknown>\nE       #2 0x557f8b328aa2 <unknown>\nE       #3 0x557f8b328d41 <unknown>\nE       #4 0x557f8b36e964 <unknown>\nE       #5 0x557f8b34d8fd <unknown>\nE       #6 0x557f8b36bdfd <unknown>\nE       #7 0x557f8b34d673 <unknown>\nE       #8 0x557f8b31b473 <unknown>\nE       #9 0x557f8b31c47e <unknown>\nE       #10 0x557f8b5d20db <unknown>\nE       #11 0x557f8b5d6071 <unknown>\nE       #12 0x557f8b5be9d5 <unknown>\nE       #13 0x557f8b5d6bf2 <unknown>\nE       #14 0x557f8b5a3b6f <unknown>\nE       #15 0x557f8b5fa248 <unknown>\nE       #16 0x557f8b5fa417 <unknown>\nE       #17 0x557f8b60a0cc <unknown>\nE       #18 0x7f101c094ac3 <unknown>\n\n/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+    "steps" : [ {
+      "name" : "Click \"Docker containers\" button.",
+      "time" : {
+        "start" : 1726794129488,
+        "stop" : 1726794130885,
+        "duration" : 1397
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check clipboard",
+      "time" : {
+        "start" : 1726794130885,
+        "stop" : 1726794136035,
+        "duration" : 5150
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//table[@id=\"table_containers\"] //tr[1]/td[3] /button')\nStacktrace:\n#0 0x557f8b60b2da <unknown>\n#1 0x557f8b2d9200 <unknown>\n#2 0x557f8b328aa2 <unknown>\n#3 0x557f8b328d41 <unknown>\n#4 0x557f8b36e964 <unknown>\n#5 0x557f8b34d8fd <unknown>\n#6 0x557f8b36bdfd <unknown>\n#7 0x557f8b34d673 <unknown>\n#8 0x557f8b31b473 <unknown>\n#9 0x557f8b31c47e <unknown>\n#10 0x557f8b5d20db <unknown>\n#11 0x557f8b5d6071 <unknown>\n#12 0x557f8b5be9d5 <unknown>\n#13 0x557f8b5d6bf2 <unknown>\n#14 0x557f8b5a3b6f <unknown>\n#15 0x557f8b5fa248 <unknown>\n#16 0x557f8b5fa417 <unknown>\n#17 0x557f8b60a0cc <unknown>\n#18 0x7f101c094ac3 <unknown>\n\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/site-packages/allure_commons/_allure.py\", line 192, in impl\n    return func(*a, **kw)\n           ^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/profile_page.py\", line 100, in check_clipboard\n    button = self.element_is_visible((By.XPATH, f'{table_xpath} //tr[1]/td[3] /button'))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 33, in element_is_visible\n    self.go_to_element(self.element_is_present(locator))\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 46, in element_is_present\n    return Wait(self.driver, self.timeout).until(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "table_xpath",
+        "value" : "'//table[@id=\"table_containers\"]'"
+      }, {
+        "name" : "token",
+        "value" : "'0c822ca3-ead0-4ab6-8f2f-fd0d56d5fe1a'"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "cf757c3f65d75c67",
+      "name" : "Screenshot 2024-09-20 01:02:16.126170",
+      "source" : "cf757c3f65d75c67.png",
+      "type" : "image/png",
+      "size" : 31756
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1726794136127,
+      "stop" : 1726794136192,
+      "duration" : 65
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfilePage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1198-566"
+  }, {
+    "name" : "thread",
+    "value" : "2272-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f82c63e56693ddde.json",
+  "parameterValues" : [ ]
+}
