@@ -1,0 +1,236 @@
+{
+  "uid" : "3e723ea55fbca24d",
+  "name" : "POST registration email is taken for unsupported languages",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_registration_email_is_taken_for_unsupported_languages",
+  "historyId" : "0f497336a453dab6752b8ca2c68cb0db",
+  "time" : {
+    "start" : 1726880322576,
+    "stop" : 1726880322969,
+    "duration" : 393
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Endpoint: /bad_request",
+      "time" : {
+        "start" : 1726880322969,
+        "stop" : 1726880322969,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Request:",
+      "time" : {
+        "start" : 1726880322969,
+        "stop" : 1726880322969,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Url: https://dbend.areso.pro/register",
+        "time" : {
+          "start" : 1726880322969,
+          "stop" : 1726880322969,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': 'None'}",
+        "time" : {
+          "start" : 1726880322969,
+          "stop" : 1726880322969,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Body: \n                            {\n                            \"email\": email,\n                            \"password\": password,\n                            \"tos_agree\": True,\n                            \"language\": ru-ru\n                           }",
+        "time" : {
+          "start" : 1726880322969,
+          "stop" : 1726880322969,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 3
+    }, {
+      "name" : "Response:",
+      "time" : {
+        "start" : 1726880322969,
+        "stop" : 1726880322969,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status code: 400",
+        "time" : {
+          "start" : 1726880322969,
+          "stop" : 1726880322969,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "JSON: {\n    \"content\": \"msg[34]: the language is not accepted\"\n}\n",
+        "time" : {
+          "start" : 1726880322969,
+          "stop" : 1726880322969,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 2
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1726880322969,
+        "stop" : 1726880322969,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: msg[34]: the language is not accepted",
+      "time" : {
+        "start" : 1726880322969,
+        "stop" : 1726880322969,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 10
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "fv-az692-270"
+  }, {
+    "name" : "thread",
+    "value" : "2267-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "b8ad9b2da909a17d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/166//#testresult/b8ad9b2da909a17d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1726793975409,
+          "stop" : 1726793975922,
+          "duration" : 513
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3e723ea55fbca24d.json",
+  "parameterValues" : [ ]
+}
