@@ -1,0 +1,422 @@
+{
+  "uid" : "e3bf696d54723535",
+  "name" : "POST change_password_with_wrong_data",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_change_password_with_wrong_data",
+  "historyId" : "c8dcf68e64482196ee23ebcfdd062055",
+  "time" : {
+    "start" : 1737161910051,
+    "stop" : 1737161910414,
+    "duration" : 363
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "post_change_password",
+      "time" : {
+        "start" : 1737161910051,
+        "stop" : 1737161910414,
+        "duration" : 363
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /password_update",
+        "time" : {
+          "start" : 1737161910413,
+          "stop" : 1737161910413,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1737161910413,
+          "stop" : 1737161910413,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Url: https://dbend.areso.pro/password_update",
+          "time" : {
+            "start" : 1737161910413,
+            "stop" : 1737161910413,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': '0fd9bfab-9d08-4b5a-afb1-41435c61b192'}",
+          "time" : {
+            "start" : 1737161910413,
+            "stop" : 1737161910413,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"current_password\": old_password, \"new_password\": new_password}",
+          "time" : {
+            "start" : 1737161910413,
+            "stop" : 1737161910413,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1737161910413,
+          "stop" : 1737161910414,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 400",
+          "time" : {
+            "start" : 1737161910413,
+            "stop" : 1737161910413,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n    \"content\": \"msg[7]: error: current password is incorrect\"\n}\n",
+          "time" : {
+            "start" : 1737161910413,
+            "stop" : 1737161910413,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 8,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1737161910414,
+        "stop" : 1737161910414,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: msg[7]: error: current password is incorrect",
+      "time" : {
+        "start" : 1737161910414,
+        "stop" : 1737161910414,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1690-387"
+  }, {
+    "name" : "thread",
+    "value" : "2435-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 69,
+        "unknown" : 0,
+        "total" : 69
+      },
+      "items" : [ {
+        "uid" : "855cfd65f51a656f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/285//#testresult/855cfd65f51a656f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737075611872,
+          "stop" : 1737075612389,
+          "duration" : 517
+        }
+      }, {
+        "uid" : "d903086b83a76e46",
+        "reportUrl" : "https://lambotik.github.io/Oblache/284//#testresult/d903086b83a76e46",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736989210927,
+          "stop" : 1736989211230,
+          "duration" : 303
+        }
+      }, {
+        "uid" : "243e414e23755a12",
+        "reportUrl" : "https://lambotik.github.io/Oblache/283//#testresult/243e414e23755a12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736902869577,
+          "stop" : 1736902869919,
+          "duration" : 342
+        }
+      }, {
+        "uid" : "c3c5987b90087f99",
+        "reportUrl" : "https://lambotik.github.io/Oblache/282//#testresult/c3c5987b90087f99",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736816360212,
+          "stop" : 1736816360722,
+          "duration" : 510
+        }
+      }, {
+        "uid" : "aa955f416b98a7ab",
+        "reportUrl" : "https://lambotik.github.io/Oblache/281//#testresult/aa955f416b98a7ab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736730345888,
+          "stop" : 1736730346211,
+          "duration" : 323
+        }
+      }, {
+        "uid" : "8d2844193422d407",
+        "reportUrl" : "https://lambotik.github.io/Oblache/280//#testresult/8d2844193422d407",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736644108092,
+          "stop" : 1736644108599,
+          "duration" : 507
+        }
+      }, {
+        "uid" : "91296f21f23e353c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/279//#testresult/91296f21f23e353c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736557365450,
+          "stop" : 1736557365810,
+          "duration" : 360
+        }
+      }, {
+        "uid" : "33d40da2848737e8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/278//#testresult/33d40da2848737e8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736471035268,
+          "stop" : 1736471035585,
+          "duration" : 317
+        }
+      }, {
+        "uid" : "38ae3ec430d529e8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/277//#testresult/38ae3ec430d529e8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736384518807,
+          "stop" : 1736384519170,
+          "duration" : 363
+        }
+      }, {
+        "uid" : "4ac92e3d60942920",
+        "reportUrl" : "https://lambotik.github.io/Oblache/276//#testresult/4ac92e3d60942920",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736298141205,
+          "stop" : 1736298141523,
+          "duration" : 318
+        }
+      }, {
+        "uid" : "7cbb596fb9f48ada",
+        "reportUrl" : "https://lambotik.github.io/Oblache/275//#testresult/7cbb596fb9f48ada",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736211742230,
+          "stop" : 1736211742549,
+          "duration" : 319
+        }
+      }, {
+        "uid" : "2c4a308f12686de2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/274//#testresult/2c4a308f12686de2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736125496679,
+          "stop" : 1736125497023,
+          "duration" : 344
+        }
+      }, {
+        "uid" : "73108d70bc6d5605",
+        "reportUrl" : "https://lambotik.github.io/Oblache/273//#testresult/73108d70bc6d5605",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736039238844,
+          "stop" : 1736039239357,
+          "duration" : 513
+        }
+      }, {
+        "uid" : "46265497c17e5bb4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/272//#testresult/46265497c17e5bb4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735952451184,
+          "stop" : 1735952451538,
+          "duration" : 354
+        }
+      }, {
+        "uid" : "60854df11f4ca7bf",
+        "reportUrl" : "https://lambotik.github.io/Oblache/271//#testresult/60854df11f4ca7bf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735866139531,
+          "stop" : 1735866139848,
+          "duration" : 317
+        }
+      }, {
+        "uid" : "65f5cfd3bab345c5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/270//#testresult/65f5cfd3bab345c5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735779693222,
+          "stop" : 1735779693535,
+          "duration" : 313
+        }
+      }, {
+        "uid" : "9cc22baa8298e681",
+        "reportUrl" : "https://lambotik.github.io/Oblache/269//#testresult/9cc22baa8298e681",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735693641745,
+          "stop" : 1735693642052,
+          "duration" : 307
+        }
+      }, {
+        "uid" : "d4cfb23cd7812763",
+        "reportUrl" : "https://lambotik.github.io/Oblache/268//#testresult/d4cfb23cd7812763",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735606909732,
+          "stop" : 1735606910262,
+          "duration" : 530
+        }
+      }, {
+        "uid" : "b4427c327f0df755",
+        "reportUrl" : "https://lambotik.github.io/Oblache/267//#testresult/b4427c327f0df755",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735520639360,
+          "stop" : 1735520639678,
+          "duration" : 318
+        }
+      }, {
+        "uid" : "57d15db6cd9a7b81",
+        "reportUrl" : "https://lambotik.github.io/Oblache/266//#testresult/57d15db6cd9a7b81",
+        "status" : "passed",
+        "time" : {
+          "start" : 1735434460797,
+          "stop" : 1735434461116,
+          "duration" : 319
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e3bf696d54723535.json",
+  "parameterValues" : [ ]
+}
