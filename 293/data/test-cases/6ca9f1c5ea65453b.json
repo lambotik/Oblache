@@ -1,0 +1,452 @@
+{
+  "uid" : "6ca9f1c5ea65453b",
+  "name" : "POST create_docker_container_without_token",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_create_docker_with_defunct_image",
+  "historyId" : "346493b9ad20460bc067ba466e60ac88",
+  "time" : {
+    "start" : 1737766669622,
+    "stop" : 1737766670142,
+    "duration" : 520
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Result is not equal expected value",
+  "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7f1fecfb2e10>\n\n    @allure.title('POST create_docker_container_without_token')\n    def test_post_create_docker_with_defunct_image(self):\n        result = API.post_create_docker_container_with_defunct_image(token=TestPOST.token)\n        Checking.check_status_code(result, 400)\n>       Checking.check_json_value(result, 'msg', \"msg[]: the image doesn't found in the DockerHub\")\n\ntests_api/test_bd.py:411: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [400]>, field_name = 'msg'\nexpected_value = \"msg[]: the image doesn't found in the DockerHub\"\n\n    @staticmethod\n    def check_json_value(response: requests.models.Response, field_name: str, expected_value):\n        \"\"\"\n        :param response: requests.models.Response\n        :param field_name:\n        :param expected_value:\n        \"\"\"\n        check = response.json()\n        check_info = check.get(field_name)\n        with allure.step(\n                f'Compare result request with expected value:'\n                f'\\nResponse: {response}\\nField name: {field_name}\\nValue: {expected_value}'):\n>           assert check_info == expected_value, 'Result is not equal expected value'\nE           AssertionError: Result is not equal expected value\n\ntests_api/utils/checking.py:57: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Result is not equal expected value",
+    "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7f1fecfb2e10>\n\n    @allure.title('POST create_docker_container_without_token')\n    def test_post_create_docker_with_defunct_image(self):\n        result = API.post_create_docker_container_with_defunct_image(token=TestPOST.token)\n        Checking.check_status_code(result, 400)\n>       Checking.check_json_value(result, 'msg', \"msg[]: the image doesn't found in the DockerHub\")\n\ntests_api/test_bd.py:411: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [400]>, field_name = 'msg'\nexpected_value = \"msg[]: the image doesn't found in the DockerHub\"\n\n    @staticmethod\n    def check_json_value(response: requests.models.Response, field_name: str, expected_value):\n        \"\"\"\n        :param response: requests.models.Response\n        :param field_name:\n        :param expected_value:\n        \"\"\"\n        check = response.json()\n        check_info = check.get(field_name)\n        with allure.step(\n                f'Compare result request with expected value:'\n                f'\\nResponse: {response}\\nField name: {field_name}\\nValue: {expected_value}'):\n>           assert check_info == expected_value, 'Result is not equal expected value'\nE           AssertionError: Result is not equal expected value\n\ntests_api/utils/checking.py:57: AssertionError",
+    "steps" : [ {
+      "name" : "post_create_docker_container_with_defunct_image",
+      "time" : {
+        "start" : 1737766669622,
+        "stop" : 1737766670141,
+        "duration" : 519
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /container_create",
+        "time" : {
+          "start" : 1737766670141,
+          "stop" : 1737766670141,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1737766670141,
+          "stop" : 1737766670141,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Url: https://dbend.areso.pro/container_create",
+          "time" : {
+            "start" : 1737766670141,
+            "stop" : 1737766670141,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': '5acb8c08-29ae-4c5d-a8d7-15c2bda8fe43'}",
+          "time" : {
+            "start" : 1737766670141,
+            "stop" : 1737766670141,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"docker_image\": \"\", \"int_ports\": \"80\", \"env\": 3, \"region\": 3}",
+          "time" : {
+            "start" : 1737766670141,
+            "stop" : 1737766670141,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 3,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1737766670141,
+          "stop" : 1737766670141,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 400",
+          "time" : {
+            "start" : 1737766670141,
+            "stop" : 1737766670141,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n    \"msg_code\": -1,\n    \"msg\": \"endpoint is disabled\"\n}\n",
+          "time" : {
+            "start" : 1737766670141,
+            "stop" : 1737766670141,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 8,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1737766670141,
+        "stop" : 1737766670141,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Compare result request with expected value:\nResponse: <Response [400]>\nField name: msg\nValue: msg[]: the image doesn't found in the DockerHub",
+      "time" : {
+        "start" : 1737766670141,
+        "stop" : 1737766670141,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Result is not equal expected value\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 57, in check_json_value\n    assert check_info == expected_value, 'Result is not equal expected value'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1044-188"
+  }, {
+    "name" : "thread",
+    "value" : "2423-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 40,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 36,
+        "unknown" : 0,
+        "total" : 76
+      },
+      "items" : [ {
+        "uid" : "7a34a1f3c9c99abd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/292//#testresult/7a34a1f3c9c99abd",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1737680505800,
+          "stop" : 1737680506327,
+          "duration" : 527
+        }
+      }, {
+        "uid" : "40928213a3c1fbc0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/291//#testresult/40928213a3c1fbc0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1737594033761,
+          "stop" : 1737594034066,
+          "duration" : 305
+        }
+      }, {
+        "uid" : "e84e6367bb1e0f14",
+        "reportUrl" : "https://lambotik.github.io/Oblache/290//#testresult/e84e6367bb1e0f14",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1737507718652,
+          "stop" : 1737507718966,
+          "duration" : 314
+        }
+      }, {
+        "uid" : "f9ac45c164670255",
+        "reportUrl" : "https://lambotik.github.io/Oblache/289//#testresult/f9ac45c164670255",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1737421200569,
+          "stop" : 1737421200876,
+          "duration" : 307
+        }
+      }, {
+        "uid" : "e102667424ff7cc1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/288//#testresult/e102667424ff7cc1",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1737334892948,
+          "stop" : 1737334893333,
+          "duration" : 385
+        }
+      }, {
+        "uid" : "b4bf586b8d067e34",
+        "reportUrl" : "https://lambotik.github.io/Oblache/287//#testresult/b4bf586b8d067e34",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1737248731653,
+          "stop" : 1737248732170,
+          "duration" : 517
+        }
+      }, {
+        "uid" : "ea284894d601404b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/286//#testresult/ea284894d601404b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1737161914456,
+          "stop" : 1737161914832,
+          "duration" : 376
+        }
+      }, {
+        "uid" : "4f2711b3fdb56484",
+        "reportUrl" : "https://lambotik.github.io/Oblache/285//#testresult/4f2711b3fdb56484",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1737075618074,
+          "stop" : 1737075618576,
+          "duration" : 502
+        }
+      }, {
+        "uid" : "2439316b07fa5d19",
+        "reportUrl" : "https://lambotik.github.io/Oblache/284//#testresult/2439316b07fa5d19",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736989214622,
+          "stop" : 1736989214928,
+          "duration" : 306
+        }
+      }, {
+        "uid" : "1995b9f613237d71",
+        "reportUrl" : "https://lambotik.github.io/Oblache/283//#testresult/1995b9f613237d71",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736902873489,
+          "stop" : 1736902873805,
+          "duration" : 316
+        }
+      }, {
+        "uid" : "9aa60cd9742ab858",
+        "reportUrl" : "https://lambotik.github.io/Oblache/282//#testresult/9aa60cd9742ab858",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736816366400,
+          "stop" : 1736816366916,
+          "duration" : 516
+        }
+      }, {
+        "uid" : "863f9d7738b7b83",
+        "reportUrl" : "https://lambotik.github.io/Oblache/281//#testresult/863f9d7738b7b83",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736730350106,
+          "stop" : 1736730350424,
+          "duration" : 318
+        }
+      }, {
+        "uid" : "8b1a3b4c8a4122a1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/280//#testresult/8b1a3b4c8a4122a1",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736644114282,
+          "stop" : 1736644114802,
+          "duration" : 520
+        }
+      }, {
+        "uid" : "d2ecbad992230c61",
+        "reportUrl" : "https://lambotik.github.io/Oblache/279//#testresult/d2ecbad992230c61",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736557369879,
+          "stop" : 1736557370252,
+          "duration" : 373
+        }
+      }, {
+        "uid" : "227990dbc91fbdc0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/278//#testresult/227990dbc91fbdc0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736471039123,
+          "stop" : 1736471039440,
+          "duration" : 317
+        }
+      }, {
+        "uid" : "266156de39d659eb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/277//#testresult/266156de39d659eb",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736384523199,
+          "stop" : 1736384523562,
+          "duration" : 363
+        }
+      }, {
+        "uid" : "ee2f8a49924ea6a8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/276//#testresult/ee2f8a49924ea6a8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736298145064,
+          "stop" : 1736298145392,
+          "duration" : 328
+        }
+      }, {
+        "uid" : "98c7f414906e6e98",
+        "reportUrl" : "https://lambotik.github.io/Oblache/275//#testresult/98c7f414906e6e98",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736211746101,
+          "stop" : 1736211746428,
+          "duration" : 327
+        }
+      }, {
+        "uid" : "dfcea4dfa80ecb0f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/274//#testresult/dfcea4dfa80ecb0f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736125500577,
+          "stop" : 1736125500893,
+          "duration" : 316
+        }
+      }, {
+        "uid" : "2b5f038ec324e007",
+        "reportUrl" : "https://lambotik.github.io/Oblache/273//#testresult/2b5f038ec324e007",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1736039245108,
+          "stop" : 1736039245623,
+          "duration" : 515
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6ca9f1c5ea65453b.json",
+  "parameterValues" : [ ]
+}
