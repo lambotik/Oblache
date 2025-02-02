@@ -1,0 +1,402 @@
+{
+  "uid" : "96453b1e5774f3a",
+  "name" : "GET list db_versions.",
+  "fullName" : "tests_api.test_bd.TestGET#test_get_list_db_versions",
+  "historyId" : "8bbfe42adf25237260fbe695e4aa058a",
+  "time" : {
+    "start" : 1738458821019,
+    "stop" : 1738458881430,
+    "duration" : 60411
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Incorrect status code: 504",
+  "statusTrace" : "self = <tests_api.test_bd.TestGET object at 0x7f7753948590>\n\n    @allure.title('GET list db_versions.')\n    def test_get_list_db_versions(self):\n        response = API.get_list_dbversions()\n>       Checking.check_status_code(response, 200)\n\ntests_api/test_bd.py:83: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [504]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 504\n\ntests_api/utils/checking.py:16: AssertionError",
+  "flaky" : false,
+  "newFailed" : true,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Incorrect status code: 504",
+    "statusTrace" : "self = <tests_api.test_bd.TestGET object at 0x7f7753948590>\n\n    @allure.title('GET list db_versions.')\n    def test_get_list_db_versions(self):\n        response = API.get_list_dbversions()\n>       Checking.check_status_code(response, 200)\n\ntests_api/test_bd.py:83: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [504]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 504\n\ntests_api/utils/checking.py:16: AssertionError",
+    "steps" : [ {
+      "name" : "Endpoint: /list_dbversions",
+      "time" : {
+        "start" : 1738458881429,
+        "stop" : 1738458881429,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Request:",
+      "time" : {
+        "start" : 1738458881429,
+        "stop" : 1738458881429,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Url: https://dbend.areso.pro/list_dbversions",
+        "time" : {
+          "start" : 1738458881429,
+          "stop" : 1738458881429,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': 'None'}",
+        "time" : {
+          "start" : 1738458881429,
+          "stop" : 1738458881429,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Body: None",
+        "time" : {
+          "start" : 1738458881429,
+          "stop" : 1738458881429,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Response:",
+      "time" : {
+        "start" : 1738458881429,
+        "stop" : 1738458881430,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status code: 504",
+        "time" : {
+          "start" : 1738458881429,
+          "stop" : 1738458881429,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "JSON: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n",
+        "time" : {
+          "start" : 1738458881430,
+          "stop" : 1738458881430,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 200 == Response status code: 504",
+      "time" : {
+        "start" : 1738458881430,
+        "stop" : 1738458881430,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Incorrect status code: 504\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 16, in check_status_code\n    assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "GET"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestGET"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1692-600"
+  }, {
+    "name" : "thread",
+    "value" : "2455-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 82,
+        "unknown" : 0,
+        "total" : 84
+      },
+      "items" : [ {
+        "uid" : "67d09efb9003d35e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/300//#testresult/67d09efb9003d35e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738371848365,
+          "stop" : 1738371848884,
+          "duration" : 519
+        }
+      }, {
+        "uid" : "e0f42507fd313bc3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/299//#testresult/e0f42507fd313bc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738350566689,
+          "stop" : 1738350567036,
+          "duration" : 347
+        }
+      }, {
+        "uid" : "26926e1c9986dc23",
+        "reportUrl" : "https://lambotik.github.io/Oblache/298//#testresult/26926e1c9986dc23",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738198757653,
+          "stop" : 1738198757964,
+          "duration" : 311
+        }
+      }, {
+        "uid" : "adca21133488ca2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/297//#testresult/adca21133488ca2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738112411736,
+          "stop" : 1738112412040,
+          "duration" : 304
+        }
+      }, {
+        "uid" : "a14ab3588e6d73df",
+        "reportUrl" : "https://lambotik.github.io/Oblache/296//#testresult/a14ab3588e6d73df",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738026023764,
+          "stop" : 1738026024088,
+          "duration" : 324
+        }
+      }, {
+        "uid" : "292b37080bb727",
+        "reportUrl" : "https://lambotik.github.io/Oblache/295//#testresult/292b37080bb727",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737939700546,
+          "stop" : 1737939700932,
+          "duration" : 386
+        }
+      }, {
+        "uid" : "6b4a784147c0ea71",
+        "reportUrl" : "https://lambotik.github.io/Oblache/294//#testresult/6b4a784147c0ea71",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737853344470,
+          "stop" : 1737853344982,
+          "duration" : 512
+        }
+      }, {
+        "uid" : "a3ef5fe0257dbad3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/293//#testresult/a3ef5fe0257dbad3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737766642017,
+          "stop" : 1737766642532,
+          "duration" : 515
+        }
+      }, {
+        "uid" : "68dac4078711fc84",
+        "reportUrl" : "https://lambotik.github.io/Oblache/292//#testresult/68dac4078711fc84",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737680477822,
+          "stop" : 1737680478346,
+          "duration" : 524
+        }
+      }, {
+        "uid" : "f2a0fa612543380d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/291//#testresult/f2a0fa612543380d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737594016916,
+          "stop" : 1737594017226,
+          "duration" : 310
+        }
+      }, {
+        "uid" : "94bbc3afc25cf2cd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/290//#testresult/94bbc3afc25cf2cd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737507701390,
+          "stop" : 1737507701704,
+          "duration" : 314
+        }
+      }, {
+        "uid" : "84228b537a738627",
+        "reportUrl" : "https://lambotik.github.io/Oblache/289//#testresult/84228b537a738627",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737421184092,
+          "stop" : 1737421184410,
+          "duration" : 318
+        }
+      }, {
+        "uid" : "7275ecd5951f3651",
+        "reportUrl" : "https://lambotik.github.io/Oblache/288//#testresult/7275ecd5951f3651",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737334873687,
+          "stop" : 1737334874068,
+          "duration" : 381
+        }
+      }, {
+        "uid" : "6a44baab082ff64c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/287//#testresult/6a44baab082ff64c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737248699177,
+          "stop" : 1737248699691,
+          "duration" : 514
+        }
+      }, {
+        "uid" : "504a4ae8a8f7d545",
+        "reportUrl" : "https://lambotik.github.io/Oblache/286//#testresult/504a4ae8a8f7d545",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737161895102,
+          "stop" : 1737161895463,
+          "duration" : 361
+        }
+      }, {
+        "uid" : "2e909c546e73768c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/285//#testresult/2e909c546e73768c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737075590722,
+          "stop" : 1737075591239,
+          "duration" : 517
+        }
+      }, {
+        "uid" : "6ed0c62340222763",
+        "reportUrl" : "https://lambotik.github.io/Oblache/284//#testresult/6ed0c62340222763",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736989198090,
+          "stop" : 1736989198402,
+          "duration" : 312
+        }
+      }, {
+        "uid" : "30aa5880c66ab5ea",
+        "reportUrl" : "https://lambotik.github.io/Oblache/283//#testresult/30aa5880c66ab5ea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736902856272,
+          "stop" : 1736902856702,
+          "duration" : 430
+        }
+      }, {
+        "uid" : "1a71eea0e7e60802",
+        "reportUrl" : "https://lambotik.github.io/Oblache/282//#testresult/1a71eea0e7e60802",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736816339664,
+          "stop" : 1736816340167,
+          "duration" : 503
+        }
+      }, {
+        "uid" : "a381b5d70dc7dbf",
+        "reportUrl" : "https://lambotik.github.io/Oblache/281//#testresult/a381b5d70dc7dbf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1736730332681,
+          "stop" : 1736730333001,
+          "duration" : 320
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "96453b1e5774f3a.json",
+  "parameterValues" : [ ]
+}
