@@ -1,0 +1,276 @@
+{
+  "uid" : "6854bd791262b7eb",
+  "name" : "Get token.",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_get_token",
+  "historyId" : "6c59ed4b9154f3b9d4e744b2bf55dfa1",
+  "time" : {
+    "start" : 1738980387423,
+    "stop" : 1738980387423,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "statusTrace" : "self = <Response [504]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/requests/models.py:974: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/json/decoder.py:338: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x7fb01453ae10>\ns = '<html>\\r\\n<head><title>504 Gateway Time-out</title></head>\\r\\n<body>\\r\\n<center><h1>504 Gateway Time-out</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/json/decoder.py:356: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\n    @pytest.fixture(scope='session')\n    def get_token():\n        load_dotenv()\n        email = os.getenv('EMAIL')\n        old_password = os.getenv('PASSWORD')\n        new_password = '123456789'\n        try:\n            body = {\"email\": email, \"password\": f'{old_password}'}\n            result = requests.post('https://dbend.areso.pro/login', json=body)\n            token = result.json()['token']\n            if token != {}:\n                new_password, old_password = old_password, new_password\n            Checking.check_status_code(result, 200)\n            return token, body, new_password, old_password, email\n        except Exception as ex:\n            print(ex)\n            old_password, new_password = new_password, old_password\n            body = {\"email\": email, \"password\": f'{old_password}'}\n            result = requests.post('https://dbend.areso.pro/login', json=body)\n>           token = result.json()['token']\n\ntests_ui/conftest.py:60: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <Response [504]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/requests/models.py:978: JSONDecodeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token",
+    "time" : {
+      "start" : 1738980387423,
+      "stop" : 1738980508453,
+      "duration" : 121030
+    },
+    "status" : "broken",
+    "statusMessage" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1123, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 902, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/conftest.py\", line 60, in get_token\n    token = result.json()['token']\n            ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.8/x64/lib/python3.12/site-packages/requests/models.py\", line 978, in json\n    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfilePage"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1940-209"
+  }, {
+    "name" : "thread",
+    "value" : "2437-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 7,
+        "skipped" : 0,
+        "passed" : 82,
+        "unknown" : 0,
+        "total" : 89
+      },
+      "items" : [ {
+        "uid" : "44b2936cbb7f4f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/306//#testresult/44b2936cbb7f4f",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1738894111900,
+          "stop" : 1738894111900,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "de889ace5d98e7aa",
+        "reportUrl" : "https://lambotik.github.io/Oblache/305//#testresult/de889ace5d98e7aa",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1738807684623,
+          "stop" : 1738807684623,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e7e92511a3ab3eb3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/304//#testresult/e7e92511a3ab3eb3",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1738721265256,
+          "stop" : 1738721265256,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ff5da2b3c218f9e4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/303//#testresult/ff5da2b3c218f9e4",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1738634835877,
+          "stop" : 1738634835877,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "136dd0bd2939ec5e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/302//#testresult/136dd0bd2939ec5e",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1738548485926,
+          "stop" : 1738548485926,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b29e9ef470849f8c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/301//#testresult/b29e9ef470849f8c",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1738462221154,
+          "stop" : 1738462221154,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "65574152e5149df4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/300//#testresult/65574152e5149df4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738371962082,
+          "stop" : 1738371962082,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "662e44dc033d7688",
+        "reportUrl" : "https://lambotik.github.io/Oblache/299//#testresult/662e44dc033d7688",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738350719232,
+          "stop" : 1738350719232,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "768a29647127276",
+        "reportUrl" : "https://lambotik.github.io/Oblache/298//#testresult/768a29647127276",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738198850575,
+          "stop" : 1738198850575,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "4075e99821c3edd8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/297//#testresult/4075e99821c3edd8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738112517210,
+          "stop" : 1738112517210,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "7924fe9e525ce4ae",
+        "reportUrl" : "https://lambotik.github.io/Oblache/296//#testresult/7924fe9e525ce4ae",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738026182978,
+          "stop" : 1738026182978,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "23a7d629380eba1d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/295//#testresult/23a7d629380eba1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737939833255,
+          "stop" : 1737939833255,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9bc2e24ac00290d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/294//#testresult/9bc2e24ac00290d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737853498762,
+          "stop" : 1737853498762,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b450b5fa58f83afd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/293//#testresult/b450b5fa58f83afd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737766806520,
+          "stop" : 1737766806520,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "1584652f8ebbf71c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/292//#testresult/1584652f8ebbf71c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737680657588,
+          "stop" : 1737680657588,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "784ff0c0aafa39dc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/291//#testresult/784ff0c0aafa39dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737594110942,
+          "stop" : 1737594110942,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "644cffde379c4fc9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/290//#testresult/644cffde379c4fc9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737507831122,
+          "stop" : 1737507831122,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d61383a668db4ed5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/289//#testresult/d61383a668db4ed5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737421310998,
+          "stop" : 1737421310998,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d0f61cf9d9de49f8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/288//#testresult/d0f61cf9d9de49f8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737334972016,
+          "stop" : 1737334972016,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ca6579582cfd1c58",
+        "reportUrl" : "https://lambotik.github.io/Oblache/287//#testresult/ca6579582cfd1c58",
+        "status" : "passed",
+        "time" : {
+          "start" : 1737248829488,
+          "stop" : 1737248829488,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "6854bd791262b7eb.json",
+  "parameterValues" : [ ]
+}
