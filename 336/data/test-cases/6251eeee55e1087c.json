@@ -1,0 +1,404 @@
+{
+  "uid" : "6251eeee55e1087c",
+  "name" : "POST db_list_with_filter",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_db_list_with_filter",
+  "historyId" : "1404cf75602dc5c195df0f6e9ffb5ba3",
+  "time" : {
+    "start" : 1741481797465,
+    "stop" : 1741481797770,
+    "duration" : 305
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL There are databases that need to be deleted manually.\n\nKeyError: 'data'",
+  "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7f1c3bba5fa0>\n\n    @allure.title('POST db_list_with_filter')\n    @pytest.mark.xfail(reason='There are databases that need to be deleted manually.')\n    def test_post_db_list_with_filter(self):\n        list_db = API.post_db_list(token=TestPOST.token)\n        json_list_db = json.loads(list_db.text)\n        try:\n>           first_db_uuid = list(json_list_db['data'])[-1]\nE           KeyError: 'data'\n\ntests_api/test_bd.py:307: KeyError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "XFAIL There are databases that need to be deleted manually.\n\nKeyError: 'data'",
+    "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7f1c3bba5fa0>\n\n    @allure.title('POST db_list_with_filter')\n    @pytest.mark.xfail(reason='There are databases that need to be deleted manually.')\n    def test_post_db_list_with_filter(self):\n        list_db = API.post_db_list(token=TestPOST.token)\n        json_list_db = json.loads(list_db.text)\n        try:\n>           first_db_uuid = list(json_list_db['data'])[-1]\nE           KeyError: 'data'\n\ntests_api/test_bd.py:307: KeyError",
+    "steps" : [ {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1741481797465,
+        "stop" : 1741481797770,
+        "duration" : 305
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1741481797770,
+          "stop" : 1741481797770,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1741481797770,
+          "stop" : 1741481797770,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': '27d312ce-f8ae-4cd2-9417-ceac157e9ebb'}",
+          "time" : {
+            "start" : 1741481797770,
+            "stop" : 1741481797770,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1741481797770,
+            "stop" : 1741481797770,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1741481797770,
+          "stop" : 1741481797770,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 401",
+          "time" : {
+            "start" : 1741481797770,
+            "stop" : 1741481797770,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n    \"content\": \"msg[5]: unauthenticated\"\n}\n",
+          "time" : {
+            "start" : 1741481797770,
+            "stop" : 1741481797770,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='There are databases that need to be deleted manually.')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "fv-az2035-376"
+  }, {
+    "name" : "thread",
+    "value" : "2465-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 123,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 124
+      },
+      "items" : [ {
+        "uid" : "6bcd550f3b5ee49",
+        "reportUrl" : "https://lambotik.github.io/Oblache/335//#testresult/6bcd550f3b5ee49",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1741395120933,
+          "stop" : 1741395121721,
+          "duration" : 788
+        }
+      }, {
+        "uid" : "96ca3d05dab7048",
+        "reportUrl" : "https://lambotik.github.io/Oblache/334//#testresult/96ca3d05dab7048",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1741309521496,
+          "stop" : 1741309522506,
+          "duration" : 1010
+        }
+      }, {
+        "uid" : "f72577bb5cc1d4b5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/23//#testresult/f72577bb5cc1d4b5",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1741273257258,
+          "stop" : 1741273258303,
+          "duration" : 1045
+        }
+      }, {
+        "uid" : "39719ce099037e87",
+        "reportUrl" : "https://lambotik.github.io/Oblache/22//#testresult/39719ce099037e87",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1741273012344,
+          "stop" : 1741273012937,
+          "duration" : 593
+        }
+      }, {
+        "uid" : "20eb768cfe0a60b2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/21//#testresult/20eb768cfe0a60b2",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1741272399496,
+          "stop" : 1741272400083,
+          "duration" : 587
+        }
+      }, {
+        "uid" : "f8d4732f5e54c06a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/20//#testresult/f8d4732f5e54c06a",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1741271073846,
+          "stop" : 1741271074867,
+          "duration" : 1021
+        }
+      }, {
+        "uid" : "67e86847b58d752d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/19//#testresult/67e86847b58d752d",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1741270255453,
+          "stop" : 1741270256469,
+          "duration" : 1016
+        }
+      }, {
+        "uid" : "13ed03c546cb1dae",
+        "reportUrl" : "https://lambotik.github.io/Oblache/333//#testresult/13ed03c546cb1dae",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1741223074656,
+          "stop" : 1741223075302,
+          "duration" : 646
+        }
+      }, {
+        "uid" : "a20d3d5fc800d538",
+        "reportUrl" : "https://lambotik.github.io/Oblache/332//#testresult/a20d3d5fc800d538",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1741136675192,
+          "stop" : 1741136675822,
+          "duration" : 630
+        }
+      }, {
+        "uid" : "a298a79c8a1b807b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/331//#testresult/a298a79c8a1b807b",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1741050271804,
+          "stop" : 1741050272412,
+          "duration" : 608
+        }
+      }, {
+        "uid" : "31abbe5d9b8321d6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/330//#testresult/31abbe5d9b8321d6",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740963961730,
+          "stop" : 1740963962488,
+          "duration" : 758
+        }
+      }, {
+        "uid" : "29fca1730fc636b4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/329//#testresult/29fca1730fc636b4",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740877661287,
+          "stop" : 1740877662032,
+          "duration" : 745
+        }
+      }, {
+        "uid" : "b9bddf4fb3484cad",
+        "reportUrl" : "https://lambotik.github.io/Oblache/328//#testresult/b9bddf4fb3484cad",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740791298011,
+          "stop" : 1740791298618,
+          "duration" : 607
+        }
+      }, {
+        "uid" : "63445250e23f5cab",
+        "reportUrl" : "https://lambotik.github.io/Oblache/327//#testresult/63445250e23f5cab",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740704629309,
+          "stop" : 1740704629934,
+          "duration" : 625
+        }
+      }, {
+        "uid" : "1e2f9b3a0c96568",
+        "reportUrl" : "https://lambotik.github.io/Oblache/326//#testresult/1e2f9b3a0c96568",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740618206536,
+          "stop" : 1740618207258,
+          "duration" : 722
+        }
+      }, {
+        "uid" : "9e7ef8db783e9f4d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/325//#testresult/9e7ef8db783e9f4d",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740531810411,
+          "stop" : 1740531811057,
+          "duration" : 646
+        }
+      }, {
+        "uid" : "ec3ca212b089a3c9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/324//#testresult/ec3ca212b089a3c9",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740445419012,
+          "stop" : 1740445419747,
+          "duration" : 735
+        }
+      }, {
+        "uid" : "529d6c3cbcf55eec",
+        "reportUrl" : "https://lambotik.github.io/Oblache/323//#testresult/529d6c3cbcf55eec",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740359086023,
+          "stop" : 1740359087036,
+          "duration" : 1013
+        }
+      }, {
+        "uid" : "c53cfc28f3d09b40",
+        "reportUrl" : "https://lambotik.github.io/Oblache/322//#testresult/c53cfc28f3d09b40",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740272816351,
+          "stop" : 1740272817384,
+          "duration" : 1033
+        }
+      }, {
+        "uid" : "9768b81b9aff63cd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/321//#testresult/9768b81b9aff63cd",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1740186040683,
+          "stop" : 1740186041513,
+          "duration" : 830
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.xfail(reason='There are databases that need to be deleted manually.')" ]
+  },
+  "source" : "6251eeee55e1087c.json",
+  "parameterValues" : [ ]
+}
