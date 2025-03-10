@@ -1,0 +1,408 @@
+{
+  "uid" : "5628638334e60a77",
+  "name" : "test order db create backup with wrong uuid",
+  "fullName" : "tests_api.test_bd.TestBackup#test_order_db_create_backup_with_wrong_uuid",
+  "historyId" : "bc5ef28400accd6488b5c9ca6e9589b9",
+  "time" : {
+    "start" : 1741568261920,
+    "stop" : 1741568262456,
+    "duration" : 536
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token_backup_1",
+    "time" : {
+      "start" : 1741568261405,
+      "stop" : 1741568261919,
+      "duration" : 514
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert status code: 200 == Response status code: 200",
+      "time" : {
+        "start" : 1741568261919,
+        "stop" : 1741568261919,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Endpoint: /db_backup_create",
+      "time" : {
+        "start" : 1741568262455,
+        "stop" : 1741568262455,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Request:",
+      "time" : {
+        "start" : 1741568262455,
+        "stop" : 1741568262455,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': '3e3514ef-36ac-4a6c-8fcb-39de6d0f38d0'}",
+        "time" : {
+          "start" : 1741568262455,
+          "stop" : 1741568262455,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Response:",
+      "time" : {
+        "start" : 1741568262455,
+        "stop" : 1741568262455,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status code: 400",
+        "time" : {
+          "start" : 1741568262455,
+          "stop" : 1741568262455,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "JSON: {\n    \"content\": \"db either not exist, not in good shape or not belong to the user\"\n}\n",
+        "time" : {
+          "start" : 1741568262455,
+          "stop" : 1741568262455,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1741568262455,
+        "stop" : 1741568262455,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Compare result request with expected value:\nResponse: <Response [400]>\nField name: content\nValue: db either not exist, not in good shape or not belong to the user",
+      "time" : {
+        "start" : 1741568262455,
+        "stop" : 1741568262455,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Backup"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestBackup"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1680-744"
+  }, {
+    "name" : "thread",
+    "value" : "2435-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 10,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 114,
+        "unknown" : 0,
+        "total" : 125
+      },
+      "items" : [ {
+        "uid" : "7c4ae353de9ce3cc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/336//#testresult/7c4ae353de9ce3cc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741481863594,
+          "stop" : 1741481863903,
+          "duration" : 309
+        }
+      }, {
+        "uid" : "a26fe8c3feca1844",
+        "reportUrl" : "https://lambotik.github.io/Oblache/335//#testresult/a26fe8c3feca1844",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741395220677,
+          "stop" : 1741395220990,
+          "duration" : 313
+        }
+      }, {
+        "uid" : "d6bfdf24ccb0e15b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/334//#testresult/d6bfdf24ccb0e15b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741309600154,
+          "stop" : 1741309600667,
+          "duration" : 513
+        }
+      }, {
+        "uid" : "89fd16329cbdad1d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/23//#testresult/89fd16329cbdad1d",
+        "status" : "broken",
+        "statusDetails" : "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xbd in position 668228: invalid start byte",
+        "time" : {
+          "start" : 1741273360151,
+          "stop" : 1741273360664,
+          "duration" : 513
+        }
+      }, {
+        "uid" : "3e8d01d653015adb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/22//#testresult/3e8d01d653015adb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741273122580,
+          "stop" : 1741273122889,
+          "duration" : 309
+        }
+      }, {
+        "uid" : "40c14c0fb49939b8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/21//#testresult/40c14c0fb49939b8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741272521221,
+          "stop" : 1741272521530,
+          "duration" : 309
+        }
+      }, {
+        "uid" : "86cb59808998488c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/20//#testresult/86cb59808998488c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741271170096,
+          "stop" : 1741271170628,
+          "duration" : 532
+        }
+      }, {
+        "uid" : "cf6be1b9bacb4ac0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/19//#testresult/cf6be1b9bacb4ac0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741270364084,
+          "stop" : 1741270364612,
+          "duration" : 528
+        }
+      }, {
+        "uid" : "1769481c9a499214",
+        "reportUrl" : "https://lambotik.github.io/Oblache/333//#testresult/1769481c9a499214",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741223202057,
+          "stop" : 1741223202365,
+          "duration" : 308
+        }
+      }, {
+        "uid" : "284a7eca826618d6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/332//#testresult/284a7eca826618d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741136803049,
+          "stop" : 1741136803360,
+          "duration" : 311
+        }
+      }, {
+        "uid" : "dad0e266e856c6d3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/331//#testresult/dad0e266e856c6d3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1741050343053,
+          "stop" : 1741050343363,
+          "duration" : 310
+        }
+      }, {
+        "uid" : "2ae22966dc8dcb24",
+        "reportUrl" : "https://lambotik.github.io/Oblache/330//#testresult/2ae22966dc8dcb24",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740964063903,
+          "stop" : 1740964064285,
+          "duration" : 382
+        }
+      }, {
+        "uid" : "e4ce2222337569a1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/329//#testresult/e4ce2222337569a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740877780538,
+          "stop" : 1740877780904,
+          "duration" : 366
+        }
+      }, {
+        "uid" : "277e726daa793674",
+        "reportUrl" : "https://lambotik.github.io/Oblache/328//#testresult/277e726daa793674",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740791380523,
+          "stop" : 1740791380828,
+          "duration" : 305
+        }
+      }, {
+        "uid" : "9bb7825bee6893eb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/327//#testresult/9bb7825bee6893eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740704739940,
+          "stop" : 1740704740244,
+          "duration" : 304
+        }
+      }, {
+        "uid" : "e9e10340ca899417",
+        "reportUrl" : "https://lambotik.github.io/Oblache/326//#testresult/e9e10340ca899417",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740618279738,
+          "stop" : 1740618280103,
+          "duration" : 365
+        }
+      }, {
+        "uid" : "c0a4b0d448631e95",
+        "reportUrl" : "https://lambotik.github.io/Oblache/325//#testresult/c0a4b0d448631e95",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740531882119,
+          "stop" : 1740531882443,
+          "duration" : 324
+        }
+      }, {
+        "uid" : "b8b3a3320eeb2a72",
+        "reportUrl" : "https://lambotik.github.io/Oblache/324//#testresult/b8b3a3320eeb2a72",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740445544133,
+          "stop" : 1740445544508,
+          "duration" : 375
+        }
+      }, {
+        "uid" : "7f47b40bb6006e2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/323//#testresult/7f47b40bb6006e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740359200698,
+          "stop" : 1740359201200,
+          "duration" : 502
+        }
+      }, {
+        "uid" : "49aa7d27b057932",
+        "reportUrl" : "https://lambotik.github.io/Oblache/322//#testresult/49aa7d27b057932",
+        "status" : "passed",
+        "time" : {
+          "start" : 1740272925068,
+          "stop" : 1740272925586,
+          "duration" : 518
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5628638334e60a77.json",
+  "parameterValues" : [ ]
+}
