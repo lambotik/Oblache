@@ -1,0 +1,307 @@
+{
+  "uid" : "8d0e2dc16a89a6b7",
+  "name" : "test order db create backup",
+  "fullName" : "tests_api.test_bd.TestBackup#test_order_db_create_backup",
+  "historyId" : "bbc51bc9e59c2f7de52280f53d30e264",
+  "time" : {
+    "start" : 1743988166606,
+    "stop" : 1743988166606,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Incorrect status code: 502",
+  "statusTrace" : "@pytest.fixture()\n    def get_token_backup_2():\n        \"\"\"\n        Method return:\\n\n        token: str\\n\n        body: dict\\n\n        uuid: str\n        \"\"\"\n        load_dotenv()\n        email = os.getenv('BACKUP2_MAIL')\n        old_password = os.getenv('BACKUP2_PASSWORD')\n        uuid = os.getenv('BACKUP2_UUID')\n        body = {\"email\": email, \"password\": old_password}\n        result = requests.post('https://dbend.areso.pro/login', json=body)\n>       Checking.check_status_code(result, 200)\n\nconftest.py:113: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [502]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 502\n\ntests_api/utils/checking.py:16: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token_backup_2",
+    "time" : {
+      "start" : 1743988166607,
+      "stop" : 1743988167079,
+      "duration" : 472
+    },
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Incorrect status code: 502\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1123, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 902, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/conftest.py\", line 113, in get_token_backup_2\n    Checking.check_status_code(result, 200)\n  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 16, in check_status_code\n    assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "steps" : [ {
+      "name" : "Assert status code: 200 == Response status code: 502",
+      "time" : {
+        "start" : 1743988167078,
+        "stop" : 1743988167079,
+        "duration" : 1
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Incorrect status code: 502\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 16, in check_status_code\n    assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Backup"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestBackup"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1344-338"
+  }, {
+    "name" : "thread",
+    "value" : "2500-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 23,
+        "broken" : 34,
+        "skipped" : 0,
+        "passed" : 96,
+        "unknown" : 0,
+        "total" : 153
+      },
+      "items" : [ {
+        "uid" : "910e52cc50603ac7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/364//#testresult/910e52cc50603ac7",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1743901874337,
+          "stop" : 1743901874337,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "fd1e4ca8b058814",
+        "reportUrl" : "https://lambotik.github.io/Oblache/363//#testresult/fd1e4ca8b058814",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7fb21785a690>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743815227919,
+          "stop" : 1743815258278,
+          "duration" : 30359
+        }
+      }, {
+        "uid" : "bef37f4e776761fa",
+        "reportUrl" : "https://lambotik.github.io/Oblache/362//#testresult/bef37f4e776761fa",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7fd682deda30>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743728889335,
+          "stop" : 1743728919892,
+          "duration" : 30557
+        }
+      }, {
+        "uid" : "6bca21385a5efe8b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/361//#testresult/6bca21385a5efe8b",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f34893e3080>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743642489750,
+          "stop" : 1743642520168,
+          "duration" : 30418
+        }
+      }, {
+        "uid" : "126df90f8195c139",
+        "reportUrl" : "https://lambotik.github.io/Oblache/360//#testresult/126df90f8195c139",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7efdac954800>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743556152016,
+          "stop" : 1743556182480,
+          "duration" : 30464
+        }
+      }, {
+        "uid" : "d2e83fc331360c61",
+        "reportUrl" : "https://lambotik.github.io/Oblache/359//#testresult/d2e83fc331360c61",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f6ae8beac90>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743470170990,
+          "stop" : 1743470201333,
+          "duration" : 30343
+        }
+      }, {
+        "uid" : "9b8bcadc649f3d32",
+        "reportUrl" : "https://lambotik.github.io/Oblache/358//#testresult/9b8bcadc649f3d32",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f31ed6cb0b0>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743383533263,
+          "stop" : 1743383563865,
+          "duration" : 30602
+        }
+      }, {
+        "uid" : "c0cf3e75ba14f45b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/357//#testresult/c0cf3e75ba14f45b",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f2c2790b800>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743297190204,
+          "stop" : 1743297220559,
+          "duration" : 30355
+        }
+      }, {
+        "uid" : "7eac35ea839e6a99",
+        "reportUrl" : "https://lambotik.github.io/Oblache/356//#testresult/7eac35ea839e6a99",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f5c917619d0>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743210369613,
+          "stop" : 1743210400053,
+          "duration" : 30440
+        }
+      }, {
+        "uid" : "eaffb381db93357d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/355//#testresult/eaffb381db93357d",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7ff9bf9ef9e0>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743124028950,
+          "stop" : 1743124059463,
+          "duration" : 30513
+        }
+      }, {
+        "uid" : "8a2175d6471f7993",
+        "reportUrl" : "https://lambotik.github.io/Oblache/354//#testresult/8a2175d6471f7993",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7fdc1ff7d070>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1743037630621,
+          "stop" : 1743037661127,
+          "duration" : 30506
+        }
+      }, {
+        "uid" : "e62fc4483dc093bd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/353//#testresult/e62fc4483dc093bd",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7fde523dec00>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742951226702,
+          "stop" : 1742951257147,
+          "duration" : 30445
+        }
+      }, {
+        "uid" : "d9a4ffbec0975da7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/352//#testresult/d9a4ffbec0975da7",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f7c5b8a3140>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742864892090,
+          "stop" : 1742864922435,
+          "duration" : 30345
+        }
+      }, {
+        "uid" : "d6deb76c38b179f9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/351//#testresult/d6deb76c38b179f9",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f516b7c7380>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742778549549,
+          "stop" : 1742778580203,
+          "duration" : 30654
+        }
+      }, {
+        "uid" : "382ae87b7ac27a5c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/350//#testresult/382ae87b7ac27a5c",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f921d8a85c0>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742692331729,
+          "stop" : 1742692362247,
+          "duration" : 30518
+        }
+      }, {
+        "uid" : "c445d2f5671a541c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/349//#testresult/c445d2f5671a541c",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7fcd86d34620>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742605566719,
+          "stop" : 1742605597152,
+          "duration" : 30433
+        }
+      }, {
+        "uid" : "d017f4ca287c14ed",
+        "reportUrl" : "https://lambotik.github.io/Oblache/348//#testresult/d017f4ca287c14ed",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7fad6eba4230>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742519231967,
+          "stop" : 1742519262612,
+          "duration" : 30645
+        }
+      }, {
+        "uid" : "909788d129468948",
+        "reportUrl" : "https://lambotik.github.io/Oblache/347//#testresult/909788d129468948",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7eff6e2ac3b0>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742432771779,
+          "stop" : 1742432802205,
+          "duration" : 30426
+        }
+      }, {
+        "uid" : "78954679a3e0e894",
+        "reportUrl" : "https://lambotik.github.io/Oblache/346//#testresult/78954679a3e0e894",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f3382aaa030>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742346429743,
+          "stop" : 1742346460088,
+          "duration" : 30345
+        }
+      }, {
+        "uid" : "5f522209a6bc0ede",
+        "reportUrl" : "https://lambotik.github.io/Oblache/345//#testresult/5f522209a6bc0ede",
+        "status" : "broken",
+        "statusDetails" : "requests.exceptions.ConnectionError: HTTPSConnectionPool(host='dbend.areso.prohttp', port=443): Max retries exceeded with url: /cis_db1.areso.pro/backups/db_cen6maxr.sql (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f0a037c32f0>: Failed to resolve 'dbend.areso.prohttp' ([Errno -2] Name or service not known)\"))",
+        "time" : {
+          "start" : 1742259973367,
+          "stop" : 1742260003918,
+          "duration" : 30551
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8d0e2dc16a89a6b7.json",
+  "parameterValues" : [ ]
+}

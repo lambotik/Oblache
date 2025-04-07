@@ -1,0 +1,289 @@
+{
+  "uid" : "2345b13d9615619c",
+  "name" : "POST delete_db",
+  "fullName" : "tests_api.test_bd.TestPOST#test_delete_db",
+  "historyId" : "aacf29e4b56c0d304e9b651197b003cc",
+  "time" : {
+    "start" : 1743988164652,
+    "stop" : 1743988164652,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "statusTrace" : "self = <Response [502]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/requests/models.py:974: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/json/decoder.py:338: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x7f8b7a367110>\ns = '<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/json/decoder.py:356: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\n    @pytest.fixture()\n    def get_token():\n        \"\"\"\n        Method return:\\n\n        token: str\\n\n        body: dict\\n\n        new_password: str\\n\n        old_password: str\\n\n        email: str\n        :returns: token: str, body: dict, new_password: str, old_password:str, email: str\n        \"\"\"\n        load_dotenv()\n        email = os.getenv('EMAIL')\n        old_password = os.getenv('PASSWORD')\n        new_password = '123456789'\n        try:\n            body = {\"email\": email, \"password\": f'{old_password}'}\n            result = requests.post('https://dbend.areso.pro/login', json=body)\n            token = result.json()['token']\n            if token != {}:\n                new_password, old_password = old_password, new_password\n            Checking.check_status_code(result, 200)\n            return token, body, new_password, old_password, email\n        except Exception as ex:\n            print(ex)\n            old_password, new_password = new_password, old_password\n            body = {\"email\": email, \"password\": f'{old_password}'}\n            result = requests.post('https://dbend.areso.pro/login', json=body)\n>           token = result.json()['token']\n\nconftest.py:75: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <Response [502]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/requests/models.py:978: JSONDecodeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token",
+    "time" : {
+      "start" : 1743988164652,
+      "stop" : 1743988165596,
+      "duration" : 944
+    },
+    "status" : "broken",
+    "statusMessage" : "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1123, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 902, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/conftest.py\", line 75, in get_token\n    token = result.json()['token']\n            ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/site-packages/requests/models.py\", line 978, in json\n    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='When using this method during a test run, the database may be in deleting status.')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1344-338"
+  }, {
+    "name" : "thread",
+    "value" : "2500-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 151,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 153
+      },
+      "items" : [ {
+        "uid" : "4076639f3aeee7af",
+        "reportUrl" : "https://lambotik.github.io/Oblache/364//#testresult/4076639f3aeee7af",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1743901873170,
+          "stop" : 1743901873170,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d37afef53ab5d902",
+        "reportUrl" : "https://lambotik.github.io/Oblache/363//#testresult/d37afef53ab5d902",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743815169809,
+          "stop" : 1743815170420,
+          "duration" : 611
+        }
+      }, {
+        "uid" : "30943547721630eb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/362//#testresult/30943547721630eb",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743728832253,
+          "stop" : 1743728833246,
+          "duration" : 993
+        }
+      }, {
+        "uid" : "4bc6ec8e312089a7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/361//#testresult/4bc6ec8e312089a7",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743642441738,
+          "stop" : 1743642442450,
+          "duration" : 712
+        }
+      }, {
+        "uid" : "5d3e7ccdc53e579d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/360//#testresult/5d3e7ccdc53e579d",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743556098327,
+          "stop" : 1743556099034,
+          "duration" : 707
+        }
+      }, {
+        "uid" : "97851c4125f2601f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/359//#testresult/97851c4125f2601f",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743470129967,
+          "stop" : 1743470130551,
+          "duration" : 584
+        }
+      }, {
+        "uid" : "5b7c019ebdcfc553",
+        "reportUrl" : "https://lambotik.github.io/Oblache/358//#testresult/5b7c019ebdcfc553",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743383470417,
+          "stop" : 1743383471411,
+          "duration" : 994
+        }
+      }, {
+        "uid" : "7c39f442b367a0c4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/357//#testresult/7c39f442b367a0c4",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743297132146,
+          "stop" : 1743297132754,
+          "duration" : 608
+        }
+      }, {
+        "uid" : "13e39aed49b22460",
+        "reportUrl" : "https://lambotik.github.io/Oblache/356//#testresult/13e39aed49b22460",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743210356483,
+          "stop" : 1743210357094,
+          "duration" : 611
+        }
+      }, {
+        "uid" : "febbcf98777e2804",
+        "reportUrl" : "https://lambotik.github.io/Oblache/355//#testresult/febbcf98777e2804",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743123992405,
+          "stop" : 1743123993115,
+          "duration" : 710
+        }
+      }, {
+        "uid" : "b137f5f4851132a0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/354//#testresult/b137f5f4851132a0",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1743037599911,
+          "stop" : 1743037600618,
+          "duration" : 707
+        }
+      }, {
+        "uid" : "a692fd02cf319d87",
+        "reportUrl" : "https://lambotik.github.io/Oblache/353//#testresult/a692fd02cf319d87",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742951208055,
+          "stop" : 1742951208663,
+          "duration" : 608
+        }
+      }, {
+        "uid" : "ec3fa4d0570c5c9c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/352//#testresult/ec3fa4d0570c5c9c",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742864822889,
+          "stop" : 1742864823474,
+          "duration" : 585
+        }
+      }, {
+        "uid" : "74a2163ace750b46",
+        "reportUrl" : "https://lambotik.github.io/Oblache/351//#testresult/74a2163ace750b46",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742778528493,
+          "stop" : 1742778529500,
+          "duration" : 1007
+        }
+      }, {
+        "uid" : "b667b410a8f2490c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/350//#testresult/b667b410a8f2490c",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742692272435,
+          "stop" : 1742692273129,
+          "duration" : 694
+        }
+      }, {
+        "uid" : "4c2eb06f117fe4a7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/349//#testresult/4c2eb06f117fe4a7",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742605508758,
+          "stop" : 1742605509392,
+          "duration" : 634
+        }
+      }, {
+        "uid" : "ee2edf53857fe5ac",
+        "reportUrl" : "https://lambotik.github.io/Oblache/348//#testresult/ee2edf53857fe5ac",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742519210859,
+          "stop" : 1742519211888,
+          "duration" : 1029
+        }
+      }, {
+        "uid" : "74ddeeb53b8bc7a1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/347//#testresult/74ddeeb53b8bc7a1",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742432712436,
+          "stop" : 1742432713144,
+          "duration" : 708
+        }
+      }, {
+        "uid" : "dddb99d4f4003b21",
+        "reportUrl" : "https://lambotik.github.io/Oblache/346//#testresult/dddb99d4f4003b21",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742346399743,
+          "stop" : 1742346400334,
+          "duration" : 591
+        }
+      }, {
+        "uid" : "fc9356d6da9dba64",
+        "reportUrl" : "https://lambotik.github.io/Oblache/345//#testresult/fc9356d6da9dba64",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL When using this method during a test run, the database may be in deleting status.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1742259958338,
+          "stop" : 1742259959311,
+          "duration" : 973
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.xfail(reason='When using this method during a test run, the database may be in deleting status.')" ]
+  },
+  "source" : "2345b13d9615619c.json",
+  "parameterValues" : [ ]
+}
