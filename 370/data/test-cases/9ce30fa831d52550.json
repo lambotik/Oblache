@@ -1,0 +1,407 @@
+{
+  "uid" : "9ce30fa831d52550",
+  "name" : "GET profile information.",
+  "fullName" : "tests_api.test_bd.TestGET#test_get_profile",
+  "historyId" : "766cb6f3a7cf6add5fb057e07bf28012",
+  "time" : {
+    "start" : 1744419969013,
+    "stop" : 1744419969478,
+    "duration" : 465
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Incorrect status code: 405",
+  "statusTrace" : "self = <tests_api.test_bd.TestGET object at 0x7fd15fbc2f00>\n\n    @allure.title('GET profile information.')\n    def test_get_profile(self):\n        response = API.get_profile(token=TestGET.token)\n>       Checking.check_status_code(response, 200)\n\ntests_api/test_bd.py:73: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [405]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 405\n\ntests_api/utils/checking.py:16: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Incorrect status code: 405",
+    "statusTrace" : "self = <tests_api.test_bd.TestGET object at 0x7fd15fbc2f00>\n\n    @allure.title('GET profile information.')\n    def test_get_profile(self):\n        response = API.get_profile(token=TestGET.token)\n>       Checking.check_status_code(response, 200)\n\ntests_api/test_bd.py:73: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [405]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 405\n\ntests_api/utils/checking.py:16: AssertionError",
+    "steps" : [ {
+      "name" : "Endpoint: /get_profile",
+      "time" : {
+        "start" : 1744419969477,
+        "stop" : 1744419969477,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Request:",
+      "time" : {
+        "start" : 1744419969477,
+        "stop" : 1744419969477,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': 'f28be64c-1d49-4f77-b3bb-6bd4a77d6483'}",
+        "time" : {
+          "start" : 1744419969477,
+          "stop" : 1744419969477,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Body: None",
+        "time" : {
+          "start" : 1744419969477,
+          "stop" : 1744419969477,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Response:",
+      "time" : {
+        "start" : 1744419969477,
+        "stop" : 1744419969478,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status code: 405",
+        "time" : {
+          "start" : 1744419969477,
+          "stop" : 1744419969477,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "JSON: {\n    \"message\": \"The method is not allowed for the requested URL.\"\n}\n",
+        "time" : {
+          "start" : 1744419969478,
+          "stop" : 1744419969478,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 200 == Response status code: 405",
+      "time" : {
+        "start" : 1744419969478,
+        "stop" : 1744419969478,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Incorrect status code: 405\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 16, in check_status_code\n    assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "GET"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestGET"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1982-11"
+  }, {
+    "name" : "thread",
+    "value" : "2477-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 137,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 21,
+        "unknown" : 0,
+        "total" : 158
+      },
+      "items" : [ {
+        "uid" : "89191f4d515b60f6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/369//#testresult/89191f4d515b60f6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1744333680716,
+          "stop" : 1744333681008,
+          "duration" : 292
+        }
+      }, {
+        "uid" : "5ff5ee09aed0d7e0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/368//#testresult/5ff5ee09aed0d7e0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1744247219738,
+          "stop" : 1744247220248,
+          "duration" : 510
+        }
+      }, {
+        "uid" : "8735f3a036bfd48d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/367//#testresult/8735f3a036bfd48d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1744160825377,
+          "stop" : 1744160825859,
+          "duration" : 482
+        }
+      }, {
+        "uid" : "8239b67b4157d635",
+        "reportUrl" : "https://lambotik.github.io/Oblache/366//#testresult/8239b67b4157d635",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1744074408035,
+          "stop" : 1744074408511,
+          "duration" : 476
+        }
+      }, {
+        "uid" : "89091e18a0abe979",
+        "reportUrl" : "https://lambotik.github.io/Oblache/365//#testresult/89091e18a0abe979",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1743988142048,
+          "stop" : 1743988142521,
+          "duration" : 473
+        }
+      }, {
+        "uid" : "cc6f165773798e57",
+        "reportUrl" : "https://lambotik.github.io/Oblache/364//#testresult/cc6f165773798e57",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1743901858667,
+          "stop" : 1743901858951,
+          "duration" : 284
+        }
+      }, {
+        "uid" : "5519dccde0857ae4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/363//#testresult/5519dccde0857ae4",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743815129657,
+          "stop" : 1743815129963,
+          "duration" : 306
+        }
+      }, {
+        "uid" : "c9527cae7d8bfb84",
+        "reportUrl" : "https://lambotik.github.io/Oblache/362//#testresult/c9527cae7d8bfb84",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743728781250,
+          "stop" : 1743728781841,
+          "duration" : 591
+        }
+      }, {
+        "uid" : "765d6db2085bce12",
+        "reportUrl" : "https://lambotik.github.io/Oblache/361//#testresult/765d6db2085bce12",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743642399645,
+          "stop" : 1743642399996,
+          "duration" : 351
+        }
+      }, {
+        "uid" : "4d5f3042e9c63454",
+        "reportUrl" : "https://lambotik.github.io/Oblache/360//#testresult/4d5f3042e9c63454",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743556056171,
+          "stop" : 1743556056553,
+          "duration" : 382
+        }
+      }, {
+        "uid" : "dfed03e3d10e1cca",
+        "reportUrl" : "https://lambotik.github.io/Oblache/359//#testresult/dfed03e3d10e1cca",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743470091096,
+          "stop" : 1743470091385,
+          "duration" : 289
+        }
+      }, {
+        "uid" : "c0722a7ba7e1424f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/358//#testresult/c0722a7ba7e1424f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743383420502,
+          "stop" : 1743383420975,
+          "duration" : 473
+        }
+      }, {
+        "uid" : "865c011bca95106a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/357//#testresult/865c011bca95106a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743297092771,
+          "stop" : 1743297093116,
+          "duration" : 345
+        }
+      }, {
+        "uid" : "655074f07e74cafa",
+        "reportUrl" : "https://lambotik.github.io/Oblache/356//#testresult/655074f07e74cafa",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743210317139,
+          "stop" : 1743210317484,
+          "duration" : 345
+        }
+      }, {
+        "uid" : "a8c111150cbe80b6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/355//#testresult/a8c111150cbe80b6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743123950255,
+          "stop" : 1743123950594,
+          "duration" : 339
+        }
+      }, {
+        "uid" : "898a0b6e814701ee",
+        "reportUrl" : "https://lambotik.github.io/Oblache/354//#testresult/898a0b6e814701ee",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1743037557921,
+          "stop" : 1743037558255,
+          "duration" : 334
+        }
+      }, {
+        "uid" : "8f9c32211b22bf5f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/353//#testresult/8f9c32211b22bf5f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1742951169060,
+          "stop" : 1742951169361,
+          "duration" : 301
+        }
+      }, {
+        "uid" : "99993c9955a18b14",
+        "reportUrl" : "https://lambotik.github.io/Oblache/352//#testresult/99993c9955a18b14",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1742864783976,
+          "stop" : 1742864784263,
+          "duration" : 287
+        }
+      }, {
+        "uid" : "e3e88cccd6f20139",
+        "reportUrl" : "https://lambotik.github.io/Oblache/351//#testresult/e3e88cccd6f20139",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1742778478328,
+          "stop" : 1742778478809,
+          "duration" : 481
+        }
+      }, {
+        "uid" : "4f95cd2cd55f4804",
+        "reportUrl" : "https://lambotik.github.io/Oblache/350//#testresult/4f95cd2cd55f4804",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 405",
+        "time" : {
+          "start" : 1742692230464,
+          "stop" : 1742692230803,
+          "duration" : 339
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "9ce30fa831d52550.json",
+  "parameterValues" : [ ]
+}
