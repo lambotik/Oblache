@@ -1,0 +1,409 @@
+{
+  "uid" : "d3bb92175b181e2f",
+  "name" : "POST registration Bulgaria language not agree.",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_registration_for_bulgaria_language_not_agree",
+  "historyId" : "537e92787106744f03e7bc213d25350a",
+  "time" : {
+    "start" : 1749777224422,
+    "stop" : 1749777224750,
+    "duration" : 328
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Incorrect status code: 502",
+  "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7fc43e45f650>\n\n    @allure.title('POST registration Bulgaria language not agree.')\n    def test_post_registration_for_bulgaria_language_not_agree(self):\n        response = API.post_registration_variety_email(\n            mail=random.choice(['gmail', 'mail', 'yandex']),\n            old_password=TestPOST.old_password,\n            prefix='bg',\n            language='bg-bg',\n            tos_agree=False)\n>       Checking.check_status_code(response, 400)\n\ntests_api/test_bd.py:163: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [502]>, status_code = 400\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 502\n\ntests_api/utils/checking.py:16: AssertionError",
+  "flaky" : true,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Incorrect status code: 502",
+    "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7fc43e45f650>\n\n    @allure.title('POST registration Bulgaria language not agree.')\n    def test_post_registration_for_bulgaria_language_not_agree(self):\n        response = API.post_registration_variety_email(\n            mail=random.choice(['gmail', 'mail', 'yandex']),\n            old_password=TestPOST.old_password,\n            prefix='bg',\n            language='bg-bg',\n            tos_agree=False)\n>       Checking.check_status_code(response, 400)\n\ntests_api/test_bd.py:163: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [502]>, status_code = 400\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 502\n\ntests_api/utils/checking.py:16: AssertionError",
+    "steps" : [ {
+      "name" : "post_registration_variety_email",
+      "time" : {
+        "start" : 1749777224422,
+        "stop" : 1749777224750,
+        "duration" : 328
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /register",
+        "time" : {
+          "start" : 1749777224750,
+          "stop" : 1749777224750,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1749777224750,
+          "stop" : 1749777224750,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': ''}",
+          "time" : {
+            "start" : 1749777224750,
+            "stop" : 1749777224750,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: \n                                {\n                                \"email\": f'aqa2025_06_13_01_13_37@mail.bg',\n                                \"password\": password,\n                                \"tos_agree\": False,\n                                \"language\": bg-bg\n                               }",
+          "time" : {
+            "start" : 1749777224750,
+            "stop" : 1749777224750,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1749777224750,
+          "stop" : 1749777224750,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 502",
+          "time" : {
+            "start" : 1749777224750,
+            "stop" : 1749777224750,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n",
+          "time" : {
+            "start" : 1749777224750,
+            "stop" : 1749777224750,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 502",
+      "time" : {
+        "start" : 1749777224750,
+        "stop" : 1749777224750,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Incorrect status code: 502\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 16, in check_status_code\n    assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmxyh4eaekms"
+  }, {
+    "name" : "thread",
+    "value" : "2557-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 20,
+        "broken" : 1,
+        "skipped" : 0,
+        "passed" : 196,
+        "unknown" : 0,
+        "total" : 217
+      },
+      "items" : [ {
+        "uid" : "e9802ca0f903d023",
+        "reportUrl" : "https://lambotik.github.io/Oblache/431//#testresult/e9802ca0f903d023",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1749690763173,
+          "stop" : 1749690763556,
+          "duration" : 383
+        }
+      }, {
+        "uid" : "9898d30c49823b1c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/430//#testresult/9898d30c49823b1c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1749604417068,
+          "stop" : 1749604417421,
+          "duration" : 353
+        }
+      }, {
+        "uid" : "285b49506fe9e825",
+        "reportUrl" : "https://lambotik.github.io/Oblache/429//#testresult/285b49506fe9e825",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1749518050747,
+          "stop" : 1749518051245,
+          "duration" : 498
+        }
+      }, {
+        "uid" : "b7bccbc023e044cb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/428//#testresult/b7bccbc023e044cb",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1749431809399,
+          "stop" : 1749431809752,
+          "duration" : 353
+        }
+      }, {
+        "uid" : "7d4b09f33deb8498",
+        "reportUrl" : "https://lambotik.github.io/Oblache/427//#testresult/7d4b09f33deb8498",
+        "status" : "passed",
+        "time" : {
+          "start" : 1749345558811,
+          "stop" : 1749345559299,
+          "duration" : 488
+        }
+      }, {
+        "uid" : "63410898c953b391",
+        "reportUrl" : "https://lambotik.github.io/Oblache/426//#testresult/63410898c953b391",
+        "status" : "passed",
+        "time" : {
+          "start" : 1749258700430,
+          "stop" : 1749258700747,
+          "duration" : 317
+        }
+      }, {
+        "uid" : "223ad7029e170d57",
+        "reportUrl" : "https://lambotik.github.io/Oblache/425//#testresult/223ad7029e170d57",
+        "status" : "passed",
+        "time" : {
+          "start" : 1749172341598,
+          "stop" : 1749172341961,
+          "duration" : 363
+        }
+      }, {
+        "uid" : "69ff5dd584ce5d8e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/424//#testresult/69ff5dd584ce5d8e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1749085935197,
+          "stop" : 1749085935522,
+          "duration" : 325
+        }
+      }, {
+        "uid" : "7bb03ff40e8bcced",
+        "reportUrl" : "https://lambotik.github.io/Oblache/423//#testresult/7bb03ff40e8bcced",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748999581834,
+          "stop" : 1748999582160,
+          "duration" : 326
+        }
+      }, {
+        "uid" : "5876e53fde29cd13",
+        "reportUrl" : "https://lambotik.github.io/Oblache/422//#testresult/5876e53fde29cd13",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748913216654,
+          "stop" : 1748913217067,
+          "duration" : 413
+        }
+      }, {
+        "uid" : "13a2589b35c94048",
+        "reportUrl" : "https://lambotik.github.io/Oblache/421//#testresult/13a2589b35c94048",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748826901296,
+          "stop" : 1748826901619,
+          "duration" : 323
+        }
+      }, {
+        "uid" : "9bf1cdbe1844b434",
+        "reportUrl" : "https://lambotik.github.io/Oblache/420//#testresult/9bf1cdbe1844b434",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 504",
+        "time" : {
+          "start" : 1748742308095,
+          "stop" : 1748742368541,
+          "duration" : 60446
+        }
+      }, {
+        "uid" : "4000c5e69df99a8d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/419//#testresult/4000c5e69df99a8d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 504",
+        "time" : {
+          "start" : 1748655021505,
+          "stop" : 1748655081981,
+          "duration" : 60476
+        }
+      }, {
+        "uid" : "ee1510430fec2eed",
+        "reportUrl" : "https://lambotik.github.io/Oblache/418//#testresult/ee1510430fec2eed",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 504",
+        "time" : {
+          "start" : 1748568612941,
+          "stop" : 1748568673271,
+          "duration" : 60330
+        }
+      }, {
+        "uid" : "34f5a97f02b31a85",
+        "reportUrl" : "https://lambotik.github.io/Oblache/417//#testresult/34f5a97f02b31a85",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748481127478,
+          "stop" : 1748481127860,
+          "duration" : 382
+        }
+      }, {
+        "uid" : "db91d89b93ec367c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/416//#testresult/db91d89b93ec367c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748394737403,
+          "stop" : 1748394737733,
+          "duration" : 330
+        }
+      }, {
+        "uid" : "327b6a099ff61f0d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/415//#testresult/327b6a099ff61f0d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748308248060,
+          "stop" : 1748308248375,
+          "duration" : 315
+        }
+      }, {
+        "uid" : "992c00bf967084eb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/414//#testresult/992c00bf967084eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748222000409,
+          "stop" : 1748222000710,
+          "duration" : 301
+        }
+      }, {
+        "uid" : "20cb5aa3dfac2bb2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/413//#testresult/20cb5aa3dfac2bb2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748135877390,
+          "stop" : 1748135877743,
+          "duration" : 353
+        }
+      }, {
+        "uid" : "4094006e1db430f2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/412//#testresult/4094006e1db430f2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748048928225,
+          "stop" : 1748048928746,
+          "duration" : 521
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d3bb92175b181e2f.json",
+  "parameterValues" : [ ]
+}
