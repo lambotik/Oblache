@@ -1,0 +1,420 @@
+{
+  "uid" : "91808a8db2253cb2",
+  "name" : "POST create_docker_container_without_token",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_create_docker_container_without_token",
+  "historyId" : "f833256fb8ca072b26357ead25c8b408",
+  "time" : {
+    "start" : 1754274191711,
+    "stop" : 1754274192080,
+    "duration" : 369
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "post_create_docker_container",
+      "time" : {
+        "start" : 1754274191711,
+        "stop" : 1754274192080,
+        "duration" : 369
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /container_create",
+        "time" : {
+          "start" : 1754274192079,
+          "stop" : 1754274192080,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1754274192080,
+          "stop" : 1754274192080,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'incorrect_token'}}",
+          "time" : {
+            "start" : 1754274192080,
+            "stop" : 1754274192080,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"docker_image\": \"nginx\", \"int_ports\": \"80\", \"env\": 3, \"region\": 3}",
+          "time" : {
+            "start" : 1754274192080,
+            "stop" : 1754274192080,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1754274192080,
+          "stop" : 1754274192080,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 401",
+          "time" : {
+            "start" : 1754274192080,
+            "stop" : 1754274192080,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n    \"msg\": \"msg[5]: unauthenticated\"\n}\n",
+          "time" : {
+            "start" : 1754274192080,
+            "stop" : 1754274192080,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 401 == Response status code: 401",
+      "time" : {
+        "start" : 1754274192080,
+        "stop" : 1754274192080,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Compare result request with expected value:\nResponse: <Response [401]>\nField name: msg\nValue: msg[5]: unauthenticated",
+      "time" : {
+        "start" : 1754274192080,
+        "stop" : 1754274192080,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmjbmru5nbw0"
+  }, {
+    "name" : "thread",
+    "value" : "2624-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 202,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 44,
+        "unknown" : 0,
+        "total" : 246
+      },
+      "items" : [ {
+        "uid" : "241a2a55f74b760",
+        "reportUrl" : "https://lambotik.github.io/Oblache/460//#testresult/241a2a55f74b760",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754187819023,
+          "stop" : 1754187819538,
+          "duration" : 515
+        }
+      }, {
+        "uid" : "cebf1590ee01d2c7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/459//#testresult/cebf1590ee01d2c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754100159510,
+          "stop" : 1754100159879,
+          "duration" : 369
+        }
+      }, {
+        "uid" : "9b8e6f12805291bd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/458//#testresult/9b8e6f12805291bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754015089814,
+          "stop" : 1754015090117,
+          "duration" : 303
+        }
+      }, {
+        "uid" : "f6e27dad790d325",
+        "reportUrl" : "https://lambotik.github.io/Oblache/457//#testresult/f6e27dad790d325",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753927681393,
+          "stop" : 1753927681829,
+          "duration" : 436
+        }
+      }, {
+        "uid" : "56fc4ce2a6b6032d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/456//#testresult/56fc4ce2a6b6032d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753841303515,
+          "stop" : 1753841303880,
+          "duration" : 365
+        }
+      }, {
+        "uid" : "55f38bdc98986809",
+        "reportUrl" : "https://lambotik.github.io/Oblache/455//#testresult/55f38bdc98986809",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753755821400,
+          "stop" : 1753755821913,
+          "duration" : 513
+        }
+      }, {
+        "uid" : "6db86c72e3d886e4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/454//#testresult/6db86c72e3d886e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753668748328,
+          "stop" : 1753668748811,
+          "duration" : 483
+        }
+      }, {
+        "uid" : "1edd21a1f64a3f3f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/453//#testresult/1edd21a1f64a3f3f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1753582885002,
+          "stop" : 1753582885512,
+          "duration" : 510
+        }
+      }, {
+        "uid" : "9dac8ddc3bff950c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/452//#testresult/9dac8ddc3bff950c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1753495283670,
+          "stop" : 1753495283979,
+          "duration" : 309
+        }
+      }, {
+        "uid" : "d71d5471bd44ab6c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/451//#testresult/d71d5471bd44ab6c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1753409122377,
+          "stop" : 1753409122734,
+          "duration" : 357
+        }
+      }, {
+        "uid" : "831f62375a333011",
+        "reportUrl" : "https://lambotik.github.io/Oblache/450//#testresult/831f62375a333011",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1751332921478,
+          "stop" : 1751332921778,
+          "duration" : 300
+        }
+      }, {
+        "uid" : "55d6086906e6f024",
+        "reportUrl" : "https://lambotik.github.io/Oblache/449//#testresult/55d6086906e6f024",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1751246322005,
+          "stop" : 1751246322316,
+          "duration" : 311
+        }
+      }, {
+        "uid" : "761bae548ee23c35",
+        "reportUrl" : "https://lambotik.github.io/Oblache/448//#testresult/761bae548ee23c35",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1751160122035,
+          "stop" : 1751160122430,
+          "duration" : 395
+        }
+      }, {
+        "uid" : "b58c22cc24f818c8",
+        "reportUrl" : "https://lambotik.github.io/Oblache/447//#testresult/b58c22cc24f818c8",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1751073116615,
+          "stop" : 1751073116917,
+          "duration" : 302
+        }
+      }, {
+        "uid" : "4c05cb3263a8a358",
+        "reportUrl" : "https://lambotik.github.io/Oblache/446//#testresult/4c05cb3263a8a358",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1750986889568,
+          "stop" : 1750986890087,
+          "duration" : 519
+        }
+      }, {
+        "uid" : "2dd56252c5831255",
+        "reportUrl" : "https://lambotik.github.io/Oblache/445//#testresult/2dd56252c5831255",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1750900424118,
+          "stop" : 1750900424490,
+          "duration" : 372
+        }
+      }, {
+        "uid" : "9850b072ac75f1c4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/444//#testresult/9850b072ac75f1c4",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1750814102496,
+          "stop" : 1750814102998,
+          "duration" : 502
+        }
+      }, {
+        "uid" : "77675165a541a91d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/443//#testresult/77675165a541a91d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1750727658035,
+          "stop" : 1750727658557,
+          "duration" : 522
+        }
+      }, {
+        "uid" : "2b857f24ccca9e32",
+        "reportUrl" : "https://lambotik.github.io/Oblache/442//#testresult/2b857f24ccca9e32",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1750641506556,
+          "stop" : 1750641507075,
+          "duration" : 519
+        }
+      }, {
+        "uid" : "10d2a250e53f4429",
+        "reportUrl" : "https://lambotik.github.io/Oblache/441//#testresult/10d2a250e53f4429",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1750555236288,
+          "stop" : 1750555236802,
+          "duration" : 514
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "91808a8db2253cb2.json",
+  "parameterValues" : [ ]
+}
