@@ -1,0 +1,289 @@
+{
+  "uid" : "228ccdf2683ebcc8",
+  "name" : "test order db create backup non-belonging db",
+  "fullName" : "tests_api.test_bd.TestBackup#test_order_db_create_backup_non_belonging_db",
+  "historyId" : "46162aec860d9e52ab8a1ce1fe9140b2",
+  "time" : {
+    "start" : 1754618951982,
+    "stop" : 1754618951982,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Incorrect status code: 502",
+  "statusTrace" : "@pytest.fixture()\n    def get_token_backup_1():\n        \"\"\"\n        Method return:\\n\n        token: str\\n\n        body: dict\\n\n        uuid: str\n        \"\"\"\n        load_dotenv()\n        email = os.getenv('BACKUP1_MAIL')\n        old_password = os.getenv('BACKUP1_PASSWORD')\n        uuid = os.getenv('BACKUP1_UUID')\n        body = {\"email\": email, \"password\": old_password}\n        result = requests.post('https://dbend.areso.pro/login', json=body)\n>       Checking.check_status_code(result, 200)\n\nconftest.py:94: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [502]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 502\n\ntests_api/utils/checking.py:16: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token_backup_1",
+    "time" : {
+      "start" : 1754618951982,
+      "stop" : 1754618952464,
+      "duration" : 482
+    },
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Incorrect status code: 502\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 38, in run_old_style_hookwrapper\n    res = yield\n          ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 139, in _multicall\n    teardown.throw(exception)\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 53, in run_old_style_hookwrapper\n    return result.get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_result.py\", line 103, in get_result\n    raise exc.with_traceback(tb)\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 38, in run_old_style_hookwrapper\n    res = yield\n          ^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/pluggy/_callers.py\", line 121, in _multicall\n    res = hook_impl.function(*args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 1123, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/_pytest/fixtures.py\", line 902, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/conftest.py\", line 94, in get_token_backup_1\n    Checking.check_status_code(result, 200)\n  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 16, in check_status_code\n    assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "steps" : [ {
+      "name" : "Assert status code: 200 == Response status code: 502",
+      "time" : {
+        "start" : 1754618952463,
+        "stop" : 1754618952463,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Incorrect status code: 502\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 16, in check_status_code\n    assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Backup"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestBackup"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmjbmru5nbw0"
+  }, {
+    "name" : "thread",
+    "value" : "2667-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 25,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 225,
+        "unknown" : 0,
+        "total" : 250
+      },
+      "items" : [ {
+        "uid" : "96c437ef91c8acef",
+        "reportUrl" : "https://lambotik.github.io/Oblache/464//#testresult/96c437ef91c8acef",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Result is not equal expected value",
+        "time" : {
+          "start" : 1754532704348,
+          "stop" : 1754532704858,
+          "duration" : 510
+        }
+      }, {
+        "uid" : "8c87c91fc9592e1e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/463//#testresult/8c87c91fc9592e1e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1754446167521,
+          "stop" : 1754446167521,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "8ba3e721ee2523e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/462//#testresult/8ba3e721ee2523e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754359960410,
+          "stop" : 1754359960771,
+          "duration" : 361
+        }
+      }, {
+        "uid" : "4647e8b67ee1d623",
+        "reportUrl" : "https://lambotik.github.io/Oblache/461//#testresult/4647e8b67ee1d623",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754274284392,
+          "stop" : 1754274284774,
+          "duration" : 382
+        }
+      }, {
+        "uid" : "1d10dc4823369cf",
+        "reportUrl" : "https://lambotik.github.io/Oblache/460//#testresult/1d10dc4823369cf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754187946517,
+          "stop" : 1754187947016,
+          "duration" : 499
+        }
+      }, {
+        "uid" : "d076207cc90c9855",
+        "reportUrl" : "https://lambotik.github.io/Oblache/459//#testresult/d076207cc90c9855",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754100280586,
+          "stop" : 1754100280938,
+          "duration" : 352
+        }
+      }, {
+        "uid" : "560894585df77c66",
+        "reportUrl" : "https://lambotik.github.io/Oblache/458//#testresult/560894585df77c66",
+        "status" : "passed",
+        "time" : {
+          "start" : 1754015202951,
+          "stop" : 1754015203255,
+          "duration" : 304
+        }
+      }, {
+        "uid" : "eb3a39bc9067a508",
+        "reportUrl" : "https://lambotik.github.io/Oblache/457//#testresult/eb3a39bc9067a508",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753927781678,
+          "stop" : 1753927782118,
+          "duration" : 440
+        }
+      }, {
+        "uid" : "1070e2d47d4e1719",
+        "reportUrl" : "https://lambotik.github.io/Oblache/456//#testresult/1070e2d47d4e1719",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753841384584,
+          "stop" : 1753841384955,
+          "duration" : 371
+        }
+      }, {
+        "uid" : "90e902f4fb2118e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/455//#testresult/90e902f4fb2118e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753755942497,
+          "stop" : 1753755943009,
+          "duration" : 512
+        }
+      }, {
+        "uid" : "363abca0081454bb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/454//#testresult/363abca0081454bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753668826986,
+          "stop" : 1753668827477,
+          "duration" : 491
+        }
+      }, {
+        "uid" : "48a79f7a22c1e79b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/453//#testresult/48a79f7a22c1e79b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753582964205,
+          "stop" : 1753582964715,
+          "duration" : 510
+        }
+      }, {
+        "uid" : "7fb34762ed2d2d83",
+        "reportUrl" : "https://lambotik.github.io/Oblache/452//#testresult/7fb34762ed2d2d83",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753495362903,
+          "stop" : 1753495363209,
+          "duration" : 306
+        }
+      }, {
+        "uid" : "839859620699aecf",
+        "reportUrl" : "https://lambotik.github.io/Oblache/451//#testresult/839859620699aecf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1753409203313,
+          "stop" : 1753409203681,
+          "duration" : 368
+        }
+      }, {
+        "uid" : "20e08ff30aa730ac",
+        "reportUrl" : "https://lambotik.github.io/Oblache/450//#testresult/20e08ff30aa730ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1751333023009,
+          "stop" : 1751333023311,
+          "duration" : 302
+        }
+      }, {
+        "uid" : "e8f42e6a4c270d8a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/449//#testresult/e8f42e6a4c270d8a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1751246440576,
+          "stop" : 1751246440886,
+          "duration" : 310
+        }
+      }, {
+        "uid" : "a4e6da77d7f834ac",
+        "reportUrl" : "https://lambotik.github.io/Oblache/448//#testresult/a4e6da77d7f834ac",
+        "status" : "passed",
+        "time" : {
+          "start" : 1751160222210,
+          "stop" : 1751160222629,
+          "duration" : 419
+        }
+      }, {
+        "uid" : "4bc43f034386ac1d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/447//#testresult/4bc43f034386ac1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1751073224058,
+          "stop" : 1751073224365,
+          "duration" : 307
+        }
+      }, {
+        "uid" : "add667347586f000",
+        "reportUrl" : "https://lambotik.github.io/Oblache/446//#testresult/add667347586f000",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750987004889,
+          "stop" : 1750987005396,
+          "duration" : 507
+        }
+      }, {
+        "uid" : "ee8488f52619c100",
+        "reportUrl" : "https://lambotik.github.io/Oblache/445//#testresult/ee8488f52619c100",
+        "status" : "passed",
+        "time" : {
+          "start" : 1750900548992,
+          "stop" : 1750900549380,
+          "duration" : 388
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "228ccdf2683ebcc8.json",
+  "parameterValues" : [ ]
+}
