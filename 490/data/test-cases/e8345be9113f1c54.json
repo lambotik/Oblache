@@ -1,0 +1,2009 @@
+{
+  "uid" : "e8345be9113f1c54",
+  "name" : "POST delete_all_created_db",
+  "fullName" : "tests_api.test_bd.TestPOST#test_delete_all_created_db",
+  "historyId" : "7e30a1eae32821cb17d096939281ad3f",
+  "time" : {
+    "start" : 1756777773960,
+    "stop" : 1756777808226,
+    "duration" : 34266
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nAssertionError: assert {'068b4fee-7c...01:49:34', 0]} == {}\n  Left contains 3 more items:\n  {'068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\n                                            '2025-09-01 02:03:29',\n                                            0],\n   '068b64d1-8c15-72d6-8000-dbaa19f5b85e': ['my_tepci57l',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l',\n                                            '2025-09-02 01:49:23',\n                                            0],\n   '068b64d2-460d-7c1c-8000-32aa98287ba5': ['my_d9hkdrn6',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6',\n                                            '2025-09-02 01:49:34',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\n  +                                           '2025-09-01 02:03:29',\n  +                                           0],\n  +  '068b64d1-8c15-72d6-8000-dbaa19f5b85e': ['my_tepci57l',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l',\n  +                                           '2025-09-02 01:49:23',\n  +                                           0],\n  +  '068b64d2-460d-7c1c-8000-32aa98287ba5': ['my_d9hkdrn6',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6',\n  +                                           '2025-09-02 01:49:34',\n  +                                           0],\n    }",
+  "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7fe7e4481340>\nget_token = ('33f25382-149d-47e8-8dce-f3388b963784', {'email': 'test4@mail.com', 'password': 'testpassword'}, 'testpassword', '123456789', 'test4@mail.com')\n\n    @pytest.mark.xfail(\n        reason=\"If databases will be deleting more than 1 minute and all databases won't deleting for this time.\")\n    @allure.title('POST delete_all_created_db')\n    def test_delete_all_created_db(self, get_token):\n        TestPOST.token = get_token[0]\n        json_list_db = API.delete_all_created_db(token=TestPOST.token)\n        list_db = API.post_db_list(token=TestPOST.token)\n        Checking.check_status_code(list_db, 200)\n>       assert json_list_db == {}\nE       AssertionError: assert {'068b4fee-7c...01:49:34', 0]} == {}\nE         Left contains 3 more items:\nE         {'068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\nE                                                   'CIS',\nE                                                   'created',\nE                                                   'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\nE                                                   '2025-09-01 02:03:29',\nE                                                   0],\nE          '068b64d1-8c15-72d6-8000-dbaa19f5b85e': ['my_tepci57l',\nE                                                   'CIS',\nE                                                   'created',\nE                                                   'mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l',\nE                                                   '2025-09-02 01:49:23',\nE                                                   0],\nE          '068b64d2-460d-7c1c-8000-32aa98287ba5': ['my_d9hkdrn6',\nE                                                   'CIS',\nE                                                   'created',\nE                                                   'mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6',\nE                                                   '2025-09-02 01:49:34',\nE                                                   0]}\nE         Full diff:\nE           {\nE         -  ,\nE         +  '068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\nE         +                                           'CIS',\nE         +                                           'created',\nE         +                                           'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\nE         +                                           '2025-09-01 02:03:29',\nE         +                                           0],\nE         +  '068b64d1-8c15-72d6-8000-dbaa19f5b85e': ['my_tepci57l',\nE         +                                           'CIS',\nE         +                                           'created',\nE         +                                           'mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l',\nE         +                                           '2025-09-02 01:49:23',\nE         +                                           0],\nE         +  '068b64d2-460d-7c1c-8000-32aa98287ba5': ['my_d9hkdrn6',\nE         +                                           'CIS',\nE         +                                           'created',\nE         +                                           'mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6',\nE         +                                           '2025-09-02 01:49:34',\nE         +                                           0],\nE           }\n\ntests_api/test_bd.py:438: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token",
+    "time" : {
+      "start" : 1756777773649,
+      "stop" : 1756777773960,
+      "duration" : 311
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert status code: 200 == Response status code: 200",
+      "time" : {
+        "start" : 1756777773960,
+        "stop" : 1756777773960,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nAssertionError: assert {'068b4fee-7c...01:49:34', 0]} == {}\n  Left contains 3 more items:\n  {'068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\n                                            '2025-09-01 02:03:29',\n                                            0],\n   '068b64d1-8c15-72d6-8000-dbaa19f5b85e': ['my_tepci57l',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l',\n                                            '2025-09-02 01:49:23',\n                                            0],\n   '068b64d2-460d-7c1c-8000-32aa98287ba5': ['my_d9hkdrn6',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6',\n                                            '2025-09-02 01:49:34',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\n  +                                           '2025-09-01 02:03:29',\n  +                                           0],\n  +  '068b64d1-8c15-72d6-8000-dbaa19f5b85e': ['my_tepci57l',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l',\n  +                                           '2025-09-02 01:49:23',\n  +                                           0],\n  +  '068b64d2-460d-7c1c-8000-32aa98287ba5': ['my_d9hkdrn6',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6',\n  +                                           '2025-09-02 01:49:34',\n  +                                           0],\n    }",
+    "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7fe7e4481340>\nget_token = ('33f25382-149d-47e8-8dce-f3388b963784', {'email': 'test4@mail.com', 'password': 'testpassword'}, 'testpassword', '123456789', 'test4@mail.com')\n\n    @pytest.mark.xfail(\n        reason=\"If databases will be deleting more than 1 minute and all databases won't deleting for this time.\")\n    @allure.title('POST delete_all_created_db')\n    def test_delete_all_created_db(self, get_token):\n        TestPOST.token = get_token[0]\n        json_list_db = API.delete_all_created_db(token=TestPOST.token)\n        list_db = API.post_db_list(token=TestPOST.token)\n        Checking.check_status_code(list_db, 200)\n>       assert json_list_db == {}\nE       AssertionError: assert {'068b4fee-7c...01:49:34', 0]} == {}\nE         Left contains 3 more items:\nE         {'068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\nE                                                   'CIS',\nE                                                   'created',\nE                                                   'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\nE                                                   '2025-09-01 02:03:29',\nE                                                   0],\nE          '068b64d1-8c15-72d6-8000-dbaa19f5b85e': ['my_tepci57l',\nE                                                   'CIS',\nE                                                   'created',\nE                                                   'mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l',\nE                                                   '2025-09-02 01:49:23',\nE                                                   0],\nE          '068b64d2-460d-7c1c-8000-32aa98287ba5': ['my_d9hkdrn6',\nE                                                   'CIS',\nE                                                   'created',\nE                                                   'mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6',\nE                                                   '2025-09-02 01:49:34',\nE                                                   0]}\nE         Full diff:\nE           {\nE         -  ,\nE         +  '068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\nE         +                                           'CIS',\nE         +                                           'created',\nE         +                                           'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\nE         +                                           '2025-09-01 02:03:29',\nE         +                                           0],\nE         +  '068b64d1-8c15-72d6-8000-dbaa19f5b85e': ['my_tepci57l',\nE         +                                           'CIS',\nE         +                                           'created',\nE         +                                           'mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l',\nE         +                                           '2025-09-02 01:49:23',\nE         +                                           0],\nE         +  '068b64d2-460d-7c1c-8000-32aa98287ba5': ['my_d9hkdrn6',\nE         +                                           'CIS',\nE         +                                           'created',\nE         +                                           'mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6',\nE         +                                           '2025-09-02 01:49:34',\nE         +                                           0],\nE           }\n\ntests_api/test_bd.py:438: AssertionError",
+    "steps" : [ {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1756777773960,
+        "stop" : 1756777774258,
+        "duration" : 298
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1756777774258,
+          "stop" : 1756777774258,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777774258,
+          "stop" : 1756777774258,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777774258,
+            "stop" : 1756777774258,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1756777774258,
+            "stop" : 1756777774258,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777774258,
+          "stop" : 1756777774258,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1756777774258,
+            "stop" : 1756777774258,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068b4fee-7c99-7520-8000-7bb81d950a52\": [\n      \"my_jrmhy0ey\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey\",\n      \"2025-09-01 02:03:29\",\n      0\n    ],\n    \"068b64d1-8c15-72d6-8000-dbaa19f5b85e\": [\n      \"my_tepci57l\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l\",\n      \"2025-09-02 01:49:23\",\n      0\n    ],\n    \"068b64d2-460d-7c1c-8000-32aa98287ba5\": [\n      \"my_d9hkdrn6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6\",\n      \"2025-09-02 01:49:34\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1756777774258,
+            "stop" : 1756777774258,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "delete_db",
+      "time" : {
+        "start" : 1756777774258,
+        "stop" : 1756777774543,
+        "duration" : 285
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_delete",
+        "time" : {
+          "start" : 1756777774543,
+          "stop" : 1756777774543,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777774543,
+          "stop" : 1756777774543,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777774543,
+            "stop" : 1756777774543,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"db_uuid\": f\"{'db_uuid': '068b64d2-460d-7c1c-8000-32aa98287ba5'}\"}",
+          "time" : {
+            "start" : 1756777774543,
+            "stop" : 1756777774543,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777774543,
+          "stop" : 1756777774543,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 500",
+          "time" : {
+            "start" : 1756777774543,
+            "stop" : 1756777774543,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: Some general exception",
+          "time" : {
+            "start" : 1756777774543,
+            "stop" : 1756777774543,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1756777779543,
+        "stop" : 1756777779855,
+        "duration" : 312
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1756777779855,
+          "stop" : 1756777779855,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777779855,
+          "stop" : 1756777779855,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777779855,
+            "stop" : 1756777779855,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1756777779855,
+            "stop" : 1756777779855,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777779855,
+          "stop" : 1756777779855,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1756777779855,
+            "stop" : 1756777779855,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068b4fee-7c99-7520-8000-7bb81d950a52\": [\n      \"my_jrmhy0ey\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey\",\n      \"2025-09-01 02:03:29\",\n      0\n    ],\n    \"068b64d1-8c15-72d6-8000-dbaa19f5b85e\": [\n      \"my_tepci57l\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l\",\n      \"2025-09-02 01:49:23\",\n      0\n    ],\n    \"068b64d2-460d-7c1c-8000-32aa98287ba5\": [\n      \"my_d9hkdrn6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6\",\n      \"2025-09-02 01:49:34\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1756777779855,
+            "stop" : 1756777779855,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "delete_db",
+      "time" : {
+        "start" : 1756777779856,
+        "stop" : 1756777780136,
+        "duration" : 280
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_delete",
+        "time" : {
+          "start" : 1756777780136,
+          "stop" : 1756777780136,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777780136,
+          "stop" : 1756777780136,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777780136,
+            "stop" : 1756777780136,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"db_uuid\": f\"{'db_uuid': '068b64d2-460d-7c1c-8000-32aa98287ba5'}\"}",
+          "time" : {
+            "start" : 1756777780136,
+            "stop" : 1756777780136,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777780136,
+          "stop" : 1756777780136,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 500",
+          "time" : {
+            "start" : 1756777780136,
+            "stop" : 1756777780136,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: Some general exception",
+          "time" : {
+            "start" : 1756777780136,
+            "stop" : 1756777780136,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1756777785137,
+        "stop" : 1756777785441,
+        "duration" : 304
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1756777785440,
+          "stop" : 1756777785440,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777785440,
+          "stop" : 1756777785440,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777785440,
+            "stop" : 1756777785440,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1756777785440,
+            "stop" : 1756777785440,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777785440,
+          "stop" : 1756777785441,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1756777785440,
+            "stop" : 1756777785440,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068b4fee-7c99-7520-8000-7bb81d950a52\": [\n      \"my_jrmhy0ey\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey\",\n      \"2025-09-01 02:03:29\",\n      0\n    ],\n    \"068b64d1-8c15-72d6-8000-dbaa19f5b85e\": [\n      \"my_tepci57l\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l\",\n      \"2025-09-02 01:49:23\",\n      0\n    ],\n    \"068b64d2-460d-7c1c-8000-32aa98287ba5\": [\n      \"my_d9hkdrn6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6\",\n      \"2025-09-02 01:49:34\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1756777785441,
+            "stop" : 1756777785441,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "delete_db",
+      "time" : {
+        "start" : 1756777785441,
+        "stop" : 1756777785729,
+        "duration" : 288
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_delete",
+        "time" : {
+          "start" : 1756777785729,
+          "stop" : 1756777785729,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777785729,
+          "stop" : 1756777785729,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777785729,
+            "stop" : 1756777785729,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"db_uuid\": f\"{'db_uuid': '068b64d2-460d-7c1c-8000-32aa98287ba5'}\"}",
+          "time" : {
+            "start" : 1756777785729,
+            "stop" : 1756777785729,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777785729,
+          "stop" : 1756777785729,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 500",
+          "time" : {
+            "start" : 1756777785729,
+            "stop" : 1756777785729,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: Some general exception",
+          "time" : {
+            "start" : 1756777785729,
+            "stop" : 1756777785729,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1756777790730,
+        "stop" : 1756777791041,
+        "duration" : 311
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1756777791041,
+          "stop" : 1756777791041,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777791041,
+          "stop" : 1756777791041,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777791041,
+            "stop" : 1756777791041,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1756777791041,
+            "stop" : 1756777791041,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777791041,
+          "stop" : 1756777791041,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1756777791041,
+            "stop" : 1756777791041,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068b4fee-7c99-7520-8000-7bb81d950a52\": [\n      \"my_jrmhy0ey\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey\",\n      \"2025-09-01 02:03:29\",\n      0\n    ],\n    \"068b64d1-8c15-72d6-8000-dbaa19f5b85e\": [\n      \"my_tepci57l\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l\",\n      \"2025-09-02 01:49:23\",\n      0\n    ],\n    \"068b64d2-460d-7c1c-8000-32aa98287ba5\": [\n      \"my_d9hkdrn6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6\",\n      \"2025-09-02 01:49:34\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1756777791041,
+            "stop" : 1756777791041,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "delete_db",
+      "time" : {
+        "start" : 1756777791042,
+        "stop" : 1756777791322,
+        "duration" : 280
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_delete",
+        "time" : {
+          "start" : 1756777791322,
+          "stop" : 1756777791322,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777791322,
+          "stop" : 1756777791322,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777791322,
+            "stop" : 1756777791322,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"db_uuid\": f\"{'db_uuid': '068b64d2-460d-7c1c-8000-32aa98287ba5'}\"}",
+          "time" : {
+            "start" : 1756777791322,
+            "stop" : 1756777791322,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777791322,
+          "stop" : 1756777791322,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 500",
+          "time" : {
+            "start" : 1756777791322,
+            "stop" : 1756777791322,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: Some general exception",
+          "time" : {
+            "start" : 1756777791322,
+            "stop" : 1756777791322,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1756777796323,
+        "stop" : 1756777796630,
+        "duration" : 307
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1756777796630,
+          "stop" : 1756777796630,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777796630,
+          "stop" : 1756777796630,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777796630,
+            "stop" : 1756777796630,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1756777796630,
+            "stop" : 1756777796630,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777796630,
+          "stop" : 1756777796630,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1756777796630,
+            "stop" : 1756777796630,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068b4fee-7c99-7520-8000-7bb81d950a52\": [\n      \"my_jrmhy0ey\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey\",\n      \"2025-09-01 02:03:29\",\n      0\n    ],\n    \"068b64d1-8c15-72d6-8000-dbaa19f5b85e\": [\n      \"my_tepci57l\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l\",\n      \"2025-09-02 01:49:23\",\n      0\n    ],\n    \"068b64d2-460d-7c1c-8000-32aa98287ba5\": [\n      \"my_d9hkdrn6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6\",\n      \"2025-09-02 01:49:34\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1756777796630,
+            "stop" : 1756777796630,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "delete_db",
+      "time" : {
+        "start" : 1756777796631,
+        "stop" : 1756777796913,
+        "duration" : 282
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_delete",
+        "time" : {
+          "start" : 1756777796913,
+          "stop" : 1756777796913,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777796913,
+          "stop" : 1756777796913,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777796913,
+            "stop" : 1756777796913,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"db_uuid\": f\"{'db_uuid': '068b64d2-460d-7c1c-8000-32aa98287ba5'}\"}",
+          "time" : {
+            "start" : 1756777796913,
+            "stop" : 1756777796913,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777796913,
+          "stop" : 1756777796913,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 500",
+          "time" : {
+            "start" : 1756777796913,
+            "stop" : 1756777796913,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: Some general exception",
+          "time" : {
+            "start" : 1756777796913,
+            "stop" : 1756777796913,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1756777801913,
+        "stop" : 1756777802228,
+        "duration" : 315
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1756777802228,
+          "stop" : 1756777802228,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777802228,
+          "stop" : 1756777802228,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777802228,
+            "stop" : 1756777802228,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1756777802228,
+            "stop" : 1756777802228,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777802228,
+          "stop" : 1756777802228,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1756777802228,
+            "stop" : 1756777802228,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068b4fee-7c99-7520-8000-7bb81d950a52\": [\n      \"my_jrmhy0ey\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey\",\n      \"2025-09-01 02:03:29\",\n      0\n    ],\n    \"068b64d1-8c15-72d6-8000-dbaa19f5b85e\": [\n      \"my_tepci57l\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l\",\n      \"2025-09-02 01:49:23\",\n      0\n    ],\n    \"068b64d2-460d-7c1c-8000-32aa98287ba5\": [\n      \"my_d9hkdrn6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6\",\n      \"2025-09-02 01:49:34\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1756777802228,
+            "stop" : 1756777802228,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "delete_db",
+      "time" : {
+        "start" : 1756777802228,
+        "stop" : 1756777802595,
+        "duration" : 367
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_delete",
+        "time" : {
+          "start" : 1756777802595,
+          "stop" : 1756777802595,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777802595,
+          "stop" : 1756777802595,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777802595,
+            "stop" : 1756777802595,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"db_uuid\": f\"{'db_uuid': '068b64d2-460d-7c1c-8000-32aa98287ba5'}\"}",
+          "time" : {
+            "start" : 1756777802595,
+            "stop" : 1756777802595,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777802595,
+          "stop" : 1756777802595,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 500",
+          "time" : {
+            "start" : 1756777802595,
+            "stop" : 1756777802595,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: Some general exception",
+          "time" : {
+            "start" : 1756777802595,
+            "stop" : 1756777802595,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1756777807595,
+        "stop" : 1756777807919,
+        "duration" : 324
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1756777807919,
+          "stop" : 1756777807919,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777807919,
+          "stop" : 1756777807919,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777807919,
+            "stop" : 1756777807919,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1756777807919,
+            "stop" : 1756777807919,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777807919,
+          "stop" : 1756777807919,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1756777807919,
+            "stop" : 1756777807919,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068b4fee-7c99-7520-8000-7bb81d950a52\": [\n      \"my_jrmhy0ey\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey\",\n      \"2025-09-01 02:03:29\",\n      0\n    ],\n    \"068b64d1-8c15-72d6-8000-dbaa19f5b85e\": [\n      \"my_tepci57l\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l\",\n      \"2025-09-02 01:49:23\",\n      0\n    ],\n    \"068b64d2-460d-7c1c-8000-32aa98287ba5\": [\n      \"my_d9hkdrn6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6\",\n      \"2025-09-02 01:49:34\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1756777807919,
+            "stop" : 1756777807919,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1756777807920,
+        "stop" : 1756777808225,
+        "duration" : 305
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1756777808225,
+          "stop" : 1756777808225,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1756777808225,
+          "stop" : 1756777808225,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'33f25382-149d-47e8-8dce-f3388b963784'}}",
+          "time" : {
+            "start" : 1756777808225,
+            "stop" : 1756777808225,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1756777808225,
+            "stop" : 1756777808225,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1756777808225,
+          "stop" : 1756777808225,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1756777808225,
+            "stop" : 1756777808225,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068b4fee-7c99-7520-8000-7bb81d950a52\": [\n      \"my_jrmhy0ey\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey\",\n      \"2025-09-01 02:03:29\",\n      0\n    ],\n    \"068b64d1-8c15-72d6-8000-dbaa19f5b85e\": [\n      \"my_tepci57l\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_87n2kjth:pwPW01__Z7zThB7KHPI59R@cis_db1.areso.pro:3306/my_tepci57l\",\n      \"2025-09-02 01:49:23\",\n      0\n    ],\n    \"068b64d2-460d-7c1c-8000-32aa98287ba5\": [\n      \"my_d9hkdrn6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_pcp6h6q2:pwPW01__iPGRXeiGkTkaZ1@cis_db1.areso.pro:3306/my_d9hkdrn6\",\n      \"2025-09-02 01:49:34\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1756777808225,
+            "stop" : 1756777808225,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 200 == Response status code: 200",
+      "time" : {
+        "start" : 1756777808225,
+        "stop" : 1756777808225,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 113,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='If databases will be deleting more than 1 minute and all databases won't deleting for this time.')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmccyg1gnepe"
+  }, {
+    "name" : "thread",
+    "value" : "2550-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 263,
+        "passed" : 12,
+        "unknown" : 0,
+        "total" : 275
+      },
+      "items" : [ {
+        "uid" : "d78cbfc2c4fa599f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/489//#testresult/d78cbfc2c4fa599f",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nAssertionError: assert {'068b4fed-6c...02:03:29', 0]} == {}\n  Left contains 2 more items:\n  {'068b4fed-6c01-7595-8000-7f8f8ab97e41': ['my_neft596h',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_ah1uxhvr:pwPW01__bBeLOR6tf1UB7T@cis_db1.areso.pro:3306/my_neft596h',\n                                            '2025-09-01 02:03:13',\n                                            0],\n   '068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\n                                            '2025-09-01 02:03:29',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '068b4fed-6c01-7595-8000-7f8f8ab97e41': ['my_neft596h',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_ah1uxhvr:pwPW01__bBeLOR6tf1UB7T@cis_db1.areso.pro:3306/my_neft596h',\n  +                                           '2025-09-01 02:03:13',\n  +                                           0],\n  +  '068b4fee-7c99-7520-8000-7bb81d950a52': ['my_jrmhy0ey',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_vfcw52jw:pwPW01__HmcoiPD3dEMecP@cis_db1.areso.pro:3306/my_jrmhy0ey',\n  +                                           '2025-09-01 02:03:29',\n  +                                           0],\n    }",
+        "time" : {
+          "start" : 1756692213652,
+          "stop" : 1756692250234,
+          "duration" : 36582
+        }
+      }, {
+        "uid" : "4eddbe070a8a7f62",
+        "reportUrl" : "https://lambotik.github.io/Oblache/488//#testresult/4eddbe070a8a7f62",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nAssertionError: assert {'068b3aaf-4c...01:53:18', 0]} == {}\n  Left contains 2 more items:\n  {'068b3aaf-4c64-79b0-8000-a252872eaea6': ['my_uo0668gj',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_7pdyzcga:pwPW01__Wg3v4LhWeqwugU@cis_db1.areso.pro:3306/my_uo0668gj',\n                                            '2025-08-31 01:53:03',\n                                            0],\n   '068b3ab0-492d-75d5-8000-b6f0cad7194a': ['my_renkhbz5',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_e9jpvagd:pwPW01__coEontFWtaNZ5v@cis_db1.areso.pro:3306/my_renkhbz5',\n                                            '2025-08-31 01:53:18',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '068b3aaf-4c64-79b0-8000-a252872eaea6': ['my_uo0668gj',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_7pdyzcga:pwPW01__Wg3v4LhWeqwugU@cis_db1.areso.pro:3306/my_uo0668gj',\n  +                                           '2025-08-31 01:53:03',\n  +                                           0],\n  +  '068b3ab0-492d-75d5-8000-b6f0cad7194a': ['my_renkhbz5',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_e9jpvagd:pwPW01__coEontFWtaNZ5v@cis_db1.areso.pro:3306/my_renkhbz5',\n  +                                           '2025-08-31 01:53:18',\n  +                                           0],\n    }",
+        "time" : {
+          "start" : 1756605202386,
+          "stop" : 1756605251026,
+          "duration" : 48640
+        }
+      }, {
+        "uid" : "e114fa941745a0d7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/487//#testresult/e114fa941745a0d7",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1756518159779,
+          "stop" : 1756518159779,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "fc598fef39033e48",
+        "reportUrl" : "https://lambotik.github.io/Oblache/486//#testresult/fc598fef39033e48",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1756432072817,
+          "stop" : 1756432073916,
+          "duration" : 1099
+        }
+      }, {
+        "uid" : "aa2e1e9892ffe2b0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/485//#testresult/aa2e1e9892ffe2b0",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1756345681662,
+          "stop" : 1756345682586,
+          "duration" : 924
+        }
+      }, {
+        "uid" : "41f5d3248b3b3d02",
+        "reportUrl" : "https://lambotik.github.io/Oblache/484//#testresult/41f5d3248b3b3d02",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1756259326453,
+          "stop" : 1756259327500,
+          "duration" : 1047
+        }
+      }, {
+        "uid" : "e1d21b4b2c77ec05",
+        "reportUrl" : "https://lambotik.github.io/Oblache/483//#testresult/e1d21b4b2c77ec05",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1756173148520,
+          "stop" : 1756173149932,
+          "duration" : 1412
+        }
+      }, {
+        "uid" : "1181dae38108e1b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/482//#testresult/1181dae38108e1b",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1756086966618,
+          "stop" : 1756086967731,
+          "duration" : 1113
+        }
+      }, {
+        "uid" : "ce206ac889719937",
+        "reportUrl" : "https://lambotik.github.io/Oblache/481//#testresult/ce206ac889719937",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1756000932885,
+          "stop" : 1756000934396,
+          "duration" : 1511
+        }
+      }, {
+        "uid" : "ef5d478f541196c7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/480//#testresult/ef5d478f541196c7",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1755913635326,
+          "stop" : 1755913636253,
+          "duration" : 927
+        }
+      }, {
+        "uid" : "fe9a18dece0884ee",
+        "reportUrl" : "https://lambotik.github.io/Oblache/479//#testresult/fe9a18dece0884ee",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1755827475372,
+          "stop" : 1755827476332,
+          "duration" : 960
+        }
+      }, {
+        "uid" : "dc5c08f59aed9117",
+        "reportUrl" : "https://lambotik.github.io/Oblache/478//#testresult/dc5c08f59aed9117",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1755741022513,
+          "stop" : 1755741023616,
+          "duration" : 1103
+        }
+      }, {
+        "uid" : "196dfce504dde05e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/477//#testresult/196dfce504dde05e",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1755654712719,
+          "stop" : 1755654713663,
+          "duration" : 944
+        }
+      }, {
+        "uid" : "d2592843b0f687ae",
+        "reportUrl" : "https://lambotik.github.io/Oblache/476//#testresult/d2592843b0f687ae",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1755568432098,
+          "stop" : 1755568433018,
+          "duration" : 920
+        }
+      }, {
+        "uid" : "77ce381ea7d61cdb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/475//#testresult/77ce381ea7d61cdb",
+        "status" : "passed",
+        "statusDetails" : "XPASS If databases will be deleting more than 1 minute and all databases won't deleting for this time.",
+        "time" : {
+          "start" : 1755482792627,
+          "stop" : 1755482793727,
+          "duration" : 1100
+        }
+      }, {
+        "uid" : "2db56b9a19ebacf3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/474//#testresult/2db56b9a19ebacf3",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nAssertionError: assert {'066b87ca-9d...one', 0], ...} == {}\n  Left contains 27 more items:\n  {'066b87ca-9dd6-7a0b-8000-461dafcab111': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87cb-4cfd-73bd-8000-ad0fc36ba001': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87cf-a338-7323-8000-0bf32a680ae6': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87fa-e7b6-76b6-8000-6da15c803e34': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b901a-88fc-7a2b-8000-712464b36b1c': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066bd164-0617-75dd-8000-866f5dc1ce44': ['db_ji3eegk9',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_tln5y0w3:pwPW01__H5d8gcbeqWWdZH@cis_db1.areso.pro:3306/db_ji3eegk9',\n                                            '2024-08-14 20:40:42',\n                                            0],\n   '066d9eed-f09a-7db8-8000-80b496f05633': ['db_8bmgvwjv',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_gdrgym35:pwPW01__Iuiwn8ykAK65hy@cis_db1.areso.pro:3306/db_8bmgvwjv',\n                                            '2024-09-05 17:48:25',\n                                            0],\n   '066d9efb-8218-79d4-8000-4e7aba4f0139': ['db_wjlk1fw0',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_rv52273g:pwPW01__4d0hT10HYRpuTi@cis_db1.areso.pro:3306/db_wjlk1fw0',\n                                            '2024-09-05 17:52:03',\n                                            0],\n   '066d9efc-7d24-7243-8000-e2a65edbd23e': ['db_i5n4oqpl',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_2d99654y:pwPW01__YR60Gyo480l0Xx@cis_db1.areso.pro:3306/db_i5n4oqpl',\n                                            '2024-09-05 17:52:17',\n                                            0],\n   '066da549-ba6b-71bc-8000-329f72336f26': ['db_i1fqs78r',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_kk09qxgi:pwPW01__5srn0nAEQwhv9H@cis_db1.areso.pro:3306/db_i1fqs78r',\n                                            '2024-09-06 01:02:29',\n                                            0],\n   '066da592-2e9e-748b-8000-9567d3d0f846': ['db_hy3nifmn',\n                                            'CIS',\n                                            'error_deleting',\n                                            'mysql://user_qyz0dq0z:pwPW01__WlYyX4pVQkosaQ@cis_db1.areso.pro:3306/db_hy3nifmn',\n                                            '2024-09-06 01:21:48',\n                                            9],\n   '0671af47-4ad9-7df1-8000-4bd970b89140': ['db_ghdm8tjq',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_np1z7f7w:pwPW01__1Gg95a9QbwUTdZ@cis_db1.areso.pro:3306/db_ghdm8tjq',\n                                            '2024-10-25 01:29:35',\n                                            0],\n   '0672c17c-2ac2-76a9-8000-755c38dfde67': ['db_udjdopyi',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_42jxxxl6:pwPW01__sEBAmuSLp4WiiO@cis_db1.areso.pro:3306/db_udjdopyi',\n                                            '2024-11-07 01:28:44',\n                                            0],\n   '0672d635-60a4-71c9-8000-293693d25d89': ['db_yvs2nrlo',\n                                            'CIS',\n                                            'manual_deleting',\n                                            'mysql://user_au971vxk:pwPW01__mmwks6dloWynhn@cis_db1.areso.pro:3306/db_yvs2nrlo',\n                                            'None',\n                                            0],\n   '0672d693-65b0-7f04-8000-fb2220c30330': ['db_oe9tvhec',\n                                            'CIS',\n                                            'manual_deleting',\n                                            'mysql://user_cpwquucc:pwPW01__hucPw3TumKIN0E@cis_db1.areso.pro:3306/db_oe9tvhec',\n                                            'None',\n                                            0],\n   '06737f8f-508a-70cb-8000-d3b442ce147e': ['db_qgkfa8pp',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_c62g023v:pwPW01__ZZxflk4e0toqx9@cis_db1.areso.pro:3306/db_qgkfa8pp',\n                                            '2024-11-16 01:44:30',\n                                            0],\n   '068940ac-8324-7bf4-8000-c6134177c765': ['db_vkdyjykg',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_08g6pf68:pwPW01__payLEeEw2szgkt@cis_db1.areso.pro:3306/db_vkdyjykg',\n                                            '2025-08-07 02:09:22',\n                                            0],\n   '068940ad-ad74-7b3b-8000-d200755a431f': ['db_ygtfx473',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_8rig0ky3:pwPW01__1BWxPzQo7OlEJ0@cis_db1.areso.pro:3306/db_ygtfx473',\n                                            '2025-08-07 02:09:40',\n                                            0],\n   '068940b9-18bc-71e7-8000-968a1cc52ee8': ['db_oi0bg7bw',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_69o6s76h:pwPW01__2W6Mr72Rcmhtc8@cis_db1.areso.pro:3306/db_oi0bg7bw',\n                                            '2025-08-07 02:12:43',\n                                            0],\n   '06896ab1-7628-7fd9-8000-3c0083c5d581': ['db_c2bb07y0',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_s4uzgfq6:pwPW01__t14tFEy1p8n29Y@cis_db1.areso.pro:3306/db_c2bb07y0',\n                                            '2025-08-09 01:57:54',\n                                            0],\n   '06896ab2-3026-7c4e-8000-85c031475d0d': ['db_czsc4ted',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_phza6yt8:pwPW01__dblKBZ9pstxa4F@cis_db1.areso.pro:3306/db_czsc4ted',\n                                            '2025-08-09 01:58:05',\n                                            0],\n   '06896abb-3bac-7484-8000-db384df2a6df': ['db_qik3uatg',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_azjdgyqj:pwPW01__EUCvHRUG9AASbw@cis_db1.areso.pro:3306/db_qik3uatg',\n                                            '2025-08-09 02:00:30',\n                                            0],\n   '0689fe4b-fca5-7698-8000-b5a75b9ae742': ['db_tsxbx4w4',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_wnu2rjdv:pwPW01__MY0jJnc4heAEbN@cis_db1.areso.pro:3306/db_tsxbx4w4',\n                                            '2025-08-16 01:54:18',\n                                            0],\n   '0689fe4d-2315-79de-8000-196d70fab0f1': ['db_xzszkfi8',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_olfyf8t5:pwPW01__XdtwX8C7fpjBID@cis_db1.areso.pro:3306/db_xzszkfi8',\n                                            '2025-08-16 01:54:36',\n                                            0],\n   '0689fe58-7351-725a-8000-21b355b22737': ['db_s8mbbbmu',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_y1ti7991:pwPW01__h566pBw2Mqnwxu@cis_db1.areso.pro:3306/db_s8mbbbmu',\n                                            '2025-08-16 01:57:37',\n                                            0],\n   '068a138f-9cfc-70dc-8000-5be2d6c66263': ['db_ps7pmmrl',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_5xvosdm8:pwPW01__xAKrMqLzRFQMZe@cis_db1.areso.pro:3306/db_ps7pmmrl',\n                                            '2025-08-17 02:05:56',\n                                            0],\n   '068a1390-ca54-7d13-8000-c23765479c2f': ['db_tpqptnot',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_rvgmi1tf:pwPW01__c7XOXzF4ATSq4J@cis_db1.areso.pro:3306/db_tpqptnot',\n                                            '2025-08-17 02:06:14',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '066b87ca-9dd6-7a0b-8000-461dafcab111': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87cb-4cfd-73bd-8000-ad0fc36ba001': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87cf-a338-7323-8000-0bf32a680ae6': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87fa-e7b6-76b6-8000-6da15c803e34': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b901a-88fc-7a2b-8000-712464b36b1c': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066bd164-0617-75dd-8000-866f5dc1ce44': ['db_ji3eegk9',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_tln5y0w3:pwPW01__H5d8gcbeqWWdZH@cis_db1.areso.pro:3306/db_ji3eegk9',\n  +                                           '2024-08-14 20:40:42',\n  +                                           0],\n  +  '066d9eed-f09a-7db8-8000-80b496f05633': ['db_8bmgvwjv',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_gdrgym35:pwPW01__Iuiwn8ykAK65hy@cis_db1.areso.pro:3306/db_8bmgvwjv',\n  +                                           '2024-09-05 17:48:25',\n  +                                           0],\n  +  '066d9efb-8218-79d4-8000-4e7aba4f0139': ['db_wjlk1fw0',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_rv52273g:pwPW01__4d0hT10HYRpuTi@cis_db1.areso.pro:3306/db_wjlk1fw0',\n  +                                           '2024-09-05 17:52:03',\n  +                                           0],\n  +  '066d9efc-7d24-7243-8000-e2a65edbd23e': ['db_i5n4oqpl',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_2d99654y:pwPW01__YR60Gyo480l0Xx@cis_db1.areso.pro:3306/db_i5n4oqpl',\n  +                                           '2024-09-05 17:52:17',\n  +                                           0],\n  +  '066da549-ba6b-71bc-8000-329f72336f26': ['db_i1fqs78r',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_kk09qxgi:pwPW01__5srn0nAEQwhv9H@cis_db1.areso.pro:3306/db_i1fqs78r',\n  +                                           '2024-09-06 01:02:29',\n  +                                           0],\n  +  '066da592-2e9e-748b-8000-9567d3d0f846': ['db_hy3nifmn',\n  +                                           'CIS',\n  +                                           'error_deleting',\n  +                                           'mysql://user_qyz0dq0z:pwPW01__WlYyX4pVQkosaQ@cis_db1.areso.pro:3306/db_hy3nifmn',\n  +                                           '2024-09-06 01:21:48',\n  +                                           9],\n  +  '0671af47-4ad9-7df1-8000-4bd970b89140': ['db_ghdm8tjq',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_np1z7f7w:pwPW01__1Gg95a9QbwUTdZ@cis_db1.areso.pro:3306/db_ghdm8tjq',\n  +                                           '2024-10-25 01:29:35',\n  +                                           0],\n  +  '0672c17c-2ac2-76a9-8000-755c38dfde67': ['db_udjdopyi',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_42jxxxl6:pwPW01__sEBAmuSLp4WiiO@cis_db1.areso.pro:3306/db_udjdopyi',\n  +                                           '2024-11-07 01:28:44',\n  +                                           0],\n  +  '0672d635-60a4-71c9-8000-293693d25d89': ['db_yvs2nrlo',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           'mysql://user_au971vxk:pwPW01__mmwks6dloWynhn@cis_db1.areso.pro:3306/db_yvs2nrlo',\n  +                                           'None',\n  +                                           0],\n  +  '0672d693-65b0-7f04-8000-fb2220c30330': ['db_oe9tvhec',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           'mysql://user_cpwquucc:pwPW01__hucPw3TumKIN0E@cis_db1.areso.pro:3306/db_oe9tvhec',\n  +                                           'None',\n  +                                           0],\n  +  '06737f8f-508a-70cb-8000-d3b442ce147e': ['db_qgkfa8pp',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_c62g023v:pwPW01__ZZxflk4e0toqx9@cis_db1.areso.pro:3306/db_qgkfa8pp',\n  +                                           '2024-11-16 01:44:30',\n  +                                           0],\n  +  '068940ac-8324-7bf4-8000-c6134177c765': ['db_vkdyjykg',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_08g6pf68:pwPW01__payLEeEw2szgkt@cis_db1.areso.pro:3306/db_vkdyjykg',\n  +                                           '2025-08-07 02:09:22',\n  +                                           0],\n  +  '068940ad-ad74-7b3b-8000-d200755a431f': ['db_ygtfx473',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_8rig0ky3:pwPW01__1BWxPzQo7OlEJ0@cis_db1.areso.pro:3306/db_ygtfx473',\n  +                                           '2025-08-07 02:09:40',\n  +                                           0],\n  +  '068940b9-18bc-71e7-8000-968a1cc52ee8': ['db_oi0bg7bw',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_69o6s76h:pwPW01__2W6Mr72Rcmhtc8@cis_db1.areso.pro:3306/db_oi0bg7bw',\n  +                                           '2025-08-07 02:12:43',\n  +                                           0],\n  +  '06896ab1-7628-7fd9-8000-3c0083c5d581': ['db_c2bb07y0',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_s4uzgfq6:pwPW01__t14tFEy1p8n29Y@cis_db1.areso.pro:3306/db_c2bb07y0',\n  +                                           '2025-08-09 01:57:54',\n  +                                           0],\n  +  '06896ab2-3026-7c4e-8000-85c031475d0d': ['db_czsc4ted',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_phza6yt8:pwPW01__dblKBZ9pstxa4F@cis_db1.areso.pro:3306/db_czsc4ted',\n  +                                           '2025-08-09 01:58:05',\n  +                                           0],\n  +  '06896abb-3bac-7484-8000-db384df2a6df': ['db_qik3uatg',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_azjdgyqj:pwPW01__EUCvHRUG9AASbw@cis_db1.areso.pro:3306/db_qik3uatg',\n  +                                           '2025-08-09 02:00:30',\n  +                                           0],\n  +  '0689fe4b-fca5-7698-8000-b5a75b9ae742': ['db_tsxbx4w4',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_wnu2rjdv:pwPW01__MY0jJnc4heAEbN@cis_db1.areso.pro:3306/db_tsxbx4w4',\n  +                                           '2025-08-16 01:54:18',\n  +                                           0],\n  +  '0689fe4d-2315-79de-8000-196d70fab0f1': ['db_xzszkfi8',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_olfyf8t5:pwPW01__XdtwX8C7fpjBID@cis_db1.areso.pro:3306/db_xzszkfi8',\n  +                                           '2025-08-16 01:54:36',\n  +                                           0],\n  +  '0689fe58-7351-725a-8000-21b355b22737': ['db_s8mbbbmu',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_y1ti7991:pwPW01__h566pBw2Mqnwxu@cis_db1.areso.pro:3306/db_s8mbbbmu',\n  +                                           '2025-08-16 01:57:37',\n  +                                           0],\n  +  '068a138f-9cfc-70dc-8000-5be2d6c66263': ['db_ps7pmmrl',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_5xvosdm8:pwPW01__xAKrMqLzRFQMZe@cis_db1.areso.pro:3306/db_ps7pmmrl',\n  +                                           '2025-08-17 02:05:56',\n  +                                           0],\n  +  '068a1390-ca54-7d13-8000-c23765479c2f': ['db_tpqptnot',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_rvgmi1tf:pwPW01__c7XOXzF4ATSq4J@cis_db1.areso.pro:3306/db_tpqptnot',\n  +                                           '2025-08-17 02:06:14',\n  +                                           0],\n    }",
+        "time" : {
+          "start" : 1755396400281,
+          "stop" : 1755396431426,
+          "duration" : 31145
+        }
+      }, {
+        "uid" : "77dfcf820ed59f76",
+        "reportUrl" : "https://lambotik.github.io/Oblache/473//#testresult/77dfcf820ed59f76",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nAssertionError: assert {'066b87ca-9d...one', 0], ...} == {}\n  Left contains 24 more items:\n  {'066b87ca-9dd6-7a0b-8000-461dafcab111': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87cb-4cfd-73bd-8000-ad0fc36ba001': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87cf-a338-7323-8000-0bf32a680ae6': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87fa-e7b6-76b6-8000-6da15c803e34': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b901a-88fc-7a2b-8000-712464b36b1c': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066bd164-0617-75dd-8000-866f5dc1ce44': ['db_ji3eegk9',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_tln5y0w3:pwPW01__H5d8gcbeqWWdZH@cis_db1.areso.pro:3306/db_ji3eegk9',\n                                            '2024-08-14 20:40:42',\n                                            0],\n   '066d9eed-f09a-7db8-8000-80b496f05633': ['db_8bmgvwjv',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_gdrgym35:pwPW01__Iuiwn8ykAK65hy@cis_db1.areso.pro:3306/db_8bmgvwjv',\n                                            '2024-09-05 17:48:25',\n                                            0],\n   '066d9efb-8218-79d4-8000-4e7aba4f0139': ['db_wjlk1fw0',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_rv52273g:pwPW01__4d0hT10HYRpuTi@cis_db1.areso.pro:3306/db_wjlk1fw0',\n                                            '2024-09-05 17:52:03',\n                                            0],\n   '066d9efc-7d24-7243-8000-e2a65edbd23e': ['db_i5n4oqpl',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_2d99654y:pwPW01__YR60Gyo480l0Xx@cis_db1.areso.pro:3306/db_i5n4oqpl',\n                                            '2024-09-05 17:52:17',\n                                            0],\n   '066da549-ba6b-71bc-8000-329f72336f26': ['db_i1fqs78r',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_kk09qxgi:pwPW01__5srn0nAEQwhv9H@cis_db1.areso.pro:3306/db_i1fqs78r',\n                                            '2024-09-06 01:02:29',\n                                            0],\n   '066da592-2e9e-748b-8000-9567d3d0f846': ['db_hy3nifmn',\n                                            'CIS',\n                                            'error_deleting',\n                                            'mysql://user_qyz0dq0z:pwPW01__WlYyX4pVQkosaQ@cis_db1.areso.pro:3306/db_hy3nifmn',\n                                            '2024-09-06 01:21:48',\n                                            9],\n   '0671af47-4ad9-7df1-8000-4bd970b89140': ['db_ghdm8tjq',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_np1z7f7w:pwPW01__1Gg95a9QbwUTdZ@cis_db1.areso.pro:3306/db_ghdm8tjq',\n                                            '2024-10-25 01:29:35',\n                                            0],\n   '0672c17c-2ac2-76a9-8000-755c38dfde67': ['db_udjdopyi',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_42jxxxl6:pwPW01__sEBAmuSLp4WiiO@cis_db1.areso.pro:3306/db_udjdopyi',\n                                            '2024-11-07 01:28:44',\n                                            0],\n   '0672d635-60a4-71c9-8000-293693d25d89': ['db_yvs2nrlo',\n                                            'CIS',\n                                            'manual_deleting',\n                                            'mysql://user_au971vxk:pwPW01__mmwks6dloWynhn@cis_db1.areso.pro:3306/db_yvs2nrlo',\n                                            'None',\n                                            0],\n   '0672d693-65b0-7f04-8000-fb2220c30330': ['db_oe9tvhec',\n                                            'CIS',\n                                            'manual_deleting',\n                                            'mysql://user_cpwquucc:pwPW01__hucPw3TumKIN0E@cis_db1.areso.pro:3306/db_oe9tvhec',\n                                            'None',\n                                            0],\n   '06737f8f-508a-70cb-8000-d3b442ce147e': ['db_qgkfa8pp',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_c62g023v:pwPW01__ZZxflk4e0toqx9@cis_db1.areso.pro:3306/db_qgkfa8pp',\n                                            '2024-11-16 01:44:30',\n                                            0],\n   '068940ac-8324-7bf4-8000-c6134177c765': ['db_vkdyjykg',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_08g6pf68:pwPW01__payLEeEw2szgkt@cis_db1.areso.pro:3306/db_vkdyjykg',\n                                            '2025-08-07 02:09:22',\n                                            0],\n   '068940ad-ad74-7b3b-8000-d200755a431f': ['db_ygtfx473',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_8rig0ky3:pwPW01__1BWxPzQo7OlEJ0@cis_db1.areso.pro:3306/db_ygtfx473',\n                                            '2025-08-07 02:09:40',\n                                            0],\n   '068940b9-18bc-71e7-8000-968a1cc52ee8': ['db_oi0bg7bw',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_69o6s76h:pwPW01__2W6Mr72Rcmhtc8@cis_db1.areso.pro:3306/db_oi0bg7bw',\n                                            '2025-08-07 02:12:43',\n                                            0],\n   '06896ab1-7628-7fd9-8000-3c0083c5d581': ['db_c2bb07y0',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_s4uzgfq6:pwPW01__t14tFEy1p8n29Y@cis_db1.areso.pro:3306/db_c2bb07y0',\n                                            '2025-08-09 01:57:54',\n                                            0],\n   '06896ab2-3026-7c4e-8000-85c031475d0d': ['db_czsc4ted',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_phza6yt8:pwPW01__dblKBZ9pstxa4F@cis_db1.areso.pro:3306/db_czsc4ted',\n                                            '2025-08-09 01:58:05',\n                                            0],\n   '06896abb-3bac-7484-8000-db384df2a6df': ['db_qik3uatg',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_azjdgyqj:pwPW01__EUCvHRUG9AASbw@cis_db1.areso.pro:3306/db_qik3uatg',\n                                            '2025-08-09 02:00:30',\n                                            0],\n   '0689fe4b-fca5-7698-8000-b5a75b9ae742': ['db_tsxbx4w4',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_wnu2rjdv:pwPW01__MY0jJnc4heAEbN@cis_db1.areso.pro:3306/db_tsxbx4w4',\n                                            '2025-08-16 01:54:18',\n                                            0],\n   '0689fe4d-2315-79de-8000-196d70fab0f1': ['db_xzszkfi8',\n                                            'CIS',\n                                            'created',\n                                            'mysql://user_olfyf8t5:pwPW01__XdtwX8C7fpjBID@cis_db1.areso.pro:3306/db_xzszkfi8',\n                                            '2025-08-16 01:54:36',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '066b87ca-9dd6-7a0b-8000-461dafcab111': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87cb-4cfd-73bd-8000-ad0fc36ba001': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87cf-a338-7323-8000-0bf32a680ae6': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87fa-e7b6-76b6-8000-6da15c803e34': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b901a-88fc-7a2b-8000-712464b36b1c': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066bd164-0617-75dd-8000-866f5dc1ce44': ['db_ji3eegk9',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_tln5y0w3:pwPW01__H5d8gcbeqWWdZH@cis_db1.areso.pro:3306/db_ji3eegk9',\n  +                                           '2024-08-14 20:40:42',\n  +                                           0],\n  +  '066d9eed-f09a-7db8-8000-80b496f05633': ['db_8bmgvwjv',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_gdrgym35:pwPW01__Iuiwn8ykAK65hy@cis_db1.areso.pro:3306/db_8bmgvwjv',\n  +                                           '2024-09-05 17:48:25',\n  +                                           0],\n  +  '066d9efb-8218-79d4-8000-4e7aba4f0139': ['db_wjlk1fw0',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_rv52273g:pwPW01__4d0hT10HYRpuTi@cis_db1.areso.pro:3306/db_wjlk1fw0',\n  +                                           '2024-09-05 17:52:03',\n  +                                           0],\n  +  '066d9efc-7d24-7243-8000-e2a65edbd23e': ['db_i5n4oqpl',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_2d99654y:pwPW01__YR60Gyo480l0Xx@cis_db1.areso.pro:3306/db_i5n4oqpl',\n  +                                           '2024-09-05 17:52:17',\n  +                                           0],\n  +  '066da549-ba6b-71bc-8000-329f72336f26': ['db_i1fqs78r',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_kk09qxgi:pwPW01__5srn0nAEQwhv9H@cis_db1.areso.pro:3306/db_i1fqs78r',\n  +                                           '2024-09-06 01:02:29',\n  +                                           0],\n  +  '066da592-2e9e-748b-8000-9567d3d0f846': ['db_hy3nifmn',\n  +                                           'CIS',\n  +                                           'error_deleting',\n  +                                           'mysql://user_qyz0dq0z:pwPW01__WlYyX4pVQkosaQ@cis_db1.areso.pro:3306/db_hy3nifmn',\n  +                                           '2024-09-06 01:21:48',\n  +                                           9],\n  +  '0671af47-4ad9-7df1-8000-4bd970b89140': ['db_ghdm8tjq',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_np1z7f7w:pwPW01__1Gg95a9QbwUTdZ@cis_db1.areso.pro:3306/db_ghdm8tjq',\n  +                                           '2024-10-25 01:29:35',\n  +                                           0],\n  +  '0672c17c-2ac2-76a9-8000-755c38dfde67': ['db_udjdopyi',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_42jxxxl6:pwPW01__sEBAmuSLp4WiiO@cis_db1.areso.pro:3306/db_udjdopyi',\n  +                                           '2024-11-07 01:28:44',\n  +                                           0],\n  +  '0672d635-60a4-71c9-8000-293693d25d89': ['db_yvs2nrlo',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           'mysql://user_au971vxk:pwPW01__mmwks6dloWynhn@cis_db1.areso.pro:3306/db_yvs2nrlo',\n  +                                           'None',\n  +                                           0],\n  +  '0672d693-65b0-7f04-8000-fb2220c30330': ['db_oe9tvhec',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           'mysql://user_cpwquucc:pwPW01__hucPw3TumKIN0E@cis_db1.areso.pro:3306/db_oe9tvhec',\n  +                                           'None',\n  +                                           0],\n  +  '06737f8f-508a-70cb-8000-d3b442ce147e': ['db_qgkfa8pp',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_c62g023v:pwPW01__ZZxflk4e0toqx9@cis_db1.areso.pro:3306/db_qgkfa8pp',\n  +                                           '2024-11-16 01:44:30',\n  +                                           0],\n  +  '068940ac-8324-7bf4-8000-c6134177c765': ['db_vkdyjykg',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_08g6pf68:pwPW01__payLEeEw2szgkt@cis_db1.areso.pro:3306/db_vkdyjykg',\n  +                                           '2025-08-07 02:09:22',\n  +                                           0],\n  +  '068940ad-ad74-7b3b-8000-d200755a431f': ['db_ygtfx473',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_8rig0ky3:pwPW01__1BWxPzQo7OlEJ0@cis_db1.areso.pro:3306/db_ygtfx473',\n  +                                           '2025-08-07 02:09:40',\n  +                                           0],\n  +  '068940b9-18bc-71e7-8000-968a1cc52ee8': ['db_oi0bg7bw',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_69o6s76h:pwPW01__2W6Mr72Rcmhtc8@cis_db1.areso.pro:3306/db_oi0bg7bw',\n  +                                           '2025-08-07 02:12:43',\n  +                                           0],\n  +  '06896ab1-7628-7fd9-8000-3c0083c5d581': ['db_c2bb07y0',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_s4uzgfq6:pwPW01__t14tFEy1p8n29Y@cis_db1.areso.pro:3306/db_c2bb07y0',\n  +                                           '2025-08-09 01:57:54',\n  +                                           0],\n  +  '06896ab2-3026-7c4e-8000-85c031475d0d': ['db_czsc4ted',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_phza6yt8:pwPW01__dblKBZ9pstxa4F@cis_db1.areso.pro:3306/db_czsc4ted',\n  +                                           '2025-08-09 01:58:05',\n  +                                           0],\n  +  '06896abb-3bac-7484-8000-db384df2a6df': ['db_qik3uatg',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_azjdgyqj:pwPW01__EUCvHRUG9AASbw@cis_db1.areso.pro:3306/db_qik3uatg',\n  +                                           '2025-08-09 02:00:30',\n  +                                           0],\n  +  '0689fe4b-fca5-7698-8000-b5a75b9ae742': ['db_tsxbx4w4',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_wnu2rjdv:pwPW01__MY0jJnc4heAEbN@cis_db1.areso.pro:3306/db_tsxbx4w4',\n  +                                           '2025-08-16 01:54:18',\n  +                                           0],\n  +  '0689fe4d-2315-79de-8000-196d70fab0f1': ['db_xzszkfi8',\n  +                                           'CIS',\n  +                                           'created',\n  +                                           'mysql://user_olfyf8t5:pwPW01__XdtwX8C7fpjBID@cis_db1.areso.pro:3306/db_xzszkfi8',\n  +                                           '2025-08-16 01:54:36',\n  +                                           0],\n    }",
+        "time" : {
+          "start" : 1755309303241,
+          "stop" : 1755309370078,
+          "duration" : 66837
+        }
+      }, {
+        "uid" : "2722d972e7eb83a4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/472//#testresult/2722d972e7eb83a4",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nrequests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1755223212300,
+          "stop" : 1755223212300,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "536218a1ee31453d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/471//#testresult/536218a1ee31453d",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nAssertionError: assert {'066b87ca-9d...one', 0], ...} == {}\n  Left contains 22 more items:\n  {'066b87ca-9dd6-7a0b-8000-461dafcab111': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87cb-4cfd-73bd-8000-ad0fc36ba001': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87cf-a338-7323-8000-0bf32a680ae6': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87fa-e7b6-76b6-8000-6da15c803e34': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b901a-88fc-7a2b-8000-712464b36b1c': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066bd164-0617-75dd-8000-866f5dc1ce44': ['db_ji3eegk9',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_tln5y0w3:pwPW01__H5d8gcbeqWWdZH@cis_db1.areso.pro:3306/db_ji3eegk9',\n                                            '2024-08-14 20:40:42',\n                                            0],\n   '066d9eed-f09a-7db8-8000-80b496f05633': ['db_8bmgvwjv',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_gdrgym35:pwPW01__Iuiwn8ykAK65hy@cis_db1.areso.pro:3306/db_8bmgvwjv',\n                                            '2024-09-05 17:48:25',\n                                            0],\n   '066d9efb-8218-79d4-8000-4e7aba4f0139': ['db_wjlk1fw0',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_rv52273g:pwPW01__4d0hT10HYRpuTi@cis_db1.areso.pro:3306/db_wjlk1fw0',\n                                            '2024-09-05 17:52:03',\n                                            0],\n   '066d9efc-7d24-7243-8000-e2a65edbd23e': ['db_i5n4oqpl',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_2d99654y:pwPW01__YR60Gyo480l0Xx@cis_db1.areso.pro:3306/db_i5n4oqpl',\n                                            '2024-09-05 17:52:17',\n                                            0],\n   '066da549-ba6b-71bc-8000-329f72336f26': ['db_i1fqs78r',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_kk09qxgi:pwPW01__5srn0nAEQwhv9H@cis_db1.areso.pro:3306/db_i1fqs78r',\n                                            '2024-09-06 01:02:29',\n                                            0],\n   '066da592-2e9e-748b-8000-9567d3d0f846': ['db_hy3nifmn',\n                                            'CIS',\n                                            'error_deleting',\n                                            'mysql://user_qyz0dq0z:pwPW01__WlYyX4pVQkosaQ@cis_db1.areso.pro:3306/db_hy3nifmn',\n                                            '2024-09-06 01:21:48',\n                                            9],\n   '0671af47-4ad9-7df1-8000-4bd970b89140': ['db_ghdm8tjq',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_np1z7f7w:pwPW01__1Gg95a9QbwUTdZ@cis_db1.areso.pro:3306/db_ghdm8tjq',\n                                            '2024-10-25 01:29:35',\n                                            0],\n   '0672c17c-2ac2-76a9-8000-755c38dfde67': ['db_udjdopyi',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_42jxxxl6:pwPW01__sEBAmuSLp4WiiO@cis_db1.areso.pro:3306/db_udjdopyi',\n                                            '2024-11-07 01:28:44',\n                                            0],\n   '0672d635-60a4-71c9-8000-293693d25d89': ['db_yvs2nrlo',\n                                            'CIS',\n                                            'manual_deleting',\n                                            'mysql://user_au971vxk:pwPW01__mmwks6dloWynhn@cis_db1.areso.pro:3306/db_yvs2nrlo',\n                                            'None',\n                                            0],\n   '0672d693-65b0-7f04-8000-fb2220c30330': ['db_oe9tvhec',\n                                            'CIS',\n                                            'manual_deleting',\n                                            'mysql://user_cpwquucc:pwPW01__hucPw3TumKIN0E@cis_db1.areso.pro:3306/db_oe9tvhec',\n                                            'None',\n                                            0],\n   '06737f8f-508a-70cb-8000-d3b442ce147e': ['db_qgkfa8pp',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_c62g023v:pwPW01__ZZxflk4e0toqx9@cis_db1.areso.pro:3306/db_qgkfa8pp',\n                                            '2024-11-16 01:44:30',\n                                            0],\n   '068940ac-8324-7bf4-8000-c6134177c765': ['db_vkdyjykg',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_08g6pf68:pwPW01__payLEeEw2szgkt@cis_db1.areso.pro:3306/db_vkdyjykg',\n                                            '2025-08-07 02:09:22',\n                                            0],\n   '068940ad-ad74-7b3b-8000-d200755a431f': ['db_ygtfx473',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_8rig0ky3:pwPW01__1BWxPzQo7OlEJ0@cis_db1.areso.pro:3306/db_ygtfx473',\n                                            '2025-08-07 02:09:40',\n                                            0],\n   '068940b9-18bc-71e7-8000-968a1cc52ee8': ['db_oi0bg7bw',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_69o6s76h:pwPW01__2W6Mr72Rcmhtc8@cis_db1.areso.pro:3306/db_oi0bg7bw',\n                                            '2025-08-07 02:12:43',\n                                            0],\n   '06896ab1-7628-7fd9-8000-3c0083c5d581': ['db_c2bb07y0',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_s4uzgfq6:pwPW01__t14tFEy1p8n29Y@cis_db1.areso.pro:3306/db_c2bb07y0',\n                                            '2025-08-09 01:57:54',\n                                            0],\n   '06896ab2-3026-7c4e-8000-85c031475d0d': ['db_czsc4ted',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_phza6yt8:pwPW01__dblKBZ9pstxa4F@cis_db1.areso.pro:3306/db_czsc4ted',\n                                            '2025-08-09 01:58:05',\n                                            0],\n   '06896abb-3bac-7484-8000-db384df2a6df': ['db_qik3uatg',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_azjdgyqj:pwPW01__EUCvHRUG9AASbw@cis_db1.areso.pro:3306/db_qik3uatg',\n                                            '2025-08-09 02:00:30',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '066b87ca-9dd6-7a0b-8000-461dafcab111': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87cb-4cfd-73bd-8000-ad0fc36ba001': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87cf-a338-7323-8000-0bf32a680ae6': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87fa-e7b6-76b6-8000-6da15c803e34': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b901a-88fc-7a2b-8000-712464b36b1c': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066bd164-0617-75dd-8000-866f5dc1ce44': ['db_ji3eegk9',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_tln5y0w3:pwPW01__H5d8gcbeqWWdZH@cis_db1.areso.pro:3306/db_ji3eegk9',\n  +                                           '2024-08-14 20:40:42',\n  +                                           0],\n  +  '066d9eed-f09a-7db8-8000-80b496f05633': ['db_8bmgvwjv',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_gdrgym35:pwPW01__Iuiwn8ykAK65hy@cis_db1.areso.pro:3306/db_8bmgvwjv',\n  +                                           '2024-09-05 17:48:25',\n  +                                           0],\n  +  '066d9efb-8218-79d4-8000-4e7aba4f0139': ['db_wjlk1fw0',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_rv52273g:pwPW01__4d0hT10HYRpuTi@cis_db1.areso.pro:3306/db_wjlk1fw0',\n  +                                           '2024-09-05 17:52:03',\n  +                                           0],\n  +  '066d9efc-7d24-7243-8000-e2a65edbd23e': ['db_i5n4oqpl',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_2d99654y:pwPW01__YR60Gyo480l0Xx@cis_db1.areso.pro:3306/db_i5n4oqpl',\n  +                                           '2024-09-05 17:52:17',\n  +                                           0],\n  +  '066da549-ba6b-71bc-8000-329f72336f26': ['db_i1fqs78r',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_kk09qxgi:pwPW01__5srn0nAEQwhv9H@cis_db1.areso.pro:3306/db_i1fqs78r',\n  +                                           '2024-09-06 01:02:29',\n  +                                           0],\n  +  '066da592-2e9e-748b-8000-9567d3d0f846': ['db_hy3nifmn',\n  +                                           'CIS',\n  +                                           'error_deleting',\n  +                                           'mysql://user_qyz0dq0z:pwPW01__WlYyX4pVQkosaQ@cis_db1.areso.pro:3306/db_hy3nifmn',\n  +                                           '2024-09-06 01:21:48',\n  +                                           9],\n  +  '0671af47-4ad9-7df1-8000-4bd970b89140': ['db_ghdm8tjq',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_np1z7f7w:pwPW01__1Gg95a9QbwUTdZ@cis_db1.areso.pro:3306/db_ghdm8tjq',\n  +                                           '2024-10-25 01:29:35',\n  +                                           0],\n  +  '0672c17c-2ac2-76a9-8000-755c38dfde67': ['db_udjdopyi',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_42jxxxl6:pwPW01__sEBAmuSLp4WiiO@cis_db1.areso.pro:3306/db_udjdopyi',\n  +                                           '2024-11-07 01:28:44',\n  +                                           0],\n  +  '0672d635-60a4-71c9-8000-293693d25d89': ['db_yvs2nrlo',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           'mysql://user_au971vxk:pwPW01__mmwks6dloWynhn@cis_db1.areso.pro:3306/db_yvs2nrlo',\n  +                                           'None',\n  +                                           0],\n  +  '0672d693-65b0-7f04-8000-fb2220c30330': ['db_oe9tvhec',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           'mysql://user_cpwquucc:pwPW01__hucPw3TumKIN0E@cis_db1.areso.pro:3306/db_oe9tvhec',\n  +                                           'None',\n  +                                           0],\n  +  '06737f8f-508a-70cb-8000-d3b442ce147e': ['db_qgkfa8pp',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_c62g023v:pwPW01__ZZxflk4e0toqx9@cis_db1.areso.pro:3306/db_qgkfa8pp',\n  +                                           '2024-11-16 01:44:30',\n  +                                           0],\n  +  '068940ac-8324-7bf4-8000-c6134177c765': ['db_vkdyjykg',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_08g6pf68:pwPW01__payLEeEw2szgkt@cis_db1.areso.pro:3306/db_vkdyjykg',\n  +                                           '2025-08-07 02:09:22',\n  +                                           0],\n  +  '068940ad-ad74-7b3b-8000-d200755a431f': ['db_ygtfx473',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_8rig0ky3:pwPW01__1BWxPzQo7OlEJ0@cis_db1.areso.pro:3306/db_ygtfx473',\n  +                                           '2025-08-07 02:09:40',\n  +                                           0],\n  +  '068940b9-18bc-71e7-8000-968a1cc52ee8': ['db_oi0bg7bw',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_69o6s76h:pwPW01__2W6Mr72Rcmhtc8@cis_db1.areso.pro:3306/db_oi0bg7bw',\n  +                                           '2025-08-07 02:12:43',\n  +                                           0],\n  +  '06896ab1-7628-7fd9-8000-3c0083c5d581': ['db_c2bb07y0',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_s4uzgfq6:pwPW01__t14tFEy1p8n29Y@cis_db1.areso.pro:3306/db_c2bb07y0',\n  +                                           '2025-08-09 01:57:54',\n  +                                           0],\n  +  '06896ab2-3026-7c4e-8000-85c031475d0d': ['db_czsc4ted',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_phza6yt8:pwPW01__dblKBZ9pstxa4F@cis_db1.areso.pro:3306/db_czsc4ted',\n  +                                           '2025-08-09 01:58:05',\n  +                                           0],\n  +  '06896abb-3bac-7484-8000-db384df2a6df': ['db_qik3uatg',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_azjdgyqj:pwPW01__EUCvHRUG9AASbw@cis_db1.areso.pro:3306/db_qik3uatg',\n  +                                           '2025-08-09 02:00:30',\n  +                                           0],\n    }",
+        "time" : {
+          "start" : 1755136802074,
+          "stop" : 1755136871643,
+          "duration" : 69569
+        }
+      }, {
+        "uid" : "b849613f61dcf0b2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/470//#testresult/b849613f61dcf0b2",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL If databases will be deleting more than 1 minute and all databases won't deleting for this time.\n\nAssertionError: assert {'066b87ca-9d...one', 0], ...} == {}\n  Left contains 22 more items:\n  {'066b87ca-9dd6-7a0b-8000-461dafcab111': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87cb-4cfd-73bd-8000-ad0fc36ba001': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87cf-a338-7323-8000-0bf32a680ae6': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b87fa-e7b6-76b6-8000-6da15c803e34': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066b901a-88fc-7a2b-8000-712464b36b1c': ['',\n                                            'CIS',\n                                            'manual_deleting',\n                                            None,\n                                            'None',\n                                            0],\n   '066bd164-0617-75dd-8000-866f5dc1ce44': ['db_ji3eegk9',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_tln5y0w3:pwPW01__H5d8gcbeqWWdZH@cis_db1.areso.pro:3306/db_ji3eegk9',\n                                            '2024-08-14 20:40:42',\n                                            0],\n   '066d9eed-f09a-7db8-8000-80b496f05633': ['db_8bmgvwjv',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_gdrgym35:pwPW01__Iuiwn8ykAK65hy@cis_db1.areso.pro:3306/db_8bmgvwjv',\n                                            '2024-09-05 17:48:25',\n                                            0],\n   '066d9efb-8218-79d4-8000-4e7aba4f0139': ['db_wjlk1fw0',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_rv52273g:pwPW01__4d0hT10HYRpuTi@cis_db1.areso.pro:3306/db_wjlk1fw0',\n                                            '2024-09-05 17:52:03',\n                                            0],\n   '066d9efc-7d24-7243-8000-e2a65edbd23e': ['db_i5n4oqpl',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_2d99654y:pwPW01__YR60Gyo480l0Xx@cis_db1.areso.pro:3306/db_i5n4oqpl',\n                                            '2024-09-05 17:52:17',\n                                            0],\n   '066da549-ba6b-71bc-8000-329f72336f26': ['db_i1fqs78r',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_kk09qxgi:pwPW01__5srn0nAEQwhv9H@cis_db1.areso.pro:3306/db_i1fqs78r',\n                                            '2024-09-06 01:02:29',\n                                            0],\n   '066da592-2e9e-748b-8000-9567d3d0f846': ['db_hy3nifmn',\n                                            'CIS',\n                                            'error_deleting',\n                                            'mysql://user_qyz0dq0z:pwPW01__WlYyX4pVQkosaQ@cis_db1.areso.pro:3306/db_hy3nifmn',\n                                            '2024-09-06 01:21:48',\n                                            9],\n   '0671af47-4ad9-7df1-8000-4bd970b89140': ['db_ghdm8tjq',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_np1z7f7w:pwPW01__1Gg95a9QbwUTdZ@cis_db1.areso.pro:3306/db_ghdm8tjq',\n                                            '2024-10-25 01:29:35',\n                                            0],\n   '0672c17c-2ac2-76a9-8000-755c38dfde67': ['db_udjdopyi',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_42jxxxl6:pwPW01__sEBAmuSLp4WiiO@cis_db1.areso.pro:3306/db_udjdopyi',\n                                            '2024-11-07 01:28:44',\n                                            0],\n   '0672d635-60a4-71c9-8000-293693d25d89': ['db_yvs2nrlo',\n                                            'CIS',\n                                            'manual_deleting',\n                                            'mysql://user_au971vxk:pwPW01__mmwks6dloWynhn@cis_db1.areso.pro:3306/db_yvs2nrlo',\n                                            'None',\n                                            0],\n   '0672d693-65b0-7f04-8000-fb2220c30330': ['db_oe9tvhec',\n                                            'CIS',\n                                            'manual_deleting',\n                                            'mysql://user_cpwquucc:pwPW01__hucPw3TumKIN0E@cis_db1.areso.pro:3306/db_oe9tvhec',\n                                            'None',\n                                            0],\n   '06737f8f-508a-70cb-8000-d3b442ce147e': ['db_qgkfa8pp',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_c62g023v:pwPW01__ZZxflk4e0toqx9@cis_db1.areso.pro:3306/db_qgkfa8pp',\n                                            '2024-11-16 01:44:30',\n                                            0],\n   '068940ac-8324-7bf4-8000-c6134177c765': ['db_vkdyjykg',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_08g6pf68:pwPW01__payLEeEw2szgkt@cis_db1.areso.pro:3306/db_vkdyjykg',\n                                            '2025-08-07 02:09:22',\n                                            0],\n   '068940ad-ad74-7b3b-8000-d200755a431f': ['db_ygtfx473',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_8rig0ky3:pwPW01__1BWxPzQo7OlEJ0@cis_db1.areso.pro:3306/db_ygtfx473',\n                                            '2025-08-07 02:09:40',\n                                            0],\n   '068940b9-18bc-71e7-8000-968a1cc52ee8': ['db_oi0bg7bw',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_69o6s76h:pwPW01__2W6Mr72Rcmhtc8@cis_db1.areso.pro:3306/db_oi0bg7bw',\n                                            '2025-08-07 02:12:43',\n                                            0],\n   '06896ab1-7628-7fd9-8000-3c0083c5d581': ['db_c2bb07y0',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_s4uzgfq6:pwPW01__t14tFEy1p8n29Y@cis_db1.areso.pro:3306/db_c2bb07y0',\n                                            '2025-08-09 01:57:54',\n                                            0],\n   '06896ab2-3026-7c4e-8000-85c031475d0d': ['db_czsc4ted',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_phza6yt8:pwPW01__dblKBZ9pstxa4F@cis_db1.areso.pro:3306/db_czsc4ted',\n                                            '2025-08-09 01:58:05',\n                                            0],\n   '06896abb-3bac-7484-8000-db384df2a6df': ['db_qik3uatg',\n                                            'CIS',\n                                            'error_to_threshold',\n                                            'mysql://user_azjdgyqj:pwPW01__EUCvHRUG9AASbw@cis_db1.areso.pro:3306/db_qik3uatg',\n                                            '2025-08-09 02:00:30',\n                                            0]}\n  Full diff:\n    {\n  -  ,\n  +  '066b87ca-9dd6-7a0b-8000-461dafcab111': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87cb-4cfd-73bd-8000-ad0fc36ba001': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87cf-a338-7323-8000-0bf32a680ae6': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b87fa-e7b6-76b6-8000-6da15c803e34': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066b901a-88fc-7a2b-8000-712464b36b1c': ['',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           None,\n  +                                           'None',\n  +                                           0],\n  +  '066bd164-0617-75dd-8000-866f5dc1ce44': ['db_ji3eegk9',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_tln5y0w3:pwPW01__H5d8gcbeqWWdZH@cis_db1.areso.pro:3306/db_ji3eegk9',\n  +                                           '2024-08-14 20:40:42',\n  +                                           0],\n  +  '066d9eed-f09a-7db8-8000-80b496f05633': ['db_8bmgvwjv',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_gdrgym35:pwPW01__Iuiwn8ykAK65hy@cis_db1.areso.pro:3306/db_8bmgvwjv',\n  +                                           '2024-09-05 17:48:25',\n  +                                           0],\n  +  '066d9efb-8218-79d4-8000-4e7aba4f0139': ['db_wjlk1fw0',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_rv52273g:pwPW01__4d0hT10HYRpuTi@cis_db1.areso.pro:3306/db_wjlk1fw0',\n  +                                           '2024-09-05 17:52:03',\n  +                                           0],\n  +  '066d9efc-7d24-7243-8000-e2a65edbd23e': ['db_i5n4oqpl',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_2d99654y:pwPW01__YR60Gyo480l0Xx@cis_db1.areso.pro:3306/db_i5n4oqpl',\n  +                                           '2024-09-05 17:52:17',\n  +                                           0],\n  +  '066da549-ba6b-71bc-8000-329f72336f26': ['db_i1fqs78r',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_kk09qxgi:pwPW01__5srn0nAEQwhv9H@cis_db1.areso.pro:3306/db_i1fqs78r',\n  +                                           '2024-09-06 01:02:29',\n  +                                           0],\n  +  '066da592-2e9e-748b-8000-9567d3d0f846': ['db_hy3nifmn',\n  +                                           'CIS',\n  +                                           'error_deleting',\n  +                                           'mysql://user_qyz0dq0z:pwPW01__WlYyX4pVQkosaQ@cis_db1.areso.pro:3306/db_hy3nifmn',\n  +                                           '2024-09-06 01:21:48',\n  +                                           9],\n  +  '0671af47-4ad9-7df1-8000-4bd970b89140': ['db_ghdm8tjq',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_np1z7f7w:pwPW01__1Gg95a9QbwUTdZ@cis_db1.areso.pro:3306/db_ghdm8tjq',\n  +                                           '2024-10-25 01:29:35',\n  +                                           0],\n  +  '0672c17c-2ac2-76a9-8000-755c38dfde67': ['db_udjdopyi',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_42jxxxl6:pwPW01__sEBAmuSLp4WiiO@cis_db1.areso.pro:3306/db_udjdopyi',\n  +                                           '2024-11-07 01:28:44',\n  +                                           0],\n  +  '0672d635-60a4-71c9-8000-293693d25d89': ['db_yvs2nrlo',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           'mysql://user_au971vxk:pwPW01__mmwks6dloWynhn@cis_db1.areso.pro:3306/db_yvs2nrlo',\n  +                                           'None',\n  +                                           0],\n  +  '0672d693-65b0-7f04-8000-fb2220c30330': ['db_oe9tvhec',\n  +                                           'CIS',\n  +                                           'manual_deleting',\n  +                                           'mysql://user_cpwquucc:pwPW01__hucPw3TumKIN0E@cis_db1.areso.pro:3306/db_oe9tvhec',\n  +                                           'None',\n  +                                           0],\n  +  '06737f8f-508a-70cb-8000-d3b442ce147e': ['db_qgkfa8pp',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_c62g023v:pwPW01__ZZxflk4e0toqx9@cis_db1.areso.pro:3306/db_qgkfa8pp',\n  +                                           '2024-11-16 01:44:30',\n  +                                           0],\n  +  '068940ac-8324-7bf4-8000-c6134177c765': ['db_vkdyjykg',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_08g6pf68:pwPW01__payLEeEw2szgkt@cis_db1.areso.pro:3306/db_vkdyjykg',\n  +                                           '2025-08-07 02:09:22',\n  +                                           0],\n  +  '068940ad-ad74-7b3b-8000-d200755a431f': ['db_ygtfx473',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_8rig0ky3:pwPW01__1BWxPzQo7OlEJ0@cis_db1.areso.pro:3306/db_ygtfx473',\n  +                                           '2025-08-07 02:09:40',\n  +                                           0],\n  +  '068940b9-18bc-71e7-8000-968a1cc52ee8': ['db_oi0bg7bw',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_69o6s76h:pwPW01__2W6Mr72Rcmhtc8@cis_db1.areso.pro:3306/db_oi0bg7bw',\n  +                                           '2025-08-07 02:12:43',\n  +                                           0],\n  +  '06896ab1-7628-7fd9-8000-3c0083c5d581': ['db_c2bb07y0',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_s4uzgfq6:pwPW01__t14tFEy1p8n29Y@cis_db1.areso.pro:3306/db_c2bb07y0',\n  +                                           '2025-08-09 01:57:54',\n  +                                           0],\n  +  '06896ab2-3026-7c4e-8000-85c031475d0d': ['db_czsc4ted',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_phza6yt8:pwPW01__dblKBZ9pstxa4F@cis_db1.areso.pro:3306/db_czsc4ted',\n  +                                           '2025-08-09 01:58:05',\n  +                                           0],\n  +  '06896abb-3bac-7484-8000-db384df2a6df': ['db_qik3uatg',\n  +                                           'CIS',\n  +                                           'error_to_threshold',\n  +                                           'mysql://user_azjdgyqj:pwPW01__EUCvHRUG9AASbw@cis_db1.areso.pro:3306/db_qik3uatg',\n  +                                           '2025-08-09 02:00:30',\n  +                                           0],\n    }",
+        "time" : {
+          "start" : 1755050372791,
+          "stop" : 1755050407737,
+          "duration" : 34946
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.xfail(reason='If databases will be deleting more than 1 minute and all databases won't deleting for this time.')" ]
+  },
+  "source" : "e8345be9113f1c54.json",
+  "parameterValues" : [ ]
+}
