@@ -1,0 +1,422 @@
+{
+  "uid" : "40ac5bed2245e39c",
+  "name" : "test order db create backup",
+  "fullName" : "tests_api.test_bd.TestBackup#test_order_db_create_backup",
+  "historyId" : "bbc51bc9e59c2f7de52280f53d30e264",
+  "time" : {
+    "start" : 1757209867612,
+    "stop" : 1757209867990,
+    "duration" : 378
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Incorrect status code: 400",
+  "statusTrace" : "self = <tests_api.test_bd.TestBackup object at 0x7f418a5e5190>\nget_token_backup_2 = ('048591c4-0a69-41d0-9e51-5bceff92a5e7', {'email': 'testbackup2@gmail.com', 'password': 'gwqldBUEoNGUiBrKFeVv'}, '066dc8d1-2d0a-753b-8000-ba69b49e1e8c')\n\n    @allure.title('test order db create backup')\n    def test_order_db_create_backup(self, get_token_backup_2):\n        token, body, uuid = get_token_backup_2\n        response = API.post_db_backup_create(token=token, db_uuid=uuid)\n>       Checking.check_status_code(response, 200)\n\ntests_api/test_bd.py:448: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [400]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 400\n\ntests_api/utils/checking.py:16: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_token_backup_2",
+    "time" : {
+      "start" : 1757209867250,
+      "stop" : 1757209867612,
+      "duration" : 362
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert status code: 200 == Response status code: 200",
+      "time" : {
+        "start" : 1757209867612,
+        "stop" : 1757209867612,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Incorrect status code: 400",
+    "statusTrace" : "self = <tests_api.test_bd.TestBackup object at 0x7f418a5e5190>\nget_token_backup_2 = ('048591c4-0a69-41d0-9e51-5bceff92a5e7', {'email': 'testbackup2@gmail.com', 'password': 'gwqldBUEoNGUiBrKFeVv'}, '066dc8d1-2d0a-753b-8000-ba69b49e1e8c')\n\n    @allure.title('test order db create backup')\n    def test_order_db_create_backup(self, get_token_backup_2):\n        token, body, uuid = get_token_backup_2\n        response = API.post_db_backup_create(token=token, db_uuid=uuid)\n>       Checking.check_status_code(response, 200)\n\ntests_api/test_bd.py:448: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresult = <Response [400]>, status_code = 200\n\n    @staticmethod\n    def check_status_code(result: requests.models.Response, status_code: int):\n        \"\"\"\n        Method check status code\n        :param result: Response\n        :param status_code:\n        \"\"\"\n        with allure.step(f'Assert status code: {status_code} == Response status code: {result.status_code}'):\n>           assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\nE           AssertionError: Incorrect status code: 400\n\ntests_api/utils/checking.py:16: AssertionError",
+    "steps" : [ {
+      "name" : "Endpoint: /db_backup_create",
+      "time" : {
+        "start" : 1757209867990,
+        "stop" : 1757209867990,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Request:",
+      "time" : {
+        "start" : 1757209867990,
+        "stop" : 1757209867990,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'048591c4-0a69-41d0-9e51-5bceff92a5e7'}}",
+        "time" : {
+          "start" : 1757209867990,
+          "stop" : 1757209867990,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Response:",
+      "time" : {
+        "start" : 1757209867990,
+        "stop" : 1757209867990,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status code: 400",
+        "time" : {
+          "start" : 1757209867990,
+          "stop" : 1757209867990,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "JSON: {\n    \"content\": \"db either not exist, not in good shape, or does not belong to the user\"\n}\n",
+        "time" : {
+          "start" : 1757209867990,
+          "stop" : 1757209867990,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 200 == Response status code: 400",
+      "time" : {
+        "start" : 1757209867990,
+        "stop" : 1757209867990,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Incorrect status code: 400\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_api/utils/checking.py\", line 16, in check_status_code\n    assert status_code == result.status_code, f'Incorrect status code: {result.status_code}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Backup"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestBackup"
+  }, {
+    "name" : "host",
+    "value" : "pkrvm7jw40e0xgp"
+  }, {
+    "name" : "thread",
+    "value" : "2559-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 57,
+        "broken" : 127,
+        "skipped" : 0,
+        "passed" : 96,
+        "unknown" : 0,
+        "total" : 280
+      },
+      "items" : [ {
+        "uid" : "153dbae1d7c1237d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/494//#testresult/153dbae1d7c1237d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1757122991425,
+          "stop" : 1757122991752,
+          "duration" : 327
+        }
+      }, {
+        "uid" : "6a1d1241d0eb4974",
+        "reportUrl" : "https://lambotik.github.io/Oblache/493//#testresult/6a1d1241d0eb4974",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1757036767795,
+          "stop" : 1757036768303,
+          "duration" : 508
+        }
+      }, {
+        "uid" : "214d0009cf88a296",
+        "reportUrl" : "https://lambotik.github.io/Oblache/492//#testresult/214d0009cf88a296",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1756950252609,
+          "stop" : 1756950253105,
+          "duration" : 496
+        }
+      }, {
+        "uid" : "94e03708fd5e951d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/491//#testresult/94e03708fd5e951d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1756863787591,
+          "stop" : 1756863787972,
+          "duration" : 381
+        }
+      }, {
+        "uid" : "aa859059c886aa8c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/490//#testresult/aa859059c886aa8c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1756777808556,
+          "stop" : 1756777808868,
+          "duration" : 312
+        }
+      }, {
+        "uid" : "d5cb983a847ccedd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/489//#testresult/d5cb983a847ccedd",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1756692250732,
+          "stop" : 1756692251229,
+          "duration" : 497
+        }
+      }, {
+        "uid" : "37abc15b9d694ca5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/488//#testresult/37abc15b9d694ca5",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1756605251535,
+          "stop" : 1756605252027,
+          "duration" : 492
+        }
+      }, {
+        "uid" : "475438ffc7b319c3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/487//#testresult/475438ffc7b319c3",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1756518160367,
+          "stop" : 1756518160367,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9cf4edde30857fd5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/486//#testresult/9cf4edde30857fd5",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1756432074280,
+          "stop" : 1756432074659,
+          "duration" : 379
+        }
+      }, {
+        "uid" : "4d35fc933e76795f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/485//#testresult/4d35fc933e76795f",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1756345682903,
+          "stop" : 1756345683213,
+          "duration" : 310
+        }
+      }, {
+        "uid" : "6b796d4f7ec52a4c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/484//#testresult/6b796d4f7ec52a4c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1756259327812,
+          "stop" : 1756259328121,
+          "duration" : 309
+        }
+      }, {
+        "uid" : "75a1dc6b1c23afc9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/483//#testresult/75a1dc6b1c23afc9",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1756173150405,
+          "stop" : 1756173150886,
+          "duration" : 481
+        }
+      }, {
+        "uid" : "c87cc1162e919b81",
+        "reportUrl" : "https://lambotik.github.io/Oblache/482//#testresult/c87cc1162e919b81",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1756086968118,
+          "stop" : 1756086968480,
+          "duration" : 362
+        }
+      }, {
+        "uid" : "a5ed4e1ed79b7765",
+        "reportUrl" : "https://lambotik.github.io/Oblache/481//#testresult/a5ed4e1ed79b7765",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1756000934890,
+          "stop" : 1756000935383,
+          "duration" : 493
+        }
+      }, {
+        "uid" : "50bfb6930358d458",
+        "reportUrl" : "https://lambotik.github.io/Oblache/480//#testresult/50bfb6930358d458",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1755913636564,
+          "stop" : 1755913636877,
+          "duration" : 313
+        }
+      }, {
+        "uid" : "98b2fb9a8468d02b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/479//#testresult/98b2fb9a8468d02b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1755827476662,
+          "stop" : 1755827476972,
+          "duration" : 310
+        }
+      }, {
+        "uid" : "c2c51910bdd9030a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/478//#testresult/c2c51910bdd9030a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1755741023993,
+          "stop" : 1755741024372,
+          "duration" : 379
+        }
+      }, {
+        "uid" : "16bfd1964ec0a585",
+        "reportUrl" : "https://lambotik.github.io/Oblache/477//#testresult/16bfd1964ec0a585",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1755654713974,
+          "stop" : 1755654714282,
+          "duration" : 308
+        }
+      }, {
+        "uid" : "edc1efa524b4c6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/476//#testresult/edc1efa524b4c6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1755568433328,
+          "stop" : 1755568433631,
+          "duration" : 303
+        }
+      }, {
+        "uid" : "44c5a8b03fbb75ce",
+        "reportUrl" : "https://lambotik.github.io/Oblache/475//#testresult/44c5a8b03fbb75ce",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 400",
+        "time" : {
+          "start" : 1755482794104,
+          "stop" : 1755482794473,
+          "duration" : 369
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "40ac5bed2245e39c.json",
+  "parameterValues" : [ ]
+}
