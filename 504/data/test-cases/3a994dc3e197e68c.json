@@ -1,0 +1,576 @@
+{
+  "uid" : "3a994dc3e197e68c",
+  "name" : "test_clipboard_jdbc",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_clipboard_jdbc",
+  "historyId" : "3c3bc2de59af179987e51569fc1d3309",
+  "time" : {
+    "start" : 1757987109503,
+    "stop" : 1757987116673,
+    "duration" : 7170
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+  "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7fa0ce004650>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"32ca0fa0ae7a048bc31d489696436bab\")>\nauthorization_user = None\n\n    @allure.title('test_clipboard_jdbc')\n    def test_clipboard_jdbc(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n        page.click_button_databases()\n>       page.check_clipboard_jdbc(token=TestProfilePage.token)\n\ntests_ui/test_ui.py:107: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:134: in check_clipboard_jdbc\n    assert self.element_is_visible(self.locators.MSG_COPYPASTE)\ntests_ui/base_page.py:34: in element_is_visible\n    return Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"32ca0fa0ae7a048bc31d489696436bab\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7fa0cd7b02c0>\nmessage = 'Can\\'t find element by locator (\\'xpath\\', \\'//div[@id=\"msg_copypaste\"]\\')'\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1757987108740,
+      "stop" : 1757987109009,
+      "duration" : 269
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1757987109009,
+      "stop" : 1757987109503,
+      "duration" : 494
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1757987109009,
+        "stop" : 1757987109315,
+        "duration" : 306
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Login user",
+      "time" : {
+        "start" : 1757987109315,
+        "stop" : 1757987109503,
+        "duration" : 188
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1757987109315,
+          "stop" : 1757987109373,
+          "duration" : 58
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1757987109373,
+          "stop" : 1757987109415,
+          "duration" : 42
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1757987109415,
+          "stop" : 1757987109500,
+          "duration" : 85
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/register.html",
+        "time" : {
+          "start" : 1757987109500,
+          "stop" : 1757987109503,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+    "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7fa0ce004650>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"32ca0fa0ae7a048bc31d489696436bab\")>\nauthorization_user = None\n\n    @allure.title('test_clipboard_jdbc')\n    def test_clipboard_jdbc(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n        page.click_button_databases()\n>       page.check_clipboard_jdbc(token=TestProfilePage.token)\n\ntests_ui/test_ui.py:107: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:134: in check_clipboard_jdbc\n    assert self.element_is_visible(self.locators.MSG_COPYPASTE)\ntests_ui/base_page.py:34: in element_is_visible\n    return Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"32ca0fa0ae7a048bc31d489696436bab\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7fa0cd7b02c0>\nmessage = 'Can\\'t find element by locator (\\'xpath\\', \\'//div[@id=\"msg_copypaste\"]\\')'\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+    "steps" : [ {
+      "name" : "Click \"Databases\" button.",
+      "time" : {
+        "start" : 1757987109503,
+        "stop" : 1757987110361,
+        "duration" : 858
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Clicked button \uD83D\uDD11 in database:0 d7629b \uD83D\uDCCB my_o5b48jj3 CIS created \uD83D\uDD11 2025-09-06 10:18:27 0 ❌ \uD83D\uDCBE, for copy uuid.",
+      "time" : {
+        "start" : 1757987111235,
+        "stop" : 1757987111235,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1757987111235,
+        "stop" : 1757987111538,
+        "duration" : 303
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1757987111537,
+          "stop" : 1757987111537,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1757987111537,
+          "stop" : 1757987111537,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'0b4584a3-72de-41bf-acbb-55e469434981'}}",
+          "time" : {
+            "start" : 1757987111537,
+            "stop" : 1757987111537,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1757987111537,
+            "stop" : 1757987111537,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1757987111537,
+          "stop" : 1757987111538,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 200",
+          "time" : {
+            "start" : 1757987111537,
+            "stop" : 1757987111537,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n  \"data\": {\n    \"068bc0a5-e43e-781e-8000-5cca74d7629b\": [\n      \"my_o5b48jj3\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_rl5neb3o:pwPW01__CZtHUq8gPu6DFA@cis_db1.areso.pro:3306/my_o5b48jj3\",\n      \"2025-09-06 10:18:27\",\n      0\n    ],\n    \"068bc0a9-2fe2-71c3-8000-40534bac03dc\": [\n      \"my_dvvq9zny\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_qo4ymaat:pwPW01__5nzJ9jQrC2JKzZ@cis_db1.areso.pro:3306/my_dvvq9zny\",\n      \"2025-09-06 10:19:10\",\n      0\n    ],\n    \"068bc0aa-4798-7db6-8000-8598a0f51b19\": [\n      \"my_v6puzr39\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_5t6gsef0:pwPW01__qXpIBIeU9UKXvm@cis_db1.areso.pro:3306/my_v6puzr39\",\n      \"2025-09-06 10:19:27\",\n      0\n    ],\n    \"068bce4e-5e62-7acb-8000-7d79ae416000\": [\n      \"my_ubilq2iq\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_vx6pmzet:pwPW01__5sJzz9A7UrKx5u@cis_db1.areso.pro:3306/my_ubilq2iq\",\n      \"2025-09-07 01:50:42\",\n      0\n    ],\n    \"068bce4f-3ca2-7382-8000-08b9deaf4567\": [\n      \"my_1ltjo5xp\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_qdxb6h4w:pwPW01__VaZcdR2F1hphJo@cis_db1.areso.pro:3306/my_1ltjo5xp\",\n      \"2025-09-07 01:50:55\",\n      0\n    ],\n    \"068c0199-e5f1-707a-8000-501b59b3f930\": [\n      \"my_mswgxtn9\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_a054d31o:pwPW01__JXoGWPv5HZT34h@cis_db1.areso.pro:3306/my_mswgxtn9\",\n      \"2025-09-09 12:12:26\",\n      0\n    ],\n    \"068c019a-c598-781c-8000-41e5845d9169\": [\n      \"my_sa2x9jm4\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_m8m1p7au:pwPW01__IHzteAWCzIdLCX@cis_db1.areso.pro:3306/my_sa2x9jm4\",\n      \"2025-09-09 12:12:39\",\n      0\n    ],\n    \"068c0d7b-ba03-7101-8000-a67ddec2db4e\": [\n      \"my_kb5r5bti\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_1atjrqzu:pwPW01__uwLjRCpN3GFrRC@cis_db1.areso.pro:3306/my_kb5r5bti\",\n      \"2025-09-10 01:43:35\",\n      0\n    ],\n    \"068c0d7c-b14a-72a4-8000-9a562f53bc82\": [\n      \"my_6f1kv1sa\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_c9wdd7ik:pwPW01__2A7EHXd0e7fBbw@cis_db1.areso.pro:3306/my_6f1kv1sa\",\n      \"2025-09-10 01:43:49\",\n      0\n    ],\n    \"068c12fe-619e-7ee5-8000-94ec841251e4\": [\n      \"my_4frrgqae\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_597fj1qx:pwPW01__YQytxrIBXGluzD@cis_db1.areso.pro:3306/my_4frrgqae\",\n      \"2025-09-10 07:59:45\",\n      0\n    ],\n    \"068c15c5-2b78-71a4-8000-0ac820403717\": [\n      \"my_z0fba9fq\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_eu3unur4:pwPW01__F5uKetmhWE2lW3@cis_db1.areso.pro:3306/my_z0fba9fq\",\n      \"2025-09-10 11:09:18\",\n      0\n    ],\n    \"068c15c5-39b8-7cc3-8000-828aea046070\": [\n      \"my_2wdqn6vz\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_gl9aaskp:pwPW01__mBwzI3yVCEdCVx@cis_db1.areso.pro:3306/my_2wdqn6vz\",\n      \"2025-09-10 11:09:29\",\n      0\n    ],\n    \"068c15c8-f2ab-757d-8000-6ca5dd90128c\": [\n      \"my_utrtzf9s\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_iw0jzri4:pwPW01__bk7N0uB0stiCin@cis_db1.areso.pro:3306/my_utrtzf9s\",\n      \"2025-09-10 11:10:19\",\n      0\n    ],\n    \"068c171e-bc3d-784f-8000-e3a223ca0f71\": [\n      \"my_96g2cgy3\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_zyurmnnb:pwPW01__2am8aQU8p3T9lu@cis_db1.areso.pro:3306/my_96g2cgy3\",\n      \"2025-09-10 12:41:27\",\n      0\n    ],\n    \"068c17f9-f072-7243-8000-f364000e0ea7\": [\n      \"my_3ckvg1z1\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_3c0yq1d3:pwPW01__aXKw6WbHA74An8@cis_db1.areso.pro:3306/my_3ckvg1z1\",\n      \"2025-09-10 13:39:54\",\n      0\n    ],\n    \"068c17f9-fc72-783a-8000-835ee2dfed2b\": [\n      \"my_6gvtdboq\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_no3mzmwu:pwPW01__jctUE5KsOfFAii@cis_db1.areso.pro:3306/my_6gvtdboq\",\n      \"2025-09-10 13:40:05\",\n      0\n    ],\n    \"068c17fd-9685-75a6-8000-aac93e5de48a\": [\n      \"my_lz5wiva5\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_a4at0aqi:pwPW01__FA9UttUmoA0PLp@cis_db1.areso.pro:3306/my_lz5wiva5\",\n      \"2025-09-10 13:40:52\",\n      0\n    ],\n    \"068c1808-8dae-708f-8000-3a035f9dd349\": [\n      \"my_tth9zwgc\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_267ej1a2:pwPW01__C9RAnomfoeEJLP@cis_db1.areso.pro:3306/my_tth9zwgc\",\n      \"2025-09-10 13:43:48\",\n      0\n    ],\n    \"068c1813-017a-7222-8000-41f4b47aa74e\": [\n      \"my_bwbfxax9\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_3ucabimk:pwPW01__eoSM42NPv5NY3t@cis_db1.areso.pro:3306/my_bwbfxax9\",\n      \"2025-09-10 13:46:35\",\n      0\n    ],\n    \"068c1837-f0bf-70ec-8000-a83ce1bacf8e\": [\n      \"my_817xa5kt\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_k864xa5l:pwPW01__7zU9wmd4yHbNmD@cis_db1.areso.pro:3306/my_817xa5kt\",\n      \"2025-09-10 13:56:26\",\n      0\n    ],\n    \"068c183b-94aa-71f3-8000-13d5b7ee54cf\": [\n      \"my_ygnn9o48\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_mvm8v78v:pwPW01__u5oc49ExbdrDDa@cis_db1.areso.pro:3306/my_ygnn9o48\",\n      \"2025-09-10 13:57:23\",\n      0\n    ],\n    \"068c183f-5771-7101-8000-7ec6569085fe\": [\n      \"my_tguo3qbo\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_y7rgdl5q:pwPW01__g345Ed5NiZ9DYu@cis_db1.areso.pro:3306/my_tguo3qbo\",\n      \"2025-09-10 13:58:23\",\n      0\n    ],\n    \"068c229e-1d33-7111-8000-e481da244928\": [\n      \"my_v85m33l5\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_2lh52cel:pwPW01__0lJeX9S8S6Luyv@cis_db1.areso.pro:3306/my_v85m33l5\",\n      \"2025-09-11 01:46:21\",\n      0\n    ],\n    \"068c229e-dd86-7e3e-8000-65bc58c48269\": [\n      \"my_ojlpmpty\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_903ssvgj:pwPW01__NlKbyknHjpZMBi@cis_db1.areso.pro:3306/my_ojlpmpty\",\n      \"2025-09-11 01:46:32\",\n      0\n    ],\n    \"068c37a5-50e2-71c3-8000-c6c48e135df6\": [\n      \"my_089woud6\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_mfwxdivw:pwPW01__narHejsOcFqZDy@cis_db1.areso.pro:3306/my_089woud6\",\n      \"2025-09-12 01:41:52\",\n      0\n    ],\n    \"068c37a6-142c-73ff-8000-df58f954e498\": [\n      \"my_bdkh4f37\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_702w9wn7:pwPW01__GMldbqHv6TN051@cis_db1.areso.pro:3306/my_bdkh4f37\",\n      \"2025-09-12 01:42:04\",\n      0\n    ],\n    \"068c4cae-4057-7381-8000-a9a66871fb65\": [\n      \"my_8ubkc2iq\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_alp5q1b4:pwPW01__w1OfpMpUZmvZzP@cis_db1.areso.pro:3306/my_8ubkc2iq\",\n      \"2025-09-13 01:37:51\",\n      0\n    ],\n    \"068c4caf-019d-7d2e-8000-c4463d43bfa8\": [\n      \"my_ork4n57m\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_3spqkwt7:pwPW01__2vMWegHdS2hHTf@cis_db1.areso.pro:3306/my_ork4n57m\",\n      \"2025-09-13 01:38:02\",\n      0\n    ],\n    \"068c61f4-c396-7cd7-8000-b797ddd0242f\": [\n      \"my_1ppluoor\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_02kr1tav:pwPW01__E5SibZagMcNgeq@cis_db1.areso.pro:3306/my_1ppluoor\",\n      \"2025-09-14 01:50:15\",\n      0\n    ],\n    \"068c61f5-e74c-7307-8000-836942eea271\": [\n      \"my_h6ak5iee\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_ha21izu5:pwPW01__W28D5ZI0NO0MxC@cis_db1.areso.pro:3306/my_h6ak5iee\",\n      \"2025-09-14 01:50:32\",\n      0\n    ],\n    \"068c6d07-053e-79d0-8000-378a6d0c258c\": [\n      \"my_7dx29heh\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_zjogds7j:pwPW01__lVcfj4sRYpm69z@cis_db1.areso.pro:3306/my_7dx29heh\",\n      \"2025-09-14 14:26:04\",\n      0\n    ],\n    \"068c6d07-19c2-74f0-8000-1bdf412189c6\": [\n      \"my_6njr0fn1\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_dbquqft8:pwPW01__4fw9rLHi7tpLZy@cis_db1.areso.pro:3306/my_6njr0fn1\",\n      \"2025-09-14 14:26:14\",\n      0\n    ],\n    \"068c6d0a-65e5-73c2-8000-fa447d353973\": [\n      \"my_9exurlmf\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_mal0v3ez:pwPW01__O6SgTvMPjItFSD@cis_db1.areso.pro:3306/my_9exurlmf\",\n      \"2025-09-14 14:26:57\",\n      0\n    ],\n    \"068c6d0b-79c3-7d6d-8000-6ba177f8f3a4\": [\n      \"my_yfrt9d12\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_hqprtl8y:pwPW01__651NHlpt7jNVmZ@cis_db1.areso.pro:3306/my_yfrt9d12\",\n      \"2025-09-14 14:27:14\",\n      0\n    ],\n    \"068c6d16-77bc-764b-8000-ab349fdd0d62\": [\n      \"my_q4gnik87\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_9rab6b6w:pwPW01__38juxgjS1k0dPW@cis_db1.areso.pro:3306/my_q4gnik87\",\n      \"2025-09-14 14:30:10\",\n      0\n    ],\n    \"068c7055-014f-7305-8000-18d56ec1bbc3\": [\n      \"my_u8iea8r2\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_17be9xn3:pwPW01__duCJyWXOk3ELbM@cis_db1.areso.pro:3306/my_u8iea8r2\",\n      \"2025-09-14 18:11:39\",\n      0\n    ],\n    \"068c7712-9c59-7288-8000-884596894877\": [\n      \"my_o4p22xyi\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_1gr66uvw:pwPW01__GaWqsMnHnVUqaX@cis_db1.areso.pro:3306/my_o4p22xyi\",\n      \"2025-09-15 01:51:48\",\n      0\n    ],\n    \"068c7713-8f5f-789d-8000-91d172a5f742\": [\n      \"my_jsa4bcuc\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_6wpu206y:pwPW01__T9tcGcH9AYXBFx@cis_db1.areso.pro:3306/my_jsa4bcuc\",\n      \"2025-09-15 01:52:02\",\n      0\n    ],\n    \"068c8c09-d3fd-7633-8000-e20a669e0121\": [\n      \"my_kkutox0n\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_rwl4g374:pwPW01__8owQ8RJGXVa8M3@cis_db1.areso.pro:3306/my_kkutox0n\",\n      \"2025-09-16 01:43:04\",\n      0\n    ],\n    \"068c8c0a-8a16-7495-8000-c6def97f5afc\": [\n      \"my_21bwi4kc\",\n      \"CIS\",\n      \"created\",\n      \"mysql://user_dzo1xuvc:pwPW01__wSkk4nB5DyIGbx@cis_db1.areso.pro:3306/my_21bwi4kc\",\n      \"2025-09-16 01:43:15\",\n      0\n    ]\n  },\n  \"headers\": {\n    \"Access-Control-Allow-Methods\": [\n      \"POST\",\n      \"OPTIONS\"\n    ],\n    \"Access-Control-Allow-Origin\": \"*\",\n    \"Access-Control-Expose-Headers\": \"*\",\n    \"Content-Type\": \"application/json; charset=utf-8\"\n  },\n  \"status\": 200\n}\n",
+          "time" : {
+            "start" : 1757987111537,
+            "stop" : 1757987111538,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "2e9d93ae67745117",
+      "name" : "Screenshot 2025-09-16 01:45:16.761525",
+      "source" : "2e9d93ae67745117.png",
+      "type" : "image/png",
+      "size" : 186198
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1757987116763,
+      "stop" : 1757987116825,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfilePage"
+  }, {
+    "name" : "host",
+    "value" : "runnervmf4ws1"
+  }, {
+    "name" : "thread",
+    "value" : "2671-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 283,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 283
+      },
+      "items" : [ {
+        "uid" : "28f1c242e00ecd0c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/503//#testresult/28f1c242e00ecd0c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1757901257304,
+          "stop" : 1757901264955,
+          "duration" : 7651
+        }
+      }, {
+        "uid" : "d3a9bdecfd19ec97",
+        "reportUrl" : "https://lambotik.github.io/Oblache/502//#testresult/d3a9bdecfd19ec97",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1757814738434,
+          "stop" : 1757814746257,
+          "duration" : 7823
+        }
+      }, {
+        "uid" : "74507021f42d17da",
+        "reportUrl" : "https://lambotik.github.io/Oblache/501//#testresult/74507021f42d17da",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1757727610107,
+          "stop" : 1757727617224,
+          "duration" : 7117
+        }
+      }, {
+        "uid" : "d1b37911ee27bbbf",
+        "reportUrl" : "https://lambotik.github.io/Oblache/500//#testresult/d1b37911ee27bbbf",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find elements by locator ('xpath', '//tbody[@id=\"tbody_dbs\"]/tr')",
+        "time" : {
+          "start" : 1757641448893,
+          "stop" : 1757641454826,
+          "duration" : 5933
+        }
+      }, {
+        "uid" : "dfee0bd6485e16ba",
+        "reportUrl" : "https://lambotik.github.io/Oblache/499//#testresult/dfee0bd6485e16ba",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1757555292318,
+          "stop" : 1757555299412,
+          "duration" : 7094
+        }
+      }, {
+        "uid" : "b8d887cdb78e18ab",
+        "reportUrl" : "https://lambotik.github.io/Oblache/498//#testresult/b8d887cdb78e18ab",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1757468719583,
+          "stop" : 1757468727157,
+          "duration" : 7574
+        }
+      }, {
+        "uid" : "a9b03203c558806a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/497//#testresult/a9b03203c558806a",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id = \"menu_button_databases\"]')\nStacktrace:\n#0 0x55b5c366d08a <unknown>\n#1 0x55b5c310ca70 <unknown>\n#2 0x55b5c315e907 <unknown>\n#3 0x55b5c315eb01 <unknown>\n#4 0x55b5c31acd54 <unknown>\n#5 0x55b5c318440d <unknown>\n#6 0x55b5c31aa14f <unknown>\n#7 0x55b5c31841b3 <unknown>\n#8 0x55b5c315059b <unknown>\n#9 0x55b5c3151971 <unknown>\n#10 0x55b5c363225b <unknown>\n#11 0x55b5c3635fa9 <unknown>\n#12 0x55b5c3619339 <unknown>\n#13 0x55b5c3636b58 <unknown>\n#14 0x55b5c35fdc1f <unknown>\n#15 0x55b5c365a118 <unknown>\n#16 0x55b5c365a2f6 <unknown>\n#17 0x55b5c366c066 <unknown>\n#18 0x7f37adc9caa4 <unknown>\n#19 0x7f37add29c3c <unknown>",
+        "time" : {
+          "start" : 1757382479734,
+          "stop" : 1757382484861,
+          "duration" : 5127
+        }
+      }, {
+        "uid" : "3e43254bd6423fef",
+        "reportUrl" : "https://lambotik.github.io/Oblache/496//#testresult/3e43254bd6423fef",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id = \"menu_button_databases\"]')\nStacktrace:\n#0 0x55fb7fb0b08a <unknown>\n#1 0x55fb7f5aaa70 <unknown>\n#2 0x55fb7f5fc907 <unknown>\n#3 0x55fb7f5fcb01 <unknown>\n#4 0x55fb7f64ad54 <unknown>\n#5 0x55fb7f62240d <unknown>\n#6 0x55fb7f64814f <unknown>\n#7 0x55fb7f6221b3 <unknown>\n#8 0x55fb7f5ee59b <unknown>\n#9 0x55fb7f5ef971 <unknown>\n#10 0x55fb7fad025b <unknown>\n#11 0x55fb7fad3fa9 <unknown>\n#12 0x55fb7fab7339 <unknown>\n#13 0x55fb7fad4b58 <unknown>\n#14 0x55fb7fa9bc1f <unknown>\n#15 0x55fb7faf8118 <unknown>\n#16 0x55fb7faf82f6 <unknown>\n#17 0x55fb7fb0a066 <unknown>\n#18 0x7f964da9caa4 <unknown>\n#19 0x7f964db29c3c <unknown>",
+        "time" : {
+          "start" : 1757296335176,
+          "stop" : 1757296340300,
+          "duration" : 5124
+        }
+      }, {
+        "uid" : "f14feb5b8e55d099",
+        "reportUrl" : "https://lambotik.github.io/Oblache/495//#testresult/f14feb5b8e55d099",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find elements by locator ('xpath', '//tbody[@id=\"tbody_dbs\"]/tr')",
+        "time" : {
+          "start" : 1757209948747,
+          "stop" : 1757209954812,
+          "duration" : 6065
+        }
+      }, {
+        "uid" : "5e198c0fd33dd4f0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/494//#testresult/5e198c0fd33dd4f0",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1757123049976,
+          "stop" : 1757123056979,
+          "duration" : 7003
+        }
+      }, {
+        "uid" : "784cbb9054e383a0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/493//#testresult/784cbb9054e383a0",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1757036834197,
+          "stop" : 1757036841896,
+          "duration" : 7699
+        }
+      }, {
+        "uid" : "1e8af327e5a107e3",
+        "reportUrl" : "https://lambotik.github.io/Oblache/492//#testresult/1e8af327e5a107e3",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1756950318985,
+          "stop" : 1756950326616,
+          "duration" : 7631
+        }
+      }, {
+        "uid" : "9b5595af73678d70",
+        "reportUrl" : "https://lambotik.github.io/Oblache/491//#testresult/9b5595af73678d70",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1756863866420,
+          "stop" : 1756863873600,
+          "duration" : 7180
+        }
+      }, {
+        "uid" : "1bb8c72f06e34970",
+        "reportUrl" : "https://lambotik.github.io/Oblache/490//#testresult/1bb8c72f06e34970",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1756777887340,
+          "stop" : 1756777894275,
+          "duration" : 6935
+        }
+      }, {
+        "uid" : "ac9d6c6413a94739",
+        "reportUrl" : "https://lambotik.github.io/Oblache/489//#testresult/ac9d6c6413a94739",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1756692338019,
+          "stop" : 1756692346049,
+          "duration" : 8030
+        }
+      }, {
+        "uid" : "58b57d6bd3b0a131",
+        "reportUrl" : "https://lambotik.github.io/Oblache/488//#testresult/58b57d6bd3b0a131",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_copypaste\"]')",
+        "time" : {
+          "start" : 1756605338318,
+          "stop" : 1756605345914,
+          "duration" : 7596
+        }
+      }, {
+        "uid" : "a9b3b98fdf78b61d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/487//#testresult/a9b3b98fdf78b61d",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id = \"menu_button_databases\"]')\nStacktrace:\n#0 0x5606511b402a <unknown>\n#1 0x560650c53a70 <unknown>\n#2 0x560650ca5907 <unknown>\n#3 0x560650ca5b01 <unknown>\n#4 0x560650cf3d54 <unknown>\n#5 0x560650ccb40d <unknown>\n#6 0x560650cf114f <unknown>\n#7 0x560650ccb1b3 <unknown>\n#8 0x560650c9759b <unknown>\n#9 0x560650c98971 <unknown>\n#10 0x5606511791fb <unknown>\n#11 0x56065117cf49 <unknown>\n#12 0x5606511602d9 <unknown>\n#13 0x56065117daf8 <unknown>\n#14 0x560651144bbf <unknown>\n#15 0x5606511a10b8 <unknown>\n#16 0x5606511a1296 <unknown>\n#17 0x5606511b3006 <unknown>\n#18 0x7f8fff49caa4 <unknown>\n#19 0x7f8fff529c3c <unknown>",
+        "time" : {
+          "start" : 1756518217023,
+          "stop" : 1756518222147,
+          "duration" : 5124
+        }
+      }, {
+        "uid" : "4d13595a732769c5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/486//#testresult/4d13595a732769c5",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find elements by locator ('xpath', '//tbody[@id=\"tbody_dbs\"]/tr')",
+        "time" : {
+          "start" : 1756432137416,
+          "stop" : 1756432143457,
+          "duration" : 6041
+        }
+      }, {
+        "uid" : "febff90244bad41c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/485//#testresult/febff90244bad41c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find elements by locator ('xpath', '//tbody[@id=\"tbody_dbs\"]/tr')",
+        "time" : {
+          "start" : 1756345744350,
+          "stop" : 1756345750380,
+          "duration" : 6030
+        }
+      }, {
+        "uid" : "b05feb5ba2f0d13d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/484//#testresult/b05feb5ba2f0d13d",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find elements by locator ('xpath', '//tbody[@id=\"tbody_dbs\"]/tr')",
+        "time" : {
+          "start" : 1756259388038,
+          "stop" : 1756259394200,
+          "duration" : 6162
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3a994dc3e197e68c.json",
+  "parameterValues" : [ ]
+}
