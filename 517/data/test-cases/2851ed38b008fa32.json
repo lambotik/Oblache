@@ -1,0 +1,408 @@
+{
+  "uid" : "2851ed38b008fa32",
+  "name" : "POST db_create_with_wrong_region.",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_db_create_with_wrong_values_region",
+  "historyId" : "856aa6401c668dd622a03a1da3937968",
+  "time" : {
+    "start" : 1759110502424,
+    "stop" : 1759110502779,
+    "duration" : 355
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "post_db_create_wrong_value_region",
+      "time" : {
+        "start" : 1759110502424,
+        "stop" : 1759110502779,
+        "duration" : 355
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_create",
+        "time" : {
+          "start" : 1759110502779,
+          "stop" : 1759110502779,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1759110502779,
+          "stop" : 1759110502779,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'179032fa-0dab-4cb9-88b2-c73b5780f9d8'}}",
+          "time" : {
+            "start" : 1759110502779,
+            "stop" : 1759110502779,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"dbtype\": 3, \"dbversion\": 5, \"env\": 3, \"region\": 42}",
+          "time" : {
+            "start" : 1759110502779,
+            "stop" : 1759110502779,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1759110502779,
+          "stop" : 1759110502779,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 400",
+          "time" : {
+            "start" : 1759110502779,
+            "stop" : 1759110502779,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n    \"content\": \"error: region isn't found or isn't available for order\"\n}\n",
+          "time" : {
+            "start" : 1759110502779,
+            "stop" : 1759110502779,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1759110502779,
+        "stop" : 1759110502779,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check and compare result request with expected value by key:\nResponse: <Response [400]>\nKey: content\nValue: error: region isn't found or isn't available for order",
+      "time" : {
+        "start" : 1759110502779,
+        "stop" : 1759110502779,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "runnervm3ublj"
+  }, {
+    "name" : "thread",
+    "value" : "2553-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 257,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 45,
+        "unknown" : 0,
+        "total" : 302
+      },
+      "items" : [ {
+        "uid" : "a34b23e8b0e13151",
+        "reportUrl" : "https://lambotik.github.io/Oblache/516//#testresult/a34b23e8b0e13151",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759024462162,
+          "stop" : 1759024462605,
+          "duration" : 443
+        }
+      }, {
+        "uid" : "10bbeae49f35e518",
+        "reportUrl" : "https://lambotik.github.io/Oblache/515//#testresult/10bbeae49f35e518",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758937270424,
+          "stop" : 1758937270846,
+          "duration" : 422
+        }
+      }, {
+        "uid" : "4465f22cec5ff83e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/514//#testresult/4465f22cec5ff83e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758851125122,
+          "stop" : 1758851125479,
+          "duration" : 357
+        }
+      }, {
+        "uid" : "89f243f1b9c6ffc9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/513//#testresult/89f243f1b9c6ffc9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758764783851,
+          "stop" : 1758764784222,
+          "duration" : 371
+        }
+      }, {
+        "uid" : "c1ae815201dd3c5a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/512//#testresult/c1ae815201dd3c5a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758678316479,
+          "stop" : 1758678316786,
+          "duration" : 307
+        }
+      }, {
+        "uid" : "17be870d43344691",
+        "reportUrl" : "https://lambotik.github.io/Oblache/511//#testresult/17be870d43344691",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758591850498,
+          "stop" : 1758591851020,
+          "duration" : 522
+        }
+      }, {
+        "uid" : "343700ee35830061",
+        "reportUrl" : "https://lambotik.github.io/Oblache/510//#testresult/343700ee35830061",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758506015285,
+          "stop" : 1758506015786,
+          "duration" : 501
+        }
+      }, {
+        "uid" : "e051768b03afae72",
+        "reportUrl" : "https://lambotik.github.io/Oblache/509//#testresult/e051768b03afae72",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758419616173,
+          "stop" : 1758419616546,
+          "duration" : 373
+        }
+      }, {
+        "uid" : "ee13f0bd8cef1917",
+        "reportUrl" : "https://lambotik.github.io/Oblache/508//#testresult/ee13f0bd8cef1917",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758332468417,
+          "stop" : 1758332468777,
+          "duration" : 360
+        }
+      }, {
+        "uid" : "125ee20074460c10",
+        "reportUrl" : "https://lambotik.github.io/Oblache/507//#testresult/125ee20074460c10",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758246389798,
+          "stop" : 1758246390273,
+          "duration" : 475
+        }
+      }, {
+        "uid" : "38547598a317544d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/506//#testresult/38547598a317544d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758159790679,
+          "stop" : 1758159790985,
+          "duration" : 306
+        }
+      }, {
+        "uid" : "de4cb574413e42fc",
+        "reportUrl" : "https://lambotik.github.io/Oblache/505//#testresult/de4cb574413e42fc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758073374848,
+          "stop" : 1758073375164,
+          "duration" : 316
+        }
+      }, {
+        "uid" : "82dbbe749aa0b50",
+        "reportUrl" : "https://lambotik.github.io/Oblache/504//#testresult/82dbbe749aa0b50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757986985669,
+          "stop" : 1757986985981,
+          "duration" : 312
+        }
+      }, {
+        "uid" : "6253d6822306865d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/503//#testresult/6253d6822306865d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757901114346,
+          "stop" : 1757901114771,
+          "duration" : 425
+        }
+      }, {
+        "uid" : "38e7ddc9ab48d211",
+        "reportUrl" : "https://lambotik.github.io/Oblache/502//#testresult/38e7ddc9ab48d211",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757814624111,
+          "stop" : 1757814624751,
+          "duration" : 640
+        }
+      }, {
+        "uid" : "d3443128880d2b87",
+        "reportUrl" : "https://lambotik.github.io/Oblache/501//#testresult/d3443128880d2b87",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757727473118,
+          "stop" : 1757727473423,
+          "duration" : 305
+        }
+      }, {
+        "uid" : "62d5926a03c041dd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/500//#testresult/62d5926a03c041dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757641314297,
+          "stop" : 1757641314773,
+          "duration" : 476
+        }
+      }, {
+        "uid" : "281bcfe388a65936",
+        "reportUrl" : "https://lambotik.github.io/Oblache/499//#testresult/281bcfe388a65936",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757555182977,
+          "stop" : 1757555183297,
+          "duration" : 320
+        }
+      }, {
+        "uid" : "ff3591e120c20db",
+        "reportUrl" : "https://lambotik.github.io/Oblache/498//#testresult/ff3591e120c20db",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757468620523,
+          "stop" : 1757468620952,
+          "duration" : 429
+        }
+      }, {
+        "uid" : "10653297ca10f479",
+        "reportUrl" : "https://lambotik.github.io/Oblache/497//#testresult/10653297ca10f479",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Incorrect status code: 502",
+        "time" : {
+          "start" : 1757382415882,
+          "stop" : 1757382416158,
+          "duration" : 276
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "2851ed38b008fa32.json",
+  "parameterValues" : [ ]
+}
