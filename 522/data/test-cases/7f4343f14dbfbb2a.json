@@ -1,0 +1,407 @@
+{
+  "uid" : "7f4343f14dbfbb2a",
+  "name" : "POST checking ports_len negative symbols",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_checking_ports_len_negative_symbols",
+  "historyId" : "381cac88cc6f55198cae5b20cb94989e",
+  "time" : {
+    "start" : 1759542003116,
+    "stop" : 1759542003546,
+    "duration" : 430
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "post_create_docker_container",
+      "time" : {
+        "start" : 1759542003116,
+        "stop" : 1759542003545,
+        "duration" : 429
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /container_create",
+        "time" : {
+          "start" : 1759542003545,
+          "stop" : 1759542003545,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1759542003545,
+          "stop" : 1759542003545,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {'c9e25789-6a72-4786-99d7-dc84816b46f6'}}",
+          "time" : {
+            "start" : 1759542003545,
+            "stop" : 1759542003545,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "Body: {\"docker_image\": \"nginx\", \"int_ports\": f\"qwert\", \"env\": 3, \"region\": 3}",
+          "time" : {
+            "start" : 1759542003545,
+            "stop" : 1759542003545,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1759542003545,
+          "stop" : 1759542003545,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 400",
+          "time" : {
+            "start" : 1759542003545,
+            "stop" : 1759542003545,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "JSON: {\n    \"msg\": \"msg[]: ports range isn't accepted\"\n}\n",
+          "time" : {
+            "start" : 1759542003545,
+            "stop" : 1759542003545,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert status code: 400 == Response status code: 400",
+      "time" : {
+        "start" : 1759542003545,
+        "stop" : 1759542003545,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Compare result request with expected value:\nResponse: <Response [400]>\nField name: msg\nValue: msg[]: ports range isn't accepted",
+      "time" : {
+        "start" : 1759542003545,
+        "stop" : 1759542003545,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "runnervm3ublj"
+  }, {
+    "name" : "thread",
+    "value" : "2640-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 210,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 97,
+        "unknown" : 0,
+        "total" : 307
+      },
+      "items" : [ {
+        "uid" : "a6855dbec6ab205a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/521//#testresult/a6855dbec6ab205a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759455812201,
+          "stop" : 1759455812554,
+          "duration" : 353
+        }
+      }, {
+        "uid" : "4127eedffdc3aab",
+        "reportUrl" : "https://lambotik.github.io/Oblache/520//#testresult/4127eedffdc3aab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759369414436,
+          "stop" : 1759369414784,
+          "duration" : 348
+        }
+      }, {
+        "uid" : "4aff5b187021ede4",
+        "reportUrl" : "https://lambotik.github.io/Oblache/519//#testresult/4aff5b187021ede4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759283744620,
+          "stop" : 1759283745117,
+          "duration" : 497
+        }
+      }, {
+        "uid" : "94acbc2f2fdf67eb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/518//#testresult/94acbc2f2fdf67eb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759196609938,
+          "stop" : 1759196610301,
+          "duration" : 363
+        }
+      }, {
+        "uid" : "25c47a21ec1d6290",
+        "reportUrl" : "https://lambotik.github.io/Oblache/517//#testresult/25c47a21ec1d6290",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759110509105,
+          "stop" : 1759110509456,
+          "duration" : 351
+        }
+      }, {
+        "uid" : "cd44a75fcb42c934",
+        "reportUrl" : "https://lambotik.github.io/Oblache/516//#testresult/cd44a75fcb42c934",
+        "status" : "passed",
+        "time" : {
+          "start" : 1759024469855,
+          "stop" : 1759024470270,
+          "duration" : 415
+        }
+      }, {
+        "uid" : "803d140cb9c5aab1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/515//#testresult/803d140cb9c5aab1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758937278075,
+          "stop" : 1758937278500,
+          "duration" : 425
+        }
+      }, {
+        "uid" : "e22bc73b346a3b50",
+        "reportUrl" : "https://lambotik.github.io/Oblache/514//#testresult/e22bc73b346a3b50",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758851131810,
+          "stop" : 1758851132166,
+          "duration" : 356
+        }
+      }, {
+        "uid" : "4b73ebc95c8ad8bb",
+        "reportUrl" : "https://lambotik.github.io/Oblache/513//#testresult/4b73ebc95c8ad8bb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758764790316,
+          "stop" : 1758764790686,
+          "duration" : 370
+        }
+      }, {
+        "uid" : "e8b01557c604b66c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/512//#testresult/e8b01557c604b66c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758678322560,
+          "stop" : 1758678322867,
+          "duration" : 307
+        }
+      }, {
+        "uid" : "863cad15b0c5eebf",
+        "reportUrl" : "https://lambotik.github.io/Oblache/511//#testresult/863cad15b0c5eebf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758591859246,
+          "stop" : 1758591859735,
+          "duration" : 489
+        }
+      }, {
+        "uid" : "2505d2a5c00d9550",
+        "reportUrl" : "https://lambotik.github.io/Oblache/510//#testresult/2505d2a5c00d9550",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758506024102,
+          "stop" : 1758506024589,
+          "duration" : 487
+        }
+      }, {
+        "uid" : "6808145bed70250f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/509//#testresult/6808145bed70250f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758419623599,
+          "stop" : 1758419623988,
+          "duration" : 389
+        }
+      }, {
+        "uid" : "fbb2279b42b747f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/508//#testresult/fbb2279b42b747f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758332474855,
+          "stop" : 1758332475216,
+          "duration" : 361
+        }
+      }, {
+        "uid" : "2c0ec08e532aabc5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/507//#testresult/2c0ec08e532aabc5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758246397986,
+          "stop" : 1758246398467,
+          "duration" : 481
+        }
+      }, {
+        "uid" : "ae47156148a6cb07",
+        "reportUrl" : "https://lambotik.github.io/Oblache/506//#testresult/ae47156148a6cb07",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758159796553,
+          "stop" : 1758159796867,
+          "duration" : 314
+        }
+      }, {
+        "uid" : "e377e1bde0cd1fea",
+        "reportUrl" : "https://lambotik.github.io/Oblache/505//#testresult/e377e1bde0cd1fea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1758073380723,
+          "stop" : 1758073381037,
+          "duration" : 314
+        }
+      }, {
+        "uid" : "f9fa93eda603fd9b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/504//#testresult/f9fa93eda603fd9b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757986991499,
+          "stop" : 1757986991803,
+          "duration" : 304
+        }
+      }, {
+        "uid" : "c719d89c14e5f38",
+        "reportUrl" : "https://lambotik.github.io/Oblache/503//#testresult/c719d89c14e5f38",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757901121777,
+          "stop" : 1757901122206,
+          "duration" : 429
+        }
+      }, {
+        "uid" : "a4c7dcbfa0cdcc03",
+        "reportUrl" : "https://lambotik.github.io/Oblache/502//#testresult/a4c7dcbfa0cdcc03",
+        "status" : "passed",
+        "time" : {
+          "start" : 1757814632828,
+          "stop" : 1757814633335,
+          "duration" : 507
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7f4343f14dbfbb2a.json",
+  "parameterValues" : [ ]
+}
