@@ -1,0 +1,404 @@
+{
+  "uid" : "884216e38c4c7e96",
+  "name" : "POST db_list_with_filter",
+  "fullName" : "tests_api.test_bd.TestPOST#test_post_db_list_with_filter",
+  "historyId" : "1404cf75602dc5c195df0f6e9ffb5ba3",
+  "time" : {
+    "start" : 1760060764447,
+    "stop" : 1760060764793,
+    "duration" : 346
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL There are databases that need to be deleted manually.\n\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7f91cd42ffb0>\n\n    @allure.title('POST db_list_with_filter')\n    @pytest.mark.xfail(reason='There are databases that need to be deleted manually.')\n    def test_post_db_list_with_filter(self):\n        list_db = API.post_db_list(token=TestPOST.token)\n>       json_list_db = json.loads(list_db.text)\n\ntests_api/test_bd.py:305: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/json/decoder.py:338: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x7f91ce656990>\ns = '<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/json/decoder.py:356: JSONDecodeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "XFAIL There are databases that need to be deleted manually.\n\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "statusTrace" : "self = <tests_api.test_bd.TestPOST object at 0x7f91cd42ffb0>\n\n    @allure.title('POST db_list_with_filter')\n    @pytest.mark.xfail(reason='There are databases that need to be deleted manually.')\n    def test_post_db_list_with_filter(self):\n        list_db = API.post_db_list(token=TestPOST.token)\n>       json_list_db = json.loads(list_db.text)\n\ntests_api/test_bd.py:305: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/json/decoder.py:338: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0x7f91ce656990>\ns = '<html>\\r\\n<head><title>502 Bad Gateway</title></head>\\r\\n<body>\\r\\n<center><h1>502 Bad Gateway</h1></center>\\r\\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\\r\\n</body>\\r\\n</html>\\r\\n'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/json/decoder.py:356: JSONDecodeError",
+    "steps" : [ {
+      "name" : "post_db_list",
+      "time" : {
+        "start" : 1760060764447,
+        "stop" : 1760060764793,
+        "duration" : 346
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Endpoint: /db_list",
+        "time" : {
+          "start" : 1760060764792,
+          "stop" : 1760060764792,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "Request:",
+        "time" : {
+          "start" : 1760060764793,
+          "stop" : 1760060764793,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Headers: {'Content-Type': 'application/json', 'Authorization': {None}}",
+          "time" : {
+            "start" : 1760060764793,
+            "stop" : 1760060764793,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        }, {
+          "name" : "Body: None",
+          "time" : {
+            "start" : 1760060764793,
+            "stop" : 1760060764793,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : true,
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "Response:",
+        "time" : {
+          "start" : 1760060764793,
+          "stop" : 1760060764793,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Status code: 502",
+          "time" : {
+            "start" : 1760060764793,
+            "stop" : 1760060764793,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        }, {
+          "name" : "JSON: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n",
+          "time" : {
+            "start" : 1760060764793,
+            "stop" : 1760060764793,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "hasContent" : false,
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : true,
+        "stepsCount" : 2,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 8,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='There are databases that need to be deleted manually.')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_api"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestPOST"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwhb2z"
+  }, {
+    "name" : "thread",
+    "value" : "2580-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_api.test_bd"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 300,
+        "passed" : 13,
+        "unknown" : 0,
+        "total" : 313
+      },
+      "items" : [ {
+        "uid" : "ce53ac041746bba0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/527//#testresult/ce53ac041746bba0",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1759974305814,
+          "stop" : 1759974306094,
+          "duration" : 280
+        }
+      }, {
+        "uid" : "b7decce44afc1767",
+        "reportUrl" : "https://lambotik.github.io/Oblache/526//#testresult/b7decce44afc1767",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1759887866124,
+          "stop" : 1759887866450,
+          "duration" : 326
+        }
+      }, {
+        "uid" : "73f7f1cfca149788",
+        "reportUrl" : "https://lambotik.github.io/Oblache/525//#testresult/73f7f1cfca149788",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1759801443840,
+          "stop" : 1759801444114,
+          "duration" : 274
+        }
+      }, {
+        "uid" : "e6b1873e50ba4e3f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/524//#testresult/e6b1873e50ba4e3f",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+        "time" : {
+          "start" : 1759715232094,
+          "stop" : 1759715232417,
+          "duration" : 323
+        }
+      }, {
+        "uid" : "4e9ed9b6e1765cf5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/523//#testresult/4e9ed9b6e1765cf5",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1759629208553,
+          "stop" : 1759629209460,
+          "duration" : 907
+        }
+      }, {
+        "uid" : "b57c532e91233afe",
+        "reportUrl" : "https://lambotik.github.io/Oblache/522//#testresult/b57c532e91233afe",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1759541997130,
+          "stop" : 1759541998034,
+          "duration" : 904
+        }
+      }, {
+        "uid" : "92193b77286a7b05",
+        "reportUrl" : "https://lambotik.github.io/Oblache/521//#testresult/92193b77286a7b05",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1759455806828,
+          "stop" : 1759455807615,
+          "duration" : 787
+        }
+      }, {
+        "uid" : "1735dafa62bf13b1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/520//#testresult/1735dafa62bf13b1",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1759369409117,
+          "stop" : 1759369409868,
+          "duration" : 751
+        }
+      }, {
+        "uid" : "788454bbc7aed687",
+        "reportUrl" : "https://lambotik.github.io/Oblache/519//#testresult/788454bbc7aed687",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1759283737476,
+          "stop" : 1759283738631,
+          "duration" : 1155
+        }
+      }, {
+        "uid" : "3c08b094ae35cd77",
+        "reportUrl" : "https://lambotik.github.io/Oblache/518//#testresult/3c08b094ae35cd77",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1759196604578,
+          "stop" : 1759196605366,
+          "duration" : 788
+        }
+      }, {
+        "uid" : "aa5b3185f3fba8c6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/517//#testresult/aa5b3185f3fba8c6",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1759110503635,
+          "stop" : 1759110504442,
+          "duration" : 807
+        }
+      }, {
+        "uid" : "8851b58de1e36e27",
+        "reportUrl" : "https://lambotik.github.io/Oblache/516//#testresult/8851b58de1e36e27",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1759024463556,
+          "stop" : 1759024464512,
+          "duration" : 956
+        }
+      }, {
+        "uid" : "a48889cb863f4e74",
+        "reportUrl" : "https://lambotik.github.io/Oblache/515//#testresult/a48889cb863f4e74",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1758937271824,
+          "stop" : 1758937272735,
+          "duration" : 911
+        }
+      }, {
+        "uid" : "709bc257c843bf1e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/514//#testresult/709bc257c843bf1e",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1758851126292,
+          "stop" : 1758851127076,
+          "duration" : 784
+        }
+      }, {
+        "uid" : "a6aac46345488962",
+        "reportUrl" : "https://lambotik.github.io/Oblache/513//#testresult/a6aac46345488962",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1758764785015,
+          "stop" : 1758764785774,
+          "duration" : 759
+        }
+      }, {
+        "uid" : "cf54057224972b33",
+        "reportUrl" : "https://lambotik.github.io/Oblache/512//#testresult/cf54057224972b33",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1758678317487,
+          "stop" : 1758678318152,
+          "duration" : 665
+        }
+      }, {
+        "uid" : "31402198e1ae09d7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/511//#testresult/31402198e1ae09d7",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1758591852161,
+          "stop" : 1758591853270,
+          "duration" : 1109
+        }
+      }, {
+        "uid" : "57c1d3cd5d5deee2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/510//#testresult/57c1d3cd5d5deee2",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1758506016976,
+          "stop" : 1758506018062,
+          "duration" : 1086
+        }
+      }, {
+        "uid" : "64d67e07701b3638",
+        "reportUrl" : "https://lambotik.github.io/Oblache/509//#testresult/64d67e07701b3638",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1758419617502,
+          "stop" : 1758419618372,
+          "duration" : 870
+        }
+      }, {
+        "uid" : "3a01728d14ced967",
+        "reportUrl" : "https://lambotik.github.io/Oblache/508//#testresult/3a01728d14ced967",
+        "status" : "skipped",
+        "statusDetails" : "XFAIL There are databases that need to be deleted manually.\n\nAssertionError: Incorrect status code: 500",
+        "time" : {
+          "start" : 1758332469505,
+          "stop" : 1758332470181,
+          "duration" : 676
+        }
+      } ]
+    },
+    "tags" : [ "@pytest.mark.xfail(reason='There are databases that need to be deleted manually.')" ]
+  },
+  "source" : "884216e38c4c7e96.json",
+  "parameterValues" : [ ]
+}
