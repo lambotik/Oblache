@@ -1,0 +1,443 @@
+{
+  "uid" : "ff806b0a88e02b77",
+  "name" : "test_check_title_of_static_table",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_check_title_of_static_table",
+  "historyId" : "eb2cea1546ad6874ff07a2bb88c686ae",
+  "time" : {
+    "start" : 1760406467666,
+    "stop" : 1760406473071,
+    "duration" : 5405
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55a03030bfba <unknown>\n#1 0x55a02fd906d0 <unknown>\n#2 0x55a02fde22aa <unknown>\n#3 0x55a02fde2541 <unknown>\n#4 0x55a02fe306c4 <unknown>\n#5 0x55a02fe07e5d <unknown>\n#6 0x55a02fe2db54 <unknown>\n#7 0x55a02fe07c03 <unknown>\n#8 0x55a02fdd47a8 <unknown>\n#9 0x55a02fdd5421 <unknown>\n#10 0x55a0302d0b28 <unknown>\n#11 0x55a0302d487f <unknown>\n#12 0x55a0302b8c49 <unknown>\n#13 0x55a0302d5405 <unknown>\n#14 0x55a03029e4ff <unknown>\n#15 0x55a0302f9258 <unknown>\n#16 0x55a0302f9432 <unknown>\n#17 0x55a03030afa3 <unknown>\n#18 0x7f9d07c9caa4 <unknown>\n#19 0x7f9d07d29c6c <unknown>",
+  "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7f39979f4740>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"70ea116d28dd095a229bba887188bf0c\")>\nauthorization_user = None\n\n    @allure.title('test_check_title_of_static_table')\n    def test_check_title_of_static_table(self, driver, authorization_user):\n        page = ProfilePage(driver)\n>       page.click_static_site_button()\n\ntests_ui/test_ui.py:75: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:40: in click_static_site_button\n    return self.element_is_present_and_clickable(self.locators.STATIC_BUTTON).click()\ntests_ui/base_page.py:28: in element_is_present_and_clickable\n    return (Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"70ea116d28dd095a229bba887188bf0c\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7f3997a72a20>\nmessage = 'Can\\'t find element by locator (\\'xpath\\', \\'//button[@id=\"menu_button_webpages\"]\\')'\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nE       Stacktrace:\nE       #0 0x55a03030bfba <unknown>\nE       #1 0x55a02fd906d0 <unknown>\nE       #2 0x55a02fde22aa <unknown>\nE       #3 0x55a02fde2541 <unknown>\nE       #4 0x55a02fe306c4 <unknown>\nE       #5 0x55a02fe07e5d <unknown>\nE       #6 0x55a02fe2db54 <unknown>\nE       #7 0x55a02fe07c03 <unknown>\nE       #8 0x55a02fdd47a8 <unknown>\nE       #9 0x55a02fdd5421 <unknown>\nE       #10 0x55a0302d0b28 <unknown>\nE       #11 0x55a0302d487f <unknown>\nE       #12 0x55a0302b8c49 <unknown>\nE       #13 0x55a0302d5405 <unknown>\nE       #14 0x55a03029e4ff <unknown>\nE       #15 0x55a0302f9258 <unknown>\nE       #16 0x55a0302f9432 <unknown>\nE       #17 0x55a03030afa3 <unknown>\nE       #18 0x7f9d07c9caa4 <unknown>\nE       #19 0x7f9d07d29c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1760406466874,
+      "stop" : 1760406467153,
+      "duration" : 279
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1760406467154,
+      "stop" : 1760406467665,
+      "duration" : 511
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1760406467154,
+        "stop" : 1760406467464,
+        "duration" : 310
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Login user",
+      "time" : {
+        "start" : 1760406467464,
+        "stop" : 1760406467665,
+        "duration" : 201
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1760406467464,
+          "stop" : 1760406467524,
+          "duration" : 60
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1760406467524,
+          "stop" : 1760406467571,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1760406467571,
+          "stop" : 1760406467662,
+          "duration" : 91
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/register.html",
+        "time" : {
+          "start" : 1760406467662,
+          "stop" : 1760406467665,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55a03030bfba <unknown>\n#1 0x55a02fd906d0 <unknown>\n#2 0x55a02fde22aa <unknown>\n#3 0x55a02fde2541 <unknown>\n#4 0x55a02fe306c4 <unknown>\n#5 0x55a02fe07e5d <unknown>\n#6 0x55a02fe2db54 <unknown>\n#7 0x55a02fe07c03 <unknown>\n#8 0x55a02fdd47a8 <unknown>\n#9 0x55a02fdd5421 <unknown>\n#10 0x55a0302d0b28 <unknown>\n#11 0x55a0302d487f <unknown>\n#12 0x55a0302b8c49 <unknown>\n#13 0x55a0302d5405 <unknown>\n#14 0x55a03029e4ff <unknown>\n#15 0x55a0302f9258 <unknown>\n#16 0x55a0302f9432 <unknown>\n#17 0x55a03030afa3 <unknown>\n#18 0x7f9d07c9caa4 <unknown>\n#19 0x7f9d07d29c6c <unknown>",
+    "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7f39979f4740>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"70ea116d28dd095a229bba887188bf0c\")>\nauthorization_user = None\n\n    @allure.title('test_check_title_of_static_table')\n    def test_check_title_of_static_table(self, driver, authorization_user):\n        page = ProfilePage(driver)\n>       page.click_static_site_button()\n\ntests_ui/test_ui.py:75: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:40: in click_static_site_button\n    return self.element_is_present_and_clickable(self.locators.STATIC_BUTTON).click()\ntests_ui/base_page.py:28: in element_is_present_and_clickable\n    return (Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"70ea116d28dd095a229bba887188bf0c\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7f3997a72a20>\nmessage = 'Can\\'t find element by locator (\\'xpath\\', \\'//button[@id=\"menu_button_webpages\"]\\')'\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nE       Stacktrace:\nE       #0 0x55a03030bfba <unknown>\nE       #1 0x55a02fd906d0 <unknown>\nE       #2 0x55a02fde22aa <unknown>\nE       #3 0x55a02fde2541 <unknown>\nE       #4 0x55a02fe306c4 <unknown>\nE       #5 0x55a02fe07e5d <unknown>\nE       #6 0x55a02fe2db54 <unknown>\nE       #7 0x55a02fe07c03 <unknown>\nE       #8 0x55a02fdd47a8 <unknown>\nE       #9 0x55a02fdd5421 <unknown>\nE       #10 0x55a0302d0b28 <unknown>\nE       #11 0x55a0302d487f <unknown>\nE       #12 0x55a0302b8c49 <unknown>\nE       #13 0x55a0302d5405 <unknown>\nE       #14 0x55a03029e4ff <unknown>\nE       #15 0x55a0302f9258 <unknown>\nE       #16 0x55a0302f9432 <unknown>\nE       #17 0x55a03030afa3 <unknown>\nE       #18 0x7f9d07c9caa4 <unknown>\nE       #19 0x7f9d07d29c6c <unknown>\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+    "steps" : [ {
+      "name" : "Click \"Static site\" button.",
+      "time" : {
+        "start" : 1760406467666,
+        "stop" : 1760406473070,
+        "duration" : 5404
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55a03030bfba <unknown>\n#1 0x55a02fd906d0 <unknown>\n#2 0x55a02fde22aa <unknown>\n#3 0x55a02fde2541 <unknown>\n#4 0x55a02fe306c4 <unknown>\n#5 0x55a02fe07e5d <unknown>\n#6 0x55a02fe2db54 <unknown>\n#7 0x55a02fe07c03 <unknown>\n#8 0x55a02fdd47a8 <unknown>\n#9 0x55a02fdd5421 <unknown>\n#10 0x55a0302d0b28 <unknown>\n#11 0x55a0302d487f <unknown>\n#12 0x55a0302b8c49 <unknown>\n#13 0x55a0302d5405 <unknown>\n#14 0x55a03029e4ff <unknown>\n#15 0x55a0302f9258 <unknown>\n#16 0x55a0302f9432 <unknown>\n#17 0x55a03030afa3 <unknown>\n#18 0x7f9d07c9caa4 <unknown>\n#19 0x7f9d07d29c6c <unknown>\n\n",
+      "statusTrace" : "  File \"/home/runner/work/Oblache/Oblache/tests_ui/profile_page.py\", line 40, in click_static_site_button\n    return self.element_is_present_and_clickable(self.locators.STATIC_BUTTON).click()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Oblache/Oblache/tests_ui/base_page.py\", line 28, in element_is_present_and_clickable\n    return (Wait(self.driver, self.timeout).until(\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py\", line 105, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "88184803aa9c27fa",
+      "name" : "Screenshot 2025-10-14 01:47:53.138809",
+      "source" : "88184803aa9c27fa.png",
+      "type" : "image/png",
+      "size" : 50510
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1760406473140,
+      "stop" : 1760406473202,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfilePage"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwhb2z"
+  }, {
+    "name" : "thread",
+    "value" : "2608-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 311,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 311
+      },
+      "items" : [ {
+        "uid" : "93cab151baecad3e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/531//#testresult/93cab151baecad3e",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x559835754fba <unknown>\n#1 0x5598351d96d0 <unknown>\n#2 0x55983522b2aa <unknown>\n#3 0x55983522b541 <unknown>\n#4 0x5598352796c4 <unknown>\n#5 0x559835250e5d <unknown>\n#6 0x559835276b54 <unknown>\n#7 0x559835250c03 <unknown>\n#8 0x55983521d7a8 <unknown>\n#9 0x55983521e421 <unknown>\n#10 0x559835719b28 <unknown>\n#11 0x55983571d87f <unknown>\n#12 0x559835701c49 <unknown>\n#13 0x55983571e405 <unknown>\n#14 0x5598356e74ff <unknown>\n#15 0x559835742258 <unknown>\n#16 0x559835742432 <unknown>\n#17 0x559835753fa3 <unknown>\n#18 0x7fbf76a9caa4 <unknown>\n#19 0x7fbf76b29c6c <unknown>",
+        "time" : {
+          "start" : 1760320416866,
+          "stop" : 1760320422232,
+          "duration" : 5366
+        }
+      }, {
+        "uid" : "cc840f23ca0e2c5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/530//#testresult/cc840f23ca0e2c5",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55df6c7e9fba <unknown>\n#1 0x55df6c26e6d0 <unknown>\n#2 0x55df6c2c02aa <unknown>\n#3 0x55df6c2c0541 <unknown>\n#4 0x55df6c30e6c4 <unknown>\n#5 0x55df6c2e5e5d <unknown>\n#6 0x55df6c30bb54 <unknown>\n#7 0x55df6c2e5c03 <unknown>\n#8 0x55df6c2b27a8 <unknown>\n#9 0x55df6c2b3421 <unknown>\n#10 0x55df6c7aeb28 <unknown>\n#11 0x55df6c7b287f <unknown>\n#12 0x55df6c796c49 <unknown>\n#13 0x55df6c7b3405 <unknown>\n#14 0x55df6c77c4ff <unknown>\n#15 0x55df6c7d7258 <unknown>\n#16 0x55df6c7d7432 <unknown>\n#17 0x55df6c7e8fa3 <unknown>\n#18 0x7f7799e9caa4 <unknown>\n#19 0x7f7799f29c6c <unknown>",
+        "time" : {
+          "start" : 1760233851634,
+          "stop" : 1760233857033,
+          "duration" : 5399
+        }
+      }, {
+        "uid" : "51eb8169d806a93d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/529//#testresult/51eb8169d806a93d",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x560f124fafba <unknown>\n#1 0x560f11f7f6d0 <unknown>\n#2 0x560f11fd12aa <unknown>\n#3 0x560f11fd1541 <unknown>\n#4 0x560f1201f6c4 <unknown>\n#5 0x560f11ff6e5d <unknown>\n#6 0x560f1201cb54 <unknown>\n#7 0x560f11ff6c03 <unknown>\n#8 0x560f11fc37a8 <unknown>\n#9 0x560f11fc4421 <unknown>\n#10 0x560f124bfb28 <unknown>\n#11 0x560f124c387f <unknown>\n#12 0x560f124a7c49 <unknown>\n#13 0x560f124c4405 <unknown>\n#14 0x560f1248d4ff <unknown>\n#15 0x560f124e8258 <unknown>\n#16 0x560f124e8432 <unknown>\n#17 0x560f124f9fa3 <unknown>\n#18 0x7f70b349caa4 <unknown>\n#19 0x7f70b3529c6c <unknown>",
+        "time" : {
+          "start" : 1760146964933,
+          "stop" : 1760146969971,
+          "duration" : 5038
+        }
+      }, {
+        "uid" : "6f6555ed132384e6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/528//#testresult/6f6555ed132384e6",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x561603bcefba <unknown>\n#1 0x5616036536d0 <unknown>\n#2 0x5616036a52aa <unknown>\n#3 0x5616036a5541 <unknown>\n#4 0x5616036f36c4 <unknown>\n#5 0x5616036cae5d <unknown>\n#6 0x5616036f0b54 <unknown>\n#7 0x5616036cac03 <unknown>\n#8 0x5616036977a8 <unknown>\n#9 0x561603698421 <unknown>\n#10 0x561603b93b28 <unknown>\n#11 0x561603b9787f <unknown>\n#12 0x561603b7bc49 <unknown>\n#13 0x561603b98405 <unknown>\n#14 0x561603b614ff <unknown>\n#15 0x561603bbc258 <unknown>\n#16 0x561603bbc432 <unknown>\n#17 0x561603bcdfa3 <unknown>\n#18 0x7f4cf449caa4 <unknown>\n#19 0x7f4cf4529c6c <unknown>",
+        "time" : {
+          "start" : 1760060802619,
+          "stop" : 1760060807718,
+          "duration" : 5099
+        }
+      }, {
+        "uid" : "b828c59d198984e9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/527//#testresult/b828c59d198984e9",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x555fffc88fba <unknown>\n#1 0x555fff70d6d0 <unknown>\n#2 0x555fff75f2aa <unknown>\n#3 0x555fff75f541 <unknown>\n#4 0x555fff7ad6c4 <unknown>\n#5 0x555fff784e5d <unknown>\n#6 0x555fff7aab54 <unknown>\n#7 0x555fff784c03 <unknown>\n#8 0x555fff7517a8 <unknown>\n#9 0x555fff752421 <unknown>\n#10 0x555fffc4db28 <unknown>\n#11 0x555fffc5187f <unknown>\n#12 0x555fffc35c49 <unknown>\n#13 0x555fffc52405 <unknown>\n#14 0x555fffc1b4ff <unknown>\n#15 0x555fffc76258 <unknown>\n#16 0x555fffc76432 <unknown>\n#17 0x555fffc87fa3 <unknown>\n#18 0x7f2224e9caa4 <unknown>\n#19 0x7f2224f29c6c <unknown>",
+        "time" : {
+          "start" : 1759974341371,
+          "stop" : 1759974346467,
+          "duration" : 5096
+        }
+      }, {
+        "uid" : "bb6f166e471f9fb6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/526//#testresult/bb6f166e471f9fb6",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55d37ebbafba <unknown>\n#1 0x55d37e63f6d0 <unknown>\n#2 0x55d37e6912aa <unknown>\n#3 0x55d37e691541 <unknown>\n#4 0x55d37e6df6c4 <unknown>\n#5 0x55d37e6b6e5d <unknown>\n#6 0x55d37e6dcb54 <unknown>\n#7 0x55d37e6b6c03 <unknown>\n#8 0x55d37e6837a8 <unknown>\n#9 0x55d37e684421 <unknown>\n#10 0x55d37eb7fb28 <unknown>\n#11 0x55d37eb8387f <unknown>\n#12 0x55d37eb67c49 <unknown>\n#13 0x55d37eb84405 <unknown>\n#14 0x55d37eb4d4ff <unknown>\n#15 0x55d37eba8258 <unknown>\n#16 0x55d37eba8432 <unknown>\n#17 0x55d37ebb9fa3 <unknown>\n#18 0x7f7ccae9caa4 <unknown>\n#19 0x7f7ccaf29c6c <unknown>",
+        "time" : {
+          "start" : 1759887906141,
+          "stop" : 1759887911237,
+          "duration" : 5096
+        }
+      }, {
+        "uid" : "e8ccf177cff3c329",
+        "reportUrl" : "https://lambotik.github.io/Oblache/525//#testresult/e8ccf177cff3c329",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x564a0d412fba <unknown>\n#1 0x564a0ce976d0 <unknown>\n#2 0x564a0cee92aa <unknown>\n#3 0x564a0cee9541 <unknown>\n#4 0x564a0cf376c4 <unknown>\n#5 0x564a0cf0ee5d <unknown>\n#6 0x564a0cf34b54 <unknown>\n#7 0x564a0cf0ec03 <unknown>\n#8 0x564a0cedb7a8 <unknown>\n#9 0x564a0cedc421 <unknown>\n#10 0x564a0d3d7b28 <unknown>\n#11 0x564a0d3db87f <unknown>\n#12 0x564a0d3bfc49 <unknown>\n#13 0x564a0d3dc405 <unknown>\n#14 0x564a0d3a54ff <unknown>\n#15 0x564a0d400258 <unknown>\n#16 0x564a0d400432 <unknown>\n#17 0x564a0d411fa3 <unknown>\n#18 0x7f549f09caa4 <unknown>\n#19 0x7f549f129c6c <unknown>",
+        "time" : {
+          "start" : 1759801479105,
+          "stop" : 1759801484204,
+          "duration" : 5099
+        }
+      }, {
+        "uid" : "bd6024a5420204f0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/524//#testresult/bd6024a5420204f0",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x562e4740dfba <unknown>\n#1 0x562e46e926d0 <unknown>\n#2 0x562e46ee42aa <unknown>\n#3 0x562e46ee4541 <unknown>\n#4 0x562e46f326c4 <unknown>\n#5 0x562e46f09e5d <unknown>\n#6 0x562e46f2fb54 <unknown>\n#7 0x562e46f09c03 <unknown>\n#8 0x562e46ed67a8 <unknown>\n#9 0x562e46ed7421 <unknown>\n#10 0x562e473d2b28 <unknown>\n#11 0x562e473d687f <unknown>\n#12 0x562e473bac49 <unknown>\n#13 0x562e473d7405 <unknown>\n#14 0x562e473a04ff <unknown>\n#15 0x562e473fb258 <unknown>\n#16 0x562e473fb432 <unknown>\n#17 0x562e4740cfa3 <unknown>\n#18 0x7f463709caa4 <unknown>\n#19 0x7f4637129c6c <unknown>",
+        "time" : {
+          "start" : 1759715284161,
+          "stop" : 1759715289265,
+          "duration" : 5104
+        }
+      }, {
+        "uid" : "5f208fcdb5fa4a1e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/523//#testresult/5f208fcdb5fa4a1e",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x562a3f3a3fba <unknown>\n#1 0x562a3ee286d0 <unknown>\n#2 0x562a3ee7a2aa <unknown>\n#3 0x562a3ee7a541 <unknown>\n#4 0x562a3eec86c4 <unknown>\n#5 0x562a3ee9fe5d <unknown>\n#6 0x562a3eec5b54 <unknown>\n#7 0x562a3ee9fc03 <unknown>\n#8 0x562a3ee6c7a8 <unknown>\n#9 0x562a3ee6d421 <unknown>\n#10 0x562a3f368b28 <unknown>\n#11 0x562a3f36c87f <unknown>\n#12 0x562a3f350c49 <unknown>\n#13 0x562a3f36d405 <unknown>\n#14 0x562a3f3364ff <unknown>\n#15 0x562a3f391258 <unknown>\n#16 0x562a3f391432 <unknown>\n#17 0x562a3f3a2fa3 <unknown>\n#18 0x7fd34789caa4 <unknown>\n#19 0x7fd347929c6c <unknown>",
+        "time" : {
+          "start" : 1759629283175,
+          "stop" : 1759629288338,
+          "duration" : 5163
+        }
+      }, {
+        "uid" : "58235adb087e43d0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/522//#testresult/58235adb087e43d0",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x5642942e8cba <unknown>\n#1 0x564293d5d8e0 <unknown>\n#2 0x564293daf580 <unknown>\n#3 0x564293daf771 <unknown>\n#4 0x564293dfd864 <unknown>\n#5 0x564293dd509d <unknown>\n#6 0x564293dfac63 <unknown>\n#7 0x564293dd4e43 <unknown>\n#8 0x564293da19a8 <unknown>\n#9 0x564293da2621 <unknown>\n#10 0x5642942ac8b8 <unknown>\n#11 0x5642942b05e2 <unknown>\n#12 0x564294293683 <unknown>\n#13 0x5642942b1135 <unknown>\n#14 0x56429427880f <unknown>\n#15 0x5642942d54c8 <unknown>\n#16 0x5642942d56a2 <unknown>\n#17 0x5642942e7dc3 <unknown>\n#18 0x7fc040c9caa4 <unknown>\n#19 0x7fc040d29c6c <unknown>",
+        "time" : {
+          "start" : 1759542107234,
+          "stop" : 1759542112468,
+          "duration" : 5234
+        }
+      }, {
+        "uid" : "c92202ebd40c2462",
+        "reportUrl" : "https://lambotik.github.io/Oblache/521//#testresult/c92202ebd40c2462",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55f15df11cba <unknown>\n#1 0x55f15d9868e0 <unknown>\n#2 0x55f15d9d8580 <unknown>\n#3 0x55f15d9d8771 <unknown>\n#4 0x55f15da26864 <unknown>\n#5 0x55f15d9fe09d <unknown>\n#6 0x55f15da23c63 <unknown>\n#7 0x55f15d9fde43 <unknown>\n#8 0x55f15d9ca9a8 <unknown>\n#9 0x55f15d9cb621 <unknown>\n#10 0x55f15ded58b8 <unknown>\n#11 0x55f15ded95e2 <unknown>\n#12 0x55f15debc683 <unknown>\n#13 0x55f15deda135 <unknown>\n#14 0x55f15dea180f <unknown>\n#15 0x55f15defe4c8 <unknown>\n#16 0x55f15defe6a2 <unknown>\n#17 0x55f15df10dc3 <unknown>\n#18 0x7f134ac9caa4 <unknown>\n#19 0x7f134ad29c6c <unknown>",
+        "time" : {
+          "start" : 1759455905214,
+          "stop" : 1759455910719,
+          "duration" : 5505
+        }
+      }, {
+        "uid" : "e6ca9165eafb23d9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/520//#testresult/e6ca9165eafb23d9",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55af3a47dcba <unknown>\n#1 0x55af39ef28e0 <unknown>\n#2 0x55af39f44580 <unknown>\n#3 0x55af39f44771 <unknown>\n#4 0x55af39f92864 <unknown>\n#5 0x55af39f6a09d <unknown>\n#6 0x55af39f8fc63 <unknown>\n#7 0x55af39f69e43 <unknown>\n#8 0x55af39f369a8 <unknown>\n#9 0x55af39f37621 <unknown>\n#10 0x55af3a4418b8 <unknown>\n#11 0x55af3a4455e2 <unknown>\n#12 0x55af3a428683 <unknown>\n#13 0x55af3a446135 <unknown>\n#14 0x55af3a40d80f <unknown>\n#15 0x55af3a46a4c8 <unknown>\n#16 0x55af3a46a6a2 <unknown>\n#17 0x55af3a47cdc3 <unknown>\n#18 0x7f28bc29caa4 <unknown>\n#19 0x7f28bc329c6c <unknown>",
+        "time" : {
+          "start" : 1759369482660,
+          "stop" : 1759369487661,
+          "duration" : 5001
+        }
+      }, {
+        "uid" : "d3dfff8e2c5ca25f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/519//#testresult/d3dfff8e2c5ca25f",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x56510aebdcba <unknown>\n#1 0x56510a9328e0 <unknown>\n#2 0x56510a984580 <unknown>\n#3 0x56510a984771 <unknown>\n#4 0x56510a9d2864 <unknown>\n#5 0x56510a9aa09d <unknown>\n#6 0x56510a9cfc63 <unknown>\n#7 0x56510a9a9e43 <unknown>\n#8 0x56510a9769a8 <unknown>\n#9 0x56510a977621 <unknown>\n#10 0x56510ae818b8 <unknown>\n#11 0x56510ae855e2 <unknown>\n#12 0x56510ae68683 <unknown>\n#13 0x56510ae86135 <unknown>\n#14 0x56510ae4d80f <unknown>\n#15 0x56510aeaa4c8 <unknown>\n#16 0x56510aeaa6a2 <unknown>\n#17 0x56510aebcdc3 <unknown>\n#18 0x7fc26b89caa4 <unknown>\n#19 0x7fc26b929c6c <unknown>",
+        "time" : {
+          "start" : 1759283808318,
+          "stop" : 1759283813711,
+          "duration" : 5393
+        }
+      }, {
+        "uid" : "99c77974bfcac113",
+        "reportUrl" : "https://lambotik.github.io/Oblache/518//#testresult/99c77974bfcac113",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x5559e8f0bcba <unknown>\n#1 0x5559e89808e0 <unknown>\n#2 0x5559e89d2580 <unknown>\n#3 0x5559e89d2771 <unknown>\n#4 0x5559e8a20864 <unknown>\n#5 0x5559e89f809d <unknown>\n#6 0x5559e8a1dc63 <unknown>\n#7 0x5559e89f7e43 <unknown>\n#8 0x5559e89c49a8 <unknown>\n#9 0x5559e89c5621 <unknown>\n#10 0x5559e8ecf8b8 <unknown>\n#11 0x5559e8ed35e2 <unknown>\n#12 0x5559e8eb6683 <unknown>\n#13 0x5559e8ed4135 <unknown>\n#14 0x5559e8e9b80f <unknown>\n#15 0x5559e8ef84c8 <unknown>\n#16 0x5559e8ef86a2 <unknown>\n#17 0x5559e8f0adc3 <unknown>\n#18 0x7fde87e9caa4 <unknown>\n#19 0x7fde87f29c6c <unknown>",
+        "time" : {
+          "start" : 1759196682904,
+          "stop" : 1759196688400,
+          "duration" : 5496
+        }
+      }, {
+        "uid" : "2a57857bdf301c3d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/517//#testresult/2a57857bdf301c3d",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55836d759cba <unknown>\n#1 0x55836d1ce8e0 <unknown>\n#2 0x55836d220580 <unknown>\n#3 0x55836d220771 <unknown>\n#4 0x55836d26e864 <unknown>\n#5 0x55836d24609d <unknown>\n#6 0x55836d26bc63 <unknown>\n#7 0x55836d245e43 <unknown>\n#8 0x55836d2129a8 <unknown>\n#9 0x55836d213621 <unknown>\n#10 0x55836d71d8b8 <unknown>\n#11 0x55836d7215e2 <unknown>\n#12 0x55836d704683 <unknown>\n#13 0x55836d722135 <unknown>\n#14 0x55836d6e980f <unknown>\n#15 0x55836d7464c8 <unknown>\n#16 0x55836d7466a2 <unknown>\n#17 0x55836d758dc3 <unknown>\n#18 0x7f5b2069caa4 <unknown>\n#19 0x7f5b20729c6c <unknown>",
+        "time" : {
+          "start" : 1759110566776,
+          "stop" : 1759110571811,
+          "duration" : 5035
+        }
+      }, {
+        "uid" : "8253bf9e1e5b415c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/516//#testresult/8253bf9e1e5b415c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x5637f5764cba <unknown>\n#1 0x5637f51d98e0 <unknown>\n#2 0x5637f522b580 <unknown>\n#3 0x5637f522b771 <unknown>\n#4 0x5637f5279864 <unknown>\n#5 0x5637f525109d <unknown>\n#6 0x5637f5276c63 <unknown>\n#7 0x5637f5250e43 <unknown>\n#8 0x5637f521d9a8 <unknown>\n#9 0x5637f521e621 <unknown>\n#10 0x5637f57288b8 <unknown>\n#11 0x5637f572c5e2 <unknown>\n#12 0x5637f570f683 <unknown>\n#13 0x5637f572d135 <unknown>\n#14 0x5637f56f480f <unknown>\n#15 0x5637f57514c8 <unknown>\n#16 0x5637f57516a2 <unknown>\n#17 0x5637f5763dc3 <unknown>\n#18 0x7f42b7c9caa4 <unknown>\n#19 0x7f42b7d29c6c <unknown>",
+        "time" : {
+          "start" : 1759024545344,
+          "stop" : 1759024550540,
+          "duration" : 5196
+        }
+      }, {
+        "uid" : "8c0e7fb9adf4286b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/515//#testresult/8c0e7fb9adf4286b",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x562c1d4b9cba <unknown>\n#1 0x562c1cf2e8e0 <unknown>\n#2 0x562c1cf80580 <unknown>\n#3 0x562c1cf80771 <unknown>\n#4 0x562c1cfce864 <unknown>\n#5 0x562c1cfa609d <unknown>\n#6 0x562c1cfcbc63 <unknown>\n#7 0x562c1cfa5e43 <unknown>\n#8 0x562c1cf729a8 <unknown>\n#9 0x562c1cf73621 <unknown>\n#10 0x562c1d47d8b8 <unknown>\n#11 0x562c1d4815e2 <unknown>\n#12 0x562c1d464683 <unknown>\n#13 0x562c1d482135 <unknown>\n#14 0x562c1d44980f <unknown>\n#15 0x562c1d4a64c8 <unknown>\n#16 0x562c1d4a66a2 <unknown>\n#17 0x562c1d4b8dc3 <unknown>\n#18 0x7f9843e9caa4 <unknown>\n#19 0x7f9843f29c6c <unknown>",
+        "time" : {
+          "start" : 1758937383970,
+          "stop" : 1758937389205,
+          "duration" : 5235
+        }
+      }, {
+        "uid" : "b353ad0b504a2aa2",
+        "reportUrl" : "https://lambotik.github.io/Oblache/514//#testresult/b353ad0b504a2aa2",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55e11cb06cba <unknown>\n#1 0x55e11c57b8e0 <unknown>\n#2 0x55e11c5cd580 <unknown>\n#3 0x55e11c5cd771 <unknown>\n#4 0x55e11c61b864 <unknown>\n#5 0x55e11c5f309d <unknown>\n#6 0x55e11c618c63 <unknown>\n#7 0x55e11c5f2e43 <unknown>\n#8 0x55e11c5bf9a8 <unknown>\n#9 0x55e11c5c0621 <unknown>\n#10 0x55e11caca8b8 <unknown>\n#11 0x55e11cace5e2 <unknown>\n#12 0x55e11cab1683 <unknown>\n#13 0x55e11cacf135 <unknown>\n#14 0x55e11ca9680f <unknown>\n#15 0x55e11caf34c8 <unknown>\n#16 0x55e11caf36a2 <unknown>\n#17 0x55e11cb05dc3 <unknown>\n#18 0x7fa28569caa4 <unknown>\n#19 0x7fa285729c6c <unknown>",
+        "time" : {
+          "start" : 1758851228434,
+          "stop" : 1758851233929,
+          "duration" : 5495
+        }
+      }, {
+        "uid" : "ba711f2b8365715c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/513//#testresult/ba711f2b8365715c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x561570d83cba <unknown>\n#1 0x5615707f88e0 <unknown>\n#2 0x56157084a580 <unknown>\n#3 0x56157084a771 <unknown>\n#4 0x561570898864 <unknown>\n#5 0x56157087009d <unknown>\n#6 0x561570895c63 <unknown>\n#7 0x56157086fe43 <unknown>\n#8 0x56157083c9a8 <unknown>\n#9 0x56157083d621 <unknown>\n#10 0x561570d478b8 <unknown>\n#11 0x561570d4b5e2 <unknown>\n#12 0x561570d2e683 <unknown>\n#13 0x561570d4c135 <unknown>\n#14 0x561570d1380f <unknown>\n#15 0x561570d704c8 <unknown>\n#16 0x561570d706a2 <unknown>\n#17 0x561570d82dc3 <unknown>\n#18 0x7fcaa2a9caa4 <unknown>\n#19 0x7fcaa2b29c6c <unknown>",
+        "time" : {
+          "start" : 1758764890501,
+          "stop" : 1758764895998,
+          "duration" : 5497
+        }
+      }, {
+        "uid" : "e52af35f0bda344f",
+        "reportUrl" : "https://lambotik.github.io/Oblache/512//#testresult/e52af35f0bda344f",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_webpages\"]')\nStacktrace:\n#0 0x55b35d9ff94a <unknown>\n#1 0x55b35d4748a0 <unknown>\n#2 0x55b35d4c6540 <unknown>\n#3 0x55b35d4c6731 <unknown>\n#4 0x55b35d514824 <unknown>\n#5 0x55b35d4ec05d <unknown>\n#6 0x55b35d511c23 <unknown>\n#7 0x55b35d4ebe03 <unknown>\n#8 0x55b35d4b8968 <unknown>\n#9 0x55b35d4b95e1 <unknown>\n#10 0x55b35d9c3548 <unknown>\n#11 0x55b35d9c7272 <unknown>\n#12 0x55b35d9aa313 <unknown>\n#13 0x55b35d9c7dc5 <unknown>\n#14 0x55b35d98f49f <unknown>\n#15 0x55b35d9ec158 <unknown>\n#16 0x55b35d9ec332 <unknown>\n#17 0x55b35d9fea53 <unknown>\n#18 0x7f6bed09caa4 <unknown>\n#19 0x7f6bed129c3c <unknown>",
+        "time" : {
+          "start" : 1758678402837,
+          "stop" : 1758678408298,
+          "duration" : 5461
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ff806b0a88e02b77.json",
+  "parameterValues" : [ ]
+}
