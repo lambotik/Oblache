@@ -1,0 +1,546 @@
+{
+  "uid" : "57f4806952b2ba35",
+  "name" : "test_create_database",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_create_database",
+  "historyId" : "4762f7b87391625d86f9ea8dbdd3b406",
+  "time" : {
+    "start" : 1761443807263,
+    "stop" : 1761443811325,
+    "duration" : 4062
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Message is not present.",
+  "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7f598a4c9190>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"193a392b0d63ba74fa743ff580a0f0d0\")>\nauthorization_user = None\n\n    @allure.title('test_create_database')\n    def test_create_database(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n>       page.compare_database_status()\n\ntests_ui/test_ui.py:83: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.profile_page.ProfilePage object at 0x7f5989b8ed20>\n\n    def compare_database_status(self):\n        self.click_button_status()\n        amount_databases = self.get_status_data()['db qty used']\n        self.click_button_databases()\n        self.click_buttons_create_new_db()\n        self.select_db_region_cis()\n        self.click_buttons_create()\n        msg = self.element_is_visible(self.locators.MSG_FROM_SERVER).text\n        # print(msg)\n        with allure.step(f'Check the message after clicking the create database button. MSG: {msg}'):\n            pass\n>       assert msg == 'Order for the new DB accepted', 'Message is not present.'\nE       AssertionError: Message is not present.\n\ntests_ui/profile_page.py:154: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1761443806418,
+      "stop" : 1761443806662,
+      "duration" : 244
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1761443806662,
+      "stop" : 1761443807263,
+      "duration" : 601
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1761443806662,
+        "stop" : 1761443807081,
+        "duration" : 419
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Login user",
+      "time" : {
+        "start" : 1761443807081,
+        "stop" : 1761443807263,
+        "duration" : 182
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1761443807081,
+          "stop" : 1761443807135,
+          "duration" : 54
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1761443807135,
+          "stop" : 1761443807179,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1761443807179,
+          "stop" : 1761443807260,
+          "duration" : 81
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/register.html",
+        "time" : {
+          "start" : 1761443807260,
+          "stop" : 1761443807263,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Message is not present.",
+    "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7f598a4c9190>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"193a392b0d63ba74fa743ff580a0f0d0\")>\nauthorization_user = None\n\n    @allure.title('test_create_database')\n    def test_create_database(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n>       page.compare_database_status()\n\ntests_ui/test_ui.py:83: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <tests_ui.profile_page.ProfilePage object at 0x7f5989b8ed20>\n\n    def compare_database_status(self):\n        self.click_button_status()\n        amount_databases = self.get_status_data()['db qty used']\n        self.click_button_databases()\n        self.click_buttons_create_new_db()\n        self.select_db_region_cis()\n        self.click_buttons_create()\n        msg = self.element_is_visible(self.locators.MSG_FROM_SERVER).text\n        # print(msg)\n        with allure.step(f'Check the message after clicking the create database button. MSG: {msg}'):\n            pass\n>       assert msg == 'Order for the new DB accepted', 'Message is not present.'\nE       AssertionError: Message is not present.\n\ntests_ui/profile_page.py:154: AssertionError",
+    "steps" : [ {
+      "name" : "Click button Status.",
+      "time" : {
+        "start" : 1761443808263,
+        "stop" : 1761443808434,
+        "duration" : 171
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get status data.",
+      "time" : {
+        "start" : 1761443808955,
+        "stop" : 1761443808955,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status data is: {'Email:': 'nodata', 'is blocked?': 'nodata', 'is db creation allowed?': 'nodata', 'disk db quota, mb': 'nodata', 'disk db used, mb': 'nodata', 'db qty quota': 'nodata', 'db qty used': 'nodata', 'site qty quota': 'nodata', 'site qty used': 'nodata', 'site disk quota': 'nodata', 'site disk usage': 'nodata', 'is site deploy allowed?': 'nodata', 'container qty quota': 'nodata', 'container qty used': '1147', 'is container creation allowed': '0'}",
+        "time" : {
+          "start" : 1761443808955,
+          "stop" : 1761443808955,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click \"Databases\" button.",
+      "time" : {
+        "start" : 1761443808955,
+        "stop" : 1761443809016,
+        "duration" : 61
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click \"Create new DB\" button.",
+      "time" : {
+        "start" : 1761443809016,
+        "stop" : 1761443809080,
+        "duration" : 64
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Select region \"CIS\".",
+      "time" : {
+        "start" : 1761443809080,
+        "stop" : 1761443810723,
+        "duration" : 1643
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click \"Create\" button.",
+      "time" : {
+        "start" : 1761443810723,
+        "stop" : 1761443810785,
+        "duration" : 62
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check the message after clicking the create database button. MSG: you are not allowed to create new databases",
+      "time" : {
+        "start" : 1761443811325,
+        "stop" : 1761443811325,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "2f2f9f17e9470638",
+      "name" : "Screenshot 2025-10-26 01:56:51.372620",
+      "source" : "2f2f9f17e9470638.png",
+      "type" : "image/png",
+      "size" : 31361
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1761443811373,
+      "stop" : 1761443811430,
+      "duration" : 57
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfilePage"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwhb2z"
+  }, {
+    "name" : "thread",
+    "value" : "2586-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 18,
+        "broken" : 302,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 323
+      },
+      "items" : [ {
+        "uid" : "cebdf8b5b5a330a6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/543//#testresult/cebdf8b5b5a330a6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1761356876037,
+          "stop" : 1761356880417,
+          "duration" : 4380
+        }
+      }, {
+        "uid" : "63a2ada8dc2c27d1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/542//#testresult/63a2ada8dc2c27d1",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1761270348299,
+          "stop" : 1761270351826,
+          "duration" : 3527
+        }
+      }, {
+        "uid" : "e158e5bd731c8d0a",
+        "reportUrl" : "https://lambotik.github.io/Oblache/541//#testresult/e158e5bd731c8d0a",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1761184193844,
+          "stop" : 1761184197385,
+          "duration" : 3541
+        }
+      }, {
+        "uid" : "44bc4a2ccc30766",
+        "reportUrl" : "https://lambotik.github.io/Oblache/540//#testresult/44bc4a2ccc30766",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x559cd6c9cfba <unknown>\n#1 0x559cd67216d0 <unknown>\n#2 0x559cd67732aa <unknown>\n#3 0x559cd6773541 <unknown>\n#4 0x559cd67c16c4 <unknown>\n#5 0x559cd6798e5d <unknown>\n#6 0x559cd67beb54 <unknown>\n#7 0x559cd6798c03 <unknown>\n#8 0x559cd67657a8 <unknown>\n#9 0x559cd6766421 <unknown>\n#10 0x559cd6c61b28 <unknown>\n#11 0x559cd6c6587f <unknown>\n#12 0x559cd6c49c49 <unknown>\n#13 0x559cd6c66405 <unknown>\n#14 0x559cd6c2f4ff <unknown>\n#15 0x559cd6c8a258 <unknown>\n#16 0x559cd6c8a432 <unknown>\n#17 0x559cd6c9bfa3 <unknown>\n#18 0x7f439169caa4 <unknown>\n#19 0x7f4391729c6c <unknown>",
+        "time" : {
+          "start" : 1761098042781,
+          "stop" : 1761098048875,
+          "duration" : 6094
+        }
+      }, {
+        "uid" : "91cd0ddd51e66fad",
+        "reportUrl" : "https://lambotik.github.io/Oblache/539//#testresult/91cd0ddd51e66fad",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x56495e455fba <unknown>\n#1 0x56495deda6d0 <unknown>\n#2 0x56495df2c2aa <unknown>\n#3 0x56495df2c541 <unknown>\n#4 0x56495df7a6c4 <unknown>\n#5 0x56495df51e5d <unknown>\n#6 0x56495df77b54 <unknown>\n#7 0x56495df51c03 <unknown>\n#8 0x56495df1e7a8 <unknown>\n#9 0x56495df1f421 <unknown>\n#10 0x56495e41ab28 <unknown>\n#11 0x56495e41e87f <unknown>\n#12 0x56495e402c49 <unknown>\n#13 0x56495e41f405 <unknown>\n#14 0x56495e3e84ff <unknown>\n#15 0x56495e443258 <unknown>\n#16 0x56495e443432 <unknown>\n#17 0x56495e454fa3 <unknown>\n#18 0x7fac6e09caa4 <unknown>\n#19 0x7fac6e129c6c <unknown>",
+        "time" : {
+          "start" : 1761011438222,
+          "stop" : 1761011444318,
+          "duration" : 6096
+        }
+      }, {
+        "uid" : "c69101b0387ed807",
+        "reportUrl" : "https://lambotik.github.io/Oblache/538//#testresult/c69101b0387ed807",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//select[@id=\"selectDBRegion\"] /option[@value=\"3\"]')\nStacktrace:\n#0 0x558efa7fe67a <unknown>\n#1 0x558efa27d566 <unknown>\n#2 0x558efa2cf68d <unknown>\n#3 0x558efa2cf921 <unknown>\n#4 0x558efa31de94 <unknown>\n#5 0x558efa2f565d <unknown>\n#6 0x558efa31b328 <unknown>\n#7 0x558efa2f5403 <unknown>\n#8 0x558efa2c1b02 <unknown>\n#9 0x558efa2c27c1 <unknown>\n#10 0x558efa7c2448 <unknown>\n#11 0x558efa7c62af <unknown>\n#12 0x558efa7a98d9 <unknown>\n#13 0x558efa7c6e55 <unknown>\n#14 0x558efa78f13f <unknown>\n#15 0x558efa7eb4b8 <unknown>\n#16 0x558efa7eb693 <unknown>\n#17 0x558efa7fd613 <unknown>\n#18 0x7f4e3e89caa4 <unknown>\n#19 0x7f4e3e929c6c <unknown>",
+        "time" : {
+          "start" : 1760925404397,
+          "stop" : 1760925411514,
+          "duration" : 7117
+        }
+      }, {
+        "uid" : "247dfe537210fcf6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/537//#testresult/247dfe537210fcf6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760839200319,
+          "stop" : 1760839204099,
+          "duration" : 3780
+        }
+      }, {
+        "uid" : "109905c504f1f758",
+        "reportUrl" : "https://lambotik.github.io/Oblache/536//#testresult/109905c504f1f758",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760751848157,
+          "stop" : 1760751852626,
+          "duration" : 4469
+        }
+      }, {
+        "uid" : "53f9c211bf45f68c",
+        "reportUrl" : "https://lambotik.github.io/Oblache/535//#testresult/53f9c211bf45f68c",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760665672958,
+          "stop" : 1760665677208,
+          "duration" : 4250
+        }
+      }, {
+        "uid" : "a45fb7255400b9fd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/534//#testresult/a45fb7255400b9fd",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760579326787,
+          "stop" : 1760579330330,
+          "duration" : 3543
+        }
+      }, {
+        "uid" : "d416132519c0b4e0",
+        "reportUrl" : "https://lambotik.github.io/Oblache/533//#testresult/d416132519c0b4e0",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760493055803,
+          "stop" : 1760493060075,
+          "duration" : 4272
+        }
+      }, {
+        "uid" : "36c96d5840b35dae",
+        "reportUrl" : "https://lambotik.github.io/Oblache/532//#testresult/36c96d5840b35dae",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760406473996,
+          "stop" : 1760406477564,
+          "duration" : 3568
+        }
+      }, {
+        "uid" : "d0b96fafd9312198",
+        "reportUrl" : "https://lambotik.github.io/Oblache/531//#testresult/d0b96fafd9312198",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760320423139,
+          "stop" : 1760320426573,
+          "duration" : 3434
+        }
+      }, {
+        "uid" : "ef950f6bf12a7c62",
+        "reportUrl" : "https://lambotik.github.io/Oblache/530//#testresult/ef950f6bf12a7c62",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760233858147,
+          "stop" : 1760233862508,
+          "duration" : 4361
+        }
+      }, {
+        "uid" : "b117b3446d9cb182",
+        "reportUrl" : "https://lambotik.github.io/Oblache/529//#testresult/b117b3446d9cb182",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Message is not present.",
+        "time" : {
+          "start" : 1760146970930,
+          "stop" : 1760146974559,
+          "duration" : 3629
+        }
+      }, {
+        "uid" : "154db9380a816716",
+        "reportUrl" : "https://lambotik.github.io/Oblache/528//#testresult/154db9380a816716",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x55bc53f54fba <unknown>\n#1 0x55bc539d96d0 <unknown>\n#2 0x55bc53a2b2aa <unknown>\n#3 0x55bc53a2b541 <unknown>\n#4 0x55bc53a796c4 <unknown>\n#5 0x55bc53a50e5d <unknown>\n#6 0x55bc53a76b54 <unknown>\n#7 0x55bc53a50c03 <unknown>\n#8 0x55bc53a1d7a8 <unknown>\n#9 0x55bc53a1e421 <unknown>\n#10 0x55bc53f19b28 <unknown>\n#11 0x55bc53f1d87f <unknown>\n#12 0x55bc53f01c49 <unknown>\n#13 0x55bc53f1e405 <unknown>\n#14 0x55bc53ee74ff <unknown>\n#15 0x55bc53f42258 <unknown>\n#16 0x55bc53f42432 <unknown>\n#17 0x55bc53f53fa3 <unknown>\n#18 0x7f5b6249caa4 <unknown>\n#19 0x7f5b62529c6c <unknown>",
+        "time" : {
+          "start" : 1760060808675,
+          "stop" : 1760060814773,
+          "duration" : 6098
+        }
+      }, {
+        "uid" : "1c6733a11ec78b9b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/527//#testresult/1c6733a11ec78b9b",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x55753762bfba <unknown>\n#1 0x5575370b06d0 <unknown>\n#2 0x5575371022aa <unknown>\n#3 0x557537102541 <unknown>\n#4 0x5575371506c4 <unknown>\n#5 0x557537127e5d <unknown>\n#6 0x55753714db54 <unknown>\n#7 0x557537127c03 <unknown>\n#8 0x5575370f47a8 <unknown>\n#9 0x5575370f5421 <unknown>\n#10 0x5575375f0b28 <unknown>\n#11 0x5575375f487f <unknown>\n#12 0x5575375d8c49 <unknown>\n#13 0x5575375f5405 <unknown>\n#14 0x5575375be4ff <unknown>\n#15 0x557537619258 <unknown>\n#16 0x557537619432 <unknown>\n#17 0x55753762afa3 <unknown>\n#18 0x7f0c31e9caa4 <unknown>\n#19 0x7f0c31f29c6c <unknown>",
+        "time" : {
+          "start" : 1759974347357,
+          "stop" : 1759974353452,
+          "duration" : 6095
+        }
+      }, {
+        "uid" : "9109892050a03c9",
+        "reportUrl" : "https://lambotik.github.io/Oblache/526//#testresult/9109892050a03c9",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x5644db6e9fba <unknown>\n#1 0x5644db16e6d0 <unknown>\n#2 0x5644db1c02aa <unknown>\n#3 0x5644db1c0541 <unknown>\n#4 0x5644db20e6c4 <unknown>\n#5 0x5644db1e5e5d <unknown>\n#6 0x5644db20bb54 <unknown>\n#7 0x5644db1e5c03 <unknown>\n#8 0x5644db1b27a8 <unknown>\n#9 0x5644db1b3421 <unknown>\n#10 0x5644db6aeb28 <unknown>\n#11 0x5644db6b287f <unknown>\n#12 0x5644db696c49 <unknown>\n#13 0x5644db6b3405 <unknown>\n#14 0x5644db67c4ff <unknown>\n#15 0x5644db6d7258 <unknown>\n#16 0x5644db6d7432 <unknown>\n#17 0x5644db6e8fa3 <unknown>\n#18 0x7fe54bc9caa4 <unknown>\n#19 0x7fe54bd29c6c <unknown>",
+        "time" : {
+          "start" : 1759887912209,
+          "stop" : 1759887918306,
+          "duration" : 6097
+        }
+      }, {
+        "uid" : "54f01b99f3ad84aa",
+        "reportUrl" : "https://lambotik.github.io/Oblache/525//#testresult/54f01b99f3ad84aa",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x5603051b2fba <unknown>\n#1 0x560304c376d0 <unknown>\n#2 0x560304c892aa <unknown>\n#3 0x560304c89541 <unknown>\n#4 0x560304cd76c4 <unknown>\n#5 0x560304caee5d <unknown>\n#6 0x560304cd4b54 <unknown>\n#7 0x560304caec03 <unknown>\n#8 0x560304c7b7a8 <unknown>\n#9 0x560304c7c421 <unknown>\n#10 0x560305177b28 <unknown>\n#11 0x56030517b87f <unknown>\n#12 0x56030515fc49 <unknown>\n#13 0x56030517c405 <unknown>\n#14 0x5603051454ff <unknown>\n#15 0x5603051a0258 <unknown>\n#16 0x5603051a0432 <unknown>\n#17 0x5603051b1fa3 <unknown>\n#18 0x7fcfd769caa4 <unknown>\n#19 0x7fcfd7729c6c <unknown>",
+        "time" : {
+          "start" : 1759801485101,
+          "stop" : 1759801491197,
+          "duration" : 6096
+        }
+      }, {
+        "uid" : "8b756eae41e11ba5",
+        "reportUrl" : "https://lambotik.github.io/Oblache/524//#testresult/8b756eae41e11ba5",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x558ff65bcfba <unknown>\n#1 0x558ff60416d0 <unknown>\n#2 0x558ff60932aa <unknown>\n#3 0x558ff6093541 <unknown>\n#4 0x558ff60e16c4 <unknown>\n#5 0x558ff60b8e5d <unknown>\n#6 0x558ff60deb54 <unknown>\n#7 0x558ff60b8c03 <unknown>\n#8 0x558ff60857a8 <unknown>\n#9 0x558ff6086421 <unknown>\n#10 0x558ff6581b28 <unknown>\n#11 0x558ff658587f <unknown>\n#12 0x558ff6569c49 <unknown>\n#13 0x558ff6586405 <unknown>\n#14 0x558ff654f4ff <unknown>\n#15 0x558ff65aa258 <unknown>\n#16 0x558ff65aa432 <unknown>\n#17 0x558ff65bbfa3 <unknown>\n#18 0x7f7d4c09caa4 <unknown>\n#19 0x7f7d4c129c6c <unknown>",
+        "time" : {
+          "start" : 1759715290238,
+          "stop" : 1759715296345,
+          "duration" : 6107
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "57f4806952b2ba35.json",
+  "parameterValues" : [ ]
+}
