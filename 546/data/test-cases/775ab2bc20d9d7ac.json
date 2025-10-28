@@ -1,0 +1,516 @@
+{
+  "uid" : "775ab2bc20d9d7ac",
+  "name" : "test_delete_database",
+  "fullName" : "tests_ui.test_ui.TestProfilePage#test_delete_database",
+  "historyId" : "79ccd4aa4a29c03ae3f72e89c73351ae",
+  "time" : {
+    "start" : 1761616195149,
+    "stop" : 1761616203499,
+    "duration" : 8350
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_from_server\"]')",
+  "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7f6b92d70e60>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"0f1e0508ca86c65a2609122f9db4c4c6\")>\nauthorization_user = None\n\n    @allure.title('test_delete_database')\n    def test_delete_database(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n        page.click_button_status()\n        amount_databases = page.get_status_data()['db qty used']\n>       msg = page.delete_database()\n\ntests_ui/test_ui.py:90: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:85: in delete_database\n    server_msg = self.element_is_visible(self.locators.MSG_FROM_SERVER).text\ntests_ui/base_page.py:34: in element_is_visible\n    return Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"0f1e0508ca86c65a2609122f9db4c4c6\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7f6b92998860>\nmessage = 'Can\\'t find element by locator (\\'xpath\\', \\'//div[@id=\"msg_from_server\"]\\')'\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_from_server\"]')\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "authorization_user",
+    "time" : {
+      "start" : 1761616194596,
+      "stop" : 1761616195149,
+      "duration" : 553
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open page: https://oblache.areso.pro/register.html",
+      "time" : {
+        "start" : 1761616194596,
+        "stop" : 1761616194952,
+        "duration" : 356
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Login user",
+      "time" : {
+        "start" : 1761616194952,
+        "stop" : 1761616195149,
+        "duration" : 197
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter email.",
+        "time" : {
+          "start" : 1761616194952,
+          "stop" : 1761616195016,
+          "duration" : 64
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Enter password.",
+        "time" : {
+          "start" : 1761616195016,
+          "stop" : 1761616195059,
+          "duration" : 43
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Click button \"Login\"",
+        "time" : {
+          "start" : 1761616195059,
+          "stop" : 1761616195146,
+          "duration" : 87
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Check url is present: https://oblache.areso.pro/register.html",
+        "time" : {
+          "start" : 1761616195146,
+          "stop" : 1761616195149,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1761616194325,
+      "stop" : 1761616194596,
+      "duration" : 271
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_from_server\"]')",
+    "statusTrace" : "self = <tests_ui.test_ui.TestProfilePage object at 0x7f6b92d70e60>\ndriver = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"0f1e0508ca86c65a2609122f9db4c4c6\")>\nauthorization_user = None\n\n    @allure.title('test_delete_database')\n    def test_delete_database(self, driver, authorization_user):\n        page = ProfilePage(driver, authorization_user)\n        page.click_button_status()\n        amount_databases = page.get_status_data()['db qty used']\n>       msg = page.delete_database()\n\ntests_ui/test_ui.py:90: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests_ui/profile_page.py:85: in delete_database\n    server_msg = self.element_is_visible(self.locators.MSG_FROM_SERVER).text\ntests_ui/base_page.py:34: in element_is_visible\n    return Wait(self.driver, self.timeout).until(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"0f1e0508ca86c65a2609122f9db4c4c6\")>\nmethod = <function visibility_of_element_located.<locals>._predicate at 0x7f6b92998860>\nmessage = 'Can\\'t find element by locator (\\'xpath\\', \\'//div[@id=\"msg_from_server\"]\\')'\n\n    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = \"\") -> T:\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value does not evaluate to ``False``.\n    \n        :param method: callable(WebDriver)\n        :param message: optional message for :exc:`TimeoutException`\n        :returns: the result of the last call to `method`\n        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs\n        \"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.monotonic() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, \"screen\", None)\n                stacktrace = getattr(exc, \"stacktrace\", None)\n            time.sleep(self._poll)\n            if time.monotonic() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//div[@id=\"msg_from_server\"]')\n\n/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:105: TimeoutException",
+    "steps" : [ {
+      "name" : "Click button Status.",
+      "time" : {
+        "start" : 1761616196149,
+        "stop" : 1761616196221,
+        "duration" : 72
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get status data.",
+      "time" : {
+        "start" : 1761616196690,
+        "stop" : 1761616196690,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Status data is: {'Email:': 'nodata', 'is blocked?': 'nodata', 'is db creation allowed?': 'nodata', 'disk db quota, mb': 'nodata', 'disk db used, mb': 'nodata', 'db qty quota': 'nodata', 'db qty used': 'nodata', 'site qty quota': 'nodata', 'site qty used': 'nodata', 'site disk quota': '300', 'site disk usage': '0', 'is site deploy allowed?': '1', 'container qty quota': '1', 'container qty used': '1147', 'is container creation allowed': '0'}",
+        "time" : {
+          "start" : 1761616196690,
+          "stop" : 1761616196690,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click \"Databases\" button.",
+      "time" : {
+        "start" : 1761616196690,
+        "stop" : 1761616196757,
+        "duration" : 67
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click \"Create new DB\" button.",
+      "time" : {
+        "start" : 1761616196757,
+        "stop" : 1761616196826,
+        "duration" : 69
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click \"Databases\" button.",
+      "time" : {
+        "start" : 1761616196826,
+        "stop" : 1761616196888,
+        "duration" : 62
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "4c688c8a96782ad8",
+      "name" : "Screenshot 2025-10-28 01:50:03.604105",
+      "source" : "4c688c8a96782ad8.png",
+      "type" : "image/png",
+      "size" : 223273
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1761616203605,
+      "stop" : 1761616203666,
+      "duration" : 61
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Test Profile Page."
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests_ui"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProfilePage"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwhb2z"
+  }, {
+    "name" : "thread",
+    "value" : "2555-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests_ui.test_ui"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 265,
+        "broken" : 59,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 325
+      },
+      "items" : [ {
+        "uid" : "7a84fd3860a52673",
+        "reportUrl" : "https://lambotik.github.io/Oblache/545//#testresult/7a84fd3860a52673",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1761530451104,
+          "stop" : 1761530454807,
+          "duration" : 3703
+        }
+      }, {
+        "uid" : "217dc725395af056",
+        "reportUrl" : "https://lambotik.github.io/Oblache/544//#testresult/217dc725395af056",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1761443812270,
+          "stop" : 1761443816064,
+          "duration" : 3794
+        }
+      }, {
+        "uid" : "e16602cb537414a7",
+        "reportUrl" : "https://lambotik.github.io/Oblache/543//#testresult/e16602cb537414a7",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1761356881490,
+          "stop" : 1761356885582,
+          "duration" : 4092
+        }
+      }, {
+        "uid" : "38939df875f63a6b",
+        "reportUrl" : "https://lambotik.github.io/Oblache/542//#testresult/38939df875f63a6b",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1761270352772,
+          "stop" : 1761270356561,
+          "duration" : 3789
+        }
+      }, {
+        "uid" : "519aef05d96f9ed1",
+        "reportUrl" : "https://lambotik.github.io/Oblache/541//#testresult/519aef05d96f9ed1",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1761184198331,
+          "stop" : 1761184202107,
+          "duration" : 3776
+        }
+      }, {
+        "uid" : "566af3e5bec065dd",
+        "reportUrl" : "https://lambotik.github.io/Oblache/540//#testresult/566af3e5bec065dd",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x560686c66fba <unknown>\n#1 0x5606866eb6d0 <unknown>\n#2 0x56068673d2aa <unknown>\n#3 0x56068673d541 <unknown>\n#4 0x56068678b6c4 <unknown>\n#5 0x560686762e5d <unknown>\n#6 0x560686788b54 <unknown>\n#7 0x560686762c03 <unknown>\n#8 0x56068672f7a8 <unknown>\n#9 0x560686730421 <unknown>\n#10 0x560686c2bb28 <unknown>\n#11 0x560686c2f87f <unknown>\n#12 0x560686c13c49 <unknown>\n#13 0x560686c30405 <unknown>\n#14 0x560686bf94ff <unknown>\n#15 0x560686c54258 <unknown>\n#16 0x560686c54432 <unknown>\n#17 0x560686c65fa3 <unknown>\n#18 0x7f4937c9caa4 <unknown>\n#19 0x7f4937d29c6c <unknown>",
+        "time" : {
+          "start" : 1761098049932,
+          "stop" : 1761098056027,
+          "duration" : 6095
+        }
+      }, {
+        "uid" : "95e5682d52e6f83e",
+        "reportUrl" : "https://lambotik.github.io/Oblache/539//#testresult/95e5682d52e6f83e",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x55e59cba6fba <unknown>\n#1 0x55e59c62b6d0 <unknown>\n#2 0x55e59c67d2aa <unknown>\n#3 0x55e59c67d541 <unknown>\n#4 0x55e59c6cb6c4 <unknown>\n#5 0x55e59c6a2e5d <unknown>\n#6 0x55e59c6c8b54 <unknown>\n#7 0x55e59c6a2c03 <unknown>\n#8 0x55e59c66f7a8 <unknown>\n#9 0x55e59c670421 <unknown>\n#10 0x55e59cb6bb28 <unknown>\n#11 0x55e59cb6f87f <unknown>\n#12 0x55e59cb53c49 <unknown>\n#13 0x55e59cb70405 <unknown>\n#14 0x55e59cb394ff <unknown>\n#15 0x55e59cb94258 <unknown>\n#16 0x55e59cb94432 <unknown>\n#17 0x55e59cba5fa3 <unknown>\n#18 0x7f72eac9caa4 <unknown>\n#19 0x7f72ead29c6c <unknown>",
+        "time" : {
+          "start" : 1761011445394,
+          "stop" : 1761011451491,
+          "duration" : 6097
+        }
+      }, {
+        "uid" : "fc93ecc95667e794",
+        "reportUrl" : "https://lambotik.github.io/Oblache/538//#testresult/fc93ecc95667e794",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760925412495,
+          "stop" : 1760925416567,
+          "duration" : 4072
+        }
+      }, {
+        "uid" : "e8c3a4f445aa8e48",
+        "reportUrl" : "https://lambotik.github.io/Oblache/537//#testresult/e8c3a4f445aa8e48",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760839204985,
+          "stop" : 1760839208792,
+          "duration" : 3807
+        }
+      }, {
+        "uid" : "4437c7849bb7ac24",
+        "reportUrl" : "https://lambotik.github.io/Oblache/536//#testresult/4437c7849bb7ac24",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760751853612,
+          "stop" : 1760751857643,
+          "duration" : 4031
+        }
+      }, {
+        "uid" : "1f4f6eb799db20c6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/535//#testresult/1f4f6eb799db20c6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760665678230,
+          "stop" : 1760665682216,
+          "duration" : 3986
+        }
+      }, {
+        "uid" : "dcd4ad82789568ba",
+        "reportUrl" : "https://lambotik.github.io/Oblache/534//#testresult/dcd4ad82789568ba",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760579331276,
+          "stop" : 1760579335073,
+          "duration" : 3797
+        }
+      }, {
+        "uid" : "a5e88cf5c15fb6",
+        "reportUrl" : "https://lambotik.github.io/Oblache/533//#testresult/a5e88cf5c15fb6",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760493061134,
+          "stop" : 1760493065154,
+          "duration" : 4020
+        }
+      }, {
+        "uid" : "f19fa4ec1a72014d",
+        "reportUrl" : "https://lambotik.github.io/Oblache/532//#testresult/f19fa4ec1a72014d",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760406478451,
+          "stop" : 1760406482220,
+          "duration" : 3769
+        }
+      }, {
+        "uid" : "f71a1e4da89f1790",
+        "reportUrl" : "https://lambotik.github.io/Oblache/531//#testresult/f71a1e4da89f1790",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760320427473,
+          "stop" : 1760320431232,
+          "duration" : 3759
+        }
+      }, {
+        "uid" : "9c1c7da0fadeba60",
+        "reportUrl" : "https://lambotik.github.io/Oblache/530//#testresult/9c1c7da0fadeba60",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760233863602,
+          "stop" : 1760233867718,
+          "duration" : 4116
+        }
+      }, {
+        "uid" : "65f69231d931ce90",
+        "reportUrl" : "https://lambotik.github.io/Oblache/529//#testresult/65f69231d931ce90",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Wrong answer from server or need manual deleting!!!",
+        "time" : {
+          "start" : 1760146975485,
+          "stop" : 1760146979246,
+          "duration" : 3761
+        }
+      }, {
+        "uid" : "6f9875d336a92382",
+        "reportUrl" : "https://lambotik.github.io/Oblache/528//#testresult/6f9875d336a92382",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x559c365fafba <unknown>\n#1 0x559c3607f6d0 <unknown>\n#2 0x559c360d12aa <unknown>\n#3 0x559c360d1541 <unknown>\n#4 0x559c3611f6c4 <unknown>\n#5 0x559c360f6e5d <unknown>\n#6 0x559c3611cb54 <unknown>\n#7 0x559c360f6c03 <unknown>\n#8 0x559c360c37a8 <unknown>\n#9 0x559c360c4421 <unknown>\n#10 0x559c365bfb28 <unknown>\n#11 0x559c365c387f <unknown>\n#12 0x559c365a7c49 <unknown>\n#13 0x559c365c4405 <unknown>\n#14 0x559c3658d4ff <unknown>\n#15 0x559c365e8258 <unknown>\n#16 0x559c365e8432 <unknown>\n#17 0x559c365f9fa3 <unknown>\n#18 0x7faa9809caa4 <unknown>\n#19 0x7faa98129c6c <unknown>",
+        "time" : {
+          "start" : 1760060815735,
+          "stop" : 1760060821833,
+          "duration" : 6098
+        }
+      }, {
+        "uid" : "e90ff6558ed77e27",
+        "reportUrl" : "https://lambotik.github.io/Oblache/527//#testresult/e90ff6558ed77e27",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x55ed79758fba <unknown>\n#1 0x55ed791dd6d0 <unknown>\n#2 0x55ed7922f2aa <unknown>\n#3 0x55ed7922f541 <unknown>\n#4 0x55ed7927d6c4 <unknown>\n#5 0x55ed79254e5d <unknown>\n#6 0x55ed7927ab54 <unknown>\n#7 0x55ed79254c03 <unknown>\n#8 0x55ed792217a8 <unknown>\n#9 0x55ed79222421 <unknown>\n#10 0x55ed7971db28 <unknown>\n#11 0x55ed7972187f <unknown>\n#12 0x55ed79705c49 <unknown>\n#13 0x55ed79722405 <unknown>\n#14 0x55ed796eb4ff <unknown>\n#15 0x55ed79746258 <unknown>\n#16 0x55ed79746432 <unknown>\n#17 0x55ed79757fa3 <unknown>\n#18 0x7f03e789caa4 <unknown>\n#19 0x7f03e7929c6c <unknown>",
+        "time" : {
+          "start" : 1759974354351,
+          "stop" : 1759974360452,
+          "duration" : 6101
+        }
+      }, {
+        "uid" : "88b2b3fb8db95b07",
+        "reportUrl" : "https://lambotik.github.io/Oblache/526//#testresult/88b2b3fb8db95b07",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: Can't find element by locator ('xpath', '//button[@id=\"menu_button_status\"]')\nStacktrace:\n#0 0x55d7e7006fba <unknown>\n#1 0x55d7e6a8b6d0 <unknown>\n#2 0x55d7e6add2aa <unknown>\n#3 0x55d7e6add541 <unknown>\n#4 0x55d7e6b2b6c4 <unknown>\n#5 0x55d7e6b02e5d <unknown>\n#6 0x55d7e6b28b54 <unknown>\n#7 0x55d7e6b02c03 <unknown>\n#8 0x55d7e6acf7a8 <unknown>\n#9 0x55d7e6ad0421 <unknown>\n#10 0x55d7e6fcbb28 <unknown>\n#11 0x55d7e6fcf87f <unknown>\n#12 0x55d7e6fb3c49 <unknown>\n#13 0x55d7e6fd0405 <unknown>\n#14 0x55d7e6f994ff <unknown>\n#15 0x55d7e6ff4258 <unknown>\n#16 0x55d7e6ff4432 <unknown>\n#17 0x55d7e7005fa3 <unknown>\n#18 0x7fc6b0e9caa4 <unknown>\n#19 0x7fc6b0f29c6c <unknown>",
+        "time" : {
+          "start" : 1759887919250,
+          "stop" : 1759887925350,
+          "duration" : 6100
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "775ab2bc20d9d7ac.json",
+  "parameterValues" : [ ]
+}
